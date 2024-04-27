@@ -1,113 +1,138 @@
-import Image from "next/image";
+"use client";
+ 
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
+import { motion } from "framer-motion";
+import React from "react";
+import { AuroraBackground } from "../components/ui/aurora-background";
+import { Poppins } from 'next/font/google'
+ 
+const poppins = Poppins({ weight: "400", subsets: ['latin'] }) 
+
+function Hero() {
+  const words = [
+    {
+      text: "Hey !",
+    },
+  ];
+
+  const name = [
+    {
+      text: "I'm"
+    },
+    {
+      text: "Prashanth",
+      className: "text-cyan-600 dark:text-cyan-200 font-light",
+    },
+  ];
+  return (
+    <>
+    <AuroraBackground className= {poppins.className}>
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col gap-4 items-center justify-center px-4"
+      >
+        <div className="text-4xl md:text-7xl dark:text-white text-center">
+        <TypewriterEffectSmooth words={words} />
+        <TypewriterEffectSmooth words={name} />
+        </div>
+      </motion.div>
+    </AuroraBackground>
+    </>
+  );
+}
+
+function Whoami() {
+  return(
+  <div className={"m-7 text-base md:text-xl " + poppins.className}>
+    <h2 className="text-4xl font-semibold md:text-7xl">Who<span className="text-cyan-600 dark:text-cyan-200 font-light">ami</span></h2>
+    <br/>
+    <ul className="m-7 ml-5">
+      <li>Full Stacker</li>
+      <li>FOSS Enthusiasist</li>
+      <li>Astrophile</li>
+      <li>Melophile</li>
+    </ul>
+    Tailwind CSS is a popular utility-first CSS framework that makes it easy to style your applications using predefined classes. One useful feature of Tailwind is the ability to apply responsive font sizes using media queries. In this blog post, we'll take a look at how to use media queries in Tailwind to apply responsive font sizes to your text.
+
+Media queries in Tailwind
+Tailwind includes a number of utility classes that allow you to apply styles based on the size of the viewport. These utility classes are prefixed with the size abbreviation, followed by a colon (e.g. sm:, md:, lg:, etc.). For example, you can use the sm: prefix to apply styles only on small screens, or the lg: prefix to apply styles only on large screens.
+
+Applying responsive font sizes
+To apply responsive font sizes in Tailwind, you can use the text- utility classes along with media queries. For example, to apply a larger font size on small screens and a smaller font size on large screens, you can use the following classes:Tailwind CSS is a popular utility-first CSS framework that makes it easy to style your applications using predefined classes. One useful feature of Tailwind is the ability to apply responsive font sizes using media queries. In this blog post, we'll take a look at how to use media queries in Tailwind to apply responsive font sizes to your text.
+
+Media queries in Tailwind
+Tailwind includes a number of utility classes that allow you to apply styles based on the size of the viewport. These utility classes are prefixed with the size abbreviation, followed by a colon (e.g. sm:, md:, lg:, etc.). For example, you can use the sm: prefix to apply styles only on small screens, or the lg: prefix to apply styles only on large screens.
+
+Applying responsive font sizes
+To apply responsive font sizes in Tailwind, you can use the text- utility classes along with media queries. For example, to apply a larger font size on small screens and a smaller font size on large screens, you can use the following classes:Tailwind CSS is a popular utility-first CSS framework that makes it easy to style your applications using predefined classes. One useful feature of Tailwind is the ability to apply responsive font sizes using media queries. In this blog post, we'll take a look at how to use media queries in Tailwind to apply responsive font sizes to your text.
+
+Media queries in Tailwind
+Tailwind includes a number of utility classes that allow you to apply styles based on the size of the viewport. These utility classes are prefixed with the size abbreviation, followed by a colon (e.g. sm:, md:, lg:, etc.). For example, you can use the sm: prefix to apply styles only on small screens, or the lg: prefix to apply styles only on large screens.
+
+Applying responsive font sizes
+To apply responsive font sizes in Tailwind, you can use the text- utility classes along with media queries. For example, to apply a larger font size on small screens and a smaller font size on large screens, you can use the following classes:Tailwind CSS is a popular utility-first CSS framework that makes it easy to style your applications using predefined classes. One useful feature of Tailwind is the ability to apply responsive font sizes using media queries. In this blog post, we'll take a look at how to use media queries in Tailwind to apply responsive font sizes to your text.
+
+Media queries in Tailwind
+Tailwind includes a number of utility classes that allow you to apply styles based on the size of the viewport. These utility classes are prefixed with the size abbreviation, followed by a colon (e.g. sm:, md:, lg:, etc.). For example, you can use the sm: prefix to apply styles only on small screens, or the lg: prefix to apply styles only on large screens.
+
+Applying responsive font sizes
+To apply responsive font sizes in Tailwind, you can use the text- utility classes along with media queries. For example, to apply a larger font size on small screens and a smaller font size on large screens, you can use the following classes:Tailwind CSS is a popular utility-first CSS framework that makes it easy to style your applications using predefined classes. One useful feature of Tailwind is the ability to apply responsive font sizes using media queries. In this blog post, we'll take a look at how to use media queries in Tailwind to apply responsive font sizes to your text.
+
+Media queries in Tailwind
+Tailwind includes a number of utility classes that allow you to apply styles based on the size of the viewport. These utility classes are prefixed with the size abbreviation, followed by a colon (e.g. sm:, md:, lg:, etc.). For example, you can use the sm: prefix to apply styles only on small screens, or the lg: prefix to apply styles only on large screens.
+
+Applying responsive font sizes
+To apply responsive font sizes in Tailwind, you can use the text- utility classes along with media queries. For example, to apply a larger font size on small screens and a smaller font size on large screens, you can use the following classes:Tailwind CSS is a popular utility-first CSS framework that makes it easy to style your applications using predefined classes. One useful feature of Tailwind is the ability to apply responsive font sizes using media queries. In this blog post, we'll take a look at how to use media queries in Tailwind to apply responsive font sizes to your text.
+
+Media queries in Tailwind
+Tailwind includes a number of utility classes that allow you to apply styles based on the size of the viewport. These utility classes are prefixed with the size abbreviation, followed by a colon (e.g. sm:, md:, lg:, etc.). For example, you can use the sm: prefix to apply styles only on small screens, or the lg: prefix to apply styles only on large screens.
+
+Applying responsive font sizes
+    </div>);
+}
+
+function Skills()
+ {
+  return(
+    <div className={"m-7 text-base md:text-xl " + poppins.className}>
+      <h2 className="text-4xl font-semibold md:text-7xl">Skills</h2>
+      <ul className="m-7 ml-5">
+        <li>JavaScipt/TypeScipt + React + Next + Node</li>
+        <li>C/Cxx</li>
+        <li>HTML/CSS</li>
+        <li>Linux - POSIX</li>
+        <li>Git</li>
+        <li></li>
+      </ul>
+    </div>
+  );
+ }
+
+function Projects() {
+  return(
+    <div>
+
+    </div>
+  )
+}
+
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+  return(
+    <>
+    <Hero/>
+    <Whoami/>
+    <br/>
+    <Skills/>
+    <br />
+    <Projects/>
+    </>
   );
 }
