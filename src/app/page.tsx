@@ -262,8 +262,8 @@ function Hero() {
 
 function Whoami() {
   return (
-    <div className={"m-7  xl:container md:mx-auto text-base md:text-lg " + poppins400.className}>
-      <h2 className={"text-4xl underline decoration-slate-500 font-semibold md:text-6xl " + poppins300.className}>Who<span className="dark:text-yellow-300 text-cyan-500 font-light">ami</span></h2>
+    <div className={"m-7 max md:mx-auto text-base " + poppins400.className}>
+      <h2 className={"text-4xl underline decoration-slate-500 font-semibold md:text-5xl " + poppins300.className}>Who<span className="dark:text-yellow-300 text-cyan-500 font-light">ami</span></h2>
       <br />
       <ul className="m-7 ml-5">
         <li>Full Stacker</li>
@@ -283,8 +283,8 @@ function Whoami() {
 
 function Skills() {
   return (
-    <div className={"m-7 text-base md:text-xl " + poppins400.className}>
-      <h2 className={"text-4xl font-semibold underline decoration-slate-500   md:text-7xl " + poppins300.className}>Skills</h2>
+    <div className={"m-7 max md:mx-auto text-base  " + poppins400.className}>
+      <h2 className={"text-4xl underline decoration-slate-500 font-semibold md:text-5xl " + poppins300.className}>Skills</h2>
       <ul className="m-7 ml-5">
         <li>JavaScipt/TypeScipt + React + Next + Node</li>
         <li>C/Cxx</li>
