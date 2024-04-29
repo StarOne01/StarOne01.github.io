@@ -22,7 +22,7 @@ export const AuroraBackground = ({
         )}
         {...props}
       >
-        <div className="inset-0 m-0  fixed overflow-hidden">
+        <div className="inset-0 m-0 overflow-hidden">
           <div
             //   I'm sorry but this is what peak developer performance looks like // trigger warning
             className={cn(
