@@ -257,7 +257,6 @@ function Whoami() {
         <li>FOSS Enthusiasist</li>
         <li>Astrophile</li>
         <li>Melophile</li>
-        <li></li>
       </ul>
       Welcome to my digital realm, where I bring code to life in extraordinary ways. I'm a <span className="dark:text-yellow-300 dark:bg-transparent text-white-500 bg-cyan-200">system developer, skilled in C, C++</span> – the building blocks of software magic. My journey takes me deep into the heart of machines, crafting their very souls and making them hum with electronic vitality.
 
