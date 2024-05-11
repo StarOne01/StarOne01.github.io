@@ -20,8 +20,6 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 const poppins300 = Poppins({ weight: "300", subsets: ['latin'] })
 const poppins400 = Poppins({ weight: "400", subsets: ['latin'] })
 const products = [
-
-
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
   { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
   { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
@@ -45,7 +43,7 @@ function classNames(...classes: any) {
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
-    <header className="bg-trasparent z-10 text-black dark:text-white dark:bg-black backdrop-blur-sm fixed w-full">
+    <header className="bg-trasparent z-10 text-black dark:text-white backdrop-blur-sm fixed w-full">
       <nav className="mx-auto flex max-w-7xl  items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 font-semibold p-1.5">
