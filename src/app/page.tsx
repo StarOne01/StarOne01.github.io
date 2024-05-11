@@ -61,7 +61,7 @@ function Nav() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-        <a href="#" className="font-semibold text-lg leading-6 text-gray-900">
+        <a href="#" className="font-semibold text-lg leading-6 dark:text-white p-2 rounded-md text-gray-900">
             Whoami
           </a>
             {/*
@@ -112,18 +112,18 @@ function Nav() {
               </Popover.Panel>
             </Transition>
                 */}
-          <a href="#" className="text-lg font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900">
             Skills
           </a>
-          <a href="#" className="text-lg font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-lg font-semibold leading-6  dark:text-white p-2 rounded-md text-gray-900">
             Projects
           </a>
-          <a href="#" className="text-lg font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900">
             Interests
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-lg font-semibold leading-6 text-gray-900">
+          <a href="#" className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900">
             Socials <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
