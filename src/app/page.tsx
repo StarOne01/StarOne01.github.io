@@ -19,26 +19,6 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 
 const poppins300 = Poppins({ weight: "300", subsets: ['latin'] })
 const poppins400 = Poppins({ weight: "400", subsets: ['latin'] })
-const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-
-
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
-
-const imgIndex = Math.floor(Math.random() * 3) + 1
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(' ')
-}
-
-
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -61,10 +41,10 @@ function Nav() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-        <a href="#" className="font-semibold text-lg leading-6 dark:text-white p-2 rounded-md text-gray-900">
+          <a href="#" className="font-semibold text-lg leading-6 dark:text-white p-2 rounded-md text-gray-900">
             Whoami
           </a>
-            {/*
+          {/*
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             
             
@@ -148,7 +128,7 @@ function Nav() {
             <div className="-my-6 center divide-gray-500/10">
               <div className="space-y-2  text-center align-middle py-6">
                 <a
-                  href="#"
+                  href="#Whoami" onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2  text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Whoami
@@ -183,19 +163,19 @@ function Nav() {
                   )}
                 </Disclosure>*/}
                 <a
-                  href="#"
+                  href="#Skills" onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Skills
                 </a>
                 <a
-                  href="#"
+                  href="#" onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7   text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Projects
                 </a>
                 <a
-                  href="#"
+                  href="#interests" onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Interests
@@ -203,7 +183,7 @@ function Nav() {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="#" onClick={() => setMobileMenuOpen(false)}
                   className=" block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Socials
@@ -233,15 +213,15 @@ function Hero() {
     },
   ];
   return (
-      <div className={"bg-[url('../../public/AIGenImage3.webp')] bg-cover bg-center " + poppins300.className}>
-        <div
-          className={`relative flex backdrop-blur-sm dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(50,50,50,0.45)] gap-4 items-center justify-center px-4`}
-        >
-          <div className="text-4xl md:text-6xl  text-slate-100 text-center">
-            <TypewriterEffectSmooth words={words} />
-            <TypewriterEffectSmooth words={name} />
-          </div>
+    <div className={"bg-[url('../../public/AIGenImage3.webp')] bg-cover bg-center " + poppins300.className}>
+      <div
+        className={`relative flex backdrop-blur-sm dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(50,50,50,0.45)] gap-4 items-center justify-center px-4`}
+      >
+        <div className="text-4xl md:text-6xl  text-slate-100 text-center">
+          <TypewriterEffectSmooth words={words} />
+          <TypewriterEffectSmooth words={name} />
         </div>
+      </div>
     </div>
   );
 }
@@ -249,7 +229,7 @@ function Hero() {
 
 function Whoami() {
   return (
-    <div className={"m-7 max md:mx-auto text-base " + poppins400.className}>
+    <div id="Whoami" className={"m-7 max md:mx-auto text-base " + poppins400.className}>
       <h2 className={"text-4xl underline decoration-slate-500 font-semibold md:text-5xl " + poppins300.className}>Who<span className="dark:text-yellow-300 text-cyan-500 font-light">ami</span></h2>
       <br />
       <ul className="m-7 ml-5">
@@ -257,6 +237,7 @@ function Whoami() {
         <li>FOSS Enthusiasist</li>
         <li>Astrophile</li>
         <li>Melophile</li>
+        <li>Cyber Security Specialist</li>
       </ul>
       Welcome to my digital realm, where I bring code to life in extraordinary ways. I'm a <span className="dark:text-yellow-300 dark:bg-transparent text-white-500 bg-cyan-200">system developer, skilled in C, C++</span> – the building blocks of software magic. My journey takes me deep into the heart of machines, crafting their very souls and making them hum with electronic vitality.
 
@@ -270,15 +251,43 @@ function Whoami() {
 
 function Skills() {
   return (
-    <div className={"m-7 max md:mx-auto text-base  " + poppins400.className}>
-      <h2 className={"text-4xl underline decoration-slate-500 font-semibold md:text-5xl " + poppins300.className}>Skills</h2>
+    <div id="Skills" className={"m-7 max md:mx-auto text-base  " + poppins400.className}>
+      <h2 className={"text-4xl underline decoration-slate-500 font-semibold md:text-5xl " + poppins300.className}>Skills</h2><br />
+      <h3 className={"text-xl underline md:text-2xl decoration-slate-500 " + poppins400.className}><span className=" text-cyan-400 dark:text-yellow-300">Web</span> Development</h3>
       <ul className="m-7 ml-5">
-        <li>JavaScipt/TypeScipt + React + Next + Node</li>
-        <li>C/Cxx</li>
-        <li>HTML/CSS</li>
-        <li>Linux - POSIX</li>
-        <li>Git</li>
+
+        <li>JavaScipt/TypeScipt</li>
+        <li>Next.js</li>
+        <li>Node.js</li>
+        <li>React.js </li>
+        <li>Express.js</li>
+        <li>MongoDB</li>
       </ul>
+
+      <h3 className={"text-xl underline md:text-2xl decoration-slate-500 " + poppins400.className}><span className=" text-cyan-400 dark:text-yellow-300">Ethical</span> Hacking</h3>
+      <ul className="m-7 ml-5">
+        <li>Computer Neworks</li>
+        <li>GNU+Linux - POSIX</li>
+        <li>Python + Bash</li>
+        <li>WireShark</li>
+        <li>Nmap</li>
+        <li>HashCat</li>
+        <li>Jhonny</li>
+        <li>Aircrack-ng</li>
+        <li>Burpsuit</li>
+
+      </ul>
+
+      <h3 id="interests" className={"text-xl underline md:text-2xl decoration-slate-500  " + poppins400.className}>Also<span className=" text-cyan-400 dark:text-yellow-300"> Interested</span> in</h3>
+      <ul className="m-7 ml-5">
+
+        <li>Software Development</li>
+        <li>Embedded Systems</li>
+        <li>Digital and Analog Electronics</li>
+        <li>Machine Learning</li>
+        <li>Mathemaics</li>
+      </ul>
+
     </div>
   );
 }
