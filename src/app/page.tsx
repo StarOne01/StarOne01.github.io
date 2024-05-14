@@ -285,7 +285,7 @@ function Skills() {
         <li>Embedded Systems</li>
         <li>Digital and Analog Electronics</li>
         <li>Machine Learning</li>
-        <li>Mathemaics</li>
+        <li>Mathematics</li>
       </ul>
 
     </div>
