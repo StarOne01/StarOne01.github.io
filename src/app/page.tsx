@@ -266,7 +266,7 @@ function Skills() {
 
       <h3 className={"text-xl underline md:text-2xl decoration-slate-500 " + poppins400.className}><span className=" text-cyan-400 dark:text-yellow-300">Ethical</span> Hacking</h3>
       <ul className="m-7 ml-5">
-        <li>Computer Neworks</li>
+        <li>Computer Networks</li>
         <li>GNU+Linux - POSIX</li>
         <li>Python + Bash</li>
         <li>WireShark</li>
