@@ -86,13 +86,13 @@ function Nav() {
               </Popover.Panel>
             </Transition>
                 */}
-          <a href="#" className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900">
+          <a href="#Skills" className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900">
             Skills
           </a>
-          <a href="#" className="text-lg font-semibold leading-6  dark:text-white p-2 rounded-md text-gray-900">
+          <a href="https://github.com/StarOne01" className="text-lg font-semibold leading-6  dark:text-white p-2 rounded-md text-gray-900">
             Projects
           </a>
-          <a href="#" className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900">
+          <a href="#interests" className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900">
             Interests
           </a>
         </Popover.Group>
@@ -163,7 +163,7 @@ function Nav() {
                   Skills
                 </a>
                 <a
-                  href="#" onClick={() => setMobileMenuOpen(false)}
+                  href="https://github.com/StarOne01" onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7   text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Projects
