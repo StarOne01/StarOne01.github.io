@@ -29,6 +29,12 @@ body {
     scroll-behavior: smooth;
 }
 
+.icon {
+  transform: msFilter;
+  width: 30px;
+  height: 30px;
+}
+
 html {
   scroll-behavior: smooth;
 }
