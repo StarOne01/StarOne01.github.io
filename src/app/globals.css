@@ -17,6 +17,7 @@
   }
 }
 body {
+  scroll-snap-type: y mandatory !important;
   scroll-behavior: smooth;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -68,4 +69,3 @@ html {
 li {
   list-style-type: disc;
 }
-
