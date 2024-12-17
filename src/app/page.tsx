@@ -403,7 +403,7 @@ function Projects() {
   return <div></div>;
 }
 
-export function LayoutGridDemo({ cards }: { cards: Card[] }) {
+function LayoutGridDemo({ cards }: { cards: Card[] }) {
   return (
     <div className="h-screen pb-16 w-full">
       <LayoutGrid cards={cards} />
