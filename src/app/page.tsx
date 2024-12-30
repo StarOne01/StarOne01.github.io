@@ -2,14 +2,15 @@
 
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 import React from "react";
+import quote from "../../public/quotes.jpg";
 import { Poppins } from "next/font/google";
 import { useState } from "react";
 import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { LayoutGrid, Card } from "@/components/ui/layout-grid";
+
 const poppins300 = Poppins({ weight: "300", subsets: ["latin"] });
 const poppins400 = Poppins({ weight: "400", subsets: ["latin"] });
-
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -325,7 +326,7 @@ function Whoami() {
 
 function Skills() {
   return (
-    <div id="Skills">
+    <div id="Skills" className="mt-7">
       <h2
         className={
           "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
@@ -335,6 +336,30 @@ function Skills() {
         Skills
       </h2>
       <br />
+
+      <div className="md:float-right">
+        <h3
+          className={
+            "text-xl underline md:text-2xl decoration-slate-500 " +
+            poppins400.className
+          }
+        >
+          <span className=" text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
+          Hacking
+        </h3>
+        <ul className="m-7 md:float-right ml-5">
+          <li>Computer Networks</li>
+          <li>GNU+Linux - POSIX</li>
+          <li>Python + Bash</li>
+          <li>WireShark</li>
+          <li>Nmap</li>
+          <li>HashCat</li>
+          <li>Jhonny</li>
+          <li>Aircrack-ng</li>
+          <li>Burpsuit</li>
+        </ul>
+      </div>
+
       <h3
         className={
           "text-xl underline md:text-2xl decoration-slate-500 " +
@@ -351,27 +376,6 @@ function Skills() {
         <li>React.js </li>
         <li>Express.js</li>
         <li>MongoDB</li>
-      </ul>
-
-      <h3
-        className={
-          "text-xl underline md:text-2xl decoration-slate-500 " +
-          poppins400.className
-        }
-      >
-        <span className=" text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
-        Hacking
-      </h3>
-      <ul className="m-7 ml-5">
-        <li>Computer Networks</li>
-        <li>GNU+Linux - POSIX</li>
-        <li>Python + Bash</li>
-        <li>WireShark</li>
-        <li>Nmap</li>
-        <li>HashCat</li>
-        <li>Jhonny</li>
-        <li>Aircrack-ng</li>
-        <li>Burpsuit</li>
       </ul>
 
       <h3
@@ -403,7 +407,7 @@ function Projects() {
   return <div></div>;
 }
 
-export function LayoutGridDemo({ cards }: { cards: Card[] }) {
+export function ThingsiLove({ cards }: { cards: Card[] }) {
   return (
     <div className="h-screen pb-16 w-full">
       <LayoutGrid cards={cards} />
@@ -415,12 +419,7 @@ const SkeletonOne = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        House in the woods
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+        Love for lights (Auroras)
       </p>
     </div>
   );
@@ -430,13 +429,7 @@ const SkeletonTwo = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        House above the clouds
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
+        Life around the clouds
       </p>
     </div>
   );
@@ -445,12 +438,11 @@ const SkeletonThree = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Greens all over
+        Stars.. You know why the name?
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        I love stars, cause they spend all their energy to keep life growing
       </p>
     </div>
   );
@@ -459,12 +451,7 @@ const SkeletonFour = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Rivers are serene
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+      Expecto Patronum
       </p>
     </div>
   );
@@ -474,12 +461,11 @@ const SkeletonFive = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Rivers are serene
+        Commanding Computers
       </p>
       <p className="font-normal text-base text-white"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        Commanding computers to do your stuff is a superpower
       </p>
     </div>
   );
@@ -489,18 +475,11 @@ const SkeletonSix = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-        Rivers are serene
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house by the river is a place of peace and tranquility. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        <span className="font-bold font-mono">BeAwesome()</span>
       </p>
     </div>
   );
 };
-
-
 
 const cards1 = [
   {
@@ -531,37 +510,29 @@ const cards1 = [
     content: <SkeletonFour />,
     className: "md:col-span-2",
     thumbnail:
-      "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  }]
+      "https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/01/patronus-from-harry-potter.jpg",
+  },
+];
 
-let cards2 = [
+const cards2 = [
   {
     id: 5,
     content: <SkeletonFive />,
     className: "md:col-span-2",
-    thumbnail:
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ",
+    thumbnail: "https://wallpapercg.com/media/ts_2x/27260.webp",
   },
   {
     id: 6,
-    content: <SkeletonSix/>,
-    className: "md:col-span-1",
-    thumbnail:
-      "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: <SkeletonSix />,
+    className: "md:col-span-2",
+    thumbnail: "https://4kwallpapers.com/images/walls/thumbs_3t/13660.png",
   },
 ];
 
-
-export default function Home() {
+function ThingsIlove() {
   return (
-    <>
-      <Nav />
-      <Hero />
-      <div className={"m-7 max md:mx-auto text-base  " + poppins400.className}>
-        <Whoami />
-        <br />
-        <Skills />
-        <h2
+    <div id="love" className="mt-20">
+      <h2
         className={
           "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
           poppins300.className
@@ -572,9 +543,22 @@ export default function Home() {
           iLove
         </span>
       </h2>
-        <LayoutGridDemo cards={cards1} />
-        <LayoutGridDemo cards={cards2} />
+      <ThingsiLove cards={cards1} />
+      <ThingsiLove cards={cards2} />
+    </div>
+  );
+}
 
+export default function Home() {
+  return (
+    <>
+      <Nav />
+      <Hero />
+      <div className={"m-7 max md:mx-auto text-base  " + poppins400.className}>
+        <Whoami />
+        <br />
+        <Skills />
+        <ThingsIlove />
       </div>
     </>
   );
