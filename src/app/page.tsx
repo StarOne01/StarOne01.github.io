@@ -407,7 +407,7 @@ function Projects() {
   return <div></div>;
 }
 
-export function ThingsiLove({ cards }: { cards: Card[] }) {
+function ThingsiLove({ cards }: { cards: Card[] }) {
   return (
     <div className="h-screen pb-16 w-full">
       <LayoutGrid cards={cards} />
