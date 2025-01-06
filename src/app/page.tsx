@@ -2,7 +2,6 @@
 
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 import React from "react";
-import quote from "../../public/quotes.jpg";
 import { Poppins } from "next/font/google";
 import { useState } from "react";
 import { Dialog, Popover } from "@headlessui/react";
@@ -21,7 +20,7 @@ function Nav() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 font-semibold p-1.5">
+          <a href="#" className="-m-1.5 text-xl font-semibold p-1.5">
             <span>StarOne</span>
           </a>
         </div>
@@ -74,7 +73,7 @@ function Nav() {
             href="https://linktr.ee/starone01"
             className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900"
           >
-            Socials <span aria-hidden="true">&rarr;</span>
+            Socials
           </a>
         </div>
       </nav>
@@ -114,36 +113,6 @@ function Nav() {
                 >
                   Whoami
                 </a>
-                {/*
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200">
-                        Product
-
-                       <ChevronDownIcon
-                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
-                          aria-hidden="true"
-                  />
-                    </Disclosure.Button>
-                  
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...products, ...callsToAction].map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                      
-                    </>
-                  )}
-                </Disclosure>*/}
                 <a
                   href="#Skills"
                   onClick={() => setMobileMenuOpen(false)}
@@ -206,8 +175,8 @@ function Nav() {
                     className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-3xl"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
                     ></path>
                   </svg>
@@ -233,6 +202,7 @@ function Hero() {
   const words = [
     {
       text: "Hey !",
+      className: poppins300.className,
     },
   ];
 
@@ -242,7 +212,7 @@ function Hero() {
     },
     {
       text: "Prashanth",
-      className: "dark:text-yellow-200 text-white",
+      className: "dark:text-yellow-200 text-white "+ poppins300.className,
     },
   ];
   return (
@@ -253,7 +223,7 @@ function Hero() {
       }
     >
       <div
-        className={`relative flex backdrop-blur-sm dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(50,50,50,0.45)] gap-4 items-center justify-center px-4`}
+        className={`relative flex backdrop-blur-lg dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.26)] gap-4 items-center justify-center px-4`}
       >
         <div className="text-4xl md:text-6xl  text-slate-100 text-center">
           <TypewriterEffectSmooth words={words} />
@@ -326,7 +296,7 @@ function Whoami() {
 
 function Skills() {
   return (
-    <div id="Skills" className="mt-7">
+    <div id="Skills" className="mt-7  ">
       <h2
         className={
           "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
@@ -337,79 +307,80 @@ function Skills() {
       </h2>
       <br />
 
-      <div className="md:float-right">
+      <div className="flex flex-col md:flex-row gap-2 flex-wrap">
+        <div>
+          <h3
+            className={
+              "text-xl underline md:text-2xl decoration-slate-500 " +
+              poppins400.className
+            }
+          >
+            <span className=" text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
+            Hacking
+          </h3>
+          <ul className="m-7 md:float-right ml-5">
+            <li>Computer Networks</li>
+            <li>GNU+Linux - POSIX</li>
+            <li>Python + Bash</li>
+            <li>WireShark</li>
+            <li>Nmap</li>
+            <li>HashCat</li>
+            <li>Jhonny</li>
+            <li>Aircrack-ng</li>
+            <li>Burpsuit</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3
+            className={
+              "text-xl underline md:text-2xl decoration-slate-500 " +
+              poppins400.className
+            }
+          >
+            <span className=" text-cyan-400 dark:text-yellow-300">Web</span>{" "}
+            Development
+          </h3>
+          <ul className="m-7 ml-5">
+            <li>JavaScipt/TypeScipt</li>
+            <li>Next.js</li>
+            <li>Node.js</li>
+            <li>React.js </li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+      </div>
+      <div>
         <h3
+          id="interests"
           className={
-            "text-xl underline md:text-2xl decoration-slate-500 " +
+            "text-xl underline md:text-2xl decoration-slate-500  " +
             poppins400.className
           }
         >
-          <span className=" text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
-          Hacking
+          Also
+          <span className=" text-cyan-400 dark:text-yellow-300">
+            {" "}
+            Interested
+          </span>{" "}
+          in
         </h3>
-        <ul className="m-7 md:float-right ml-5">
-          <li>Computer Networks</li>
-          <li>GNU+Linux - POSIX</li>
-          <li>Python + Bash</li>
-          <li>WireShark</li>
-          <li>Nmap</li>
-          <li>HashCat</li>
-          <li>Jhonny</li>
-          <li>Aircrack-ng</li>
-          <li>Burpsuit</li>
+        <ul className="m-7 ml-5">
+          <li>Software Development</li>
+          <li>Embedded Systems</li>
+          <li>Digital and Analog Electronics</li>
+          <li>Machine Learning</li>
+          <li>Mathematics</li>
         </ul>
       </div>
-
-      <h3
-        className={
-          "text-xl underline md:text-2xl decoration-slate-500 " +
-          poppins400.className
-        }
-      >
-        <span className=" text-cyan-400 dark:text-yellow-300">Web</span>{" "}
-        Development
-      </h3>
-      <ul className="m-7 ml-5">
-        <li>JavaScipt/TypeScipt</li>
-        <li>Next.js</li>
-        <li>Node.js</li>
-        <li>React.js </li>
-        <li>Express.js</li>
-        <li>MongoDB</li>
-      </ul>
-
-      <h3
-        id="interests"
-        className={
-          "text-xl underline md:text-2xl decoration-slate-500  " +
-          poppins400.className
-        }
-      >
-        Also
-        <span className=" text-cyan-400 dark:text-yellow-300">
-          {" "}
-          Interested
-        </span>{" "}
-        in
-      </h3>
-      <ul className="m-7 ml-5">
-        <li>Software Development</li>
-        <li>Embedded Systems</li>
-        <li>Digital and Analog Electronics</li>
-        <li>Machine Learning</li>
-        <li>Mathematics</li>
-      </ul>
     </div>
   );
 }
 
-function Projects() {
-  return <div></div>;
-}
-
 function ThingsiLove({ cards }: { cards: Card[] }) {
   return (
-    <div className="h-screen pb-16 w-full">
+    <div className="h-screen snap-center pb-16 w-full">
       <LayoutGrid cards={cards} />
     </div>
   );
@@ -451,7 +422,7 @@ const SkeletonFour = () => {
   return (
     <div>
       <p className="font-bold md:text-4xl text-xl text-white">
-      Expecto Patronum
+        Expecto Patronum
       </p>
     </div>
   );
