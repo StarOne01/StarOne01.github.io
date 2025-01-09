@@ -2,27 +2,33 @@
 
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 import React from "react";
-import { Poppins } from "next/font/google";
+import Image from "next/image";
+import LLVM_logo from "../../public/LLVM_logo.png";
+import Linux_logo from "../../public/Tux.svg";
+import { Parkinsans } from "next/font/google";
+import GNU_logo from "../../public/GNU_logo.svg";
+import C_logo from "../../public/C_Logo.png";
 import { useState } from "react";
 import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { LayoutGrid, Card } from "@/components/ui/layout-grid";
 
-const poppins300 = Poppins({ weight: "300", subsets: ["latin"] });
-const poppins400 = Poppins({ weight: "400", subsets: ["latin"] });
+const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="bg-trasparent z-10 text-black dark:text-white backdrop-blur-sm fixed w-full">
       <nav
-        className="mx-auto flex max-w-7xl  items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl  items-center justify-between px-6 py-4 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 text-xl font-semibold p-1.5">
+          <p
+            className={"-m-1.5 sm:font-bold font-semibold " + parkin.className}
+          >
             <span>StarOne</span>
-          </a>
+          </p>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -36,7 +42,9 @@ function Nav() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group
+          className={`hidden lg:flex lg:gap-x-12 ${parkin.className}`}
+        >
           <a
             href="#Whoami"
             className="font-semibold text-lg leading-6 dark:text-white p-2 rounded-md text-gray-900"
@@ -87,7 +95,11 @@ function Nav() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-transparent backdrop-blur-xl dark:backdrop-blur-3xl px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="text-black font-semibold dark:text-white">
+              <span
+                className={
+                  "text-black font-semibold dark:text-white " + parkin.className
+                }
+              >
                 StarOne
               </span>
             </a>
@@ -105,7 +117,11 @@ function Nav() {
           </div>
           <div className="mt-6 flow-root ">
             <div className="-my-6 center divide-gray-500/10">
-              <div className="space-y-2  text-center align-middle py-6">
+              <div
+                className={
+                  "space-y-2  text-center align-middle py-6 " + parkin.className
+                }
+              >
                 <a
                   href="#Whoami"
                   onClick={() => setMobileMenuOpen(false)}
@@ -192,9 +208,7 @@ function Nav() {
 
 function Resume() {
   return (
-    <div
-      className={"m-7 max md:mx-auto text-base " + poppins400.className}
-    ></div>
+    <div className={"m-7 max md:mx-auto text-base " + parkin.className}></div>
   );
 }
 
@@ -202,7 +216,7 @@ function Hero() {
   const words = [
     {
       text: "Hey !",
-      className: poppins300.className,
+      className: parkin.className,
     },
   ];
 
@@ -212,18 +226,18 @@ function Hero() {
     },
     {
       text: "Prashanth",
-      className: "dark:text-yellow-200 text-white "+ poppins300.className,
+      className: "dark:text-yellow-200 text-white " + parkin.className,
     },
   ];
   return (
     <div
       className={
         "bg-[url('../../public/AIGenImage3.webp')] bg-cover bg-center " +
-        poppins300.className
+        parkin.className
       }
     >
       <div
-        className={`relative flex backdrop-blur-lg dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.26)] gap-4 items-center justify-center px-4`}
+        className={`relative flex backdrop-blur-lg dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
       >
         <div className="text-4xl md:text-6xl  text-slate-100 text-center">
           <TypewriterEffectSmooth words={words} />
@@ -236,11 +250,11 @@ function Hero() {
 
 function Whoami() {
   return (
-    <div id="Whoami" className={" " + poppins400.className}>
+    <div id="Whoami" className={" " + parkin.className}>
       <h2
         className={
           "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
-          poppins300.className
+          parkin.className
         }
       >
         Who
@@ -285,11 +299,78 @@ function Whoami() {
         networks, and from captivating graphics to the core of bare-metal
         transistors, I love unveiling secrets and seeing what lies beneath the
         surface.
-      </span>
+      </span>{" "}
       Come, join me on this adventure where science fiction meets reality. Let's
       explore uncharted code, push the boundaries of what's possible, and dive
       into the very heart of technology and the mysteries of the electronical
       world.
+    </div>
+  );
+}
+
+function FavProjs() {
+  const projects = [
+    {
+      name: "LLVM",
+      description:
+        "LLVM is a compiler infrastructure project that is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines. The name 'LLVM' itself is not an acronym; it is the full name of the project.",
+      logo: LLVM_logo,
+    },
+    {
+      name: "Linux",
+      description:
+        "The Linux kernel is a free and open-source, monolithic, modular, multitasking, Unix-like operating system kernel. It was conceived and created in 1991 by Linus Torvalds for his i386-based PC, and it was soon adopted as the kernel for the GNU Operating System, which was created as open-source software.",
+      logo: Linux_logo,
+    },
+    {
+      name: "GNU",
+      description:
+        "The GNU Project is a free software, mass collaboration project that Richard Stallman announced on September 27, 1983. Its goal is to give computer users freedom and control in their use of their computers and computing devices by collaboratively developing and publishing software that gives everyone the rights to freely run, copy, distribute, study, share, change, and improve the software.",
+      logo: GNU_logo,
+    },
+    {
+      name: "C",
+      description:
+        "C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system. By design, C provides constructs that map efficiently to typical machine instructions and has found lasting use in applications previously coded in assembly language.",
+      logo: C_logo,
+    },
+  ];
+  return (
+    <div id="Projects" className="mt-7">
+      <h2 
+        className={
+          "text-4xl underline cursor-default  decoration-slate-500 font-semibold md:text-5xl " +
+          parkin.className
+        }
+      >
+        <span className="dark:text-yellow-300 text-cyan-500 font-light">
+          Fav
+        </span>
+        Projects
+      </h2>
+      <br />
+      <div className="flex flex-col md:flex-row gap-2 flex-wrap">
+        {projects.map((project) => (
+          <div key={project.name} className="bg-white dark:hover:shadow-lg dark:md:hover:shadow-md dark:md:hover:shadow-yellow-200 hover:text-white cursor-pointer  hover:bg-black justify-center dark:bg-black border max-w-80 rounded-lg p-4 m-4 flex flex-col items-center gap-4">
+            <Image
+              alt={project.name+ ' Logo'}
+              src={project.logo}
+              width={150}
+              height={150}
+            ></Image>
+            <h3 className="text-xl underline decoration-slate-500 font-semibold">
+              The{" "}
+              <span className="dark:text-yellow-300 text-cyan-500 font-light">
+                {project.name}
+              </span>{" "}
+              Project
+            </h3>
+            <p className="text-base text-center">
+              {project.description}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -300,7 +381,7 @@ function Skills() {
       <h2
         className={
           "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
-          poppins300.className
+          parkin.className
         }
       >
         Skills
@@ -312,7 +393,7 @@ function Skills() {
           <h3
             className={
               "text-xl underline md:text-2xl decoration-slate-500 " +
-              poppins400.className
+              parkin.className
             }
           >
             <span className=" text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
@@ -320,7 +401,7 @@ function Skills() {
           </h3>
           <ul className="m-7 md:float-right ml-5">
             <li>Computer Networks</li>
-            <li>GNU+Linux - POSIX</li>
+            <li>GNU/Linux - POSIX</li>
             <li>Python + Bash</li>
             <li>WireShark</li>
             <li>Nmap</li>
@@ -335,7 +416,7 @@ function Skills() {
           <h3
             className={
               "text-xl underline md:text-2xl decoration-slate-500 " +
-              poppins400.className
+              parkin.className
             }
           >
             <span className=" text-cyan-400 dark:text-yellow-300">Web</span>{" "}
@@ -356,7 +437,7 @@ function Skills() {
           id="interests"
           className={
             "text-xl underline md:text-2xl decoration-slate-500  " +
-            poppins400.className
+            parkin.className
           }
         >
           Also
@@ -506,7 +587,7 @@ function ThingsIlove() {
       <h2
         className={
           "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
-          poppins300.className
+          parkin.className
         }
       >
         Things
@@ -525,11 +606,12 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <div className={"m-7 max md:mx-auto text-base  " + poppins400.className}>
+      <div className={"m-7 max md:mx-auto text-base  " + parkin.className}>
         <Whoami />
         <br />
         <Skills />
         <ThingsIlove />
+        <FavProjs />
       </div>
     </>
   );

@@ -26,7 +26,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full pt-5 grid grid-cols-1 snap-always snap-mandatory snap-center md:grid-cols-3  max-w-7xl  gap-4 relative">
+    <div className="w-full h-full pt-5 grid grid-cols-1 md:grid-cols-3  max-w-7xl  gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -67,7 +67,7 @@ const ImageComponent = ({ card }: { card: Card }) => {
       height="500"
       width="500"
       className={cn(
-        "object-cover object-top rounded-lg absolute inset-0 h-full w-full transition duration-200"
+        "object-cover object-top cursor-pointer rounded-lg absolute inset-0 h-full w-full transition duration-200"
       )}
       alt="thumbnail"
     />

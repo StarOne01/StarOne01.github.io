@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y;
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -21,7 +16,6 @@ html {
   }
 }
 body {
-  scroll-snap-type: y;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
