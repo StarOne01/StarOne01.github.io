@@ -15,6 +15,17 @@ import { LayoutGrid, Card } from "@/components/ui/layout-grid";
 
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
+function unBlur() {
+  (document.body.getElementsByClassName("hehe")[0] as HTMLElement).style.backdropFilter = "blur(0px)";
+  (document.body.getElementsByClassName("hehe")[0] as HTMLElement).style.transition = "backdrop-filter 0.5s";
+}
+
+function blur() {
+  (document.body.getElementsByClassName("hehe")[0] as HTMLElement).style.backdropFilter = "blur(16px)";
+  (document.body.getElementsByClassName("hehe")[0] as HTMLElement).style.transition = "backdrop-filter 0.5s";
+
+}
+
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
@@ -23,9 +34,9 @@ function Nav() {
         className="mx-auto flex max-w-7xl  items-center justify-between px-6 py-4 lg:px-8"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <p
-            className={"-m-1.5 sm:font-bold font-semibold " + parkin.className}
+        <div className="flex secret lg:flex-1">
+          <p onPointerOver={() => unBlur()} onPointerLeave={() => blur()}
+            className={"-m-1.5 sm:font-bold cursor-pointer font-semibold " + parkin.className}
           >
             <span>StarOne</span>
           </p>
@@ -47,42 +58,73 @@ function Nav() {
         >
           <a
             href="#Whoami"
-            className="font-semibold text-lg leading-6 dark:text-white p-2 rounded-md text-gray-900"
+            className="font-semibold text-lg leading-6 p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Whoami
           </a>
           <a
             href="#Skills"
-            className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900"
+            className="text-lg font-semibold leading-6  p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Skills
           </a>
-          <a
+          {/* <a
             href="https://github.com/StarOne01"
             className="text-lg font-semibold leading-6  dark:text-white p-2 rounded-md text-gray-900"
           >
             Projects
-          </a>
+          </a> */}
           <a
             href="prashanth-resume.pdf"
-            className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900"
+            className="text-lg font-semibold leading-6 p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Resume
           </a>
           <a
             href="#interests"
-            className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900"
+            className="text-lg font-semibold leading-6 p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Interests
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="https://linktr.ee/starone01"
-            className="text-lg font-semibold leading-6 dark:text-white p-2 rounded-md text-gray-900"
-          >
-            Socials
-          </a>
+                <a href="mailto:thestarone01@proton.me">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    className="icon dark:fill-white dark:hover:fill-black  hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-sm"
+                  >
+                    <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/StarOne/">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-md"
+                  >
+                    <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
+                  </svg>
+                </a>
+                <a href="https://github.com/StarOne01">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-3xl"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+                    ></path>
+                  </svg>
+                </a>
         </div>
       </nav>
       <Dialog
@@ -136,13 +178,13 @@ function Nav() {
                 >
                   Skills
                 </a>
-                <a
+                {/* <a
                   href="https://github.com/StarOne01"
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7   text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Projects
-                </a>
+                </a> */}
                 <a
                   href="#interests"
                   onClick={() => setMobileMenuOpen(false)}
@@ -237,7 +279,7 @@ function Hero() {
       }
     >
       <div
-        className={`relative flex backdrop-blur-lg dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
+        className={`relative hehe flex backdrop-blur-lg dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
       >
         <div className="text-4xl md:text-6xl  text-slate-100 text-center">
           <TypewriterEffectSmooth words={words} />
@@ -388,7 +430,8 @@ function Skills() {
       </h2>
       <br />
 
-      <div className="flex flex-col md:flex-row gap-2 flex-wrap">
+      <div className=" ">
+
         <div>
           <h3
             className={
@@ -399,7 +442,7 @@ function Skills() {
             <span className=" text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
             Hacking
           </h3>
-          <ul className="m-7 md:float-right ml-5">
+          <ul className="m-7  ml-5">
             <li>Computer Networks</li>
             <li>GNU/Linux - POSIX</li>
             <li>Python + Bash</li>
@@ -411,7 +454,6 @@ function Skills() {
             <li>Burpsuit</li>
           </ul>
         </div>
-
         <div>
           <h3
             className={
@@ -509,30 +551,6 @@ const SkeletonFour = () => {
   );
 };
 
-const SkeletonFive = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Commanding Computers
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Commanding computers to do your stuff is a superpower
-      </p>
-    </div>
-  );
-};
-
-const SkeletonSix = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        <span className="font-bold font-mono">BeAwesome()</span>
-      </p>
-    </div>
-  );
-};
-
 const cards1 = [
   {
     id: 1,
@@ -565,22 +583,6 @@ const cards1 = [
       "https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/01/patronus-from-harry-potter.jpg",
   },
 ];
-
-const cards2 = [
-  {
-    id: 5,
-    content: <SkeletonFive />,
-    className: "md:col-span-2",
-    thumbnail: "https://wallpapercg.com/media/ts_2x/27260.webp",
-  },
-  {
-    id: 6,
-    content: <SkeletonSix />,
-    className: "md:col-span-2",
-    thumbnail: "https://4kwallpapers.com/images/walls/thumbs_3t/13660.png",
-  },
-];
-
 function ThingsIlove() {
   return (
     <div id="love" className="mt-20">
@@ -596,7 +598,6 @@ function ThingsIlove() {
         </span>
       </h2>
       <ThingsiLove cards={cards1} />
-      <ThingsiLove cards={cards2} />
     </div>
   );
 }
