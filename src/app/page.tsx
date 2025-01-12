@@ -476,33 +476,6 @@ function Skills() {
   );
 }
 
-function ThingsiLove({ cards }: { cards: Card[] }) {
-  return (
-    <div className="h-screen snap-center pb-16 w-full">
-      <LayoutGrid cards={cards} />
-    </div>
-  );
-}
-
-
-function ThingsIlove() {
-  return (
-    <div id="love" className="mt-20">
-      <h2
-        className={
-          "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
-          parkin.className
-        }
-      >
-        Things
-        <span className="dark:text-yellow-300 py-4 text-cyan-500 font-light">
-          iLove
-        </span>
-      </h2>
-      <ThingsiLove cards={cards} />
-    </div>
-  );
-}
 
 function Contribs() {
 
@@ -560,11 +533,10 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <div className={"m-7 max md:mx-auto text-base  " + parkin.className}>
+      <div className={"m-7 max md:mx-auto text-base " + parkin.className}>
         <Whoami />
         <br />
         <Skills />
-        <ThingsIlove />
         <FavProjs />
         <Contribs />
       </div>
