@@ -5,10 +5,9 @@ import React from "react";
 import Image from "next/image";
 import { Parkinsans } from "next/font/google";
 import { useState } from "react";
-import { Dialog, Popover } from "@headlessui/react";
+import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { LayoutGrid, Card } from "@/components/ui/layout-grid";
-import { words, nameData, projects, contrib,  cards } from "@/data/data";
+import { words, projects, contrib, nameData } from "@/data/data";
 
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
@@ -62,9 +61,7 @@ function Nav() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group
-          className={`hidden lg:flex lg:gap-x-12 ${parkin.className}`}
-        >
+        <div className={`hidden lg:flex lg:gap-x-12 ${parkin.className}`}>
           <a
             href="#Whoami"
             className="font-semibold text-lg leading-6 p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
@@ -95,7 +92,7 @@ function Nav() {
           >
             Interests
           </a>
-        </Popover.Group>
+        </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="mailto:thestarone01@proton.me">
             <svg
@@ -264,7 +261,6 @@ function Resume() {
 }
 
 function Hero() {
-
   return (
     <div
       className={
@@ -345,7 +341,6 @@ function Whoami() {
 }
 
 function FavProjs() {
-
   return (
     <div id="Projects" className="mt-7">
       <h2
@@ -476,9 +471,7 @@ function Skills() {
   );
 }
 
-
 function Contribs() {
-
   return (
     <div id="contributions" className="mt-7">
       <h2

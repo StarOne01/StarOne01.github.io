@@ -5,7 +5,6 @@ import LLVM_logo from "../../public/LLVM_logo.png";
 import Linux_logo from "../../public/Tux.svg";
 import Chromium_logo from "../../public/Chromium_Logo.svg";
 
-
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
 const words = [
