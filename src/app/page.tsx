@@ -3,15 +3,12 @@
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 import React from "react";
 import Image from "next/image";
-import LLVM_logo from "../../public/LLVM_logo.png";
-import Linux_logo from "../../public/Tux.svg";
 import { Parkinsans } from "next/font/google";
-import GNU_logo from "../../public/GNU_logo.svg";
-import C_logo from "../../public/C_Logo.png";
 import { useState } from "react";
 import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { LayoutGrid, Card } from "@/components/ui/layout-grid";
+import { words, nameData, projects, contrib,  cards } from "@/data/data";
 
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
@@ -267,22 +264,7 @@ function Resume() {
 }
 
 function Hero() {
-  const words = [
-    {
-      text: "Hey !",
-      className: parkin.className,
-    },
-  ];
 
-  const name = [
-    {
-      text: "I'm",
-    },
-    {
-      text: "Prashanth",
-      className: "dark:text-yellow-200 text-white " + parkin.className,
-    },
-  ];
   return (
     <div
       className={
@@ -295,7 +277,7 @@ function Hero() {
       >
         <div className="text-4xl md:text-6xl  text-slate-100 text-center">
           <TypewriterEffectSmooth words={words} />
-          <TypewriterEffectSmooth words={name} />
+          <TypewriterEffectSmooth words={nameData} />
         </div>
       </div>
     </div>
@@ -363,37 +345,7 @@ function Whoami() {
 }
 
 function FavProjs() {
-  const projects = [
-    {
-      name: "Legendary",
-      projects: [
-        {
-          name: "LLVM",
-          description:
-            "LLVM is a compiler infrastructure project that is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines. The name 'LLVM' itself is not an acronym; it is the full name of the project.",
-          logo: LLVM_logo,
-        },
-        {
-          name: "Linux",
-          description:
-            "The Linux kernel is a free and open-source, monolithic, modular, multitasking, Unix-like operating system kernel. It was conceived and created in 1991 by Linus Torvalds for his i386-based PC, and it was soon adopted as the kernel for the GNU Operating System, which was created as open-source software.",
-          logo: Linux_logo,
-        },
-        {
-          name: "GNU",
-          description:
-            "The GNU Project is a free software, mass collaboration project that Richard Stallman announced on September 27, 1983. Its goal is to give computer users freedom and control in their use of their computers and computing devices by collaboratively developing and publishing software that gives everyone the rights to freely run, copy, distribute, study, share, change, and improve the software.",
-          logo: GNU_logo,
-        },
-        {
-          name: "C",
-          description:
-            "C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system. By design, C provides constructs that map efficiently to typical machine instructions and has found lasting use in applications previously coded in assembly language.",
-          logo: C_logo,
-        },
-      ],
-    },
-  ];
+
   return (
     <div id="Projects" className="mt-7">
       <h2
@@ -532,80 +484,7 @@ function ThingsiLove({ cards }: { cards: Card[] }) {
   );
 }
 
-const SkeletonOne = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Love for lights (Auroras)
-      </p>
-    </div>
-  );
-};
 
-const SkeletonTwo = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Life around the clouds
-      </p>
-    </div>
-  );
-};
-const SkeletonThree = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Stars.. You know why the name?
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        I love stars, cause they spend all their energy to keep life growing
-      </p>
-    </div>
-  );
-};
-const SkeletonFour = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Expecto Patronum
-      </p>
-    </div>
-  );
-};
-
-const cards1 = [
-  {
-    id: 1,
-    content: <SkeletonOne />,
-    className: "md:col-span-2",
-    thumbnail:
-      "https://images.unsplash.com/photo-1476970980147-71209edbfa4f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 2,
-    content: <SkeletonTwo />,
-    className: "col-span-1",
-    thumbnail:
-      "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    content: <SkeletonThree />,
-    className: "col-span-1",
-
-    thumbnail:
-      "https://images.unsplash.com/photo-1498194187168-304d0ffa6ed0?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-
-  {
-    id: 4,
-    content: <SkeletonFour />,
-    className: "md:col-span-2",
-    thumbnail:
-      "https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/01/patronus-from-harry-potter.jpg",
-  },
-];
 function ThingsIlove() {
   return (
     <div id="love" className="mt-20">
@@ -620,39 +499,13 @@ function ThingsIlove() {
           iLove
         </span>
       </h2>
-      <ThingsiLove cards={cards1} />
+      <ThingsiLove cards={cards} />
     </div>
   );
 }
 
 function Contribs() {
-  const contrib = [
-    {
-      name: "LLVM",
-      contribs: {
-        docs: [
-          {
-            PR: "122219",
-          },
-          {
-            PR: "122598",
-          },
-          {
-            PR: "122563",
-          },
-          {
-            PR: "122497",
-          },
-          {
-            PR: "122406",
-          },
-          {
-            PR: "122411",
-          },
-        ],
-      },
-    },
-  ];
+
   return (
     <div id="contributions" className="mt-7">
       <h2
