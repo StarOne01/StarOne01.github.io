@@ -1,7 +1,7 @@
 import GNU_logo from "../../public/GNU_logo.svg";
-import C_logo from "../../public/C_Logo.png";
+import C_logo from "../../public/C_Logo.webp";
 import { Parkinsans } from "next/font/google";
-import LLVM_logo from "../../public/LLVM_logo.png";
+import LLVM_logo from "../../public/LLVM_logo.webp";
 import Linux_logo from "../../public/Tux.svg";
 import Chromium_logo from "../../public/Chromium_Logo.svg";
 
