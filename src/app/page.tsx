@@ -323,10 +323,10 @@ function Whoami() {
       <br />
       <ul className="m-7 ml-5">
         <li>Full Stacker</li>
-        <li>FOSS Enthusiasist</li>
+        <li>FOSS Enthusiast</li>
         <li>Astrophile</li>
         <li>Melophile</li>
-        <li>Cyber Security Specialist</li>
+        <li>Cyber Security Advocate</li>
       </ul>
       Welcome to my digital realm, where I bring code to life in extraordinary
       ways. I'm a{" "}
@@ -461,7 +461,7 @@ function Skills() {
             Development
           </h3>
           <ul className="m-7 ml-5">
-            <li>JavaScipt/TypeScipt</li>
+            <li>JavaScript/TypeScript</li>
             <li>Next.js</li>
             <li>Node.js</li>
             <li>React.js </li>
