@@ -295,7 +295,7 @@ function Hero() {
       }
     >
       <div
-        className={`relative blurEffect flex backdrop-blur-lg z-[50] dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
+        className={`relative blurEffect flex backdrop-blur-lg z-[50] flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
       >
         <div className="text-4xl md:text-6xl  text-slate-100 text-center">
           <TypewriterEffectSmooth words={words} />
