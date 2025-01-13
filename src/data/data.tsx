@@ -2,7 +2,7 @@ import GNU_logo from "../../public/GNU_logo.svg";
 import C_logo from "../../public/C_Logo.webp";
 import { Parkinsans } from "next/font/google";
 import LLVM_logo from "../../public/LLVM_logo.webp";
-import Linux_logo from "../../public/Tux.svg";
+import Linux_logo from "../../public/Tux.webp";
 import Chromium_logo from "../../public/Chromium_Logo.svg";
 
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
