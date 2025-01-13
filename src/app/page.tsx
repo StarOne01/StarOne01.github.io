@@ -7,7 +7,8 @@ import { Parkinsans } from "next/font/google";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { words, projects, contrib, nameData } from "@/data/data";
+import { words, projects, contrib, nameData, cards } from "@/data/data";
+import { LayoutGrid, Card } from "@/components/ui/layout-grid";
 
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
@@ -251,6 +252,33 @@ function Nav() {
         </Dialog.Panel>
       </Dialog>
     </header>
+  );
+}
+
+
+function ThingsiLove({ cards }: { cards: Card[] }) {
+  return (
+    <div className="h-screen snap-center pb-16 w-full">
+      <LayoutGrid cards={cards} />
+    </div>
+  );
+}
+function ThingsIlove() {
+  return (
+    <div id="love" className="mt-20">
+      <h2
+        className={
+          "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
+          parkin.className
+        }
+      >
+        Things
+        <span className="dark:text-yellow-300 py-4 text-cyan-500 font-light">
+          iLove
+        </span>
+      </h2>
+      <ThingsiLove cards={cards} />
+    </div>
   );
 }
 
@@ -530,6 +558,7 @@ export default function Home() {
         <Whoami />
         <br />
         <Skills />
+        <ThingsIlove />
         <FavProjs />
         <Contribs />
       </div>
