@@ -5,7 +5,6 @@ import React from "react";
 import Image from "next/image";
 import { Parkinsans } from "next/font/google";
 import { useState } from "react";
-import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { words, projects, contrib, nameData, cards } from "@/data/data";
 import { LayoutGrid, Card } from "@/components/ui/layout-grid";
@@ -32,46 +31,63 @@ function blur() {
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  function invMenu() {
+    setMobileMenuOpen(mobileMenuOpen ? false : true);
+  }
   return (
-    <header className="bg-trasparent z-10 text-black dark:text-white backdrop-blur-sm fixed w-full">
+    <header
+      className={
+        " text-black  dark:text-white bg-black " + mobileMenuOpen ? "fixed bottom-5  w-full z-[50]" : "fixed bottom-5  w-full z-0 "
+      }
+    >
       <nav
-        className="mx-auto flex max-w-7xl  items-center justify-between px-6 py-4 lg:px-8"
+        className={ mobileMenuOpen ? " flex lg:max-w-5xl dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)]  md:max-w-xl z-[45] border sm:mx-auto max-w-sm mx-6  rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8" : " flex lg:max-w-5xl md:max-w-xl z-0 sm:mx-auto max-w-xs mx-auto  bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] border rounded-full items-center justify-between  backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8" }
         aria-label="Global"
       >
-        <div className="flex secret lg:flex-1">
+        <div className="flex secret lg:flex-1 z-[45]">
           <p
             onPointerOver={() => unBlur()}
             onPointerLeave={() => blur()}
             className={
-              "-m-1.5 sm:font-bold cursor-pointer font-semibold " +
+              " sm:font-bold cursor-pointer font-semibold " +
               parkin.className
             }
           >
             <span>StarOne</span>
           </p>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden z-[45]">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black dark:text-white"
+            className={
+              "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black dark:text-white z-40"
+            }
             onClick={() => {
-              setMobileMenuOpen(true);
+              invMenu();
             }}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            {mobileMenuOpen ? (
+              <XMarkIcon
+                className="h-6 z-50 w-6 dark:text-white text-black"
+                aria-hidden="true"
+              />
+            ) : (
+              <Bars3Icon className="h-6 w-6 z-50 " aria-hidden="true" />
+            )}
           </button>
         </div>
-        <div className={`hidden lg:flex lg:gap-x-12 ${parkin.className}`}>
+        <div className={`hidden lg:flex  lg:gap-x-12 ${parkin.className}`}>
           <a
             href="#Whoami"
-            className="font-semibold text-lg leading-6 p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+            className="font-semibold text-lg leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Whoami
           </a>
           <a
             href="#Skills"
-            className="text-lg font-semibold leading-6  p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+            className="text-lg font-semibold leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Skills
           </a>
@@ -83,25 +99,28 @@ function Nav() {
           </a> */}
           <a
             href="prashanth-resume.pdf"
-            className="text-lg font-semibold leading-6 p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+            className="text-lg font-semibold leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Resume
           </a>
           <a
             href="#interests"
-            className="text-lg font-semibold leading-6 p-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+            className="text-lg font-semibold leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Interests
+          </a>
+          <a href="#love" className="text-lg font-semibold leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200">
+            Things I love
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="mailto:thestarone01@proton.me">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="icon dark:fill-white dark:hover:fill-black  hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-sm"
+              width="10"
+              height="10"
+              viewBox="-1 0 25 25"
+              className="icon dark:fill-white dark:hover:fill-black -py-1 rounded hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block mx-1"
             >
               <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path>
             </svg>
@@ -109,10 +128,10 @@ function Nav() {
           <a href="https://www.linkedin.com/in/StarOne/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="10"
+              height="10"
               viewBox="0 0 24 24"
-              className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-md"
+              className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block mx-1 rounded-md"
             >
               <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
             </svg>
@@ -120,10 +139,10 @@ function Nav() {
           <a href="https://github.com/StarOne01">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="10"
+              height="10"
               viewBox="0 0 24 24"
-              className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-3xl"
+              className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block mx-1 rounded-3xl"
             >
               <path
                 fillRule="evenodd"
@@ -134,38 +153,10 @@ function Nav() {
           </a>
         </div>
       </nav>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
-      >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-transparent backdrop-blur-xl dark:backdrop-blur-3xl px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span
-                className={
-                  "text-black font-semibold dark:text-white " + parkin.className
-                }
-              >
-                StarOne
-              </span>
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-white"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon
-                className="h-6 w-6 dark:text-white text-black"
-                aria-hidden="true"
-              />
-            </button>
-          </div>
-          <div className="mt-6 flow-root ">
-            <div className="-my-6 center divide-gray-500/10">
+     {mobileMenuOpen && <div className={"lg:hidden z-10 "}>
+     <div className="fixed h-lvh top-0 right-0 z-0 w-full overflow-y-auto bg-[#ffffff61] dark:bg-[#0000002e] px-6 py-6 sm:max-w-sm ">
+     <div className="fixed h-lvh top-0 right-0 z-1 w-full overflow-y-auto bg-transparent backdrop-blur-md dark:backdrop-blur-3xl px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="-my-6 center z-1 divide-gray-500/10">
               <div
                 className={
                   "space-y-2  text-center align-middle py-6 " + parkin.className
@@ -173,42 +164,50 @@ function Nav() {
               >
                 <a
                   href="#Whoami"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={invMenu}
                   className="-mx-3 block rounded-lg px-3 py-2  text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Whoami
                 </a>
                 <a
                   href="#Skills"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={invMenu}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Skills
                 </a>
                 {/* <a
                   href="https://github.com/StarOne01"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={invMenu}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7   text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Projects
                 </a> */}
                 <a
                   href="#interests"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={invMenu}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Interests
                 </a>
                 <a
                   href="prashanth-resume.pdf"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={invMenu}
                   className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                 >
                   Resume
                 </a>
+                <a
+                  href="#love"
+                  onClick={invMenu}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                >
+                  Things I love
+                </a>
+
               </div>
               <div className="py-6">
-                {/*href="#" onClick={() => setMobileMenuOpen(false)*/}
+                {/*href="#" onClick={invMenu*/}
                 <a href="mailto:thestarone01@proton.me">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -246,19 +245,18 @@ function Nav() {
                     ></path>
                   </svg>
                 </a>
+                </div>
               </div>
-            </div>
           </div>
-        </Dialog.Panel>
-      </Dialog>
+        </div>
+      </div>}
     </header>
   );
 }
 
-
 function ThingsiLove({ cards }: { cards: Card[] }) {
   return (
-    <div className="h-screen snap-center pb-16 w-full">
+    <div id="love" className="h-screen snap-center pb-16 w-full">
       <LayoutGrid cards={cards} />
     </div>
   );
@@ -268,7 +266,7 @@ function ThingsIlove() {
     <div id="love" className="mt-20">
       <h2
         className={
-          "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
+          "text-4xl underline decoration-slate-500 font-semibold sm:text-5xl " +
           parkin.className
         }
       >
@@ -292,12 +290,12 @@ function Hero() {
   return (
     <div
       className={
-        "bg-[url('../../public/AIGenImage3.webp')] bg-cover bg-center " +
+        "bg-[url('../../public/AIGenImage3.webp')]  bg-cover bg-center " +
         parkin.className
       }
     >
       <div
-        className={`relative blurEffect flex backdrop-blur-lg dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
+        className={`relative blurEffect flex backdrop-blur-lg z-50 dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
       >
         <div className="text-4xl md:text-6xl  text-slate-100 text-center">
           <TypewriterEffectSmooth words={words} />
@@ -370,7 +368,7 @@ function Whoami() {
 
 function FavProjs() {
   return (
-    <div id="Projects" className="mt-7">
+    <div id="projects" className="mt-7 max-w-full ">
       <h2
         className={
           "text-4xl underline cursor-default  decoration-slate-500 font-semibold md:text-5xl " +
@@ -386,12 +384,12 @@ function FavProjs() {
 
       {projects.map((theme) => (
         <div key={theme.name}>
-          <p className="c font-extrabold text-2xl"> {theme.name}: </p>
-          <div className="flex flex-col md:flex-row gap-2 flex-wrap">
+          <p className="font-extrabold text-2xl"> {theme.name}: </p>
+          <div className="flex flex-row gap-2 flex-wrap">
             {theme.projects.map((project) => (
               <div
                 key={project.name}
-                className="bg-white dark:hover:shadow-lg dark:md:hover:shadow-md dark:md:hover:shadow-yellow-200 hover:text-white cursor-pointer  hover:bg-black justify-center dark:bg-black border max-w-80 rounded-lg p-4 m-4 flex flex-col items-center gap-4"
+                className="bg-white dark:hover:shadow-lg dark:md:hover:shadow-md dark:md:hover:shadow-yellow-200 hover:text-white cursor-pointer  hover:bg-black justify-center dark:bg-black border sm:max-w-64 rounded-lg p-4 m-4 flex flex-col items-center gap-4"
               >
                 <Image
                   alt={project.name + " Logo"}
@@ -554,7 +552,7 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <div className={"m-7 max md:mx-auto text-base " + parkin.className}>
+      <div className={"m-7 md:max-w-[900px] lg:mx-auto md:mx-16 mx-6 text-base " + parkin.className}>
         <Whoami />
         <br />
         <Skills />

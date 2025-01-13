@@ -139,7 +139,7 @@ const cards = [
   {
     id: 1,
     content: <SkeletonOne />,
-    className: "md:col-span-2",
+    className: "sm:col-span-2",
     thumbnail:
       Aurora,
   },
@@ -162,7 +162,7 @@ const cards = [
   {
     id: 4,
     content: <SkeletonFour />,
-    className: "md:col-span-2",
+    className: "sm:col-span-2",
     thumbnail:
       Patronus,
   },
