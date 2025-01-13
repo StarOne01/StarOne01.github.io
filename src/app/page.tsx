@@ -38,14 +38,14 @@ function Nav() {
   return (
     <header
       className={
-        " text-black  dark:text-white bg-black " + mobileMenuOpen ? "fixed bottom-5  w-full z-[50]" : "fixed bottom-5  w-full z-0 "
+        " text-black   dark:text-white bg-black " + mobileMenuOpen ? "fixed bottom-5  w-full z-[50]" : "fixed bottom-5  w-full -z-50 "
       }
     >
       <nav
-        className={ mobileMenuOpen ? " flex lg:max-w-5xl dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)]  md:max-w-xl z-[45] border sm:mx-auto max-w-sm mx-6  rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8" : " flex lg:max-w-5xl md:max-w-xl z-0 sm:mx-auto max-w-xs mx-auto  bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] border rounded-full items-center justify-between  backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8" }
+        className={ mobileMenuOpen ? " flex lg:max-w-5xl no-doc-scroll dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)]  md:max-w-xl z-[59] border sm:mx-auto max-w-sm mx-6  rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8" : " flex lg:max-w-5xl md:max-w-xl -z-50 sm:mx-auto max-w-xs mx-auto  bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] border border-[rgba(255,255,255,0.4)] border-r-0 border-l-0 rounded-full items-center justify-between  backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8" }
         aria-label="Global"
       >
-        <div className="flex secret lg:flex-1 z-[45]">
+        <div className={mobileMenuOpen ? "flex secret lg:flex-1 z-[45]":"flex secret lg:flex-1 -z-50" }>
           <p
             onPointerOver={() => unBlur()}
             onPointerLeave={() => blur()}
@@ -153,9 +153,9 @@ function Nav() {
           </a>
         </div>
       </nav>
-     {mobileMenuOpen && <div className={"lg:hidden z-10 "}>
-     <div className="fixed h-lvh top-0 right-0 z-0 w-full overflow-y-auto bg-[#ffffff61] dark:bg-[#0000002e] px-6 py-6 sm:max-w-sm ">
-     <div className="fixed h-lvh top-0 right-0 z-1 w-full overflow-y-auto bg-transparent backdrop-blur-md dark:backdrop-blur-3xl px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+     {mobileMenuOpen && <div className={"lg:hidden z-[650] "}>
+     <div className="fixed h-max top-0 right-0 z-0 w-full overflow-y-auto bg-[#ffffff61] dark:bg-[#0000002e] px-6 py-6 sm:max-w-sm ">
+     <div className="fixed h-screen top-0 right-0 z-1 w-full overflow-y-auto bg-transparent backdrop-blur-md dark:backdrop-blur-3xl px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="-my-6 center z-1 divide-gray-500/10">
               <div
                 className={
@@ -206,13 +206,13 @@ function Nav() {
                 </a>
 
               </div>
-              <div className="py-6">
+              <div className="py-6 flex justify-evenly">
                 {/*href="#" onClick={invMenu*/}
                 <a href="mailto:thestarone01@proton.me">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="35"
+                    height="35"
                     viewBox="0 0 24 24"
                     className="icon dark:fill-white dark:hover:fill-black  hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-sm"
                   >
@@ -222,8 +222,8 @@ function Nav() {
                 <a href="https://www.linkedin.com/in/StarOne/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="35"
+                    height="35"
                     viewBox="0 0 24 24"
                     className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-md"
                   >
@@ -233,8 +233,8 @@ function Nav() {
                 <a href="https://github.com/StarOne01">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="35"
+                    height="35"
                     viewBox="0 0 24 24"
                     className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-3xl"
                   >
@@ -295,7 +295,7 @@ function Hero() {
       }
     >
       <div
-        className={`relative blurEffect flex backdrop-blur-lg z-50 dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
+        className={`relative blurEffect flex backdrop-blur-lg z-[50] dark:mix-blend-hard-light flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
       >
         <div className="text-4xl md:text-6xl  text-slate-100 text-center">
           <TypewriterEffectSmooth words={words} />
