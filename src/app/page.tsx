@@ -154,7 +154,7 @@ function Nav() {
         </div>
       </nav>
      {mobileMenuOpen && <div className={"lg:hidden z-[650] "}>
-     <div className="fixed h-screen top-0 right-0 z-0 w-full overflow-y-auto bg-[#ffffff61] backdrop-blur-xl dark:backdrop-blur-xl dark:bg-[#0000002e] px-6 py-6 sm:max-w-sm ">
+     <div className="fixed h-screen top-0 right-0 z-0 w-full overflow-y-auto bg-[#ffffff61] backdrop-blur-xl dark:bg-[#0000002e] px-6 py-6 sm:max-w-sm ">
      <div className="fixed h-screen top-0 right-0 z-1 w-full overflow-y-auto bg-transparent backdrop-blur-md dark:backdrop-blur-3xl px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="-my-6 center z-1 divide-gray-500/10">
               <div
