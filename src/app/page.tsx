@@ -42,7 +42,7 @@ function Nav() {
       }
     >
       <nav
-        className={ mobileMenuOpen ? " flex lg:max-w-5xl no-doc-scroll dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)]  md:max-w-xl z-[59] border sm:mx-auto max-w-sm mx-6  rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8" : " flex lg:max-w-5xl md:max-w-xl -z-50 sm:mx-auto max-w-xs mx-auto  bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] border border-[rgba(255,255,255,0.4)] border-r-0 border-l-0 rounded-full items-center justify-between  backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8" }
+        className={ mobileMenuOpen ? " flex lg:max-w-5xl no-doc-scroll dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)]  md:max-w-xl z-[59] border sm:mx-auto max-w-sm mx-6  rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8" : " flex lg:max-w-5xl md:max-w-xl -z-50 sm:mx-auto max-w-xs mx-auto  bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)]  rounded-full items-center justify-between  backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8" }
         aria-label="Global"
       >
         <div className={mobileMenuOpen ? "flex secret lg:flex-1 z-[45]":"flex secret lg:flex-1 -z-50" }>
