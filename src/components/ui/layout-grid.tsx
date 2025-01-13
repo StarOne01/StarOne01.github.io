@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 
 export type Card = {
   id: number;
   content: JSX.Element | React.ReactNode | string;
   className: string;
-  thumbnail: string;
+  thumbnail: StaticImageData;
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
@@ -60,8 +62,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <motion.img
-      layoutId={`image-${card.id}-image`}
+    <Image
       src={card.thumbnail}
       height="500"
       width="500"

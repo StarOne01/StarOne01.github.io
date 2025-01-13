@@ -4,7 +4,10 @@ import { Parkinsans } from "next/font/google";
 import LLVM_logo from "../../public/LLVM_logo.webp";
 import Linux_logo from "../../public/Tux.webp";
 import Chromium_logo from "../../public/Chromium_Logo.svg";
-
+import Patronus from "../../public/patronus-from-harry-potter.avif"
+import Stars from "../../public/stars.avif"
+import Mountains from "../../public/mountains.avif"
+import Aurora from "../../public/aurora.avif"
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
 const words = [
@@ -138,14 +141,14 @@ const cards = [
     content: <SkeletonOne />,
     className: "md:col-span-2",
     thumbnail:
-      "https://images.unsplash.com/photo-1476970980147-71209edbfa4f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      Aurora,
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
     thumbnail:
-      "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      Mountains,
   },
   {
     id: 3,
@@ -153,7 +156,7 @@ const cards = [
     className: "col-span-1",
 
     thumbnail:
-      "https://images.unsplash.com/photo-1498194187168-304d0ffa6ed0?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      Stars,
   },
 
   {
@@ -161,7 +164,7 @@ const cards = [
     content: <SkeletonFour />,
     className: "md:col-span-2",
     thumbnail:
-      "https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/01/patronus-from-harry-potter.jpg",
+      Patronus,
   },
 ];
 
