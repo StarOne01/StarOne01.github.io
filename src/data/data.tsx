@@ -4,10 +4,10 @@ import { Parkinsans } from "next/font/google";
 import LLVM_logo from "../../public/LLVM_logo.webp";
 import Linux_logo from "../../public/Tux.webp";
 import Chromium_logo from "../../public/Chromium_Logo.svg";
-import Patronus from "../../public/patronus-from-harry-potter.avif"
-import Stars from "../../public/stars.avif"
-import Mountains from "../../public/mountains.avif"
-import Aurora from "../../public/aurora.avif"
+import Patronus from "../../public/patronus-from-harry-potter.webp"
+import Stars from "../../public/stars.webp"
+import Mountains from "../../public/mountains.webp"
+import Aurora from "../../public/aurora.webp"
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
 const words = [
