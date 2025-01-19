@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Parkinsans } from "next/font/google";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { words, projects, contrib, nameData, cards } from "@/data/data";
+import { words, also, projects, contrib, nameData, cards } from "@/data/data";
 import { LayoutGrid, Card } from "@/components/ui/layout-grid";
 
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
@@ -38,11 +38,11 @@ function Nav() {
   return (
     <header
       className={
-        " text-black   dark:text-white bg-black " + mobileMenuOpen ? "fixed bottom-5  w-full z-[50]" : "fixed bottom-5  w-full -z-50 "
+        " text-black dark:text-white bg-black " + mobileMenuOpen ? "fixed bottom-5  w-full z-[50]" : "fixed bottom-5  w-full -z-50 "
       }
     >
       <nav
-        className={ mobileMenuOpen ? " flex lg:max-w-5xl no-doc-scroll dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)]  md:max-w-xl z-[59] border sm:mx-auto max-w-sm mx-6  rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8" : " flex lg:max-w-5xl md:max-w-xl -z-50 sm:mx-auto max-w-xs mx-auto  bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)]  rounded-full items-center justify-between  backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8" }
+        className={ mobileMenuOpen ? " flex lg:max-w-5xl no-doc-scroll dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)]  md:max-w-xl z-[59] border sm:mx-auto max-w-sm mx-6  rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8" : " flex lg:max-w-5xl md:max-w-xl -z-50 sm:mx-auto max-w-xs mx-auto  bg-[rgba(255,255,255,0.4)] dark:bg-[rgb(0,0,0)] dark:border dark:border-yellow-500 dark:shadow-inner dark:shadow-yellow-300  rounded-full items-center justify-between  backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8" }
         aria-label="Global"
       >
         <div className={mobileMenuOpen ? "flex secret lg:flex-1 z-[45]":"flex secret lg:flex-1 -z-50" }>
@@ -295,11 +295,12 @@ function Hero() {
       }
     >
       <div
-        className={`relative blurEffect flex backdrop-blur-lg z-[50] flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4`}
+        className={`relative blurEffect flex backdrop-blur-lg z-[50] flex-col h-[100vh] bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.53)] gap-4 items-center justify-center px-4 ${parkin.className}`}
       >
         <div className="text-4xl md:text-6xl  text-slate-100 text-center">
           <TypewriterEffectSmooth words={words} />
           <TypewriterEffectSmooth words={nameData} />
+          <TypewriterEffectSmooth className="relative text-lg md:text-xl" words={also} />
         </div>
       </div>
     </div>
@@ -389,7 +390,7 @@ function FavProjs() {
             {theme.projects.map((project) => (
               <div
                 key={project.name}
-                className="bg-white dark:hover:shadow-lg dark:md:hover:shadow-md dark:md:hover:shadow-yellow-200 hover:text-white cursor-pointer  hover:bg-black justify-center dark:bg-black border sm:max-w-64 rounded-lg p-4 m-4 flex flex-col items-center gap-4"
+                className="bg-white dark:border-yellow-300 dark:hover:shadow-lg dark:md:hover:shadow-md dark:md:hover:shadow-yellow-200 hover:text-white cursor-pointer  hover:bg-black justify-center dark:bg-black border sm:max-w-64 rounded-lg p-4 m-4 flex flex-col items-center gap-4"
               >
                 <Image
                   alt={project.name + " Logo"}
@@ -517,6 +518,29 @@ function Contribs() {
         {contrib.map((org) => (
           <div key={org.name + "contrib"} className="max-w-80">
             <h2 className="text-2xl">{org.name}</h2>
+            <ul className="mb-1 mt-1 ml-10">
+            {org.contribs.code !== null && (
+                <li>
+                  {" "}
+                  <p className="underline">Codeeee</p>
+                  <ol className="mb-1 flex flex-row flex-wrap ml-10">
+                    {org.contribs.code.map((contribs: { PR: string }) => (
+                      <li className="p-2 list-none" key={contribs.PR}>
+                        <a
+                          className="text-cyan-300"
+                          href={
+                            "https://github.com/llvm/llvm-project/pull/" +
+                            contribs.PR
+                          }
+                        >
+                          #{contribs.PR}{" "}
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </li>
+              )}
+              </ul>
             <ul className="mb-1 mt-1 ml-10">
               {org.contribs.docs !== null && (
                 <li>

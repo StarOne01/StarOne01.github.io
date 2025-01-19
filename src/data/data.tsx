@@ -4,16 +4,15 @@ import { Parkinsans } from "next/font/google";
 import LLVM_logo from "../../public/LLVM_logo.webp";
 import Linux_logo from "../../public/Tux.webp";
 import Chromium_logo from "../../public/Chromium_Logo.svg";
-import Patronus from "../../public/patronus-from-harry-potter.webp"
-import Stars from "../../public/stars.webp"
-import Mountains from "../../public/mountains.webp"
-import Aurora from "../../public/aurora.webp"
+import Patronus from "../../public/patronus-from-harry-potter.webp";
+import Stars from "../../public/stars.webp";
+import Mountains from "../../public/mountains.webp";
+import Aurora from "../../public/aurora.webp";
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
 const words = [
   {
     text: "Hey !",
-    className: parkin.className,
   },
 ];
 
@@ -23,9 +22,20 @@ const nameData = [
   },
   {
     text: "Prashanth",
-    className: "dark:text-yellow-200 text-white " + parkin.className,
+    className: "dark:text-yellow-200 text-white ",
   },
 ];
+
+const also = [
+  {
+    text: "a.k.a",
+  },
+  {
+    text: "Starone01",
+    className: "dark:text-yellow-200 text-white ",
+  },
+];
+
 const projects = [
   {
     name: "Legendary",
@@ -69,6 +79,11 @@ const contrib = [
   {
     name: "LLVM",
     contribs: {
+      code: [
+        {
+          PR: "123495",
+        },
+      ],
       docs: [
         {
           PR: "122219",
@@ -88,6 +103,18 @@ const contrib = [
         {
           PR: "122411",
         },
+        {
+          PR: "122997",
+        },
+        {
+          PR: "123000",
+        },
+        {
+          PR: "123004",
+        },
+        {
+          PR: "123068"
+        }
       ],
     },
   },
@@ -140,36 +167,33 @@ const cards = [
     id: 1,
     content: <SkeletonOne />,
     className: "sm:col-span-2",
-    thumbnail:
-      Aurora,
+    thumbnail: Aurora,
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
-    thumbnail:
-      Mountains,
+    thumbnail: Mountains,
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
 
-    thumbnail:
-      Stars,
+    thumbnail: Stars,
   },
 
   {
     id: 4,
     content: <SkeletonFour />,
     className: "sm:col-span-2",
-    thumbnail:
-      Patronus,
+    thumbnail: Patronus,
   },
 ];
 
 export {
   words,
+  also,
   nameData,
   projects,
   contrib,
