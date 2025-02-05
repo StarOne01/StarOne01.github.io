@@ -1,7 +1,6 @@
 "use client";
 
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
-import { Home01Icon } from "hugeicons-react";
 import React from "react";
 import Image from "next/image";
 import { Parkinsans } from "next/font/google";
