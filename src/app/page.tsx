@@ -1,6 +1,7 @@
 "use client";
 
 import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
+import { Home01Icon } from "hugeicons-react";
 import React from "react";
 import Image from "next/image";
 import { Parkinsans } from "next/font/google";
@@ -81,13 +82,13 @@ function Nav() {
         <div className={`hidden lg:flex  lg:gap-x-12 ${parkin.className}`}>
           <a
             href="#Whoami"
-            className="font-semibold text-lg leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+            className="font-semibold text-md m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Whoami
           </a>
           <a
             href="#Skills"
-            className="text-lg font-semibold leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+            className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Skills
           </a>
@@ -99,17 +100,17 @@ function Nav() {
           </a> */}
           <a
             href="prashanth-resume.pdf"
-            className="text-lg font-semibold leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+            className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Resume
           </a>
           <a
             href="#interests"
-            className="text-lg font-semibold leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+            className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
           >
             Interests
           </a>
-          <a href="#love" className="text-lg font-semibold leading-6 my-2 py-1 px-2 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200">
+          <a href="#love" className="text-md m-1 p-1 font-semibold leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200">
             Things I love
           </a>
         </div>
@@ -117,8 +118,8 @@ function Nav() {
           <a href="mailto:thestarone01@proton.me">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="10"
-              height="10"
+              width="4"
+              height="4"
               viewBox="-1 0 25 25"
               className="icon dark:fill-white dark:hover:fill-black -py-1 rounded hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block mx-1"
             >
@@ -128,8 +129,8 @@ function Nav() {
           <a href="https://www.linkedin.com/in/StarOne/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="10"
-              height="10"
+              width="4"
+              height="4"
               viewBox="0 0 24 24"
               className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block mx-1 rounded-md"
             >
@@ -139,8 +140,8 @@ function Nav() {
           <a href="https://github.com/StarOne01">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="10"
-              height="10"
+              width="4"
+              height="4"
               viewBox="0 0 24 24"
               className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block mx-1 rounded-3xl"
             >
@@ -432,7 +433,7 @@ function Skills() {
         <div>
           <h3
             className={
-              "text-xl underline md:text-2xl decoration-slate-500 " +
+              "text-xl underline text-center md:text-2xl decoration-slate-500 " +
               parkin.className
             }
           >
