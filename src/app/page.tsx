@@ -432,7 +432,7 @@ function Skills() {
         <div>
           <h3
             className={
-              "text-xl underline text-center md:text-2xl decoration-slate-500 " +
+              "text-xl underline md:text-2xl decoration-slate-500 " +
               parkin.className
             }
           >
