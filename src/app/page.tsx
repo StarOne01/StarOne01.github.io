@@ -582,7 +582,8 @@ export default function Home() {
         <Skills />
         <ThingsIlove />
         <FavProjs />
-        <Contribs />
+{ //       <Contribs />
+}
       </div>
     </>
   );
