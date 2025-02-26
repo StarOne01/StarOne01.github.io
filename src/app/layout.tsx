@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Parkinsans } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/ui/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
   title: "Prashanth",
   description: "Prashanth's Portfolio",
 };
+
+const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
+
 
 export default function RootLayout({
   children,
@@ -19,7 +23,9 @@ export default function RootLayout({
       <head>
       <meta name="google-site-verification" content="M6nxCCzJ_3vuz-HM6P0E9M_uDE5wv1IgOT72IqJ5mGY" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={parkin.className}>
+        <Nav />
+        {children}</body>
     </html>
   );
 }

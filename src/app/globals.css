@@ -5,7 +5,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 244, 249, 250;
   --background-end-rgb: 255, 255, 255;
   :has(.no-doc-scroll){
     overflow: hidden;
@@ -21,11 +21,7 @@
 }
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: 
     rgb(var(--background-start-rgb));
 
     scroll-behavior: smooth;

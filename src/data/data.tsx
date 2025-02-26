@@ -11,7 +11,8 @@ import Floris_Logo from "../../public/florish.png";
 import Signal_Logo from "../../public/Signal-Logo.png";
 import Graphene_Logo from "../../public/graphene.webp";
 import Aurora from "../../public/aurora.webp";
-import { desc } from "framer-motion/client";
+import Brave_logo from "../../public/brave.png";
+
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
 const words = [
@@ -107,10 +108,16 @@ const projects = [
           link: "https://signal.org/",
           description:
             "Signal is a free and open-source messaging app that prioritizes privacy and security, providing end-to-end encryption for all communications."
+        },
+        {
+          name: "Brave",
+          logo: Brave_logo,
+          link: "https://brave.com/",
+          description:
+            "Brave is a privacy-focused web browser that blocks ads and trackers, providing a faster and more secure browsing experience."
         }
     ],
   },
-  
 ];
 
 const contrib = [
