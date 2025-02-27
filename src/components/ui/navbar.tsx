@@ -182,14 +182,14 @@ function Nav() {
                   }
                 >
                   <Link
-                    href="#Whoami"
+                    href="/#Whoami"
                     onClick={invMenu}
                     className="-mx-3 block rounded-lg px-3 py-2  text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                   >
                     Whoami
                   </Link>
                   <Link
-                    href="#Skills"
+                    href="/#Skills"
                     onClick={invMenu}
                     className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                   >
@@ -212,14 +212,14 @@ function Nav() {
                     Fav Projects
                   </Link>
                   <Link
-                    href="prashanth-resume.pdf"
+                    href="/prashanth-resume.pdf"
                     onClick={invMenu}
                     className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                   >
                     Resume
                   </Link>
                   <Link
-                    href="#love"
+                    href="/#love"
                     onClick={invMenu}
                     className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
                   >
