@@ -29,14 +29,6 @@ function ThingsIlove() {
           iLove
         </span>
       </h2>
-      
-      <div className="mb-8 mt-4 max-w-2xl">
-        <p className="text-lg">
-          Beyond code and circuits, I'm passionate about things that inspire wonder and creativity.
-          Here are some of the interests that fuel my imagination and perspective.
-        </p>
-      </div>
-      
       <ThingsiLove cards={cards} />
     </div>
   );
