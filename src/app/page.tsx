@@ -79,27 +79,27 @@ function Whoami() {
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-1">
           <div className="p-4 border border-slate-300 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-800">
-            <h3 className="text-xl font-semibold mb-4">At a Glance</h3>
+            <h3 className="text-xl font-semibold mb-4">TL;DR</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <span className="inline-flex items-center justify-center w-8 h-8 mr-2 bg-cyan-100 dark:bg-yellow-900/30 rounded-full text-cyan-600 dark:text-yellow-300">💻</span>
-                Full Stack Developer
+                Dual-degree EE/ECE student
               </li>
               <li className="flex items-center">
                 <span className="inline-flex items-center justify-center w-8 h-8 mr-2 bg-cyan-100 dark:bg-yellow-900/30 rounded-full text-cyan-600 dark:text-yellow-300">🔓</span>
-                FOSS Enthusiast
+                Passionate about cybersecurity
+              </li>
+              <li className="flex items-center">
+                <span className="inline-flex items-center justify-center w-8 h-8 mr-2 bg-cyan-100 dark:bg-yellow-900/30 rounded-full text-cyan-600 dark:text-yellow-300">🔧</span>
+                C/C++ System Developer
               </li>
               <li className="flex items-center">
                 <span className="inline-flex items-center justify-center w-8 h-8 mr-2 bg-cyan-100 dark:bg-yellow-900/30 rounded-full text-cyan-600 dark:text-yellow-300">✨</span>
-                Astrophile
+                Astrophile & Open-Source Advocate
               </li>
               <li className="flex items-center">
                 <span className="inline-flex items-center justify-center w-8 h-8 mr-2 bg-cyan-100 dark:bg-yellow-900/30 rounded-full text-cyan-600 dark:text-yellow-300">🎵</span>
                 Melophile
-              </li>
-              <li className="flex items-center">
-                <span className="inline-flex items-center justify-center w-8 h-8 mr-2 bg-cyan-100 dark:bg-yellow-900/30 rounded-full text-cyan-600 dark:text-yellow-300">🔒</span>
-                Cyber Security Advocate
               </li>
             </ul>
           </div>
@@ -108,25 +108,74 @@ function Whoami() {
         <div className="md:col-span-2">
           <div className="prose dark:prose-invert max-w-none">
             <p className="mb-4">
-              Welcome to my digital realm, where I bring code to life in extraordinary ways. I'm a{" "}
+              Welcome to my digital realm! I'm a{" "}
               <span className="font-bold dark:text-yellow-300 text-cyan-600">
-                system developer, skilled in C, C++
+                dual-degree EE/ECE student
               </span>{" "}
-              – the building blocks of software magic.
+              with a fervent passion for cybersecurity, system-level software, and electronics.
             </p>
             
+            <div className="mb-6 relative">
+              <h4 className="text-lg font-semibold mb-4">My Journey:</h4>
+              
+              <div className="relative">
+                {/* Journey Path Line */}
+                <div className="absolute left-6 top-2 bottom-2 w-1 bg-gradient-to-b from-cyan-400 via-purple-500 to-yellow-400 dark:from-yellow-300 dark:via-amber-500 dark:to-cyan-400"></div>
+                
+                {/* Journey Points */}
+                <div className="space-y-12">
+                  {/* 2018 */}
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-100 dark:bg-yellow-900/30 border-4 border-cyan-400 dark:border-yellow-300 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-cyan-600 dark:text-yellow-300 font-bold">2018</span>
+                    </div>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-cyan-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-cyan-600 dark:text-yellow-300">The Linux Awakening</h5>
+                      <p>Embarked on the Linux journey, igniting a deep-seated curiosity for open-source ecosystems and command-line wizardry.</p>
+                    </div>
+                  </div>
+                  
+                  {/* 2020 */}
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 dark:bg-amber-900/30 border-4 border-purple-400 dark:border-amber-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-purple-600 dark:text-amber-300 font-bold">2020</span>
+                    </div>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-purple-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-purple-600 dark:text-amber-300">The Encryption Breakthrough</h5>
+                      <p>Delved into C programming, successfully decrypting my first wireless encryption—a pivotal moment that unlocked my passion for cybersecurity.</p>
+                    </div>
+                  </div>
+                  
+                  {/* 2022 */}
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 dark:bg-orange-900/30 border-4 border-indigo-400 dark:border-orange-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-indigo-600 dark:text-orange-300 font-bold">2022</span>
+                    </div>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-indigo-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-indigo-600 dark:text-orange-300">The Full-Stack Milestone</h5>
+                      <p>Engineered my inaugural full-stack application and made meaningful contributions to open-source communities, finding my voice in the digital commons.</p>
+                    </div>
+                  </div>
+                  
+                  {/* 2025 */}
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-100 dark:bg-cyan-900/30 border-4 border-yellow-400 dark:border-cyan-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-yellow-600 dark:text-cyan-300 font-bold">2025</span>
+                    </div>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-yellow-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-yellow-600 dark:text-cyan-300">The Horizon Beckons</h5>
+                      <p>Aspiring to participate in <strong>Google Summer of Code (GSoC)</strong>, currently developing a health startup, and perpetually captivated by the mysteries of the universe.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <p className="mb-4">
-              My journey takes me deep into the heart of machines, crafting their very souls and making them hum with
-              electronic vitality. I'm also a{" "}
+              As a{" "}
               <span className="font-bold dark:text-yellow-300 text-cyan-600">
-                aspiring dual-faceted engineer
-              </span>, both Electric and Electronic.
-            </p>
-            
-            <p className="mb-4">
-              <strong>Electronic engineering</strong> supports my interests in computers and electronic systems,
-              while my passion for <strong>Electric engineering</strong> quenches my thirst for
-              understanding the beauty of physics and electromagnetism.
+                system developer proficient in C/C++
+              </span>, I'm dedicated to crafting elegant code and developing secure, scalable systems. My journey takes me deep into the heart of machines, where I breathe electronic vitality into code.
             </p>
             
             <blockquote className="italic border-l-4 border-cyan-500 dark:border-yellow-300 pl-4 my-4">
@@ -134,21 +183,13 @@ function Whoami() {
               As an electrical engineer, I play with hundreds of volts and craft high-power appliances.
             </blockquote>
             
+            <h4 className="text-lg font-semibold mb-2">Beyond the Code:</h4>
             <p className="mb-4">
-              But that's not all –{" "}
-              <span className="font-bold dark:text-yellow-300 text-cyan-600">
-                I'm also a cybersecurity enthusiast
-              </span>, unearthing hidden truths across various realms.
-              From the vast expanse of astronomy to the intricate dance of wireless
-              networks, and from captivating graphics to the core of bare-metal
-              transistors, I love unveiling secrets and seeing what lies beneath the
-              surface.
+              When I'm not immersed in debugging kernel drivers or gazing at the stars, you'll find me delving into science fiction literature. I'm endlessly fascinated by how simple electrons can give rise to consciousness and the intricate code that powers our world.
             </p>
             
             <p>
-              Come, join me on this adventure where science fiction meets reality. Let's
-              explore uncharted code, push the boundaries of what's possible, and dive
-              into the very heart of technology and the mysteries of the electronic world.
+              I'm an enthusiastic advocate for open-source projects and deep tech innovations, always exploring uncharted code and pushing the boundaries of what's possible in technology.
             </p>
           </div>
         </div>
