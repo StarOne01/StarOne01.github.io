@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { LayoutGrid, Card } from "@/components/ui/layout-grid";
 import { Parkinsans } from "next/font/google";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
@@ -28,26 +28,26 @@ function blur() {
 
 function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   function invMenu() {
-    setMobileMenuOpen(mobileMenuOpen ? false : true);
+    setMobileMenuOpen(!mobileMenuOpen);
   }
-
-  
 
   return (
     <header
       className={
-        " text-black dark:text-white bg-black " + mobileMenuOpen
-          ? "fixed bottom-5  w-full z-[50]"
-          : "fixed bottom-5  w-full -z-50 "
+        "text-black dark:text-white bg-black " + mobileMenuOpen
+          ? "fixed bottom-5 w-full z-[50]"
+          : "fixed bottom-5 w-full -z-50"
       }
     >
       <nav
         className={
           mobileMenuOpen
-            ? " flex lg:max-w-5xl no-doc-scroll dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)]  md:max-w-xl z-[59] border sm:mx-auto max-w-sm mx-6  rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8"
-            : " flex lg:max-w-5xl md:max-w-xl -z-50 sm:mx-auto max-w-xs mx-auto  bg-[rgba(255,255,255,0.4)] dark:bg-[rgb(0,0,0)] dark:border dark:border-yellow-500 dark:shadow-inner dark:shadow-yellow-300  rounded-full items-center justify-between  backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8"
+            ? "flex lg:max-w-5xl no-doc-scroll dark:bg-[rgba(0,0,0,0.53)] bg-[rgba(255,255,255,0.4)] z-[59] border sm:mx-auto max-w-sm mx-6 rounded-full items-center justify-between px-6 lg:py-2 py-3 lg:px-8"
+            : "flex lg:max-w-5xl md:max-w-xl -z-50 sm:mx-auto max-w-xs mx-auto bg-[rgba(255,255,255,0.4)] dark:bg-[rgb(0,0,0)] dark:border dark:border-yellow-500 dark:shadow-inner dark:shadow-yellow-300 rounded-full items-center justify-between backdrop-blur-md px-6 lg:py-2 py-3 lg:px-8"
         }
         aria-label="Global"
       >
@@ -58,15 +58,17 @@ function Nav() {
               : "flex secret lg:flex-1 -z-50"
           }
         >
-          <p
-            onPointerOver={() => unBlur()}
-            onPointerLeave={() => blur()}
-            className={
-              " sm:font-bold cursor-pointer font-semibold " + parkin.className
-            }
-          >
-            <span>StarOne</span>
-          </p>
+          <Link href="/">
+            <p
+              onPointerOver={() => unBlur()}
+              onPointerLeave={() => blur()}
+              className={
+                "sm:font-bold cursor-pointer font-semibold " + parkin.className
+              }
+            >
+              <span>StarOne</span>
+            </p>
+          </Link>
         </div>
         <div className="flex lg:hidden z-[45]">
           <button
@@ -89,46 +91,56 @@ function Nav() {
             )}
           </button>
         </div>
-        <div className={`hidden lg:flex  lg:gap-x-12 ${parkin.className}`}>
-          <Link
-            href="/#Whoami"
-            className="font-semibold text-md m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-          >
-            Whoami
-          </Link>
-          <Link
-            href="/#Skills"
-            className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-          >
-            Skills
-          </Link>
-          {/* <Link
-              href="https://github.com/StarOne01"
-              className="text-lg font-semibold leading-6  dark:text-white p-2 rounded-md text-gray-900"
+        <div className={`hidden lg:flex lg:gap-x-12 ${parkin.className}`}>
+          {isHomePage ? (
+            <>
+              <a
+                href="#Whoami"
+                className="font-semibold text-md m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+              >
+                Whoami
+              </a>
+              <a
+                href="#Skills"
+                className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+              >
+                Skills
+              </a>
+              <a
+                href="/prashanth-resume.pdf"
+                className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
+              <Link
+                href="/projects"
+                className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+              >
+                Projects
+              </Link>
+              <a
+                href="#love"
+                className="text-md m-1 p-1 font-semibold leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+              >
+                Things I Love
+              </a>
+              <a
+                href="#contact"
+                className="text-md m-1 p-1 font-semibold leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+              >
+                Contact
+              </a>
+            </>
+          ) : (
+            <Link
+              href="/"
+              className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
             >
-              Projects
-            </Link> */}
-          <Link
-            href="/prashanth-resume.pdf"
-            className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-          >
-            Resume
-          </Link>
-
-          <Link
-          href={{
-            pathname: '/projects',
-          }}
-            className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-          >
-            Fav Projects
-          </Link>
-          <Link
-            href="/#love"
-            className="text-md m-1 p-1 font-semibold leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-          >
-            Things I love
-          </Link>
+              Back to Home
+            </Link>
+          )}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link href="mailto:thestarone01@proton.me">
@@ -177,64 +189,75 @@ function Nav() {
               <div className="-my-6 center z-1 divide-gray-500/10">
                 <div
                   className={
-                    "space-y-2  text-center align-middle py-6 " +
+                    "space-y-2 text-center align-middle py-6 " +
                     parkin.className
                   }
                 >
-                  <Link
-                    href="/#Whoami"
-                    onClick={invMenu}
-                    className="-mx-3 block rounded-lg px-3 py-2  text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                  >
-                    Whoami
-                  </Link>
-                  <Link
-                    href="/#Skills"
-                    onClick={invMenu}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                  >
-                    Skills
-                  </Link>
-                  {/* <Link
-                    href="https://github.com/StarOne01"
-                    onClick={invMenu}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7   text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                  >
-                    Projects
-                  </Link> */}
-                  <Link
-                    href={{
-                      pathname: "/projects",
-                    }}
-                    onClick={invMenu}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                  >
-                    Fav Projects
-                  </Link>
-                  <Link
-                    href="/prashanth-resume.pdf"
-                    onClick={invMenu}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                  >
-                    Resume
-                  </Link>
-                  <Link
-                    href="/#love"
-                    onClick={invMenu}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7  text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                  >
-                    Things I love
-                  </Link>
+                  {isHomePage ? (
+                    <>
+                      <a
+                        href="#Whoami"
+                        onClick={invMenu}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                      >
+                        Whoami
+                      </a>
+                      <a
+                        href="#Skills"
+                        onClick={invMenu}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                      >
+                        Skills
+                      </a>
+                      <Link
+                        href="/projects"
+                        onClick={invMenu}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                      >
+                        Projects
+                      </Link>
+                      <a
+                        href="/prashanth-resume.pdf"
+                        onClick={invMenu}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Resume
+                      </a>
+                      <a
+                        href="#love"
+                        onClick={invMenu}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                      >
+                        Things I Love
+                      </a>
+                      <a
+                        href="#contact"
+                        onClick={invMenu}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                      >
+                        Contact
+                      </a>
+                    </>
+                  ) : (
+                    <Link
+                      href="/"
+                      onClick={invMenu}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
+                    >
+                      Back to Home
+                    </Link>
+                  )}
                 </div>
                 <div className="py-6 flex justify-evenly">
-                  {/*href="#" onClick={invMenu*/}
                   <Link href="mailto:thestarone01@proton.me">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="35"
                       height="35"
                       viewBox="0 0 24 24"
-                      className="icon dark:fill-white dark:hover:fill-black  hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-sm"
+                      className="icon dark:fill-white dark:hover:fill-black hover:fill-white hover:bg-black dark:hover:bg-yellow-200 inline-block m-1 rounded-sm"
                     >
                       <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path>
                     </svg>
