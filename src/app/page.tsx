@@ -124,7 +124,7 @@ function Whoami() {
 
 function Skills() {
   return (
-    <div id="Skills" className="mt-7  ">
+    <div id="Skills" className="mt-20">
       <h2
         className={
           "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
@@ -132,73 +132,77 @@ function Skills() {
         }
       >
         Skills
+        <span className="dark:text-yellow-300 py-4 text-cyan-500 font-light">
+          &Expertise
+        </span>
       </h2>
-      <br />
-
-      <div className=" ">
-        <div>
+      
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="p-4 border border-slate-300 dark:border-slate-700 rounded-lg hover:shadow-lg transition-all">
           <h3
             className={
-              "text-xl underline md:text-2xl decoration-slate-500 " +
+              "text-xl md:text-2xl mb-4 " +
               parkin.className
             }
           >
-            <span className=" text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
+            <span className="text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
             Hacking
           </h3>
-          <ul className="m-7  ml-5">
-            <li>Computer Networks</li>
-            <li>GNU/Linux - POSIX</li>
-            <li>Python + Bash</li>
-            <li>WireShark</li>
-            <li>Nmap</li>
-            <li>HashCat</li>
-            <li>Jhonny</li>
-            <li>Aircrack-ng</li>
-            <li>Burpsuit</li>
+          <ul className="space-y-2 ml-5">
+            <li className="flex items-center"><span className="mr-2">🔍</span>Computer Networks</li>
+            <li className="flex items-center"><span className="mr-2">🐧</span>GNU/Linux - POSIX</li>
+            <li className="flex items-center"><span className="mr-2">🐍</span>Python + Bash</li>
+            <li className="flex items-center"><span className="mr-2">🦈</span>WireShark</li>
+            <li className="flex items-center"><span className="mr-2">🔭</span>Nmap</li>
+            <li className="flex items-center"><span className="mr-2">🔑</span>HashCat</li>
+            <li className="flex items-center"><span className="mr-2">🔓</span>Jhonny</li>
+            <li className="flex items-center"><span className="mr-2">📡</span>Aircrack-ng</li>
+            <li className="flex items-center"><span className="mr-2">🕸️</span>Burpsuit</li>
           </ul>
         </div>
-        <div>
+        
+        <div className="p-4 border border-slate-300 dark:border-slate-700 rounded-lg hover:shadow-lg transition-all">
           <h3
             className={
-              "text-xl underline md:text-2xl decoration-slate-500 " +
+              "text-xl md:text-2xl mb-4 " +
               parkin.className
             }
           >
-            <span className=" text-cyan-400 dark:text-yellow-300">Web</span>{" "}
+            <span className="text-cyan-400 dark:text-yellow-300">Web</span>{" "}
             Development
           </h3>
-          <ul className="m-7 ml-5">
-            <li>JavaScript/TypeScript</li>
-            <li>Next.js</li>
-            <li>Node.js</li>
-            <li>React.js </li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
+          <ul className="space-y-2 ml-5">
+            <li className="flex items-center"><span className="mr-2">⚡</span>JavaScript/TypeScript</li>
+            <li className="flex items-center"><span className="mr-2">➡️</span>Next.js</li>
+            <li className="flex items-center"><span className="mr-2">🟢</span>Node.js</li>
+            <li className="flex items-center"><span className="mr-2">⚛️</span>React.js</li>
+            <li className="flex items-center"><span className="mr-2">🚂</span>Express.js</li>
+            <li className="flex items-center"><span className="mr-2">🍃</span>MongoDB</li>
           </ul>
         </div>
       </div>
-      <div>
+      
+      <div className="mt-8 p-4 border border-slate-300 dark:border-slate-700 rounded-lg hover:shadow-lg transition-all">
         <h3
           id="interests"
           className={
-            "text-xl underline md:text-2xl decoration-slate-500  " +
+            "text-xl md:text-2xl mb-4 " +
             parkin.className
           }
         >
           Also
-          <span className=" text-cyan-400 dark:text-yellow-300">
+          <span className="text-cyan-400 dark:text-yellow-300">
             {" "}
             Interested
           </span>{" "}
           in
         </h3>
-        <ul className="m-7 ml-5">
-          <li>Software Development</li>
-          <li>Embedded Systems</li>
-          <li>Digital and Analog Electronics</li>
-          <li>Machine Learning</li>
-          <li>Mathematics</li>
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 ml-5">
+          <li className="flex items-center"><span className="mr-2">💻</span>Software Development</li>
+          <li className="flex items-center"><span className="mr-2">🔌</span>Embedded Systems</li>
+          <li className="flex items-center"><span className="mr-2">⚡</span>Digital and Analog Electronics</li>
+          <li className="flex items-center"><span className="mr-2">🧠</span>Machine Learning</li>
+          <li className="flex items-center"><span className="mr-2">🔢</span>Mathematics</li>
         </ul>
       </div>
     </div>
