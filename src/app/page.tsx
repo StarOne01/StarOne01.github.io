@@ -83,7 +83,7 @@ function Whoami() {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <span className="inline-flex items-center justify-center w-8 h-8 mr-2 bg-cyan-100 dark:bg-yellow-900/30 rounded-full text-cyan-600 dark:text-yellow-300">💻</span>
-                Dual-degree EE/ECE student
+                Electrical student
               </li>
               <li className="flex items-center">
                 <span className="inline-flex items-center justify-center w-8 h-8 mr-2 bg-cyan-100 dark:bg-yellow-900/30 rounded-full text-cyan-600 dark:text-yellow-300">🔓</span>
@@ -502,7 +502,7 @@ function Contact() {
               </div>
               <div>
                 <p className="font-medium">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/StarOne/" target="_blank" rel="noopener noreferrer" className="text-cyan-500 dark:text-yellow-300 hover:underline">Connect on LinkedIn</a>
+                <a href="https://www.linkedin.com/in/StarOne01/" target="_blank" rel="noopener noreferrer" className="text-cyan-500 dark:text-yellow-300 hover:underline">Connect on LinkedIn</a>
               </div>
             </div>
             
