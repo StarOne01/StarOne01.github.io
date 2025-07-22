@@ -116,7 +116,7 @@ function Whoami() {
             </p>
             
             <div className="mb-6 relative">
-              <h4 className="text-lg font-semibold mb-4">My Journey:</h4>
+              <h4 className="text-lg font-semibold mb-4">Professional Timeline:</h4>
               
               <div className="relative">
                 {/* Journey Path Line */}
@@ -135,8 +135,8 @@ function Whoami() {
                         "The world started making sense in circuits, logic gates, and cosmic questions."
                       </blockquote>
                       <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
-                        <li>Got obsessed with how computers really work—from silicon to screen.</li>
-                        <li>Spent days exploring the overlap between physics, tech, and human behavior.</li>
+                        <li>Developed fascination with computer architecture—from silicon to software interfaces</li>
+                        <li>Explored the intersection of theoretical physics, computational systems, and human-computer interaction</li>
                       </ul>
                     </div>
                   </div>
@@ -152,9 +152,9 @@ function Whoami() {
                         "The terminal became my playground."
                       </blockquote>
                       <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
-                        <li>Wrote first programs in C and C++, learning memory management and pointers.</li>
-                        <li>Started questioning every abstraction: "Why OS? What is a syscall?"</li>
-                        <li>Created basic shell scripts and batch scripts for automation.</li>
+                        <li>Mastered C/C++ fundamentals, with particular focus on memory management principles</li>
+                        <li>Analyzed operating system architecture and system call interfaces</li>
+                        <li>Developed automation scripts for repetitive tasks and system maintenance</li>
                       </ul>
                     </div>
                   </div>
@@ -269,22 +269,22 @@ function Whoami() {
             <p className="mb-4">
               As a{" "}
               <span className="font-bold dark:text-yellow-300 text-cyan-600">
-                system developer proficient in C/C++
-              </span>, I'm dedicated to crafting elegant code and developing secure, scalable systems. My journey takes me deep into the heart of machines, where I breathe electronic vitality into code.
+                systems developer proficient in C/C++
+              </span>, I'm committed to designing elegant architectures and implementing secure, scalable solutions. My expertise bridges hardware and software domains, enabling me to develop optimized systems from the ground up.
             </p>
             
             <blockquote className="italic border-l-4 border-cyan-500 dark:border-yellow-300 pl-4 my-4">
-              As an electronic engineer, I create powerful things with mere milliamps.
-              As an electrical engineer, I play with hundreds of volts and craft high-power appliances.
+              As an electronic engineer, I harness the power of precision signals and embedded systems.
+              As an electrical engineer, I design high-power infrastructure and energy-efficient solutions.
             </blockquote>
             
             <h4 className="text-lg font-semibold mb-2">Beyond the Code:</h4>
             <p className="mb-4">
-              When I'm not immersed in Optimizing Backend algorithmns or gazing at the stars, you'll find me delving into science fiction literature. I'm endlessly fascinated by how simple electrons can give rise to consciousness and the intricate code that powers our world.
+              When I'm not optimizing algorithms or contemplating the cosmos, you'll find me exploring speculative fiction and theoretical physics. I'm perpetually fascinated by how quantum phenomena and computational systems converge to create the technological landscape we navigate.
             </p>
             
             <p>
-              I'm an enthusiastic advocate for open-source projects and deep tech innovations, always exploring uncharted code and pushing the boundaries of what's possible in technology.
+              I champion open-source development and breakthrough technologies, constantly seeking to expand the boundaries of what's possible in computing, security, and digital infrastructure.
             </p>
           </div>
         </div>
@@ -299,13 +299,100 @@ function Whoami() {
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
           </svg>
-          Explore My Skills
+          Discover My Technical Expertise
         </a>
       </div>
     </div>
   );
 }
 
+function Professional() {
+  return (
+    <div id="professional" className="mt-20 mb-10">
+      <h2
+        className={
+          "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
+          parkin.className
+        }
+      >
+        Current
+        <span className="dark:text-yellow-300 py-4 text-cyan-500 font-light">
+          Role
+        </span>
+      </h2>
+      
+      <div className="mt-8 p-6 border border-slate-300 dark:border-slate-700 rounded-lg bg-gradient-to-r from-slate-50 to-cyan-50/30 dark:from-slate-800 dark:to-slate-800/80 hover:shadow-lg transition-all">
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0">
+            <div className="bg-white dark:bg-slate-900 p-5 rounded-lg shadow-md border border-slate-200 dark:border-slate-700">
+              <h3 className="text-xl font-bold text-cyan-600 dark:text-yellow-300 mb-2">
+                Co-founder & CTO
+              </h3>
+              <h4 className="text-lg font-medium mb-4">Auxacode Solutions</h4>
+              <div className="flex items-center text-sm text-slate-600 dark:text-slate-400 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Full Stack Development
+              </div>
+              <div className="flex items-center text-sm text-slate-600 dark:text-slate-400 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                Cybersecurity
+              </div>
+              <div className="flex items-center text-sm text-slate-600 dark:text-slate-400">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                Technical Leadership
+              </div>
+            </div>
+          </div>
+          
+          <div className="w-full md:w-2/3">
+            <h3 className="text-xl font-semibold mb-3">Building Innovative Solutions</h3>
+            <p className="mb-4">
+              As the co-founder and CTO of <span className="font-semibold text-cyan-600 dark:text-yellow-300">Auxacode Solutions</span>, I lead our technical strategy and oversee the development of scalable, secure applications for businesses and organizations.
+            </p>
+            <p className="mb-4">
+              My expertise in full stack development and passion for cybersecurity has helped us build robust solutions that prioritize both functionality and security, providing our clients with reliable systems that protect their sensitive data.
+            </p>
+            
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-sm">
+                <div className="text-xs uppercase text-slate-500 dark:text-slate-400 mb-1">Focus Area</div>
+                <div className="font-medium">Web Applications</div>
+              </div>
+              <div className="p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-sm">
+                <div className="text-xs uppercase text-slate-500 dark:text-slate-400 mb-1">Focus Area</div>
+                <div className="font-medium">API Development</div>
+              </div>
+              <div className="p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-sm">
+                <div className="text-xs uppercase text-slate-500 dark:text-slate-400 mb-1">Focus Area</div>
+                <div className="font-medium">Secure Architecture</div>
+              </div>
+            </div>
+            
+            <div className="mt-6">
+              <a 
+                href="https://auxacode.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center px-4 py-2 bg-cyan-500 dark:bg-yellow-500 text-white dark:text-black font-medium rounded-md hover:bg-cyan-600 dark:hover:bg-yellow-600 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Visit Auxacode Solutions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function Skills() {
   return (
@@ -316,9 +403,9 @@ function Skills() {
           parkin.className
         }
       >
-        Skills
+        Technical
         <span className="dark:text-yellow-300 py-4 text-cyan-500 font-light">
-          &Expertise
+          Proficiencies
         </span>
       </h2>
       
@@ -547,12 +634,11 @@ function Skills() {
             parkin.className
           }
         >
-          Also
+          Research
           <span className="text-cyan-400 dark:text-yellow-300">
             {" "}
-            Interested
-          </span>{" "}
-          in
+            Interests
+          </span>
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {["Software Development", "Embedded Systems", "Digital & Analog Electronics", 
@@ -577,16 +663,16 @@ function Contact() {
           parkin.className
         }
       >
-        Get in
+        Connect
         <span className="dark:text-yellow-300 py-4 text-cyan-500 font-light">
-          Touch
+          WithMe
         </span>
       </h2>
       
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <p className="text-lg mb-6">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out using your preferred method below.
+            I welcome discussions on innovative projects, technical collaborations, and opportunities to contribute to meaningful solutions. Reach out through any of the channels below.
           </p>
           
           <div className="space-y-4">
@@ -712,6 +798,7 @@ export default function Home() {
       <div className={"m-7 md:max-w-[900px] lg:mx-auto md:mx-16 mx-6 text-base " + parkin.className}>
         <Whoami />
         <br />
+        <Professional />
         <Skills />
         <ThingsIlove />
         <Contact />
@@ -721,3 +808,4 @@ export default function Home() {
     </>
   );
 }
+
