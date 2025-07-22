@@ -358,22 +358,9 @@ function Professional() {
             <p className="mb-4">
               My expertise in full stack development and passion for cybersecurity has helped us build robust solutions that prioritize both functionality and security, providing our clients with reliable systems that protect their sensitive data.
             </p>
-            
-            <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-3">
-              <div className="p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-sm">
-                <div className="text-xs uppercase text-slate-500 dark:text-slate-400 mb-1">Focus Area</div>
-                <div className="font-medium">Web Applications</div>
-              </div>
-              <div className="p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-sm">
-                <div className="text-xs uppercase text-slate-500 dark:text-slate-400 mb-1">Focus Area</div>
-                <div className="font-medium">API Development</div>
-              </div>
-              <div className="p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md shadow-sm">
-                <div className="text-xs uppercase text-slate-500 dark:text-slate-400 mb-1">Focus Area</div>
-                <div className="font-medium">Secure Architecture</div>
-              </div>
-            </div>
-            
+            <p className="mb-4">
+              I am committed to fostering a culture of innovation and collaboration within our team, ensuring that we stay at the forefront of technology trends while delivering exceptional value to our clients.
+            </p>
             <div className="mt-6">
               <a 
                 href="https://auxacode.com" 
