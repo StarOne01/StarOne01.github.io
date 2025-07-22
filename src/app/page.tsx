@@ -116,7 +116,7 @@ function Whoami() {
             </p>
             
             <div className="mb-6 relative">
-              <h4 className="text-lg font-semibold mb-4">Professional Timeline:</h4>
+              <h4 className="text-lg font-semibold mb-4">My Journey:</h4>
               
               <div className="relative">
                 {/* Journey Path Line */}
@@ -331,7 +331,7 @@ function Professional() {
               <h4 className="text-lg font-medium mb-4">Auxacode Solutions</h4>
               <div className="flex items-center text-sm text-slate-600 dark:text-slate-400 mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
                 Full Stack Development
               </div>
@@ -358,20 +358,76 @@ function Professional() {
             <p className="mb-4">
               My expertise in full stack development and passion for cybersecurity has helped us build robust solutions that prioritize both functionality and security, providing our clients with reliable systems that protect their sensitive data.
             </p>
+            
+            <div className="mt-6 mb-6 bg-gradient-to-r from-slate-900/10 to-cyan-900/10 dark:from-slate-800 dark:to-yellow-900/20 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+              <h4 className="font-medium mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-cyan-500 dark:text-yellow-300" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+                Key Achievements
+              </h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex">
+                  <span className="text-cyan-500 dark:text-yellow-300 mr-2">◆</span>
+                  Led the development of a secure client portal with end-to-end encryption that improved data privacy compliance by 40%
+                </li>
+                <li className="flex">
+                  <span className="text-cyan-500 dark:text-yellow-300 mr-2">◆</span>
+                  Architected scalable microservices infrastructure handling 300+ concurrent users with 99.9% uptime
+                </li>
+                <li className="flex">
+                  <span className="text-cyan-500 dark:text-yellow-300 mr-2">◆</span>
+                  Implemented comprehensive security protocols that prevented vulnerabilities during third-party penetration testing
+                </li>
+              </ul>
+            </div>
+            
+            <div className="mb-6">
+              <h4 className="font-medium mb-2 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-cyan-500 dark:text-yellow-300" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+                Technology Stack
+              </h4>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="px-3 py-1 text-xs rounded-full bg-cyan-100 dark:bg-yellow-900/30 text-cyan-700 dark:text-yellow-300 border border-cyan-200 dark:border-yellow-800">React</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-cyan-100 dark:bg-yellow-900/30 text-cyan-700 dark:text-yellow-300 border border-cyan-200 dark:border-yellow-800">Node.js</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-cyan-100 dark:bg-yellow-900/30 text-cyan-700 dark:text-yellow-300 border border-cyan-200 dark:border-yellow-800">TypeScript</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-cyan-100 dark:bg-yellow-900/30 text-cyan-700 dark:text-yellow-300 border border-cyan-200 dark:border-yellow-800">MongoDB</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-cyan-100 dark:bg-yellow-900/30 text-cyan-700 dark:text-yellow-300 border border-cyan-200 dark:border-yellow-800">AWS</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-cyan-100 dark:bg-yellow-900/30 text-cyan-700 dark:text-yellow-300 border border-cyan-200 dark:border-yellow-800">OWASP</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-cyan-100 dark:bg-yellow-900/30 text-cyan-700 dark:text-yellow-300 border border-cyan-200 dark:border-yellow-800">CI/CD</span>
+              </div>
+            </div>
+            
+           
+            
             <p className="mb-4">
               I am committed to fostering a culture of innovation and collaboration within our team, ensuring that we stay at the forefront of technology trends while delivering exceptional value to our clients.
             </p>
-            <div className="mt-6">
+            
+            <div className="mt-6 flex flex-wrap gap-4">
               <a 
                 href="https://auxacode.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center px-4 py-2 bg-cyan-500 dark:bg-yellow-500 text-white dark:text-black font-medium rounded-md hover:bg-cyan-600 dark:hover:bg-yellow-600 transition-colors"
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-600 dark:from-yellow-500 dark:to-amber-500 text-white dark:text-black font-medium rounded-md hover:from-cyan-600 hover:to-cyan-700 dark:hover:from-yellow-600 dark:hover:to-amber-600 transition-all shadow-sm"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
                 Visit Auxacode Solutions
+              </a>
+              
+              <a 
+                href="#contact" 
+                className="inline-flex items-center px-4 py-2 border border-cyan-500 dark:border-yellow-500 text-cyan-600 dark:text-yellow-300 font-medium rounded-md hover:bg-cyan-50 dark:hover:bg-yellow-900/10 transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                Discuss Your Project
               </a>
             </div>
           </div>
@@ -650,9 +706,9 @@ function Contact() {
           parkin.className
         }
       >
-        Connect
+        Get in
         <span className="dark:text-yellow-300 py-4 text-cyan-500 font-light">
-          WithMe
+          Touch
         </span>
       </h2>
       
