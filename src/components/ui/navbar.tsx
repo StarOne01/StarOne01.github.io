@@ -106,14 +106,6 @@ function Nav() {
               >
                 Skills
               </a>
-              <a
-                href="/prashanth-resume.pdf"
-                className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Resume
-              </a>
               <Link
                 href="/projects"
                 className="text-md font-semibold m-1 p-1 leading-6 rounded-md text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
@@ -216,15 +208,6 @@ function Nav() {
                       >
                         Projects
                       </Link>
-                      <a
-                        href="/prashanth-resume.pdf"
-                        onClick={invMenu}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-2xl font-semibold leading-7 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-yellow-200"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Resume
-                      </a>
                       <a
                         href="#love"
                         onClick={invMenu}

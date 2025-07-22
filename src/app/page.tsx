@@ -110,7 +110,7 @@ function Whoami() {
             <p className="mb-4">
               Welcome to my digital realm! I'm a{" "}
               <span className="font-bold dark:text-yellow-300 text-cyan-600">
-                dual-degree EE/ECE student
+                A EE student
               </span>{" "}
               with a fervent passion for cybersecurity, system-level software, and electronics.
             </p>
@@ -124,49 +124,144 @@ function Whoami() {
                 
                 {/* Journey Points */}
                 <div className="space-y-12">
-                  {/* 2018 */}
+                  {/* 2016-2018 */}
                   <div className="relative pl-16">
-                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-100 dark:bg-yellow-900/30 border-4 border-cyan-400 dark:border-yellow-300 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
-                      <span className="text-cyan-600 dark:text-yellow-300 font-bold">2018</span>
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-100 dark:bg-black border-4 border-cyan-400 dark:border-yellow-300 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-cyan-600 dark:text-yellow-300 font-bold">2016</span>
                     </div>
                     <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-cyan-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
-                      <h5 className="font-semibold text-cyan-600 dark:text-yellow-300">The Linux Awakening</h5>
-                      <p>Embarked on the Linux journey, igniting a deep-seated curiosity for open-source ecosystems and command-line wizardry.</p>
+                      <h5 className="font-semibold text-cyan-600 dark:text-yellow-300">Spark of Curiosity</h5>
+                      <blockquote className="italic border-l-2 pl-3 my-2 text-sm border-cyan-300 dark:border-yellow-600">
+                        "The world started making sense in circuits, logic gates, and cosmic questions."
+                      </blockquote>
+                      <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
+                        <li>Got obsessed with how computers really work—from silicon to screen.</li>
+                        <li>Spent days exploring the overlap between physics, tech, and human behavior.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  {/* 2019 */}
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 dark:bg-black border-4 border-blue-400 dark:border-blue-300 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-blue-600 dark:text-blue-300 font-bold">2019</span>
+                    </div>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-blue-600 dark:text-blue-300">First Lines of Code</h5>
+                      <blockquote className="italic border-l-2 pl-3 my-2 text-sm border-blue-300 dark:border-blue-600">
+                        "The terminal became my playground."
+                      </blockquote>
+                      <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
+                        <li>Wrote first programs in C and C++, learning memory management and pointers.</li>
+                        <li>Started questioning every abstraction: "Why OS? What is a syscall?"</li>
+                        <li>Created basic shell scripts and batch scripts for automation.</li>
+                      </ul>
                     </div>
                   </div>
                   
                   {/* 2020 */}
                   <div className="relative pl-16">
-                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 dark:bg-amber-900/30 border-4 border-purple-400 dark:border-amber-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 dark:bg-black border-4 border-purple-400 dark:border-amber-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
                       <span className="text-purple-600 dark:text-amber-300 font-bold">2020</span>
                     </div>
                     <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-purple-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
-                      <h5 className="font-semibold text-purple-600 dark:text-amber-300">The Encryption Breakthrough</h5>
-                      <p>Delved into C programming, successfully decrypting my first wireless encryption—a pivotal moment that unlocked my passion for cybersecurity.</p>
+                      <h5 className="font-semibold text-purple-600 dark:text-amber-300">Depth over Breadth</h5>
+                      <blockquote className="italic border-l-2 pl-3 my-2 text-sm border-purple-300 dark:border-amber-600">
+                        "The deeper I went, the more everything connected—math, logic, electronics."
+                      </blockquote>
+                      <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
+                        <li>Built tiny OS-level tools for learning syscall interfaces.</li>
+                        <li>Started learning ARM Assembly and reverse engineering for fun.</li>
+                        <li>Dived into cryptography and networking protocols—recreated them from RFCs manually.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  {/* 2021 */}
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-green-100 dark:bg-black border-4 border-green-400 dark:border-green-500 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-green-600 dark:text-green-300 font-bold">2021</span>
+                    </div>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-green-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-green-600 dark:text-green-300">Open Source & Real-World Tech</h5>
+                      <blockquote className="italic border-l-2 pl-3 my-2 text-sm border-green-300 dark:border-green-600">
+                        "I wasn't just learning anymore—I was building things people used."
+                      </blockquote>
+                      <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
+                        <li>Contributed to open-source projects and explored low-level bugs in memory management.</li>
+                        <li>Created networking tools using raw sockets.</li>
+                        <li>Built full-stack web apps using MERN stack (Mongo, Express, React, Node).</li>
+                      </ul>
                     </div>
                   </div>
                   
                   {/* 2022 */}
                   <div className="relative pl-16">
-                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 dark:bg-orange-900/30 border-4 border-indigo-400 dark:border-orange-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 dark:bg-black border-4 border-indigo-400 dark:border-orange-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
                       <span className="text-indigo-600 dark:text-orange-300 font-bold">2022</span>
                     </div>
                     <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-indigo-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
-                      <h5 className="font-semibold text-indigo-600 dark:text-orange-300">The Full-Stack Milestone</h5>
-                      <p>Engineered my inaugural full-stack application and made meaningful contributions to open-source communities, finding my voice in the digital commons.</p>
+                      <h5 className="font-semibold text-indigo-600 dark:text-orange-300">Ethical Hacking & Systems Mastery</h5>
+                      <blockquote className="italic border-l-2 pl-3 my-2 text-sm border-indigo-300 dark:border-orange-600">
+                        "Seeing how things break made me better at building them."
+                      </blockquote>
+                      <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
+                        <li>Explored ethical hacking, bug bounty, and CTFs.</li>
+                        <li>Practiced binary exploitation, stack smashing, and protocol fuzzing.</li>
+                        <li>Built and broke Linux kernel modules.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  {/* 2023 */}
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-red-100 dark:bg-black border-4 border-red-400 dark:border-red-500 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-red-600 dark:text-red-300 font-bold">2023</span>
+                    </div>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-red-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-red-600 dark:text-red-300">Compiler Internals & Vision</h5>
+                      <blockquote className="italic border-l-2 pl-3 my-2 text-sm border-red-300 dark:border-red-600">
+                        "Compiler is the final boss. If I can transform code to machine instructions, I own it."
+                      </blockquote>
+                      <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
+                        <li>Contributed to LLVM.</li>
+                        <li>Learned polynomial approximations, precision tuning, and low-level optimization.</li>
+                        <li>Gained full-stack fluency across systems: bare metal → kernel → userspace → web → AI.</li>
+                      </ul>
                     </div>
                   </div>
                   
                   {/* 2025 */}
                   <div className="relative pl-16">
-                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-100 dark:bg-cyan-900/30 border-4 border-yellow-400 dark:border-cyan-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
-                      <span className="text-yellow-600 dark:text-cyan-300 font-bold">2025</span>
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-amber-100 dark:bg-black border-4 border-amber-400 dark:border-cyan-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-amber-600 dark:text-cyan-300 font-bold">2025</span>
                     </div>
-                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-yellow-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
-                      <h5 className="font-semibold text-yellow-600 dark:text-cyan-300">The Horizon Beckons</h5>
-                      <p>Aspiring to participate in <strong>Google Summer of Code (GSoC)</strong>, currently developing a health startup, and perpetually captivated by the mysteries of the universe.</p>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-amber-50 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-amber-600 dark:text-cyan-300">Multi-Domain Mastery & Beyond</h5>
+                      <blockquote className="italic border-l-2 pl-3 my-2 text-sm border-amber-300 dark:border-cyan-600">
+                        "The end goal is not just mastery—but superhuman synthesis."
+                      </blockquote>
+                      <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
+                        <li>Leading student innovation as President of Youth Parliament in university.</li>
+                        <li>Exploring hardware acceleration, quantized model serving, and privacy-first AI.</li>
+                        <li>Pushing boundaries in systems thinking, startup design, and tech philosophy.</li>
+                      </ul>
                     </div>
                   </div>
+                  
+                  {/* Future */}
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 dark:bg-black border-4 border-slate-400 dark:border-slate-400 transform transition-all duration-500 hover:scale-110 hover:rotate-12">
+                      <span className="text-slate-600 dark:text-slate-300 font-bold">∞</span>
+                    </div>
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800/90 dark:to-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+                      <h5 className="font-semibold text-slate-600 dark:text-slate-300">Future: Founder. Hacker. Philosopher. Architect.</h5>
+                      <blockquote className="italic border-l-2 pl-3 my-2 text-sm border-slate-300 dark:border-slate-600">
+                        "Creating something larger than just apps—building systems that understand humans and optimize their lives, from molecules to mindset."
+                      </blockquote>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -185,7 +280,7 @@ function Whoami() {
             
             <h4 className="text-lg font-semibold mb-2">Beyond the Code:</h4>
             <p className="mb-4">
-              When I'm not immersed in debugging kernel drivers or gazing at the stars, you'll find me delving into science fiction literature. I'm endlessly fascinated by how simple electrons can give rise to consciousness and the intricate code that powers our world.
+              When I'm not immersed in Optimizing Backend algorithmns or gazing at the stars, you'll find me delving into science fiction literature. I'm endlessly fascinated by how simple electrons can give rise to consciousness and the intricate code that powers our world.
             </p>
             
             <p>
@@ -235,60 +330,60 @@ function Skills() {
               parkin.className
             }
           >
-            <span className="text-cyan-400 dark:text-yellow-300">Ethical</span>{" "}
-            Hacking
+            <span className="text-cyan-400 dark:text-yellow-300">Network</span>{" "}
+            Security
           </h3>
           <ul className="space-y-2 ml-5">
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🔍</span>Computer Networks</div>
+              <div className="flex items-center"><span className="mr-2"></span>Computer Networks</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "90%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🐧</span>GNU/Linux - POSIX</div>
+              <div className="flex items-center"><span className="mr-2"></span>GNU/Linux - POSIX</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "95%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🐍</span>Python + Bash</div>
+              <div className="flex items-center"><span className="mr-2"></span>Python + Bash</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "85%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🦈</span>WireShark</div>
+              <div className="flex items-center"><span className="mr-2"></span>WireShark</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "80%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🔭</span>Nmap</div>
+              <div className="flex items-center"><span className="mr-2"></span>Nmap</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "90%"}}></div>
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "80%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🔑</span>HashCat</div>
+              <div className="flex items-center"><span className="mr-2"></span>HashCat</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "75%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🔓</span>Jhonny</div>
+              <div className="flex items-center"><span className="mr-2"></span>Jhonny</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "70%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">📡</span>Aircrack-ng</div>
+              <div className="flex items-center"><span className="mr-2"></span>Aircrack-ng</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "85%"}}></div>
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "75%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🕸️</span>Burpsuit</div>
+              <div className="flex items-center"><span className="mr-2"></span>Burpsuit</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "80%"}}></div>
               </div>
@@ -308,41 +403,66 @@ function Skills() {
           </h3>
           <ul className="space-y-2 ml-5">
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">⚡</span>JavaScript/TypeScript</div>
+              <div className="flex items-center"><span className="mr-2"></span>JavaScript/TypeScript</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "90%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">➡️</span>Next.js</div>
+              <div className="flex items-center"><span className="mr-2"></span>Next.js</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "85%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🟢</span>Node.js</div>
+              <div className="flex items-center"><span className="mr-2"></span>Node.js</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "80%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">⚛️</span>React.js</div>
+              <div className="flex items-center"><span className="mr-2"></span>React.js</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "90%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🚂</span>Express.js</div>
+              <div className="flex items-center"><span className="mr-2"></span>Express.js</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "75%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🍃</span>MongoDB</div>
+              <div className="flex items-center"><span className="mr-2"></span>MongoDB</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "80%"}}></div>
               </div>
             </li>
+            <li className="flex items-center justify-between">
+              <div className="flex items-center"><span className="mr-2"></span>Tailwind CSS</div>
+              <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "85%"}}></div>
+              </div>
+            </li>
+            <li className="flex items-center justify-between">
+              <div className="flex items-center"><span className="mr-2"></span>HTML/CSS</div>
+              <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "90%"}}></div>
+              </div>
+            </li>
+            <li className="flex items-center justify-between">
+              <div className="flex items-center"><span className="mr-2"></span>REST APIs</div>
+              <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "80%"}}></div>
+              </div>
+            </li>
+            <li className="flex items-center justify-between">
+              <div className="flex items-center"><span className="mr-2"></span>Postgres SQL</div>
+              <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "70%"}}></div>
+              </div>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -360,27 +480,27 @@ function Skills() {
           </h3>
           <ul className="space-y-2 ml-5">
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🔧</span>C/C++</div>
+              <div className="flex items-center"><span className="mr-2"></span>C/C++</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "95%"}}></div>
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "90%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">⚙️</span>Embedded Systems</div>
+              <div className="flex items-center"><span className="mr-2"></span>Embedded Systems</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "85%"}}></div>
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "45%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🧩</span>System Architecture</div>
+              <div className="flex items-center"><span className="mr-2"></span>Computer Architecture</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "80%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">📊</span>Data Structures</div>
+              <div className="flex items-center"><span className="mr-2"></span>Data Structures and algorithmns</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "90%"}}></div>
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "60%"}}></div>
               </div>
             </li>
           </ul>
@@ -398,21 +518,21 @@ function Skills() {
           </h3>
           <ul className="space-y-2 ml-5">
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">🔌</span>Circuit Design</div>
+              <div className="flex items-center"><span className="mr-2"></span>Circuit Design</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "85%"}}></div>
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "45%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">💡</span>Microcontrollers</div>
+              <div className="flex items-center"><span className="mr-2"></span>Microcontrollers</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "80%"}}></div>
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "60%"}}></div>
               </div>
             </li>
             <li className="flex items-center justify-between">
-              <div className="flex items-center"><span className="mr-2">📱</span>Digital Electronics</div>
+              <div className="flex items-center"><span className="mr-2"></span>Digital Electronics</div>
               <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "90%"}}></div>
+                <div className="bg-cyan-400 dark:bg-yellow-300 h-2.5 rounded-full" style={{width: "65%"}}></div>
               </div>
             </li>
           </ul>
@@ -444,18 +564,6 @@ function Skills() {
         </div>
       </div>
       
-      <div className="mt-6 flex justify-center">
-        <a 
-          href="/prashanth-resume.pdf" 
-          className="px-6 py-3 rounded-md bg-cyan-500 dark:bg-yellow-500 text-white dark:text-black font-medium hover:bg-cyan-600 dark:hover:bg-yellow-600 transition-colors flex items-center"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mr-2" viewBox="0 0 16 16">
-            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-          </svg>
-          View Full Resume
-        </a>
-      </div>
     </div>
   );
 }
