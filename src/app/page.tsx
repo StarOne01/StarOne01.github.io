@@ -442,12 +442,12 @@ function Skills() {
     <div id="Skills" className="mt-20">
       <h2
         className={
-          "text-4xl underline decoration-slate-500 font-semibold md:text-5xl " +
+          "text-4xl underline flex flex-wrap decoration-slate-500 font-semibold md:text-5xl " +
           parkin.className
         }
       >
-        Technical
-        <span className="dark:text-yellow-300 py-4 text-cyan-500 font-light">
+        <span className="my-0.5">Technical</span>
+        <span className="dark:text-yellow-300 text-cyan-500 my-0.5 font-light">
           Proficiencies
         </span>
       </h2>
