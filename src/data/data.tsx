@@ -27,7 +27,7 @@ const nameData = [
   },
   {
     text: "Prashanth",
-    className: "dark:text-yellow-200 text-white ",
+    className: "text-white",
   },
 ];
 
@@ -37,7 +37,7 @@ const also = [
   },
   {
     text: "Starone01",
-    className: "dark:text-yellow-200 text-white ",
+    className: "text-white",
   },
 ];
 

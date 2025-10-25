@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
       <meta name="google-site-verification" content="M6nxCCzJ_3vuz-HM6P0E9M_uDE5wv1IgOT72IqJ5mGY" />
       </head>
-      <body className={parkin.className}>
+      <body className={`${parkin.className} bg-black`}>
         <Nav />
         {children}</body>
     </html>

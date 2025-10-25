@@ -21,11 +21,11 @@ function FavProjs() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
           <h2
             className={
-              "text-4xl underline cursor-default decoration-slate-500 font-semibold md:text-5xl " +
+              "text-4xl underline cursor-default decoration-white/30 font-semibold md:text-5xl text-white " +
               parkin.className
             }
           >
-            <span className="dark:text-yellow-300 text-cyan-500 font-light">
+            <span className="text-white font-light">
               Favorite
             </span>{" "}
             Projects
@@ -36,8 +36,8 @@ function FavProjs() {
               onClick={() => setActiveTab("all")}
               className={`px-4 py-2 rounded-md transition-colors ${
                 activeTab === "all"
-                  ? "bg-cyan-500 dark:bg-yellow-500 text-white dark:text-black"
-                  : "bg-slate-200 dark:bg-slate-700"
+                  ? "bg-white text-black"
+                  : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
               All
@@ -48,8 +48,8 @@ function FavProjs() {
                 onClick={() => setActiveTab(category.name)}
                 className={`px-4 py-2 rounded-md transition-colors ${
                   activeTab === category.name
-                    ? "bg-cyan-500 dark:bg-yellow-500 text-white dark:text-black"
-                    : "bg-slate-200 dark:bg-slate-700"
+                    ? "bg-white text-black"
+                    : "bg-white/10 text-white hover:bg-white/20"
                 }`}
               >
                 {category.name}
@@ -58,7 +58,7 @@ function FavProjs() {
           </div>
         </div>
 
-        <p className="text-lg md:text-xl mb-12">
+        <p className="text-lg md:text-xl mb-12 text-white/80">
           These are projects that have either revolutionized technology or that I personally admire for their innovation, impact, and philosophy.
         </p>
 
@@ -66,17 +66,17 @@ function FavProjs() {
         {activeTab === "all" && projects.map((theme) => (
           <div key={theme.name} className="mb-16">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-1 bg-cyan-500 dark:bg-yellow-500 mr-3"></div>
-              <h3 className="font-extrabold text-2xl md:text-3xl">{theme.name}</h3>
+              <div className="w-10 h-1 bg-white mr-3"></div>
+              <h3 className="font-extrabold text-2xl md:text-3xl text-white">{theme.name}</h3>
             </div>
-            <p className="mb-8 text-lg opacity-80">{theme.description}</p>
+            <p className="mb-8 text-lg opacity-70 text-white/70">{theme.description}</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {theme.projects.map((project) => (
                 <div
                   key={project.name}
-                  className="group bg-white dark:bg-black border dark:border-yellow-300/50 border-cyan-500/50 rounded-xl overflow-hidden hover:shadow-xl dark:hover:shadow-yellow-500/20 transition-all duration-300"
+                  className="group bg-black border border-white/20 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:border-white/40"
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden bg-white/5">
                     <Image
                       alt={project.name + " Logo"}
                       src={project.logo}
@@ -85,17 +85,17 @@ function FavProjs() {
                     />
                   </div>
                   <div className="p-6">
-                    <h4 className="text-xl font-semibold mb-3 group-hover:text-cyan-500 dark:group-hover:text-yellow-300 transition-colors">
+                    <h4 className="text-xl font-semibold mb-3 text-white group-hover:text-white/80 transition-colors">
                       {project.name}
                     </h4>
-                    <p className="mb-4 text-gray-700 dark:text-gray-300">
+                    <p className="mb-4 text-white/60">
                       {project.description}
                     </p>
                     <Link
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-cyan-500 dark:text-yellow-300 hover:underline"
+                      className="inline-flex items-center text-white/70 hover:text-white transition-colors"
                     >
                       Learn more
                       <svg
@@ -126,17 +126,17 @@ function FavProjs() {
           .map((theme) => (
             <div key={`filtered-${theme.name}`} className="mb-16">
               <div className="flex items-center mb-4">
-                <div className="w-10 h-1 bg-cyan-500 dark:bg-yellow-500 mr-3"></div>
-                <h3 className="font-extrabold text-2xl md:text-3xl">{theme.name}</h3>
+                <div className="w-10 h-1 bg-white mr-3"></div>
+                <h3 className="font-extrabold text-2xl md:text-3xl text-white">{theme.name}</h3>
               </div>
-              <p className="mb-8 text-lg opacity-80">{theme.description}</p>
+              <p className="mb-8 text-lg opacity-70 text-white/70">{theme.description}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {theme.projects.map((project) => (
                   <div
                     key={`filtered-project-${project.name}`}
-                    className="group bg-white dark:bg-black border dark:border-yellow-300/50 border-cyan-500/50 rounded-xl overflow-hidden hover:shadow-xl dark:hover:shadow-yellow-500/20 transition-all duration-300"
+                    className="group bg-black border border-white/20 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:border-white/40"
                   >
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-48 overflow-hidden bg-white/5">
                       <Image
                         alt={project.name + " Logo"}
                         src={project.logo}
@@ -145,17 +145,17 @@ function FavProjs() {
                       />
                     </div>
                     <div className="p-6">
-                      <h4 className="text-xl font-semibold mb-3 group-hover:text-cyan-500 dark:group-hover:text-yellow-300 transition-colors">
+                      <h4 className="text-xl font-semibold mb-3 text-white group-hover:text-white/80 transition-colors">
                         {project.name}
                       </h4>
-                      <p className="mb-4 text-gray-700 dark:text-gray-300">
+                      <p className="mb-4 text-white/60">
                         {project.description}
                       </p>
                       <Link
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-cyan-500 dark:text-yellow-300 hover:underline"
+                        className="inline-flex items-center text-white/70 hover:text-white transition-colors"
                       >
                         Learn more
                         <svg
@@ -182,7 +182,7 @@ function FavProjs() {
         <div className="mt-16 flex justify-center">
           <Link 
             href="/" 
-            className="px-6 py-3 rounded-md bg-cyan-500 dark:bg-yellow-500 text-white dark:text-black font-medium hover:bg-cyan-600 dark:hover:bg-yellow-600 transition-colors flex items-center"
+            className="px-6 py-3 rounded-md bg-white text-black font-medium hover:shadow-lg hover:shadow-white/20 transition-all flex items-center"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mr-2" viewBox="0 0 16 16">
               <path fillRule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
