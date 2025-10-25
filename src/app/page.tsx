@@ -43,7 +43,7 @@ function Resume() {
 
 function Hero() {
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden flex flex-col items-center justify-center">
+    <div className="relative w-full h-[100svh] bg-black overflow-hidden flex flex-col items-center justify-center">
       {/* Premium background effects */}
       <div className="absolute inset-0 z-0">
         {/* Gradient orbs */}
