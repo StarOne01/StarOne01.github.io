@@ -55,7 +55,7 @@ function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center space-y-6 sm:space-y-8 px-4 sm:px-6 max-w-6xl mx-auto flex-grow flex flex-col justify-center">
+      <div className="relative z-10 text-center space-y-6 sm:space-y-8 px-4 sm:px-6 max-w-6xl mx-auto flex-grow flex flex-col justify-evenly pb-32 sm:pb-40">
         {/* Refined top accent */}
         <div className="flex items-center justify-center gap-3 sm:gap-6 mb-2 sm:mb-4 opacity-0 animate-fade-in" style={{animationDelay: '0.2s'}}>
           <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
@@ -78,7 +78,7 @@ function Hero() {
             textShadow: '0 20px 60px rgba(255,255,255,0.1)',
             letterSpacing: '-0.02em'
           }}>
-            StarOne
+            StarOne01
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-white/70 font-light mt-2 sm:mt-3 tracking-wide">
             Crafting elegant systems with precision and purpose
@@ -90,12 +90,12 @@ function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-white/60 text-xs sm:text-sm font-light tracking-wide">
             <span className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 bg-white/40 rounded-full"></span>
-              Electrical Engineer
+              Technical Founder 
             </span>
             <span className="hidden sm:inline w-px h-4 bg-white/20"></span>
             <span className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 bg-white/40 rounded-full"></span>
-              Systems Developer
+              Electrical Engineer
             </span>
             <span className="hidden sm:inline w-px h-4 bg-white/20"></span>
             <span className="flex items-center gap-2">
@@ -135,17 +135,7 @@ function Hero() {
         </div>
       </div>
 
-      {/* Elegant scroll indicator */}
-      <div className="absolute bottom-8 sm:bottom-10 left-1/2 transform -translate-x-1/2 z-10 opacity-0 animate-fade-in" style={{animationDelay: '1.2s'}}>
-        <div className="flex flex-col items-center gap-2 group cursor-pointer">
-          <span className="text-xs text-white/40 uppercase tracking-[0.1em] font-light group-hover:text-white/60 transition-colors">Scroll Down</span>
-          <div className="animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-white/40 group-hover:text-white/60 transition-colors">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </div>
-        </div>
-      </div>
+
 
       {/* Add animation styles */}
       <style>{`
