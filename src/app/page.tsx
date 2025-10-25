@@ -57,9 +57,9 @@ function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center space-y-6 sm:space-y-8 px-4 sm:px-6 max-w-6xl mx-auto flex-grow flex flex-col justify-evenly pb-32 sm:pb-40">
         {/* Refined top accent */}
-        <div className="flex items-center justify-center gap-3 sm:gap-6 mb-2 sm:mb-4 opacity-0 animate-fade-in" style={{animationDelay: '0.2s'}}>
+        <div className="flex mt-7 items-center justify-center gap-3 sm:gap-6 mb-2 sm:mb-4 opacity-0 animate-fade-in" style={{animationDelay: '0.2s'}}>
           <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
-          <span className="text-xs sm:text-sm uppercase tracking-[0.15em] text-white/50 font-light whitespace-nowrap">Innovator & Developer</span>
+          <span className="text-xs sm:text-sm uppercase tracking-[0.15em] text-white/50 opacity-100 md:opacity-0  font-light  whitespace-nowrap">Innovator & Developer</span>
           <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent via-white/50 to-transparent"></div>
         </div>
 
