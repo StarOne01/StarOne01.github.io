@@ -126,9 +126,6 @@ function Hero() {
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
               Get in Touch
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" className="group-hover:rotate-12 transition-transform">
-                <path d="M2.5 1A1.5 1.5 0 0 0 1 2.5v.006c0 .596.404 1.09.885 1.223V15.5h12.71V3.726A1.5 1.5 0 0 0 15 2.5V2a1.5 1.5 0 0 0-1.5-1h-11zM2 2.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5v.006H2V2.5z"/>
-              </svg>
             </span>
             <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
           </a>
