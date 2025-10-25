@@ -242,7 +242,7 @@ function Whoami() {
                         "The end goal is not just mastery—but superhuman synthesis."
                       </blockquote>
                       <ul className="list-disc ml-5 text-sm space-y-1 mt-2">
-                        <li>Leading student innovation as President of Youth Parliament in university.</li>
+                        <li>Leading student innovation as President of Innovation and Entrepreneurship development cell in university.</li>
                         <li>Exploring hardware acceleration, quantized model serving, and privacy-first AI.</li>
                         <li>Pushing boundaries in systems thinking, startup design, and tech philosophy.</li>
                       </ul>
@@ -841,7 +841,6 @@ export default function Home() {
       <div className={"m-7 md:max-w-[900px] lg:mx-auto md:mx-16 mx-6 text-base " + parkin.className}>
         <Whoami />
         <br />
-        <Professional />
         <Skills />
         <ThingsIlove />
         <Contact />
