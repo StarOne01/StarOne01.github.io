@@ -129,10 +129,23 @@ function Hero() {
             </span>
             <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
           </a>
+
         </div>
       </div>
 
 
+
+      {/* Swipe up indicator */}
+      <div className="absolute bottom-8 sm:bottom-12 inset-x-0 flex justify-center z-20 opacity-0 animate-fade-in" style={{animationDelay: '1.2s'}}>
+        <div className="flex flex-col items-center gap-2 sm:gap-3">
+          <span className="text-xs sm:text-sm text-white/50 font-light tracking-widest uppercase">Scroll</span>
+          <div className="animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/50 hover:text-white/80 transition-colors">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
 
       {/* Add animation styles */}
       <style>{`
