@@ -174,11 +174,10 @@ function FavProjs() {
                       </svg>
                     </Link>
                   </div>
-                ))
               </div>
           ))}
             </div>
-          ))
+        
           
         <div className="mt-16 flex justify-center">
           <Link 
