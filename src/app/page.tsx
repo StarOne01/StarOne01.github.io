@@ -100,7 +100,7 @@ function Hero() {
             <span className="hidden sm:inline w-px h-4 bg-white/20"></span>
             <span className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 bg-white/40 rounded-full"></span>
-              Security Architect
+              Full Stacker
             </span>
           </div>
         </div>
