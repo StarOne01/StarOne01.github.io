@@ -2,26 +2,10 @@
 import { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { Parkinsans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 
-const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
-
-function unBlur() {
-  const element = document.body.getElementsByClassName("blurEffect")[0] as HTMLElement | undefined;
-  if (element) {
-    element.style.backdropFilter = "blur(0px)";
-    element.style.transition = "backdrop-filter 0.5s";
-  }
-}
-
-function blur() {
-  const element = document.body.getElementsByClassName("blurEffect")[0] as HTMLElement | undefined;
-  if (element) {
-    element.style.backdropFilter = "blur(16px)";
-    element.style.transition = "backdrop-filter 0.5s";
-  }
-}
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -60,8 +44,8 @@ export default function Nav() {
       <nav
         className={
           mobileMenuOpen
-            ? "flex lg:max-w-5xl no-doc-scroll backdrop-blur-xl bg-white/10 border border-white/20 sm:mx-auto max-w-sm mx-6 rounded-2xl items-center justify-between px-6 lg:py-3 py-3 lg:px-8 shadow-xl"
-            : "flex lg:max-w-5xl md:max-w-xl sm:mx-auto max-w-xs mx-auto bg-white/5 border border-white/10 rounded-2xl items-center justify-between backdrop-blur-xl px-6 lg:py-3 py-3 lg:px-8 shadow-lg transition-all duration-300 hover:bg-white/10"
+            ? "flex lg:max-w-3xl no-doc-scroll backdrop-blur-xl bg-white/5 border border-white/10 sm:mx-auto max-w-sm mx-6 rounded-lg items-center justify-between px-6 lg:py-3 py-3 lg:px-8"
+            : "flex lg:max-w-3xl md:max-w-xl sm:mx-auto max-w-xs mx-auto bg-white/5 border border-white/10 rounded-lg items-center justify-between backdrop-blur-xl px-6 lg:py-3 py-3 lg:px-8 transition-all duration-300 hover:bg-white/8"
         }
         aria-label="Global"
       >
@@ -74,13 +58,11 @@ export default function Nav() {
         >
           <Link href="/">
             <p
-              onPointerOver={() => unBlur()}
-              onPointerLeave={() => blur()}
               className={
-                "sm:font-bold cursor-pointer font-semibold text-lg text-white hover:text-slate-200 transition-all " + parkin.className
+                "cursor-pointer font-medium text-base text-white hover:text-white/80 transition-all " + inter.className
               }
             >
-              <span>StarOne01</span>
+              Prashanth
             </p>
           </Link>
         </div>
@@ -97,91 +79,85 @@ export default function Nav() {
             <span className="sr-only">Open main menu</span>
             {mobileMenuOpen ? (
               <XMarkIcon
-                className="h-6 z-50 w-6 text-white"
+                className="h-5 z-50 w-5 text-white"
                 aria-hidden="true"
               />
             ) : (
-              <Bars3Icon className="h-6 w-6 z-50 " aria-hidden="true" />
+              <Bars3Icon className="h-5 w-5 z-50" aria-hidden="true" />
             )}
           </button>
         </div>
-        <div className={`hidden lg:flex lg:gap-x-8 ${parkin.className}`}>
+        <div className={`hidden lg:flex lg:gap-x-6 ${inter.className}`}>
           {isHomePage ? (
             <>
               <a
-                href="#Whoami"
-                className="font-semibold text-sm m-0 p-2 leading-6 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+                href="#about"
+                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
               >
-                Whoami
+                About
               </a>
               <a
-                href="#Skills"
-                className="text-sm font-semibold m-0 p-2 leading-6 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+                href="#expertise"
+                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
               >
-                Skills
+                Expertise
               </a>
-              <Link
-                href="/projects"
-                className="text-sm font-semibold m-0 p-2 leading-6 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300"
-              >
-                Projects
-              </Link>
               <a
-                href="#love"
-                className="text-sm m-0 p-2 font-semibold leading-6 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+                href="#experience"
+                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
               >
-                Things I Love
+                Experience
               </a>
               <a
                 href="#contact"
-                className="text-sm m-0 p-2 font-semibold leading-6 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
               >
                 Contact
               </a>
             </>
           ) : (
             <Link href="/"
-              className="text-sm font-semibold m-0 p-2 leading-6 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+              className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
             >
-              Back to Home
+              ← Home
             </Link>
           )}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
           <Link href="mailto:thestarone01@proton.me" title="Email">
-            <div className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300">
+            <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
-                className="icon fill-white hover:fill-slate-200"
+                className="fill-white/60 hover:fill-white"
               >
                 <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path>
               </svg>
             </div>
           </Link>
-          <Link href="https://www.linkedin.com/in/StarOne/" title="LinkedIn">
-            <div className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300">
+          <Link href="https://www.linkedin.com/in/StarOne01/" title="LinkedIn">
+            <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
-                className="icon fill-white hover:fill-slate-200"
+                className="fill-white/60 hover:fill-white"
               >
                 <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
               </svg>
             </div>
           </Link>
           <Link href="https://github.com/StarOne01" title="GitHub">
-            <div className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300">
+            <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
-                className="icon fill-white hover:fill-slate-200"
+                className="fill-white/60 hover:fill-white"
               >
                 <path
                   fillRule="evenodd"
@@ -196,60 +172,60 @@ export default function Nav() {
       {mobileMenuOpen && (
         <div className={"lg:hidden z-[650] fixed inset-0"}>
           {/* Backdrop */}
-          <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" onClick={closeMenu}></div>
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={closeMenu}></div>
           
-          {/* Menu Panel - Slide in from bottom */}
-          <div className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-b from-white/10 via-white/5 to-black/20 backdrop-blur-2xl border-t border-white/20 rounded-t-3xl shadow-2xl max-h-[90vh] overflow-y-auto animate-in slide-in-from-bottom-5">
+          {/* Menu Panel */}
+          <div className="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-t border-white/10 rounded-t-2xl max-h-[80vh] overflow-y-auto">
             <div className="px-6 py-8 space-y-6">
               {/* Close Button */}
               <div className="flex justify-between items-center mb-6">
-                <h3 className={`text-2xl font-bold text-white ${parkin.className}`}>Menu</h3>
+                <h3 className={`text-xl font-medium text-white ${inter.className}`}>Menu</h3>
                 <button
                   type="button"
-                  className="p-2 text-white hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110"
+                  className="p-2 text-white hover:bg-white/10 rounded-lg transition-all duration-300"
                   onClick={closeMenu}
                 >
                   <span className="sr-only">Close menu</span>
-                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                  <XMarkIcon className="h-5 w-5" aria-hidden="true" />
                 </button>
               </div>
 
               {/* Menu Items */}
-              <div className={`space-y-3 ${parkin.className}`}>
+              <div className={`space-y-2 ${inter.className}`}>
                 {isHomePage ? (
                   <>
                     <a
-                      href="#Whoami"
+                      href="#about"
                       onClick={closeMenu}
-                      className="block px-4 py-3 rounded-xl text-lg font-semibold text-white bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 hover:translate-x-1"
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
                     >
-                      Whoami
+                      About
                     </a>
                     <a
-                      href="#Skills"
+                      href="#expertise"
                       onClick={closeMenu}
-                      className="block px-4 py-3 rounded-xl text-lg font-semibold text-white bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 hover:translate-x-1"
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+                    >
+                      Expertise
+                    </a>
+                    <a
+                      href="#experience"
+                      onClick={closeMenu}
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+                    >
+                      Experience
+                    </a>
+                    <a
+                      href="#skills"
+                      onClick={closeMenu}
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
                     >
                       Skills
-                    </a>
-                    <Link
-                      href="/projects"
-                      onClick={closeMenu}
-                      className="block px-4 py-3 rounded-xl text-lg font-semibold text-white bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 hover:translate-x-1"
-                    >
-                      Projects
-                    </Link>
-                    <a
-                      href="#love"
-                      onClick={closeMenu}
-                      className="block px-4 py-3 rounded-xl text-lg font-semibold text-white bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 hover:translate-x-1"
-                    >
-                      Things I Love
                     </a>
                     <a
                       href="#contact"
                       onClick={closeMenu}
-                      className="block px-4 py-3 rounded-xl text-lg font-semibold text-white bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 hover:translate-x-1"
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
                     >
                       Contact
                     </a>
@@ -258,54 +234,54 @@ export default function Nav() {
                   <Link
                     href="/"
                     onClick={closeMenu}
-                    className="block px-4 py-3 rounded-xl text-lg font-semibold text-white bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 hover:translate-x-1"
+                    className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
                   >
-                    ← Back to Home
+                    ← Home
                   </Link>
                 )}
               </div>
 
               {/* Divider */}
-              <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+              <div className="h-px bg-white/10"></div>
 
               {/* Social Links */}
               <div>
-                <p className={`text-sm font-semibold text-white/60 mb-4 ${parkin.className}`}>Connect</p>
+                <p className={`text-xs font-medium text-white/40 uppercase tracking-wider mb-4 ${inter.className}`}>Connect</p>
                 <div className="grid grid-cols-3 gap-3">
                   <Link href="mailto:thestarone01@proton.me" title="Email" onClick={closeMenu}>
-                    <div className="p-4 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center justify-center hover:scale-110">
+                    <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="28"
-                        height="28"
+                        width="20"
+                        height="20"
                         viewBox="0 0 24 24"
-                        className="fill-white hover:fill-slate-200"
+                        className="fill-white/60"
                       >
                         <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path>
                       </svg>
                     </div>
                   </Link>
-                  <Link href="https://www.linkedin.com/in/StarOne/" title="LinkedIn" onClick={closeMenu}>
-                    <div className="p-4 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center justify-center hover:scale-110">
+                  <Link href="https://www.linkedin.com/in/StarOne01/" title="LinkedIn" onClick={closeMenu}>
+                    <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="28"
-                        height="28"
+                        width="20"
+                        height="20"
                         viewBox="0 0 24 24"
-                        className="fill-white hover:fill-slate-200"
+                        className="fill-white/60"
                       >
                         <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
                       </svg>
                     </div>
                   </Link>
                   <Link href="https://github.com/StarOne01" title="GitHub" onClick={closeMenu}>
-                    <div className="p-4 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center justify-center hover:scale-110">
+                    <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="28"
-                        height="28"
+                        width="20"
+                        height="20"
                         viewBox="0 0 24 24"
-                        className="fill-white hover:fill-slate-200"
+                        className="fill-white/60"
                       >
                         <path
                           fillRule="evenodd"
@@ -319,7 +295,7 @@ export default function Nav() {
               </div>
 
               {/* Bottom Safe Area */}
-              <div className="h-6"></div>
+              <div className="h-4"></div>
             </div>
           </div>
         </div>
