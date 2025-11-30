@@ -21,9 +21,14 @@ function Hero() {
         </div>
 
         {/* Name */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold text-white mb-4 opacity-0 animate-fade-in" style={{animationDelay: '0.4s', letterSpacing: '-0.02em'}}>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold text-white mb-2 opacity-0 animate-fade-in" style={{animationDelay: '0.4s', letterSpacing: '-0.02em'}}>
           Prashanth
         </h1>
+        
+        {/* Alias */}
+        <p className="text-white/40 text-sm tracking-widest uppercase mb-4 opacity-0 animate-fade-in" style={{animationDelay: '0.5s'}}>
+          StarOne01
+        </p>
 
         {/* Company */}
         <div className="flex items-center justify-center gap-3 mb-8 opacity-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
@@ -88,10 +93,10 @@ function About() {
           As <span className="text-white">Chief Technology Officer at Medclara</span>, I lead the technical vision and engineering strategy for our healthcare technology platform.
         </p>
         <p>
-          With a background in <span className="text-white">Electrical Engineering</span> and expertise in systems development, I bridge the gap between complex technical challenges and innovative solutions that improve patient care.
+          I designed and built <span className="text-white">Medclara's core technology</span> — the Automatic Speech Recognition (ASR) system that powers our platform, including the training pipelines and iteration workflows that continuously improve our models.
         </p>
         <p>
-          My focus is on building secure, scalable infrastructure that enables healthcare providers to deliver better outcomes through technology.
+          With a background in <span className="text-white">Electrical Engineering</span> and deep expertise in ML/AI systems, I bridge the gap between complex technical challenges and innovative solutions that improve patient care.
         </p>
       </div>
     </section>
@@ -109,12 +114,12 @@ function Expertise() {
       description: "Building compliant, secure systems for healthcare data management and patient care optimization."
     },
     {
-      title: "Systems Architecture",
-      description: "Designing scalable infrastructure with focus on performance, security, and reliability."
+      title: "AI & Machine Learning",
+      description: "LLMs, transformer models, and fine-tuning with PEFT techniques. Traditional ML and NLP applications."
     },
     {
-      title: "Full-Stack Development",
-      description: "End-to-end development expertise from embedded systems to modern web applications."
+      title: "Systems Architecture",
+      description: "Designing scalable infrastructure with focus on performance, security, and reliability."
     }
   ];
 
@@ -146,13 +151,13 @@ function Experience() {
       role: "Chief Technology Officer",
       company: "Medclara",
       period: "Present",
-      description: "Leading technology strategy and engineering for healthcare innovation platform."
+      description: "Designed and built the core ASR technology, training pipelines, and model iteration workflows powering the platform."
     },
     {
-      role: "Open Source Contributor",
-      company: "LLVM Project",
-      period: "Ongoing",
-      description: "Contributing to foundational compiler infrastructure and documentation."
+      role: "Chief Technology Officer",
+      company: "Auxacode Solutions",
+      period: "Previous",
+      description: "Led technical strategy and engineering teams to deliver innovative software solutions."
     },
     {
       role: "Electrical Engineering",
@@ -191,7 +196,11 @@ function Skills() {
   const skillCategories = [
     {
       title: "Languages & Frameworks",
-      skills: ["TypeScript", "Python", "C/C++", "React", "Next.js", "Node.js"]
+      skills: ["TypeScript", "Python", "C/C++", "Go", "React", "Next.js", "Node.js"]
+    },
+    {
+      title: "AI & Machine Learning",
+      skills: ["LLMs", "Transformers", "PEFT", "Unsloth", "NLP", "Traditional ML", "PyTorch"]
     },
     {
       title: "Infrastructure",
@@ -327,7 +336,7 @@ function Footer() {
   return (
     <footer className="py-8 px-6 border-t border-white/10">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/40">
-        <p>© 2024 Prashanth. All rights reserved.</p>
+        <p>© 2025 Prashanth. All rights reserved.</p>
         <p>CTO at Medclara</p>
       </div>
     </footer>
