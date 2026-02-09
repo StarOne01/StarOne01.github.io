@@ -59,10 +59,10 @@ export default function Nav() {
           <Link href="/">
             <p
               className={
-                "cursor-pointer font-medium text-base text-white hover:text-white/80 transition-all " + inter.className
+                "cursor-pointer font-black text-base text-white hover:text-white/80 transition-all tracking-tight " + inter.className
               }
             >
-              Prashanth
+              STARONE01
             </p>
           </Link>
         </div>
@@ -92,25 +92,25 @@ export default function Nav() {
             <>
               <a
                 href="#about"
-                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
+                className="text-xs m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300 uppercase tracking-wider font-mono"
               >
                 About
               </a>
               <a
-                href="#expertise"
-                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
+                href="#capabilities"
+                className="text-xs m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300 uppercase tracking-wider font-mono"
               >
-                Expertise
+                Capabilities
               </a>
               <a
                 href="#experience"
-                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
+                className="text-xs m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300 uppercase tracking-wider font-mono"
               >
                 Experience
               </a>
               <a
                 href="#contact"
-                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
+                className="text-xs m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300 uppercase tracking-wider font-mono"
               >
                 Contact
               </a>
@@ -124,7 +124,7 @@ export default function Nav() {
           )}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
-          <Link href="mailto:thestarone01@proton.me" title="Email">
+          <Link href="mailto:contact@starone01.dev" title="Email">
             <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -197,35 +197,35 @@ export default function Nav() {
                     <a
                       href="#about"
                       onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 uppercase tracking-wider font-mono text-sm"
                     >
                       About
                     </a>
                     <a
-                      href="#expertise"
+                      href="#capabilities"
                       onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 uppercase tracking-wider font-mono text-sm"
                     >
-                      Expertise
+                      Capabilities
                     </a>
                     <a
                       href="#experience"
                       onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 uppercase tracking-wider font-mono text-sm"
                     >
                       Experience
                     </a>
                     <a
                       href="#skills"
                       onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 uppercase tracking-wider font-mono text-sm"
                     >
-                      Skills
+                      Technical Arsenal
                     </a>
                     <a
                       href="#contact"
                       onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 uppercase tracking-wider font-mono text-sm"
                     >
                       Contact
                     </a>
@@ -248,7 +248,7 @@ export default function Nav() {
               <div>
                 <p className={`text-xs font-medium text-white/40 uppercase tracking-wider mb-4 ${inter.className}`}>Connect</p>
                 <div className="grid grid-cols-3 gap-3">
-                  <Link href="mailto:thestarone01@proton.me" title="Email" onClick={closeMenu}>
+                  <Link href="mailto:contact@starone01.dev" title="Email" onClick={closeMenu}>
                     <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
