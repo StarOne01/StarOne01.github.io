@@ -12,14 +12,14 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-950"></div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
         {/* Main Title */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl font-black text-white mb-6 opacity-0 animate-fade-in tracking-tighter" style={{animationDelay: '0.2s'}}>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-4 sm:mb-6 opacity-0 animate-fade-in tracking-tighter leading-tight" style={{animationDelay: '0.2s'}}>
           STARONE01
         </h1>
         
         {/* Subtitle */}
-        <p className="text-sm sm:text-base font-mono text-zinc-400 mb-12 opacity-0 animate-fade-in tracking-wider" style={{animationDelay: '0.4s'}}>
+        <p className="text-xs sm:text-sm font-mono text-zinc-400 mb-8 sm:mb-12 opacity-0 animate-fade-in tracking-wider" style={{animationDelay: '0.4s'}}>
           PRASHANTH | CREATIVE TECHNOLOGIST
         </p>
 
@@ -49,13 +49,13 @@ function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0 animate-fade-in" style={{animationDelay: '1s'}}>
           <a
             href="#capabilities"
-            className="px-10 py-3 bg-white text-black font-black rounded-lg hover:bg-white hover:shadow-xl hover:shadow-white/20 transition-all duration-300 text-sm uppercase tracking-wider group"
+            className="w-full sm:w-auto px-8 sm:px-10 py-3.5 bg-white text-black font-black rounded-lg hover:bg-white hover:shadow-xl hover:shadow-white/20 transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider group active:scale-95"
           >
             View Work
           </a>
           <a
             href="#contact"
-            className="px-10 py-3 border border-white/40 text-white font-black rounded-lg hover:border-white/80 hover:bg-white/10 hover:shadow-lg hover:shadow-white/10 transition-all duration-300 text-sm uppercase tracking-wider"
+            className="w-full sm:w-auto px-8 sm:px-10 py-3.5 border border-white/40 text-white font-black rounded-lg hover:border-white/80 hover:bg-white/10 hover:shadow-lg hover:shadow-white/10 transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider active:scale-95"
           >
             Commission Me
           </a>
@@ -85,13 +85,13 @@ function Hero() {
 
 function About() {
   return (
-    <section id="about" className="py-24 px-6 max-w-4xl mx-auto border-t border-white/10">
-      <div className="mb-12">
-        <h2 className="text-4xl font-black text-white mb-4 tracking-tight">ABOUT</h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
+    <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto border-t border-white/10">
+      <div className="mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl font-black text-white mb-3 sm:mb-4 tracking-tight">ABOUT</h2>
+        <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
       </div>
       
-      <div className="space-y-6 text-white/70 text-lg leading-relaxed">
+      <div className="space-y-4 sm:space-y-6 text-white/70 text-base sm:text-lg leading-relaxed">
         <p>
           I'm <span className="text-white">STARONE01</span> — a Creative Technologist who operates at the intersection of <span className="text-red-400">cinematic vision</span> and <span className="text-blue-400">systems engineering</span>.
         </p>
@@ -123,13 +123,13 @@ function Capabilities() {
   ];
 
   return (
-    <section id="capabilities" className="py-24 px-6 max-w-4xl mx-auto border-t border-white/10">
-      <div className="mb-12">
-        <h2 className="text-4xl font-black text-white mb-4 tracking-tight">CAPABILITIES</h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
+    <section id="capabilities" className="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto border-t border-white/10">
+      <div className="mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl font-black text-white mb-3 sm:mb-4 tracking-tight">CAPABILITIES</h2>
+        <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {services.map((service, idx) => {
           const isRed = service.accent === "red";
           const accentColor = isRed ? "#ef4444" : "#3b82f6";
@@ -190,13 +190,13 @@ function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24 px-6 max-w-4xl mx-auto border-t border-white/10">
-      <div className="mb-12">
-        <h2 className="text-4xl font-black text-white mb-4 tracking-tight">EXPERIENCE</h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
+    <section id="experience" className="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto border-t border-white/10">
+      <div className="mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl font-black text-white mb-3 sm:mb-4 tracking-tight">EXPERIENCE</h2>
+        <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
       </div>
       
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {timeline.map((item, idx) => (
           <div 
             key={idx}
@@ -243,13 +243,13 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 px-6 max-w-4xl mx-auto border-t border-white/10">
-      <div className="mb-12">
-        <h2 className="text-4xl font-black text-white mb-4 tracking-tight">TECHNICAL ARSENAL</h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
+    <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto border-t border-white/10">
+      <div className="mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl font-black text-white mb-3 sm:mb-4 tracking-tight">TECHNICAL ARSENAL</h2>
+        <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
       </div>
       
-      <div className="space-y-10">
+      <div className="space-y-8 sm:space-y-10">
         {skillCategories.map((category, idx) => {
           const borderClass = category.accent === "red" ? "border-red-500/30" : category.accent === "blue" ? "border-blue-500/30" : "border-white/15";
           
@@ -282,19 +282,19 @@ function Skills() {
 
 function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 max-w-4xl mx-auto mb-16 border-t border-white/10">
-      <div className="mb-12">
-        <h2 className="text-4xl font-black text-white mb-4 tracking-tight">LET'S WORK</h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
+    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto mb-12 sm:mb-16 border-t border-white/10">
+      <div className="mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl font-black text-white mb-3 sm:mb-4 tracking-tight">LET'S WORK</h2>
+        <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-white/60 via-white/40 to-transparent rounded-full"></div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
         <div>
-          <p className="text-white/60 leading-relaxed mb-8">
+          <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
             I work with founders and visionaries who need someone who can execute at the intersection of cinematic vision and systems engineering. If you're building something undoable, let's talk.
           </p>
           
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             <a 
               href="mailto:contact@starone01.dev"
               className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-white/40 hover:bg-white/5 hover:shadow-lg hover:shadow-white/5 transition-all group"
@@ -374,10 +374,10 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="py-8 px-6 border-t border-white/10">
-      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/40">
-        <p>© 2025 STARONE01 / Prashanth. All rights reserved.</p>
-        <p>Creative Technologist | Unreal Engine 5 + Go/Python Systems</p>
+    <footer className="py-6 sm:py-8 px-4 sm:px-6 border-t border-white/10">
+      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/40 text-center sm:text-left">
+        <p>© 2025 STARONE01 / Prashanth</p>
+        <p>Creative Technologist | UE5 + Go/Python</p>
       </div>
     </footer>
   );
