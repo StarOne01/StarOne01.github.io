@@ -7,54 +7,57 @@ const inter = Inter({ subsets: ["latin"] });
 
 function Hero() {
   return (
-    <div className="relative w-full min-h-[100svh] bg-black overflow-hidden flex flex-col items-center justify-center">
+    <div className="relative w-full min-h-[100svh] bg-zinc-950 overflow-hidden flex flex-col items-center justify-center">
       {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-950"></div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Role badge */}
-        <div className="mb-6 opacity-0 animate-fade-in" style={{animationDelay: '0.2s'}}>
-          <span className="inline-block px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/60 border border-white/20 rounded-full">
-            Chief Technology Officer
-          </span>
-        </div>
-
-        {/* Name */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold text-white mb-2 opacity-0 animate-fade-in" style={{animationDelay: '0.4s', letterSpacing: '-0.02em'}}>
-          Prashanth
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        {/* Main Title */}
+        <h1 className="text-6xl sm:text-7xl md:text-8xl font-black text-white mb-6 opacity-0 animate-fade-in tracking-tighter" style={{animationDelay: '0.2s'}}>
+          STARONE01
         </h1>
         
-        {/* Alias */}
-        <p className="text-white/40 text-sm tracking-widest uppercase mb-4 opacity-0 animate-fade-in" style={{animationDelay: '0.5s'}}>
-          StarOne01
+        {/* Subtitle */}
+        <p className="text-sm sm:text-base font-mono text-zinc-400 mb-12 opacity-0 animate-fade-in tracking-wider" style={{animationDelay: '0.4s'}}>
+          PRASHANTH | CREATIVE TECHNOLOGIST
         </p>
 
-        {/* Company */}
-        <div className="flex items-center justify-center gap-3 mb-8 opacity-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
-          <div className="h-px w-12 bg-white/30"></div>
-          <span className="text-xl sm:text-2xl text-white/80 font-light tracking-wide">Medclara</span>
-          <div className="h-px w-12 bg-white/30"></div>
+        {/* Split Indicator - UE5 & Golang */}
+        <div className="flex items-center justify-center gap-8 mb-12 opacity-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+              <span className="text-xs sm:text-sm font-mono text-white/70 uppercase tracking-wider">UNREAL ENGINE 5</span>
+            </div>
+          </div>
+          <div className="w-px h-6 bg-white/20"></div>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></div>
+              <span className="text-xs sm:text-sm font-mono text-white/70 uppercase tracking-wider">GOLANG SYSTEMS</span>
+            </div>
+          </div>
         </div>
 
         {/* Tagline */}
-        <p className="text-lg sm:text-xl text-white/50 font-light max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-in" style={{animationDelay: '0.8s'}}>
-          Building technology that transforms healthcare delivery
+        <p className="text-lg sm:text-xl text-white/60 font-light max-w-3xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-in" style={{animationDelay: '0.8s'}}>
+          Architecting the Undoable. Merging high-performance code with cinematic storytelling.
         </p>
 
-        {/* CTA */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in" style={{animationDelay: '1s'}}>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0 animate-fade-in" style={{animationDelay: '1s'}}>
           <a
-            href="#about"
-            className="px-8 py-3 bg-white text-black font-medium rounded-lg hover:bg-white/90 transition-all duration-300"
+            href="#work"
+            className="px-10 py-3 bg-white text-black font-semibold rounded-lg hover:bg-white/90 transition-all duration-300 text-sm uppercase tracking-wider"
           >
-            About Me
+            View Work
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/5 transition-all duration-300"
+            className="px-10 py-3 border border-white/30 text-white font-semibold rounded-lg hover:border-white/60 hover:bg-white/5 transition-all duration-300 text-sm uppercase tracking-wider"
           >
-            Get in Touch
+            Commission Me
           </a>
         </div>
       </div>
@@ -84,62 +87,68 @@ function About() {
   return (
     <section id="about" className="py-24 px-6 max-w-4xl mx-auto">
       <div className="mb-12">
-        <h2 className="text-3xl font-semibold text-white mb-2">About</h2>
+        <h2 className="text-3xl font-black text-white mb-2 tracking-tight">ABOUT</h2>
         <div className="w-12 h-0.5 bg-white/40"></div>
       </div>
       
       <div className="space-y-6 text-white/70 text-lg leading-relaxed">
         <p>
-          As <span className="text-white">Chief Technology Officer at Medclara</span>, I lead the technical vision and engineering strategy for our healthcare technology platform.
+          I'm <span className="text-white">STARONE01</span> — a Creative Technologist who operates at the intersection of <span className="text-red-400">cinematic vision</span> and <span className="text-blue-400">systems engineering</span>.
         </p>
         <p>
-          I designed and built <span className="text-white">Medclara's core technology</span> — the Automatic Speech Recognition (ASR) system that powers our platform, including the training pipelines and iteration workflows that continuously improve our models.
+          On one side, I architect <span className="text-white">photorealistic experiences</span> in Unreal Engine 5, crafting trailers and visualizations that move audiences. On the other, I design <span className="text-white">high-performance backend systems</span> in Go and Python that scale without breaking.
         </p>
         <p>
-          With a background in <span className="text-white">Electrical Engineering</span> and deep expertise in ML/AI systems, I bridge the gap between complex technical challenges and innovative solutions that improve patient care.
+          I don't build for agencies. I work with <span className="text-white">visionaries and founders</span> who need someone who can execute both the art direction and the underlying infrastructure. That's the rare combination I bring.
         </p>
       </div>
     </section>
   );
 }
 
-function Expertise() {
-  const areas = [
+function Capabilities() {
+  const services = [
     {
-      title: "Technical Leadership",
-      description: "Guiding engineering teams, defining architecture, and driving technical strategy aligned with business objectives."
+      title: "3D VISUALIZATION",
+      subtitle: "The Director",
+      description: "I create photorealistic cinematic trailers and product reveals using Unreal Engine 5. High-impact visuals that tell your story.",
+      accent: "red"
     },
     {
-      title: "Healthcare Technology",
-      description: "Building compliant, secure systems for healthcare data management and patient care optimization."
-    },
-    {
-      title: "AI & Machine Learning",
-      description: "LLMs, transformer models, and fine-tuning with PEFT techniques. Traditional ML and NLP applications."
-    },
-    {
-      title: "Systems Architecture",
-      description: "Designing scalable infrastructure with focus on performance, security, and reliability."
+      title: "BACKEND ENGINEERING",
+      subtitle: "The Engineer",
+      description: "I build high-scale, fault-tolerant systems using Go (Gin) and Python. Production-ready infrastructure that performs.",
+      accent: "blue"
     }
   ];
 
   return (
-    <section id="expertise" className="py-24 px-6 max-w-4xl mx-auto">
+    <section id="capabilities" className="py-24 px-6 max-w-4xl mx-auto">
       <div className="mb-12">
-        <h2 className="text-3xl font-semibold text-white mb-2">Expertise</h2>
+        <h2 className="text-3xl font-black text-white mb-2 tracking-tight">CAPABILITIES</h2>
         <div className="w-12 h-0.5 bg-white/40"></div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {areas.map((area, idx) => (
-          <div 
-            key={idx}
-            className="p-6 border border-white/10 rounded-lg hover:border-white/20 transition-all duration-300"
-          >
-            <h3 className="text-lg font-medium text-white mb-2">{area.title}</h3>
-            <p className="text-white/50 text-sm leading-relaxed">{area.description}</p>
-          </div>
-        ))}
+        {services.map((service, idx) => {
+          const accentColor = service.accent === "red" ? "red-500" : "blue-500";
+          const hoverBorder = service.accent === "red" ? "hover:border-red-500/50" : "hover:border-blue-500/50";
+          const glowClass = service.accent === "red" ? "group-hover:shadow-red-500/20" : "group-hover:shadow-blue-500/20";
+          
+          return (
+            <div 
+              key={idx}
+              className={`group p-8 border border-white/10 rounded-lg transition-all duration-300 ${hoverBorder} ${glowClass} hover:shadow-lg`}
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className={`w-2 h-2 bg-${accentColor} rounded-full`}></div>
+                <p className="text-xs font-mono text-white/50 uppercase tracking-wider">{service.subtitle}</p>
+              </div>
+              <h3 className="text-xl font-black text-white mb-3 tracking-tight">{service.title}</h3>
+              <p className="text-white/50 text-sm leading-relaxed">{service.description}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
@@ -148,29 +157,29 @@ function Expertise() {
 function Experience() {
   const timeline = [
     {
-      role: "Chief Technology Officer",
-      company: "Medclara",
-      period: "Present",
-      description: "Designed and built the core ASR technology, training pipelines, and model iteration workflows powering the platform."
+      role: "Creative Technologist",
+      company: "Independent Operator",
+      period: "2024 - Present",
+      description: "Architecting cinematic experiences and backend systems. Unreal Engine 5 cinematics, Go/Python infrastructure, working with founders and visionaries."
     },
     {
-      role: "Chief Technology Officer",
-      company: "Auxacode Solutions",
-      period: "Previous",
-      description: "Led technical strategy and engineering teams to deliver innovative software solutions."
+      role: "CTO & Systems Architect",
+      company: "Previous Ventures",
+      period: "2022 - 2024",
+      description: "Led technical strategy, built production systems, managed engineering teams. Deep expertise in ASR systems, NLP, and ML infrastructure."
     },
     {
-      role: "Electrical Engineering",
-      company: "Academic",
+      role: "Electrical Engineer",
+      company: "Academic Foundation",
       period: "Ongoing",
-      description: "Pursuing degree with focus on embedded systems and signal processing."
+      description: "Continuous learning in embedded systems, signal processing, and systems design. EE principles inform my technical decisions."
     }
   ];
 
   return (
     <section id="experience" className="py-24 px-6 max-w-4xl mx-auto">
       <div className="mb-12">
-        <h2 className="text-3xl font-semibold text-white mb-2">Experience</h2>
+        <h2 className="text-3xl font-black text-white mb-2 tracking-tight">EXPERIENCE</h2>
         <div className="w-12 h-0.5 bg-white/40"></div>
       </div>
       
@@ -181,9 +190,9 @@ function Experience() {
             className="relative pl-8 border-l border-white/20"
           >
             <div className="absolute left-0 top-1 w-2 h-2 -translate-x-1/2 bg-white rounded-full"></div>
-            <span className="text-xs text-white/40 uppercase tracking-wider">{item.period}</span>
-            <h3 className="text-lg font-medium text-white mt-1">{item.role}</h3>
-            <p className="text-white/60 text-sm">{item.company}</p>
+            <span className="text-xs text-white/40 uppercase tracking-wider font-mono">{item.period}</span>
+            <h3 className="text-lg font-black text-white mt-2">{item.role}</h3>
+            <p className="text-white/60 text-sm font-mono">{item.company}</p>
             <p className="text-white/40 text-sm mt-2">{item.description}</p>
           </div>
         ))}
@@ -195,46 +204,55 @@ function Experience() {
 function Skills() {
   const skillCategories = [
     {
-      title: "Languages & Frameworks",
-      skills: ["TypeScript", "Python", "C/C++", "Go", "React", "Next.js", "Node.js"]
+      title: "3D & CINEMATICS",
+      accent: "red",
+      skills: ["Unreal Engine 5", "Cinematography", "Rendering", "VFX", "Motion Design", "Lighting"]
     },
     {
-      title: "AI & Machine Learning",
-      skills: ["LLMs", "Transformers", "PEFT", "Unsloth", "NLP", "Traditional ML", "PyTorch"]
+      title: "SYSTEMS & BACKEND",
+      accent: "blue",
+      skills: ["Go (Gin)", "Python", "PostgreSQL", "Docker", "Kubernetes", "CI/CD"]
     },
     {
-      title: "Infrastructure",
-      skills: ["Linux/POSIX", "Cloud Architecture", "Docker", "CI/CD", "Databases"]
+      title: "CORE LANGUAGES",
+      accent: "white",
+      skills: ["TypeScript", "C++", "Python", "Go", "Rust"]
     },
     {
-      title: "Security & Systems",
-      skills: ["Network Security", "Embedded Systems", "System Design", "API Development"]
+      title: "INFRASTRUCTURE",
+      accent: "white",
+      skills: ["Linux/POSIX", "Cloud Architecture", "API Design", "System Design", "Networking"]
     }
   ];
 
   return (
     <section id="skills" className="py-24 px-6 max-w-4xl mx-auto">
       <div className="mb-12">
-        <h2 className="text-3xl font-semibold text-white mb-2">Technical Skills</h2>
+        <h2 className="text-3xl font-black text-white mb-2 tracking-tight">TECHNICAL ARSENAL</h2>
         <div className="w-12 h-0.5 bg-white/40"></div>
       </div>
       
       <div className="space-y-8">
-        {skillCategories.map((category, idx) => (
-          <div key={idx}>
-            <h3 className="text-sm text-white/40 uppercase tracking-wider mb-4">{category.title}</h3>
-            <div className="flex flex-wrap gap-2">
-              {category.skills.map((skill, skillIdx) => (
-                <span 
-                  key={skillIdx}
-                  className="px-4 py-2 text-sm text-white/70 border border-white/15 rounded-lg hover:border-white/30 transition-colors"
-                >
-                  {skill}
-                </span>
-              ))}
+        {skillCategories.map((category, idx) => {
+          const borderClass = category.accent === "red" ? "border-red-500/30" : category.accent === "blue" ? "border-blue-500/30" : "border-white/15";
+          const hoverClass = category.accent === "red" ? "hover:border-red-500/50" : category.accent === "blue" ? "hover:border-blue-500/50" : "hover:border-white/30";
+          
+          return (
+            <div key={idx} className={`pb-8 border-b ${borderClass}`}>
+              <h3 className="text-xs font-black text-white/60 uppercase tracking-wider mb-4">{category.title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill, skillIdx) => (
+                  <span 
+                    key={skillIdx}
+                    className={`px-4 py-2 text-xs font-mono text-white/70 border rounded-lg transition-all ${hoverClass}`}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
@@ -244,20 +262,20 @@ function Contact() {
   return (
     <section id="contact" className="py-24 px-6 max-w-4xl mx-auto mb-16">
       <div className="mb-12">
-        <h2 className="text-3xl font-semibold text-white mb-2">Contact</h2>
+        <h2 className="text-3xl font-black text-white mb-2 tracking-tight">LET'S WORK</h2>
         <div className="w-12 h-0.5 bg-white/40"></div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <p className="text-white/60 leading-relaxed mb-8">
-            I welcome discussions on healthcare technology, engineering leadership, and opportunities to collaborate on meaningful solutions.
+            I work with founders and visionaries who need someone who can execute at the intersection of cinematic vision and systems engineering. If you're building something undoable, let's talk.
           </p>
           
           <div className="space-y-4">
             <a 
-              href="mailto:thestarone01@proton.me"
-              className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-white/20 transition-all group"
+              href="mailto:contact@starone01.dev"
+              className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-white/30 transition-all group"
             >
               <div className="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg group-hover:border-white/40 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" className="text-white/60">
@@ -266,7 +284,7 @@ function Contact() {
               </div>
               <div>
                 <p className="text-sm text-white/40">Email</p>
-                <p className="text-white/80">thestarone01@proton.me</p>
+                <p className="text-white/80">contact@starone01.dev</p>
               </div>
             </a>
             
@@ -274,7 +292,7 @@ function Contact() {
               href="https://www.linkedin.com/in/StarOne01/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-white/20 transition-all group"
+              className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-white/30 transition-all group"
             >
               <div className="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg group-hover:border-white/40 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" className="text-white/60">
@@ -291,7 +309,7 @@ function Contact() {
               href="https://github.com/StarOne01"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-white/20 transition-all group"
+              className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:border-white/30 transition-all group"
             >
               <div className="w-10 h-10 flex items-center justify-center border border-white/20 rounded-lg group-hover:border-white/40 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" className="text-white/60">
@@ -307,23 +325,23 @@ function Contact() {
         </div>
 
         <div className="p-6 border border-white/10 rounded-lg">
-          <h3 className="text-lg font-medium text-white mb-4">Let's Connect</h3>
+          <h3 className="text-lg font-black text-white mb-4 tracking-tight">COMMISSION OPPORTUNITIES</h3>
           <ul className="space-y-3 text-sm text-white/50">
             <li className="flex items-start gap-3">
-              <span className="text-white/30 mt-0.5">→</span>
-              <span>Healthcare technology partnerships</span>
+              <span className="text-red-400 mt-0.5 font-bold">→</span>
+              <span>Cinematic trailers & product reveals (UE5)</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-white/30 mt-0.5">→</span>
-              <span>Technical advisory opportunities</span>
+              <span className="text-blue-400 mt-0.5 font-bold">→</span>
+              <span>Backend systems & infrastructure (Go/Python)</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-white/30 mt-0.5">→</span>
-              <span>Engineering leadership discussions</span>
+              <span className="text-white/30 mt-0.5 font-bold">→</span>
+              <span>Consulting on technical architecture</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-white/30 mt-0.5">→</span>
-              <span>Open source collaboration</span>
+              <span className="text-white/30 mt-0.5 font-bold">→</span>
+              <span>Fractional CTO / technical leadership</span>
             </li>
           </ul>
         </div>
@@ -336,8 +354,8 @@ function Footer() {
   return (
     <footer className="py-8 px-6 border-t border-white/10">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/40">
-        <p>© 2025 Prashanth. All rights reserved.</p>
-        <p>CTO at Medclara</p>
+        <p>© 2025 STARONE01 / Prashanth. All rights reserved.</p>
+        <p>Creative Technologist | Unreal Engine 5 + Go/Python Systems</p>
       </div>
     </footer>
   );
@@ -348,7 +366,7 @@ export default function Home() {
     <main className={inter.className}>
       <Hero />
       <About />
-      <Expertise />
+      <Capabilities />
       <Experience />
       <Skills />
       <Contact />
