@@ -16,7 +16,7 @@ function Hero() {
         {/* Role badge */}
         <div className="mb-6 opacity-0 animate-fade-in" style={{animationDelay: '0.2s'}}>
           <span className="inline-block px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/60 border border-white/20 rounded-full">
-            Chief Technology Officer
+            Founding Engineer
           </span>
         </div>
 
@@ -90,7 +90,7 @@ function About() {
       
       <div className="space-y-6 text-white/70 text-lg leading-relaxed">
         <p>
-          As <span className="text-white">Chief Technology Officer at Medclara</span>, I lead the technical vision and engineering strategy for our healthcare technology platform.
+          As <span className="text-white">Founding Engineer at Medclara</span>, I lead the technical vision and engineering strategy for our healthcare technology platform.
         </p>
         <p>
           I designed and built <span className="text-white">Medclara's core technology</span> — the Automatic Speech Recognition (ASR) system that powers our platform, including the training pipelines and iteration workflows that continuously improve our models.
@@ -148,13 +148,13 @@ function Expertise() {
 function Experience() {
   const timeline = [
     {
-      role: "Chief Technology Officer",
+      role: "Founding Engineer",
       company: "Medclara",
       period: "Present",
       description: "Designed and built the core ASR technology, training pipelines, and model iteration workflows powering the platform."
     },
     {
-      role: "Chief Technology Officer",
+      role: "Founding Engineer",
       company: "Auxacode Solutions",
       period: "Previous",
       description: "Led technical strategy and engineering teams to deliver innovative software solutions."
@@ -337,7 +337,7 @@ function Footer() {
     <footer className="py-8 px-6 border-t border-white/10">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/40">
         <p>© 2025 Prashanth. All rights reserved.</p>
-        <p>CTO at Medclara</p>
+        <p>Founding Engineer at Medclara</p>
       </div>
     </footer>
   );

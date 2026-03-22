@@ -6,8 +6,8 @@ import Nav from "@/components/ui/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Prashanth | CTO at Medclara",
-  description: "Chief Technology Officer at Medclara - Building technology that transforms healthcare delivery",
+  title: "Prashanth | Founding Engineer at Medclara",
+  description: "Founding Engineer at Medclara - Building technology that transforms healthcare delivery",
 };
 
 export default function RootLayout({
