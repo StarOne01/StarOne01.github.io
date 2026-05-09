@@ -40,7 +40,7 @@ function Hero() {
 
         {/* Tagline */}
         <p className="text-lg sm:text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
-          Designing high-performance distributed systems and production-grade machine learning pipelines.
+          Curiosity-driven engineer exploring systems from first principles. Building high-performance distributed systems and production ML pipelines.
         </p>
 
         {/* CTA */}
@@ -107,7 +107,7 @@ function About() {
       
       <div className="space-y-8 text-white/70 text-lg md:text-xl font-light leading-relaxed p-8 md:p-12 rounded-3xl bg-white/[0.02] border border-white/[0.05] shadow-2xl backdrop-blur-sm">
         <p>
-          I am a <span className="font-semibold text-white">Systems and AI Engineer</span> who specializes in building software from zero-to-one. I don't just glue APIs together; I architect low-latency microservices, optimize inference engines, and design deterministic fault-tolerant systems.
+          I am a <span className="font-semibold text-white">Systems and AI Engineer</span> driven by an insatiable curiosity about how complex systems work. I specialize in building software from zero-to-one through deep exploration and investigative problem-solving. I don't just glue APIs together; I architect low-latency microservices, optimize inference engines, and design deterministic fault-tolerant systems by understanding the "why" at every level.
         </p>
         <p>
           My core expertise lies in <span className="font-semibold text-white">production machine learning</span> and <span className="font-semibold text-white">scalable backend infrastructure</span>. Whether it's training state-of-the-art Automatic Speech Recognition (ASR) pipelines, efficiently fine-tuning large language models using PEFT techniques, or designing concurrent Go/C++ backends, I build systems that scale gracefully.
@@ -169,7 +169,7 @@ function Experience() {
       role: "Founding Engineer",
       company: "Stealth AI Infrastructure startup",
       period: "Present",
-      description: "Leading the core engineering architecture. Building resilient machine learning pipelines, scalable backend microservices, and high-throughput inference engines running locally on custom AI hardware."
+      description: "Driven by curiosity about how things work at their core. Leading the engineering architecture by asking hard questions and exploring first principles—building resilient ML pipelines, scalable microservices, and high-throughput inference engines on custom AI hardware."
     },
     {
       role: "Founding Engineer",
@@ -337,23 +337,23 @@ function Contact() {
 
         <div className="p-8 rounded-3xl bg-gradient-to-br from-white/[0.05] to-transparent border border-white/[0.05] backdrop-blur-xl relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-48 h-48 bg-white/10 blur-[50px] rounded-full"></div>
-          <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+          <h3 className="text-2xl font-bold text-white mb-6">Curious Explorations</h3>
           <ul className="space-y-5 text-base text-white/60">
             <li className="flex items-start gap-4 group">
               <span className="text-white/40 mt-1 transition-transform group-hover:translate-x-1">→</span>
-              <span className="group-hover:text-white transition-colors">AI and Systems Architecture</span>
+              <span className="group-hover:text-white transition-colors">Deep dives into AI systems and first-principles architecture</span>
             </li>
             <li className="flex items-start gap-4 group">
               <span className="text-white/40 mt-1 transition-transform group-hover:translate-x-1">→</span>
-              <span className="group-hover:text-white transition-colors">Technical advisory opportunities</span>
+              <span className="group-hover:text-white transition-colors">Investigating novel solutions to hard technical problems</span>
             </li>
             <li className="flex items-start gap-4 group">
               <span className="text-white/40 mt-1 transition-transform group-hover:translate-x-1">→</span>
-              <span className="group-hover:text-white transition-colors">Engineering leadership discussions</span>
+              <span className="group-hover:text-white transition-colors">Mentoring teams to explore and understand systems deeply</span>
             </li>
             <li className="flex items-start gap-4 group">
               <span className="text-white/40 mt-1 transition-transform group-hover:translate-x-1">→</span>
-              <span className="group-hover:text-white transition-colors">Open source collaboration</span>
+              <span className="group-hover:text-white transition-colors">Collaborative projects pushing technical boundaries</span>
             </li>
           </ul>
         </div>
