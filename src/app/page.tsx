@@ -40,7 +40,7 @@ function Hero() {
 
         {/* Tagline */}
         <p className="text-lg sm:text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
-          Curiosity-driven engineer exploring systems from first principles. Building high-performance distributed systems and production ML pipelines.
+          Curiosity-driven engineer exploring systems from first principles. Building high-performance distributed systems, AI voice agents, and production ML pipelines.
         </p>
 
         {/* CTA */}
@@ -107,13 +107,13 @@ function About() {
       
       <div className="space-y-8 text-white/70 text-lg md:text-xl font-light leading-relaxed p-8 md:p-12 rounded-3xl bg-white/[0.02] border border-white/[0.05] shadow-2xl backdrop-blur-sm">
         <p>
-          I am a <span className="font-semibold text-white">Systems and AI Engineer</span> driven by an insatiable curiosity about how complex systems work. I specialize in building software from zero-to-one through deep exploration and investigative problem-solving. I don't just glue APIs together; I architect low-latency microservices, optimize inference engines, and design deterministic fault-tolerant systems by understanding the "why" at every level.
+          I am a <span className="font-semibold text-white">Systems and AI Engineer</span> based in Coimbatore, Tamil Nadu. Currently a third-year Electrical & Electronics Engineering student, I am a self-taught programmer driven by an insatiable curiosity about how complex systems work. I specialize in building software from zero-to-one through deep exploration and investigative problem-solving.
         </p>
         <p>
-          My core expertise lies in <span className="font-semibold text-white">production machine learning</span> and <span className="font-semibold text-white">scalable backend infrastructure</span>. Whether it's training state-of-the-art Automatic Speech Recognition (ASR) pipelines, efficiently fine-tuning large language models using PEFT techniques, or designing concurrent Go/C++ backends, I build systems that scale gracefully.
+          As the <span className="font-semibold text-white">Founding Engineer & CTO at Medclara</span>, I architect voice-first, multilingual clinical documentation platforms that convert doctor-patient conversations into structured SOAP notes using custom ASR and LLMs. I also run a <span className="font-semibold text-white">Software Development Agency</span> delivering high-end enterprise software and AI agent systems for diverse businesses, while building an upcoming startup called <span className="font-semibold text-white">primesoma</span>.
         </p>
         <p>
-          With deep roots in <span className="font-semibold text-white">Electrical Engineering</span> and signal processing, my approach is grounded in first principles. I bridge the complex constraints of bare-metal hardware orchestration and high-level software abstractions to deliver optimal, robust solutions.
+          My core expertise spans <span className="font-semibold text-white">production machine learning pipelines</span> running local inference with fine-tuned Whisper and Indic models, down to <span className="font-semibold text-white">core compiler infrastructure</span> with over 15 merged PRs to LLVM. I bridge the complex constraints of local bare-metal inference and responsive UI to deliver optimal, robust solutions.
         </p>
       </div>
     </section>
@@ -124,19 +124,19 @@ function Expertise() {
   const areas = [
     {
       title: "Production Machine Learning",
-      description: "Training state-of-the-art Automatic Speech Recognition (ASR) pipelines, deploying and scaling Transformer models, and utilizing Parameter-Efficient Fine-Tuning (PEFT) like LoRA for low-latency inference."
+      description: "Developing state-of-the-art ASR architectures (Conformer, RNN-T, CTC). Fine-tuning Whisper models with QLoRA, handling speaker diarization, and deploying local inference pipelines (Ollama) with structured clinical outputs."
     },
     {
-      title: "Distributed Systems Engineering",
-      description: "Architecting low-latency microservices, concurrent data pipelines, and robust backend infrastructures designed for high availability and fault tolerance."
+      title: "Systems & Infrastructure",
+      description: "Architecting ABDM/ABHA, FHIR R4 integrations and targeting rigorous Indian compliance standards (DPDP Act). Building on-premise PostgreSQL architectures and deterministic concurrent Go/C++ backends."
     },
     {
-      title: "Cloud & Infrastructure",
-      description: "Designing deterministic, scalable, and secure cloud architectures utilizing containerization (Docker, Kubernetes) and structured CI/CD pipelines."
+      title: "Open Source & Compilers",
+      description: "Active LLVM contributor with 15+ merged PRs including float-related changes. Creator of PhraseNuX, a C++ CLI password manager with AES encryption, and researcher on cross-lingual reasoning compression."
     },
     {
-      title: "Engineering Leadership",
-      description: "Mentoring technical teams, establishing rigorous engineering standards, conducting code reviews, and driving architectural vision from zero-to-one."
+      title: "Creative Technologies",
+      description: "Fusing technical rigor with high-end creative tools, working with Unreal Engine 5 cinematics and DaVinci Resolve for advanced color grading and export pipelines."
     }
   ];
 
@@ -167,21 +167,27 @@ function Experience() {
   const timeline = [
     {
       role: "Founding Engineer",
-      company: "Stealth AI Infrastructure startup",
+      company: "Medclara",
       period: "Present",
-      description: "Driven by curiosity about how things work at their core. Leading the engineering architecture by asking hard questions and exploring first principles—building resilient ML pipelines, scalable microservices, and high-throughput inference engines on custom AI hardware."
+      description: "Architecting a voice-first, multilingual clinical documentation platform. Built a pipeline combining IndicConformer, Gemma 4, and SOAP notes achieving ~88/100 clinical accuracy from raw Tamil inputs in a single call. Integrated ABDM/FHIR R4 targeting Tier-2/3 cities with on-premise deployments."
     },
     {
-      role: "Founding Engineer",
-      company: "Auxacode Solutions",
-      period: "Previous",
-      description: "Directed technical strategy and scalable software architecture to rapidly deliver MVPs. Established engineering practices across frontend and backend systems."
+      role: "Founder",
+      company: "Software Development Agency",
+      period: "Present",
+      description: "Running a Coimbatore-based agency funding other ventures. Delivering high-end web projects, custom AI agent systems (like WhatsApp bots), and enterprise software for real estate firms, studios, and manufacturing businesses."
     },
     {
-      role: "Electrical Engineering",
-      company: "Academic Focus",
+      role: "Founder",
+      company: "primesoma",
+      period: "Upcoming Startup",
+      description: "Currently building primesoma, an upcoming startup venture pushing the boundaries in technological solutions. Learn more at primesoma.com."
+    },
+    {
+      role: "Open Source Contributor & Researcher",
+      company: "LLVM, EfficientXLang",
       period: "Ongoing",
-      description: "Researching low-level interactions bridging hardware and software, focusing on embedded systems, digital signal processing, and low-level firmware optimization."
+      description: "Authored 15+ merged LLVM PRs. Conducted original research assessing cross-lingual reasoning in multilingual LLMs. Created PhraseNuX (C++ CLI password manager) and authored technical series on production AI realities."
     }
   ];
 
@@ -223,19 +229,19 @@ function Skills() {
   const skillCategories = [
     {
       title: "Languages & Frameworks",
-      skills: ["TypeScript", "Python", "C/C++", "Go", "React", "Next.js", "Node.js"]
+      skills: ["Go", "Python", "Next.js", "C++", "React", "TypeScript", "PostgreSQL"]
     },
     {
       title: "AI & Machine Learning",
-      skills: ["LLMs", "Transformers", "PEFT", "Unsloth", "NLP", "Traditional ML", "PyTorch"]
+      skills: ["Whisper", "IndicConformer", "Ollama", "Gemma 4", "Speaker Diarization", "PEFT/QLoRA"]
     },
     {
-      title: "Infrastructure",
-      skills: ["Linux/POSIX", "Cloud Architecture", "Docker", "CI/CD", "Databases"]
+      title: "Systems & Infrastructure",
+      skills: ["LLVM", "ABDM/FHIR R4", "On-premise Deployment", "DPDP Act Compliance", "AES Encryption"]
     },
     {
-      title: "Security & Systems",
-      skills: ["Network Security", "Embedded Systems", "System Design", "API Development"]
+      title: "Creative Tools",
+      skills: ["Unreal Engine 5", "DaVinci Resolve", "Cinematics", "Color Grading"]
     }
   ];
 
@@ -337,23 +343,23 @@ function Contact() {
 
         <div className="p-8 rounded-3xl bg-gradient-to-br from-white/[0.05] to-transparent border border-white/[0.05] backdrop-blur-xl relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-48 h-48 bg-white/10 blur-[50px] rounded-full"></div>
-          <h3 className="text-2xl font-bold text-white mb-6">Curious Explorations</h3>
+          <h3 className="text-2xl font-bold text-white mb-6">Recent Research & Work</h3>
           <ul className="space-y-5 text-base text-white/60">
             <li className="flex items-start gap-4 group">
               <span className="text-white/40 mt-1 transition-transform group-hover:translate-x-1">→</span>
-              <span className="group-hover:text-white transition-colors">Deep dives into AI systems and first-principles architecture</span>
+              <span className="group-hover:text-white transition-colors">15+ Merged LLVM PRs (float-related changes)</span>
             </li>
             <li className="flex items-start gap-4 group">
               <span className="text-white/40 mt-1 transition-transform group-hover:translate-x-1">→</span>
-              <span className="group-hover:text-white transition-colors">Investigating novel solutions to hard technical problems</span>
+              <span className="group-hover:text-white transition-colors">EfficientXLang: Cross-lingual reasoning gap in LLMs</span>
             </li>
             <li className="flex items-start gap-4 group">
               <span className="text-white/40 mt-1 transition-transform group-hover:translate-x-1">→</span>
-              <span className="group-hover:text-white transition-colors">Mentoring teams to explore and understand systems deeply</span>
+              <span className="group-hover:text-white transition-colors">PhraseNuX: C++ CLI AES password manager</span>
             </li>
             <li className="flex items-start gap-4 group">
               <span className="text-white/40 mt-1 transition-transform group-hover:translate-x-1">→</span>
-              <span className="group-hover:text-white transition-colors">Collaborative projects pushing technical boundaries</span>
+              <span className="group-hover:text-white transition-colors">Active content series: Multilingual LLM evaluation & ASR architecture</span>
             </li>
           </ul>
         </div>
@@ -366,8 +372,8 @@ function Footer() {
   return (
     <footer className="py-8 px-6 border-t border-white/10">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/40">
-        <p>© 2026 Prashanth. All rights reserved.</p>
-        <p>AI & Systems Engineer</p>
+        <p>© 2026 Prashanth T. All rights reserved.</p>
+        <p>Founding Engineer</p>
       </div>
     </footer>
   );
