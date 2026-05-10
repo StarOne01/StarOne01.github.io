@@ -169,7 +169,7 @@ function Experience() {
       role: "Founding Engineer",
       company: "Medclara",
       period: "Present",
-      description: "Architecting a voice-first, multilingual clinical documentation platform. Built a pipeline combining IndicConformer, Gemma 4, and SOAP notes achieving ~88/100 clinical accuracy from raw Tamil inputs in a single call. Integrated ABDM/FHIR R4 targeting Tier-2/3 cities with on-premise deployments."
+      description: "Architecting a voice-first, multilingual clinical documentation platform. Built a pipeline achieving ~88/100 clinical accuracy from raw Tamil inputs in a single call. Integrated ABDM/FHIR R4 targeting Tier-2/3 cities with on-premise deployments."
     },
     {
       role: "Founder",
@@ -226,24 +226,28 @@ function Experience() {
 }
 
 function Skills() {
-  const skillCategories = [
-    {
-      title: "Languages & Frameworks",
-      skills: ["Go", "Python", "Next.js", "C++", "React", "TypeScript", "PostgreSQL"]
-    },
-    {
-      title: "AI & Machine Learning",
-      skills: ["Whisper", "IndicConformer", "Ollama", "Gemma 4", "Speaker Diarization", "PEFT/QLoRA"]
-    },
-    {
-      title: "Systems & Infrastructure",
-      skills: ["LLVM", "ABDM/FHIR R4", "On-premise Deployment", "DPDP Act Compliance", "AES Encryption"]
-    },
-    {
-      title: "Creative Tools",
-      skills: ["Unreal Engine 5", "DaVinci Resolve", "Cinematics", "Color Grading"]
-    }
-  ];
+const skillCategories = [
+  {
+    title: "Languages & Frameworks",
+    skills: ["Go", "Python", "TypeScript", "C++", "Next.js", "React", "PostgreSQL"]
+  },
+  {
+    title: "AI & ML Systems",
+    skills: ["Whisper Fine-tuning", "IndicConformer", "Speaker Diarization", "PEFT / QLoRA", "Ollama", "Local LLM Inference", "Multilingual NLP"]
+  },
+  {
+    title: "Production & Infrastructure",
+    skills: ["On-premise AI Deployment", "ABDM / FHIR R4", "WhatsApp Bot Systems", "Voice Pipelines", "AES Encryption", "REST APIs"]
+  },
+  {
+    title: "Low-level & Compilers",
+    skills: ["LLVM", "Compiler Internals", "C++ Systems Programming", "AST Transformations"]
+  },
+  {
+    title: "Creative & Motion",
+    skills: ["Unreal Engine 5", "DaVinci Resolve", "Cinematic Editing", "Color Grading"]
+  }
+];
 
   return (
     <section id="skills" className="py-32 px-6 max-w-5xl mx-auto overflow-hidden">
