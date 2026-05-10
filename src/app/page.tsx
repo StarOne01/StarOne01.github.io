@@ -181,7 +181,7 @@ function Experience() {
       role: "Founder",
       company: "primesoma",
       period: "Upcoming Startup",
-      description: "Currently building primesoma, an upcoming startup venture pushing the boundaries in technological solutions. Learn more at primesoma.com."
+      description: "Building a vertically integrated wellness ecosystem — everything a prime body needs from food and groceries to farms, fitness, and health. Owning the entire stack to deliver seamless, end-to-end wellness solutions."
     },
     {
       role: "Open Source Contributor & Researcher",
