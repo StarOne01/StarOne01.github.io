@@ -124,7 +124,7 @@ export default function Nav() {
           )}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
-          <Link href="mailto:thestarone01@proton.me" title="Email">
+          <Link href="mailto:ping@starone01.me" title="Email">
             <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -295,7 +295,7 @@ function Contact() {
           
           <div className="space-y-4">
             <a 
-              href="mailto:thestarone01@proton.me"
+              href="mailto:ping@starone01.me"
               className="flex items-center gap-5 p-5 bg-white/[0.02] border border-white/[0.05] rounded-2xl hover:bg-white/[0.05] hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300 group backdrop-blur-md"
             >
               <div className="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 text-white/70 rounded-xl group-hover:scale-110 group-hover:bg-white group-hover:text-black group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300">
@@ -304,8 +304,23 @@ function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-1">Email</p>
-                <p className="text-base font-medium text-white/90 group-hover:text-white transition-colors">thestarone01@proton.me</p>
+                <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-1">Professional Email</p>
+                <p className="text-base font-medium text-white/90 group-hover:text-white transition-colors">ping@starone01.me</p>
+              </div>
+            </a>
+            
+            <a 
+              href="mailto:orbit@starone01.me"
+              className="flex items-center gap-5 p-5 bg-white/[0.02] border border-white/[0.05] rounded-2xl hover:bg-white/[0.05] hover:border-white/[0.15] hover:-translate-y-1 transition-all duration-300 group backdrop-blur-md"
+            >
+              <div className="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 text-white/70 rounded-xl group-hover:scale-110 group-hover:bg-white group-hover:text-black group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                </svg>
+              </div>
+              <div>
+                <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-1">Personal Email</p>
+                <p className="text-base font-medium text-white/90 group-hover:text-white transition-colors">orbit@starone01.me</p>
               </div>
             </a>
             
