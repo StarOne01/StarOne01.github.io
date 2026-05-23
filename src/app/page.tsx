@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 function Hero() {
   return (
-    <div className="relative w-full min-h-[100svh] bg-slate-950 overflow-hidden flex flex-col items-center justify-center">
+    <div className="relative w-full min-h-[100svh] bg-white/[0.03] overflow-hidden flex flex-col items-center justify-center">
       {/* Dynamic Ambient Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] -left-[10%] w-[40%] h-[40%] bg-white/5 blur-[120px] rounded-full animate-pulse" style={{animationDuration: '8s'}}></div>
