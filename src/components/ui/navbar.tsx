@@ -248,7 +248,7 @@ export default function Nav() {
               <div>
                 <p className={`text-xs font-medium text-white/40 uppercase tracking-wider mb-4 ${inter.className}`}>Connect</p>
                 <div className="grid grid-cols-3 gap-3">
-                  <Link href="mailto:thestarone01@proton.me" title="Email" onClick={closeMenu}>
+                  <Link href="mailto:ping@starone01.me" title="Email" onClick={closeMenu}>
                     <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

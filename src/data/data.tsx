@@ -1,45 +1,12 @@
 import GNU_logo from "../../public/GNU_logo.svg";
 import C_logo from "../../public/C_Logo.webp";
-import { Parkinsans } from "next/font/google";
 import LLVM_logo from "../../public/LLVM_logo.webp";
 import Linux_logo from "../../public/Tux.webp";
 import Chromium_logo from "../../public/Chromium_Logo.svg";
-import Patronus from "../../public/patronus-from-harry-potter.webp";
-import Stars from "../../public/stars.webp";
-import Mountains from "../../public/mountains.webp";
 import Floris_Logo from "../../public/florish.png";
 import Signal_Logo from "../../public/Signal-Logo.png";
 import Graphene_Logo from "../../public/graphene.webp";
-import Aurora from "../../public/aurora.webp";
 import Brave_logo from "../../public/brave.png";
-
-const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
-
-const words = [
-  {
-    text: "Hey !",
-  },
-];
-
-const nameData = [
-  {
-    text: "I'm",
-  },
-  {
-    text: "Prashanth",
-    className: "text-white",
-  },
-];
-
-const also = [
-  {
-    text: "a.k.a",
-  },
-  {
-    text: "Starone01",
-    className: "text-white",
-  },
-];
 
 const projects = [
   {
@@ -120,131 +87,4 @@ const projects = [
   },
 ];
 
-const contrib = [
-  {
-    name: "LLVM",
-    contribs: {
-      code: [
-        {
-          PR: "123495",
-        },
-      ],
-      docs: [
-        {
-          PR: "122219",
-        },
-        {
-          PR: "122598",
-        },
-        {
-          PR: "122563",
-        },
-        {
-          PR: "122497",
-        },
-        {
-          PR: "122406",
-        },
-        {
-          PR: "122411",
-        },
-        {
-          PR: "122997",
-        },
-        {
-          PR: "123000",
-        },
-        {
-          PR: "123004",
-        },
-        {
-          PR: "123068"
-        }
-      ],
-    },
-  },
-];
-
-const SkeletonOne = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Love for lights (Auroras)
-      </p>
-    </div>
-  );
-};
-
-const SkeletonTwo = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Life around the clouds
-      </p>
-    </div>
-  );
-};
-const SkeletonThree = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Stars.. You know why the name?
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        I love stars, cause they spend all their energy to keep life growing
-      </p>
-    </div>
-  );
-};
-const SkeletonFour = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Expecto Patronum
-      </p>
-    </div>
-  );
-};
-
-const cards = [
-  {
-    id: 1,
-    content: <SkeletonOne />,
-    className: "sm:col-span-2",
-    thumbnail: Aurora,
-  },
-  {
-    id: 2,
-    content: <SkeletonTwo />,
-    className: "col-span-1",
-    thumbnail: Mountains,
-  },
-  {
-    id: 3,
-    content: <SkeletonThree />,
-    className: "col-span-1",
-
-    thumbnail: Stars,
-  },
-
-  {
-    id: 4,
-    content: <SkeletonFour />,
-    className: "sm:col-span-2",
-    thumbnail: Patronus,
-  },
-];
-
-export {
-  words,
-  also,
-  nameData,
-  projects,
-  contrib,
-  SkeletonOne,
-  SkeletonTwo,
-  SkeletonThree,
-  SkeletonFour,
-  cards,
-};
+export { projects };
