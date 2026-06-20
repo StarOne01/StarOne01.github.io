@@ -34,7 +34,7 @@ export default function ScrollSpeed() {
       accPx += dy;
       const elapsed = now - accStart;
 
-      if (accPx > 500 && elapsed < 300) {
+      if (accPx > 500 && elapsed > 50 && elapsed < 300) {
         setSpeed(Math.round(accPx / (elapsed / 1000)));
         setMsg(messages[Math.floor(Math.random() * messages.length)]);
         setVisible(true);

@@ -35,7 +35,7 @@ function Hero() {
         </div>
 
         <p className="text-lg sm:text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
-          Curiosity-driven engineer exploring systems from first principles. Building high-performance distributed systems, AI voice agents, and production ML pipelines.
+          Curiosity-driven engineer exploring systems from first principles. Building stuff.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 opacity-0 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
