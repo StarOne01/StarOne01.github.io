@@ -20,8 +20,18 @@ export default function ScrollSpeed() {
     let lastY = window.scrollY;
     let accPx = 0;
     let accStart = 0;
+    let stopTimer: ReturnType<typeof setTimeout>;
+
+    const stop = () => {
+      setVisible(false);
+      busy.current = false;
+      accPx = 0;
+    };
 
     const onScroll = () => {
+      clearTimeout(stopTimer);
+      stopTimer = setTimeout(stop, 300);
+
       if (busy.current) return;
 
       const now = performance.now();
@@ -39,7 +49,6 @@ export default function ScrollSpeed() {
         setMsg(messages[Math.floor(Math.random() * messages.length)]);
         setVisible(true);
         busy.current = true;
-        setTimeout(() => { busy.current = false; setVisible(false); }, 4000);
         accPx = 0;
       }
 
@@ -47,7 +56,10 @@ export default function ScrollSpeed() {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      clearTimeout(stopTimer);
+    };
   }, []);
 
   return (
