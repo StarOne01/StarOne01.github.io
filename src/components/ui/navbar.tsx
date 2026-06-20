@@ -205,30 +205,42 @@ export default function Nav() {
 }
 
 function ThemeToggle() {
-  const [flash, setFlash] = useState(false);
-  const [showMsg, setShowMsg] = useState(false);
+  const [theme, setTheme] = useState("default");
+  const [showName, setShowName] = useState("");
 
-  const handleClick = () => {
-    setFlash(true);
-    setTimeout(() => {
-      setFlash(false);
-      setShowMsg(true);
-      setTimeout(() => setShowMsg(false), 2500);
-    }, 200);
+  useEffect(() => {
+    const saved = localStorage.getItem("theme") || "default";
+    setTheme(saved);
+    document.documentElement.setAttribute("data-theme", saved);
+  }, []);
+
+  const themes = [
+    { id: "default", label: "default" },
+    { id: "nord", label: "nord" },
+    { id: "tokyo", label: "tokyo" },
+  ];
+
+  const cycle = () => {
+    const idx = themes.findIndex((t) => t.id === theme);
+    const next = themes[(idx + 1) % themes.length];
+    setTheme(next.id);
+    document.documentElement.setAttribute("data-theme", next.id);
+    localStorage.setItem("theme", next.id);
+    setShowName(next.label);
+    setTimeout(() => setShowName(""), 1500);
   };
 
   return (
     <>
-      <div className={`fixed inset-0 z-[60] pointer-events-none transition-colors duration-200 ${flash ? "bg-white" : "bg-transparent"}`} />
-      {showMsg && (
+      {showName && (
         <div className="fixed bottom-20 right-4 z-50 bg-black/80 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/60 backdrop-blur-xl whitespace-nowrap">
-          light mode? in this economy?
+          theme: {showName}
         </div>
       )}
       <button
-        onClick={handleClick}
+        onClick={cycle}
         className="p-2 rounded hover:bg-white/10 transition-all duration-300"
-        title="toggle theme"
+        title={`theme: ${theme}`}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" className="fill-white/60 hover:fill-white">
           <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />

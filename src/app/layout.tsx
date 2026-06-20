@@ -55,7 +55,7 @@ export default function RootLayout({
         }}
       />
       </head>
-      <body className={`${inter.className} bg-black`}>
+      <body className={inter.className}>
         <Nav />
         <ScrollSpeed />
         <SelectEgg />
