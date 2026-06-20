@@ -89,32 +89,15 @@ export default function Nav() {
         </div>
         <div className={`hidden lg:flex lg:gap-x-6 ${inter.className}`}>
           {isHomePage ? (
-            <>
+            ["About", "Expertise", "Experience", "Contact"].map((item) => (
               <a
-                href="#about"
+                key={item}
+                href={`#${item.toLowerCase()}`}
                 className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
               >
-                About
+                {item}
               </a>
-              <a
-                href="#expertise"
-                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
-              >
-                Expertise
-              </a>
-              <a
-                href="#experience"
-                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
-              >
-                Experience
-              </a>
-              <a
-                href="#contact"
-                className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
-              >
-                Contact
-              </a>
-            </>
+            ))
           ) : (
             <Link href="/"
               className="text-sm m-0 px-3 py-1.5 leading-6 rounded text-white/60 hover:text-white transition-all duration-300"
@@ -124,49 +107,19 @@ export default function Nav() {
           )}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
-          <Link href="mailto:ping@starone01.me" title="Email">
-            <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                className="fill-white/60 hover:fill-white"
-              >
-                <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path>
-              </svg>
-            </div>
-          </Link>
-          <Link href="https://www.linkedin.com/in/StarOne01/" title="LinkedIn">
-            <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                className="fill-white/60 hover:fill-white"
-              >
-                <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
-              </svg>
-            </div>
-          </Link>
-          <Link href="https://github.com/StarOne01" title="GitHub">
-            <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                className="fill-white/60 hover:fill-white"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
-                ></path>
-              </svg>
-            </div>
-          </Link>
+          {[
+            { href: "mailto:ping@starone01.me", title: "Email", path: "M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z" },
+            { href: "https://www.linkedin.com/in/StarOne01/", title: "LinkedIn", path: "M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z" },
+            { href: "https://github.com/StarOne01", title: "GitHub", path: "M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z" },
+          ].map(({ href, title, path }) => (
+            <Link key={title} href={href} title={title}>
+              <div className="p-2 rounded hover:bg-white/10 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" className="fill-white/60 hover:fill-white">
+                  <path d={path} />
+                </svg>
+              </div>
+            </Link>
+          ))}
         </div>
       </nav>
       {mobileMenuOpen && (
@@ -193,43 +146,16 @@ export default function Nav() {
               {/* Menu Items */}
               <div className={`space-y-2 ${inter.className}`}>
                 {isHomePage ? (
-                  <>
+                  ["About", "Expertise", "Experience", "Skills", "Contact"].map((item) => (
                     <a
-                      href="#about"
+                      key={item}
+                      href={`#${item.toLowerCase()}`}
                       onClick={closeMenu}
                       className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
                     >
-                      About
+                      {item}
                     </a>
-                    <a
-                      href="#expertise"
-                      onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
-                    >
-                      Expertise
-                    </a>
-                    <a
-                      href="#experience"
-                      onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
-                    >
-                      Experience
-                    </a>
-                    <a
-                      href="#skills"
-                      onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
-                    >
-                      Skills
-                    </a>
-                    <a
-                      href="#contact"
-                      onClick={closeMenu}
-                      className="block px-4 py-3 rounded-lg text-base text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
-                    >
-                      Contact
-                    </a>
-                  </>
+                  ))
                 ) : (
                   <Link
                     href="/"
@@ -248,49 +174,19 @@ export default function Nav() {
               <div>
                 <p className={`text-xs font-medium text-white/40 uppercase tracking-wider mb-4 ${inter.className}`}>Connect</p>
                 <div className="grid grid-cols-3 gap-3">
-                  <Link href="mailto:ping@starone01.me" title="Email" onClick={closeMenu}>
-                    <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        className="fill-white/60"
-                      >
-                        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"></path>
-                      </svg>
-                    </div>
-                  </Link>
-                  <Link href="https://www.linkedin.com/in/StarOne01/" title="LinkedIn" onClick={closeMenu}>
-                    <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        className="fill-white/60"
-                      >
-                        <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
-                      </svg>
-                    </div>
-                  </Link>
-                  <Link href="https://github.com/StarOne01" title="GitHub" onClick={closeMenu}>
-                    <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        className="fill-white/60"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
-                        ></path>
-                      </svg>
-                    </div>
-                  </Link>
+                  {[
+                    { href: "mailto:ping@starone01.me", title: "Email", path: "M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z" },
+                    { href: "https://www.linkedin.com/in/StarOne01/", title: "LinkedIn", path: "M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z" },
+                    { href: "https://github.com/StarOne01", title: "GitHub", path: "M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z" },
+                  ].map(({ href, title, path }) => (
+                    <Link key={title} href={href} title={title} onClick={closeMenu}>
+                      <div className="p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-white/60">
+                          <path d={path} />
+                        </svg>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
 
