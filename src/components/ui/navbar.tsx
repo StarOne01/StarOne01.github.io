@@ -61,6 +61,8 @@ export default function Nav() {
               className={
                 "cursor-pointer font-medium text-base text-white hover:text-white/80 transition-all " + inter.className
               }
+              onMouseEnter={() => dispatchEvent(new CustomEvent("egg:prashanth-hover"))}
+              onMouseLeave={() => dispatchEvent(new CustomEvent("egg:prashanth-leave"))}
             >
               Prashanth
             </p>

@@ -17,24 +17,35 @@ export default function SelectEgg() {
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
 
-    const onSelect = () => {
-      const text = document.getSelection()?.toString() || "";
-      const match = text.match(/Prashanth/);
-      if (match) {
-        clearTimeout(timer);
-        setMsg(messages[Math.floor(Math.random() * messages.length)]);
-        setVisible(true);
-      } else {
-        timer = setTimeout(() => {
-          setVisible(false);
-          setMsg("");
-        }, 400);
-      }
+    const show = () => {
+      clearTimeout(timer);
+      setMsg(messages[Math.floor(Math.random() * messages.length)]);
+      setVisible(true);
     };
 
+    const hide = () => {
+      timer = setTimeout(() => {
+        setVisible(false);
+        setMsg("");
+      }, 400);
+    };
+
+    const onSelect = () => {
+      const text = document.getSelection()?.toString() || "";
+      if (text.match(/Prashanth/)) show();
+      else hide();
+    };
+
+    const onHover = () => show();
+    const onLeave = () => hide();
+
     document.addEventListener("selectionchange", onSelect);
+    document.addEventListener("egg:prashanth-hover", onHover);
+    document.addEventListener("egg:prashanth-leave", onLeave);
     return () => {
       document.removeEventListener("selectionchange", onSelect);
+      document.removeEventListener("egg:prashanth-hover", onHover);
+      document.removeEventListener("egg:prashanth-leave", onLeave);
       clearTimeout(timer);
     };
   }, []);
