@@ -27,6 +27,7 @@ export default function ScrollSpeed() {
       setMsg("");
       setVisible(false);
       busy.current = false;
+      lastY = window.scrollY;
       accPx = 0;
     };
 
@@ -34,13 +35,12 @@ export default function ScrollSpeed() {
       clearTimeout(stopTimer);
       stopTimer = setTimeout(stop, 300);
 
-      if (busy.current) return;
-
-      const now = performance.now();
       const dy = Math.abs(window.scrollY - lastY);
       lastY = window.scrollY;
 
-      if (dy === 0) return;
+      if (busy.current || dy === 0) return;
+
+      const now = performance.now();
       if (accPx === 0) accStart = now;
 
       accPx += dy;
