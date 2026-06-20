@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/navbar";
 import ScrollSpeed from "@/components/ui/scroll-speed";
+import SelectEgg from "@/components/ui/select-egg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,6 +58,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black`}>
         <Nav />
         <ScrollSpeed />
+        <SelectEgg />
         {children}</body>
     </html>
   );
