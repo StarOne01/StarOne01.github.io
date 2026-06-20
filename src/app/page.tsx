@@ -113,7 +113,7 @@ function Expertise() {
     },
     {
       title: "Systems & Infrastructure",
-      description: "Architecting ABDM/ABHA, FHIR R4 integrations and targeting rigorous Indian compliance standards (DPDP Act). Building on-premise PostgreSQL architectures and deterministic concurrent Go/C++ backends."
+      description: "Engineering privacy-by-design infrastructure for an AI companion platform (primesoma self) — GDPR (Art. 9, 22), India DPDP Act, CCPA/CPRA, and US state AI companion laws. Argon2id encryption, Go backends with vector-based matching."
     },
     {
       title: "Open Source & Compilers",

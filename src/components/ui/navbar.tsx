@@ -66,7 +66,8 @@ export default function Nav() {
             </p>
           </Link>
         </div>
-        <div className="flex lg:hidden z-[45]">
+        <div className="flex lg:hidden z-[45] items-center gap-1">
+          <ThemeToggle />
           <button
             type="button"
             className={
@@ -189,10 +190,6 @@ export default function Nav() {
                     </Link>
                   ))}
                 </div>
-              </div>
-
-              <div className="flex justify-center">
-                <ThemeToggle />
               </div>
 
               {/* Bottom Safe Area */}
