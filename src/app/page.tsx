@@ -95,17 +95,12 @@ function About() {
     <section id="about" className="py-32 px-6 max-w-4xl mx-auto">
       <SectionHeader title="About" />
       
-      <div className="space-y-8 text-white/70 text-lg md:text-xl font-light leading-relaxed rounded-3xl bg-white/[0.02] border border-white/[0.05] shadow-2xl backdrop-blur-sm">
-        <p>
-          I am a <span className="font-semibold text-white">Systems and AI Engineer</span> based in Coimbatore, Tamil Nadu. Currently a third-year Electrical & Electronics Engineering student, I am a self-taught programmer driven by an insatiable curiosity about how complex systems work. I specialize in building software from zero-to-one through deep exploration and investigative problem-solving.
-        </p>
-        <p>
-          As the <span className="font-semibold text-white">Founding Engineer at Medclara</span>, I architect voice-first, multilingual clinical documentation platforms. I also run a <span className="font-semibold text-white">Software Development Agency</span> delivering enterprise software and AI agent systems, while building an upcoming startup called <span className="font-semibold text-white">primesoma</span>.
-        </p>
-        <p>
-          My work bridges bare-metal inference and responsive UI, spanning production machine learning pipelines, compiler infrastructure, and distributed systems.
-        </p>
-      </div>
+      <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed">
+        I am a <span className="font-semibold text-white">Systems and AI Engineer</span> based in Coimbatore, Tamil Nadu. Currently a third-year Electrical & Electronics Engineering student, I am a self-taught programmer driven by an insatiable curiosity about how complex systems work. I specialize in building software from zero-to-one through deep exploration and investigative problem-solving.
+      </p>
+      <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed mt-6">
+        My work bridges bare-metal inference and responsive UI, spanning production machine learning pipelines, compiler infrastructure, and distributed systems.
+      </p>
     </section>
   );
 }
@@ -156,13 +151,19 @@ function Experience() {
       role: "Founding Engineer",
       company: "Medclara",
       period: "Present",
-      description: "Architecting a voice-first, multilingual clinical documentation platform that converts doctor-patient conversations into structured SOAP notes using custom ASR and LLMs. Built a pipeline achieving ~88/100 clinical accuracy from raw Tamil inputs. Integrated ABDM/FHIR R4 targeting Tier-2/3 cities with on-premise deployments."
+      description: "Architecting a voice-first, multilingual clinical documentation platform that converts doctor-patient conversations into structured SOAP notes using custom ASR and LLMs."
     },
     {
       role: "Founder",
       company: "Software Development Agency",
       period: "Present",
       description: "Running a Coimbatore-based agency funding other ventures. Delivering high-end web projects, custom AI agent systems (like WhatsApp bots), and enterprise software for real estate firms, studios, and manufacturing businesses."
+    },
+    {
+      role: "Founder",
+      company: "self (primesoma)",
+      period: "Present",
+      description: "Building an AI-native dating platform that matches people through meaningful conversation. Full-stack: Go/Gin backend, Flutter mobile app, vector-based matching, and end-to-end encryption."
     },
     {
       role: "Founder",
@@ -219,7 +220,7 @@ const skillCategories = [
   },
   {
     title: "Production & Infrastructure",
-    skills: ["On-premise AI Deployment", "ABDM / FHIR R4", "Redis", "Docker", "Authentication & Authorization", "Voice Pipelines", "REST APIs"]
+    skills: ["On-premise AI Deployment", "Redis", "Docker", "Authentication & Authorization", "Voice Pipelines", "REST APIs"]
   },
   {
     title: "Low-level & Compilers",
