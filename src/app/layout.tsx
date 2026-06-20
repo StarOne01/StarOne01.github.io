@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/navbar";
 import ScrollSpeed from "@/components/ui/scroll-speed";
-import ThemeJoke from "@/components/ui/theme-joke";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,7 +57,6 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black`}>
         <Nav />
         <ScrollSpeed />
-        <ThemeJoke />
         {children}</body>
     </html>
   );
