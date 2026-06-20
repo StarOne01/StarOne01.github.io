@@ -7,15 +7,15 @@ import { useState } from "react";
 
 const parkin = Parkinsans({ weight: "400", subsets: ["latin"] });
 
-function ProjectCard({ project, wide }: { project: { name: string; logo: string; description: string; link: string }; wide?: boolean }) {
+function ProjectCard({ project }: { project: { name: string; logo: string; description: string; link: string } }) {
   return (
-    <div className="group bg-black border border-white/20 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:border-white/40 h-full">
-      <div className={`relative overflow-hidden bg-white/5 ${wide ? "h-64" : "h-48"}`}>
+    <div className="group bg-black border border-white/20 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:border-white/40">
+      <div className="relative h-48 overflow-hidden bg-white/5">
         <Image
           alt={project.name + " Logo"}
           src={project.logo}
           fill
-          className="object-contain p-4 md:p-8 group-hover:scale-105 transition-transform duration-300"
+          className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div className="p-6">
@@ -118,35 +118,10 @@ function FavProjs() {
               <h3 className="font-extrabold text-2xl md:text-3xl text-white">{theme.name}</h3>
             </div>
             <p className="mb-8 text-lg opacity-70 text-white/70">{theme.description}</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {(() => {
-                const n = theme.projects.length;
-                const spanClass = (i: number) => {
-                  if (n === 5) {
-                    if (i === 0) return "lg:col-span-2";
-                    if (i === 3) return "lg:col-span-2";
-                    if (i === 4) return "lg:col-span-3";
-                  }
-                  if (n === 4) {
-                    if (i === 0) return "lg:col-span-2";
-                    if (i === 3) return "lg:col-span-2";
-                  }
-                  if (n === 3) {
-                    if (i === 0) return "lg:col-span-2";
-                    if (i === 2) return "lg:col-span-3";
-                  }
-                  return "";
-                };
-                return theme.projects.map((project, i) => {
-                  const span = spanClass(i);
-                  const wide = span.includes("col-span-2") || span.includes("col-span-3");
-                  return (
-                    <div key={project.name} className={span}>
-                      <ProjectCard project={project} wide={wide} />
-                    </div>
-                  );
-                });
-              })()}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {theme.projects.map((project) => (
+                <ProjectCard key={project.name} project={project} />
+              ))}
             </div>
           </div>
         ))}
