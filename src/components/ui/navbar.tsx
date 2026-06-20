@@ -71,7 +71,7 @@ export default function Nav() {
           <button
             type="button"
             className={
-              "-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white z-40 hover:bg-white/10 transition-colors"
+              "-m-2.5 inline-flex items-center justify-center rounded-md p-3 md:p-2.5 text-white z-40 hover:bg-white/10 transition-colors"
             }
             onClick={() => {
               invMenu();
@@ -80,11 +80,11 @@ export default function Nav() {
             <span className="sr-only">Open main menu</span>
             {mobileMenuOpen ? (
               <XMarkIcon
-                className="h-5 z-50 w-5 text-white"
+                className="h-6 w-6 md:h-5 md:w-5 z-50 text-white"
                 aria-hidden="true"
               />
             ) : (
-              <Bars3Icon className="h-5 w-5 z-50" aria-hidden="true" />
+              <Bars3Icon className="h-6 w-6 md:h-5 md:w-5 z-50" aria-hidden="true" />
             )}
           </button>
         </div>
