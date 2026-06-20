@@ -44,8 +44,8 @@ export default function Nav() {
       <nav
         className={
           mobileMenuOpen
-            ? "flex lg:max-w-3xl no-doc-scroll backdrop-blur-xl bg-white/5 border border-white/10 sm:mx-auto max-w-sm mx-6 rounded-lg items-center justify-between px-6 lg:py-3 py-3 lg:px-8"
-            : "flex lg:max-w-3xl md:max-w-xl sm:mx-auto max-w-xs mx-auto bg-white/5 border border-white/10 rounded-lg items-center justify-between backdrop-blur-xl px-6 lg:py-3 py-3 lg:px-8 transition-all duration-300 hover:bg-white/8"
+            ? "flex lg:max-w-5xl no-doc-scroll backdrop-blur-xl bg-white/5 border border-white/10 sm:mx-auto max-w-sm mx-6 rounded-lg items-center justify-between px-6 lg:py-3 py-3 lg:px-8"
+            : "flex lg:max-w-5xl md:max-w-xl sm:mx-auto max-w-xs mx-auto bg-white/5 border border-white/10 rounded-lg items-center justify-between backdrop-blur-xl px-6 lg:py-3 py-3 lg:px-8 transition-all duration-300 hover:bg-white/8"
         }
         aria-label="Global"
       >
