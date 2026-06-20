@@ -6,21 +6,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 function Hero() {
   return (
-    <div className="relative w-full min-h-[100svh] bg-white/[0.03] overflow-hidden flex flex-col items-center justify-center">
+    <div className="relative w-full min-h-[80svh] md:min-h-[100svh] bg-white/[0.03] overflow-hidden flex flex-col items-center justify-center">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] -left-[10%] w-[40%] h-[40%] bg-white/5 blur-[120px] rounded-full animate-pulse" style={{animationDuration: '8s'}}></div>
         <div className="absolute bottom-[-10%] -right-[10%] w-[40%] h-[40%] bg-white/5 blur-[120px] rounded-full animate-pulse" style={{animationDuration: '10s', animationDelay: '2s'}}></div>
       </div>
       
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-10">
-        <div className="mb-8 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-6 md:mt-10">
+        <div className="mb-6 md:mb-8 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <span className="inline-flex items-center gap-2 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/80 bg-white/[0.03] border border-white/10 rounded-full backdrop-blur-md shadow-2xl shadow-white/5">
             <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse"></span>
             AI & Systems Engineer
           </span>
         </div>
 
-        <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s', letterSpacing: '-0.03em'}}>
+        <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-3 md:mb-4 opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s', letterSpacing: '-0.03em'}}>
           <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/40">
             Prashanth
           </span>
@@ -34,7 +34,7 @@ function Hero() {
           <div className="h-px w-8 bg-gradient-to-l from-transparent to-white/30"></div>
         </div>
 
-        <p className="text-lg sm:text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto mb-12 leading-relaxed opacity-0 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+        <p className="text-base sm:text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed opacity-0 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
           Curiosity-driven engineer exploring systems from first principles. Building stuff.
         </p>
 
