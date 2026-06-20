@@ -219,7 +219,7 @@ function ThemeToggle() {
     <>
       <div className={`fixed inset-0 z-[60] pointer-events-none transition-colors duration-200 ${flash ? "bg-white" : "bg-transparent"}`} />
       {showMsg && (
-        <div className="fixed bottom-16 left-1/2 -translate-x-1/2 z-50 bg-black/80 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/60 backdrop-blur-xl whitespace-nowrap">
+        <div className="fixed bottom-20 right-4 z-50 bg-black/80 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/60 backdrop-blur-xl whitespace-nowrap">
           light mode? in this economy?
         </div>
       )}
