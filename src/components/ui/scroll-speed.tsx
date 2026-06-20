@@ -23,8 +23,6 @@ export default function ScrollSpeed() {
     let stopTimer: ReturnType<typeof setTimeout>;
 
     const stop = () => {
-      setSpeed(0);
-      setMsg("");
       setVisible(false);
       busy.current = false;
       lastY = window.scrollY;
