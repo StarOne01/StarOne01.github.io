@@ -1,25 +1,32 @@
-import React from "react";
+"use client";
+import { ReactNode } from "react";
+import { cn } from "@/utils/cn";
 
 interface SectionHeaderProps {
-  title: string;
-  align?: "center" | "left" | "right";
+  eyebrow: string;
+  title: ReactNode;
+  description?: string;
+  align?: "left" | "center";
+  className?: string;
 }
 
-export default function SectionHeader({ title, align = "center" }: SectionHeaderProps) {
-  const alignClasses = {
-    center: "items-center text-center",
-    left: "items-start text-left",
-    right: "items-end text-right",
-  };
-
-  const gradientDir = align === "right" ? "to-l" : "to-r";
-
+export default function SectionHeader({ eyebrow, title, description, align = "left", className }: SectionHeaderProps) {
   return (
-    <div className={`mb-16 flex flex-col ${alignClasses[align]}`}>
-      <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 mb-4">
+    <div className={cn("mb-12 md:mb-16", align === "center" && "text-center", className)}>
+      <div className={cn("flex items-center gap-3 mb-5", align === "center" && "justify-center")}>
+        <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/40">
+          {eyebrow}
+        </span>
+        <span className="h-px w-10 bg-white/15" />
+      </div>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
         {title}
       </h2>
-      <div className={`w-16 h-1 bg-gradient-to-${gradientDir} from-white/40 to-white/10 rounded-full`} />
+      {description && (
+        <p className={cn("mt-5 text-white/50 text-base md:text-lg max-w-2xl leading-relaxed", align === "center" && "mx-auto")}>
+          {description}
+        </p>
+      )}
     </div>
   );
 }

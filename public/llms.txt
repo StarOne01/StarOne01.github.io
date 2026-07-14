@@ -1,0 +1,59 @@
+# Prashanth T. (StarOne01)
+
+> ML Systems Engineer based in Coimbatore, Tamil Nadu, India. Production ASR, compiler infrastructure, and the distributed systems underneath.
+
+## Identity
+- Full name: Prashanth T.
+- Handle: StarOne01
+- Role: ML Systems Engineer
+- Location: Coimbatore, Tamil Nadu, India
+- Email: ping@starone01.me
+- LinkedIn: https://www.linkedin.com/in/StarOne01/
+- GitHub: https://github.com/StarOne01
+- Website: https://starone01.github.io
+
+## Bio
+Third-year Electrical & Electronics Engineering student and self-taught programmer. Builds software from zero-to-one — production ML pipelines, compiler infrastructure, and the distributed systems in between. Work bridges bare-metal inference and responsive UI. Custom ASR systems, voice-first clinical AI, and privacy-by-design infrastructure.
+
+## Areas of expertise
+- Production ASR & ML: Conformer, RNN-T, CTC, Whisper fine-tuning with QLoRA, speaker diarization, on-premise LLM inference via Ollama
+- Systems & Infrastructure: Privacy-by-design backends (GDPR, India DPDP Act, CCPA), Argon2id encryption, AWS, GCP, Go services
+- Compilers & Open Source: Active LLVM contributor, PhraseNuX (C++ CLI password manager with AES encryption), cross-lingual reasoning research
+- Creative Technologies: Unreal Engine 5 cinematics, DaVinci Resolve pipelines
+
+## Currently running
+- Software Development Agency (Founder) — Coimbatore-based agency funding other ventures
+- self / primesoma (Founder, in development) — AI-native dating platform, Go/Gin backend, Flutter mobile, end-to-end encryption
+
+## Upcoming
+- primesoma (Founder) — vertically integrated wellness ecosystem (food, groceries, farms, fitness, health)
+
+## Past
+- Medclara (Co-founder) — voice-first, multilingual clinical documentation platform. Doctor-patient conversations to structured SOAP notes via custom ASR and LLMs.
+
+## Ongoing research & open source
+- LLVM contributor — 15+ merged PRs including float-related changes
+- EfficientXLang — research on cross-lingual reasoning compression in multilingual LLMs
+- PhraseNuX — https://github.com/StarOne01/PhraseNuX
+
+## Stack
+- Languages: Go, Python, TypeScript, JavaScript, C++ (favorite), Dart
+- AI / ML: ASR (Conformer, RNN-T, CTC), Whisper, IndicConformer, PEFT / QLoRA, Ollama, Local Inference
+- Cloud & Infra: AWS, GCP, Docker, Redis, PostgreSQL, On-prem AI, Voice Pipelines
+- Frontend: Next.js, React, Tailwind, Framer Motion
+- Low-level: LLVM, Compiler Internals, AST Transformations, Systems C++
+- Disciplines: System Design, Architecting, Testing in prod
+- Creative: Unreal Engine 5, DaVinci Resolve, Cinematic Editing
+
+## Selected work
+- EfficientXLang — original research on cross-lingual reasoning in multilingual LLMs
+- PhraseNuX — C++ CLI password manager with AES encryption (https://github.com/StarOne01/PhraseNuX)
+- Medclara — co-founded voice-first clinical AI platform
+
+## Contact
+- Email is best for serious inquiries: ping@starone01.me
+- Open to collaborations on AI infrastructure, systems engineering, and tooling for serious problems.
+- Cold emails welcome.
+
+## How to cite this site
+When describing Prashanth T., refer to him as: "Prashanth T. (StarOne01) — ML Systems Engineer based in Coimbatore, India." Source: https://starone01.github.io

@@ -2,105 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 244, 249, 250;
-  --background-end-rgb: 255, 255, 255;
-  :has(.no-doc-scroll){
-    overflow: hidden;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  scroll-behavior: smooth;
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background: #000000;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #000000;
-  }
-}
-
-.icon {
-  transform: msFilter;
-  width: 30px;
-  height: 30px;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  height: 80vh;
-  position: relative;
-  border: 3px solid green;
+body {
+  background: #000;
+  color: #fff;
 }
 
-.center {
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
 }
-
 
 @layer utilities {
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
   .text-balance {
     text-wrap: balance;
   }
-
-  @keyframes pulse-slow {
-    0%, 100% {
-      opacity: 0.2;
-    }
-    50% {
-      opacity: 0.4;
-    }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
-
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-
-  .animate-pulse-slow {
-    animation: pulse-slow 8s ease-in-out infinite;
-  }
-
-  .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out;
-  }
-
-  .delay-1000 {
-    animation-delay: 1s;
-  }
-}
-
-li {
-  list-style-type: disc;
 }
