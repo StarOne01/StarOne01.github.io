@@ -250,6 +250,7 @@ const jsonLd = {
       name: `${FULL_NAME} (@${site.handle}) — ${site.role}`,
       description:
         "ML Systems Engineer working on production ASR, compiler infrastructure, and the distributed systems that power real-world AI.",
+      mainEntity: { "@id": `${SITE_URL}#person` },
       about: { "@id": `${SITE_URL}#person` },
       isPartOf: { "@id": `${SITE_URL}#website` },
       inLanguage: "en-US",
