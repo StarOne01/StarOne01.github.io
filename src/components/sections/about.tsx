@@ -12,11 +12,11 @@ export default function About() {
             eyebrow="01 — about"
             title={
               <>
-                An engineer who ships <span className="text-white/40">in production.</span>
+                An engineer who ships <span className="text-white/55">in production.</span>
               </>
             }
           />
-          <div className="space-y-5 text-white/60 text-base md:text-lg leading-relaxed">
+          <div className="space-y-5 text-white/75 text-base md:text-lg leading-relaxed">
             {site.bio.map((p, i) => (
               <motion.p
                 key={i}
@@ -32,7 +32,7 @@ export default function About() {
         </div>
 
         <div className="lg:col-span-7">
-          <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/40 mb-8">
+          <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/50 mb-8">
             02 — areas
           </div>
           <ul className="divide-y divide-white/[0.06] border-y border-white/[0.06]">
@@ -45,14 +45,14 @@ export default function About() {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className="group grid grid-cols-12 gap-4 py-6 cursor-default"
               >
-                <span className="col-span-1 font-mono text-[10px] text-white/30 pt-1">
+                <span className="col-span-1 font-mono text-[10px] text-white/50 pt-1" aria-hidden>
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="col-span-11">
-                  <h3 className="text-lg font-medium text-white/90 group-hover:text-white transition-colors mb-1.5">
+                  <h3 className="text-lg font-medium text-white/95 group-hover:text-white transition-colors mb-1.5">
                     {area.title}
                   </h3>
-                  <p className="text-white/50 text-sm leading-relaxed group-hover:text-white/60 transition-colors">
+                  <p className="text-white/65 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
                     {area.description}
                   </p>
                 </div>

@@ -1,9 +1,9 @@
 "use client";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { ReactNode, useRef, MouseEvent } from "react";
+import { ReactNode, useRef, MouseEvent, HTMLAttributes } from "react";
 import { cn } from "@/utils/cn";
 
-interface MagneticProps {
+interface MagneticProps extends Omit<HTMLAttributes<HTMLElement>, "ref" | "onClick" | "onAnimationStart" | "onAnimationEnd" | "onAnimationIteration" | "onDrag" | "onDragEnd" | "onDragStart"> {
   children: ReactNode;
   className?: string;
   strength?: number;
@@ -19,6 +19,7 @@ export default function Magnetic({
   as = "div",
   href,
   onClick,
+  ...rest
 }: MagneticProps) {
   const ref = useRef<HTMLElement | null>(null);
   const x = useMotionValue(0);
@@ -48,6 +49,7 @@ export default function Magnetic({
     className: cn("inline-block", className),
     style: { x: sx, y: sy },
     onClick,
+    ...rest,
   } as const;
 
   if (as === "a") return <motion.a {...(props as React.ComponentProps<typeof motion.a>)} href={href}>{children}</motion.a>;

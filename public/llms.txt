@@ -2,58 +2,33 @@
 
 > ML Systems Engineer based in Coimbatore, Tamil Nadu, India. Production ASR, compiler infrastructure, and the distributed systems underneath.
 
-## Identity
-- Full name: Prashanth T.
-- Handle: StarOne01
-- Role: ML Systems Engineer
-- Location: Coimbatore, Tamil Nadu, India
-- Email: ping@starone01.me
-- LinkedIn: https://www.linkedin.com/in/StarOne01/
-- GitHub: https://github.com/StarOne01
-- Website: https://starone01.github.io
+Prashanth T. is a self-taught ML Systems Engineer and third-year Electrical & Electronics Engineering student. He builds production ML pipelines, custom ASR systems (Conformer, RNN-T, Whisper fine-tuning with QLoRA), contributes to LLVM, and runs multiple ventures spanning voice-first clinical AI, AI-native dating, and an integrated wellness ecosystem. Stack: Go, Python, TypeScript, C++ (favorite), AWS, GCP.
 
-## Bio
-Third-year Electrical & Electronics Engineering student and self-taught programmer. Builds software from zero-to-one — production ML pipelines, compiler infrastructure, and the distributed systems in between. Work bridges bare-metal inference and responsive UI. Custom ASR systems, voice-first clinical AI, and privacy-by-design infrastructure.
+## About
+- [Bio](https://starone01.github.io/#about): Self-taught ML Systems Engineer, production ASR, compiler infrastructure, distributed systems
+- [Expertise](https://starone01.github.io/#about): Production ASR & ML, Systems & Infrastructure, Compilers & Open Source, Creative Technologies
+- [Open Graph card](https://starone01.github.io/opengraph-image): Site preview used by search engines and chat apps
 
-## Areas of expertise
-- Production ASR & ML: Conformer, RNN-T, CTC, Whisper fine-tuning with QLoRA, speaker diarization, on-premise LLM inference via Ollama
-- Systems & Infrastructure: Privacy-by-design backends (GDPR, India DPDP Act, CCPA), Argon2id encryption, AWS, GCP, Go services
-- Compilers & Open Source: Active LLVM contributor, PhraseNuX (C++ CLI password manager with AES encryption), cross-lingual reasoning research
-- Creative Technologies: Unreal Engine 5 cinematics, DaVinci Resolve pipelines
+## Work
+- [Selected work](https://starone01.github.io/#work): EfficientXLang, PhraseNuX, Medclara
+- [EfficientXLang](https://github.com/StarOne01): Original research on cross-lingual reasoning in multilingual LLMs
+- [PhraseNuX](https://github.com/StarOne01/PhraseNuX): Open-source C++ CLI password manager with AES encryption
+- [GitHub profile](https://github.com/StarOne01): All open source code and contributions
 
-## Currently running
-- Software Development Agency (Founder) — Coimbatore-based agency funding other ventures
-- self / primesoma (Founder, in development) — AI-native dating platform, Go/Gin backend, Flutter mobile, end-to-end encryption
-
-## Upcoming
-- primesoma (Founder) — vertically integrated wellness ecosystem (food, groceries, farms, fitness, health)
-
-## Past
-- Medclara (Co-founder) — voice-first, multilingual clinical documentation platform. Doctor-patient conversations to structured SOAP notes via custom ASR and LLMs.
-
-## Ongoing research & open source
-- LLVM contributor — 15+ merged PRs including float-related changes
-- EfficientXLang — research on cross-lingual reasoning compression in multilingual LLMs
-- PhraseNuX — https://github.com/StarOne01/PhraseNuX
+## Experience
+- [Experience timeline](https://starone01.github.io/#experience): Software Development Agency, primesoma, self, Medclara, LLVM research
+- [LinkedIn](https://www.linkedin.com/in/StarOne01/): Professional history and endorsements
 
 ## Stack
-- Languages: Go, Python, TypeScript, JavaScript, C++ (favorite), Dart
-- AI / ML: ASR (Conformer, RNN-T, CTC), Whisper, IndicConformer, PEFT / QLoRA, Ollama, Local Inference
-- Cloud & Infra: AWS, GCP, Docker, Redis, PostgreSQL, On-prem AI, Voice Pipelines
-- Frontend: Next.js, React, Tailwind, Framer Motion
-- Low-level: LLVM, Compiler Internals, AST Transformations, Systems C++
-- Disciplines: System Design, Architecting, Testing in prod
-- Creative: Unreal Engine 5, DaVinci Resolve, Cinematic Editing
+- [Stack & tools](https://starone01.github.io/#stack): Go, Python, TypeScript, JavaScript, C++ (favorite), Dart, ASR (Conformer/RNN-T/CTC), Whisper, Ollama, AWS, GCP, LLVM, Next.js
 
-## Selected work
-- EfficientXLang — original research on cross-lingual reasoning in multilingual LLMs
-- PhraseNuX — C++ CLI password manager with AES encryption (https://github.com/StarOne01/PhraseNuX)
-- Medclara — co-founded voice-first clinical AI platform
+## Connect
+- [Email](mailto:ping@starone01.me): ping@starone01.me — best for serious inquiries
+- [LinkedIn](https://www.linkedin.com/in/StarOne01/): in/StarOne01
+- [GitHub](https://github.com/StarOne01): @StarOne01
 
-## Contact
-- Email is best for serious inquiries: ping@starone01.me
-- Open to collaborations on AI infrastructure, systems engineering, and tooling for serious problems.
-- Cold emails welcome.
-
-## How to cite this site
-When describing Prashanth T., refer to him as: "Prashanth T. (StarOne01) — ML Systems Engineer based in Coimbatore, India." Source: https://starone01.github.io
+## Machine-readable
+- [Sitemap](https://starone01.github.io/sitemap.xml): XML sitemap
+- [Robots](https://starone01.github.io/robots.txt): Crawler directives
+- [Web manifest](https://starone01.github.io/manifest.webmanifest): PWA manifest
+- [Full LLM reference](https://starone01.github.io/llms-full.txt): Detailed reference for LLM ingestion

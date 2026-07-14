@@ -8,7 +8,7 @@ import Footer from "@/components/sections/footer";
 
 export default function Home() {
   return (
-    <main>
+    <main id="main" tabIndex={-1}>
       <Hero />
       <About />
       <Work />
