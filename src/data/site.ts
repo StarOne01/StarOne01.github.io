@@ -4,7 +4,7 @@ export const site = {
   role: "ML Systems Engineer",
   location: "Coimbatore, Tamil Nadu",
   bio: [
-    "Third-year Electrical & Electronics Engineering student and self-taught programmer. I build software from zero-to-one — production ML pipelines, compiler infrastructure, and the distributed systems in between.",
+    "Final-year Electrical & Electronics Engineering student and self-taught programmer. I build software from zero-to-one — production ML pipelines, compiler infrastructure, and the distributed systems in between.",
     "My work bridges bare-metal inference and responsive UI. Custom ASR systems, voice-first clinical AI, and privacy-by-design infrastructure.",
   ],
   tagline: "Curiosity-driven engineer exploring systems from first principles.",

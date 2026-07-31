@@ -2,7 +2,7 @@
 
 > ML Systems Engineer based in Coimbatore, Tamil Nadu, India. Production ASR, compiler infrastructure, and the distributed systems underneath.
 
-Prashanth T. is a self-taught ML Systems Engineer and third-year Electrical & Electronics Engineering student. He builds production ML pipelines, custom ASR systems (Conformer, RNN-T, Whisper fine-tuning with QLoRA), contributes to LLVM, and runs multiple ventures spanning voice-first clinical AI, AI-native dating, and an integrated wellness ecosystem. Stack: Go, Python, TypeScript, C++ (favorite), AWS, GCP.
+Prashanth T. is a self-taught ML Systems Engineer and final-year Electrical & Electronics Engineering student. He builds production ML pipelines, custom ASR systems (Conformer, RNN-T, Whisper fine-tuning with QLoRA), contributes to LLVM, and runs multiple ventures spanning voice-first clinical AI, AI-native dating, and an integrated wellness ecosystem. Stack: Go, Python, TypeScript, C++ (favorite), AWS, GCP.
 
 ## About
 - [Bio](https://starone01.github.io/#about): Self-taught ML Systems Engineer, production ASR, compiler infrastructure, distributed systems

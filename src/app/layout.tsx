@@ -286,7 +286,7 @@ const jsonLd = {
           name: `Who is ${site.name}?`,
           acceptedAnswer: {
             "@type": "Answer",
-            text: `${site.name} (${site.handle}) is a ${site.role.toLowerCase()} based in ${site.location}. He is a third-year Electrical & Electronics Engineering student and self-taught programmer building production ML pipelines, compiler infrastructure, and distributed systems.`,
+            text: `${site.name} (${site.handle}) is a ${site.role.toLowerCase()} based in ${site.location}. He is a final-year Electrical & Electronics Engineering student and self-taught programmer building production ML pipelines, compiler infrastructure, and distributed systems.`,
           },
         },
         {
