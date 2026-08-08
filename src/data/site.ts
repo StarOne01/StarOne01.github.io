@@ -119,7 +119,14 @@ export const stack: Record<string, readonly StackItem[]> = {
   Creative: ["Unreal Engine 5", "DaVinci Resolve", "Cinematic Editing"],
 };
 
-export const featuredWork = [
+export type WorkItem = {
+  name: string;
+  tag: string;
+  description: string;
+  href?: string;
+};
+
+export const featuredWork: readonly WorkItem[] = [
   {
     name: "MoviesLikeThis",
     tag: "Full Stack",
@@ -132,14 +139,12 @@ export const featuredWork = [
     tag: "Research",
     description:
       "Original research assessing cross-lingual reasoning in multilingual LLMs. A study on whether reasoning compresses across languages — and where it doesn't.",
-    href: "https://github.com/StarOne01",
   },
   {
     name: "Medclara",
     tag: "Founder",
     description:
       "Voice-first, multilingual clinical documentation. Doctor-patient conversations → structured SOAP notes via custom ASR and local LLMs.",
-    href: "mailto:ping@starone01.me",
   },
   {
     name: "PhraseNuX",
@@ -148,4 +153,4 @@ export const featuredWork = [
       "C++ CLI password manager with AES encryption. Zero dependencies, audited crypto, built to teach myself systems-level C++ the hard way.",
     href: "https://github.com/StarOne01/PhraseNuX",
   },
-] as const;
+];
