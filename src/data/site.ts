@@ -65,28 +65,12 @@ export const experience: readonly ExperienceItem[] = [
       "Coimbatore-based agency funding other ventures. High-end web projects, custom AI agent systems (WhatsApp bots), and enterprise software for real estate, studios, and manufacturing.",
   },
   {
-    role: "Founder",
-    company: "primesoma",
-    period: "Upcoming",
-    status: "upcoming" as const,
+    role: "Creator",
+    company: "MoviesLikeThis",
+    period: "In production",
+    status: "active" as const,
     description:
-      "Vertically integrated wellness ecosystem — food, groceries, farms, fitness, health. Owning the entire stack end-to-end.",
-  },
-  {
-    role: "Founder",
-    company: "self (primesoma)",
-    period: "In development",
-    status: "development" as const,
-    description:
-      "AI-native dating platform matching through meaningful conversation. Go/Gin backend, Flutter mobile, end-to-end encryption.",
-  },
-  {
-    role: "Co-founder",
-    company: "Medclara",
-    period: "Past",
-    status: "past" as const,
-    description:
-      "Co-founded a voice-first, multilingual clinical documentation platform. Doctor-patient conversations → structured SOAP notes via custom ASR and LLMs.",
+      "Taste-first movie discovery. Semantic pgvector recommendations across 5,000+ films, trailer-first Next.js pages, IMDb CSV import, and a Postgres queue that auto-matches ratings the moment a film lands.",
   },
   {
     role: "Open Source Contributor & Researcher",
@@ -97,12 +81,28 @@ export const experience: readonly ExperienceItem[] = [
       "15+ merged LLVM PRs (incl. float-related changes). Original research on cross-lingual reasoning in multilingual LLMs. Authored technical series on production AI realities.",
   },
   {
-    role: "Full-stack Builder",
-    company: "MoviesLikeThis",
-    period: "In production",
-    status: "active" as const,
+    role: "Founder",
+    company: "self (primesoma)",
+    period: "In development",
+    status: "development" as const,
     description:
-      "Taste-first movie discovery. Semantic pgvector recommendations across 5,000+ films, trailer-first Next.js pages, IMDb CSV import, and a Postgres queue that auto-matches ratings the moment a film lands.",
+      "AI-native dating platform matching through meaningful conversation. Go/Gin backend, Flutter mobile, end-to-end encryption.",
+  },
+  {
+    role: "Founder",
+    company: "primesoma",
+    period: "Upcoming",
+    status: "upcoming" as const,
+    description:
+      "Vertically integrated wellness ecosystem — food, groceries, farms, fitness, health. Owning the entire stack end-to-end.",
+  },
+  {
+    role: "Co-founder",
+    company: "Medclara",
+    period: "Past",
+    status: "past" as const,
+    description:
+      "Co-founded a voice-first, multilingual clinical documentation platform. Doctor-patient conversations → structured SOAP notes via custom ASR and LLMs.",
   },
 ] as const;
 
