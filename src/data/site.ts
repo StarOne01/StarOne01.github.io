@@ -90,7 +90,7 @@ export const experience = [
     role: "Full-stack Builder",
     company: "MoviesLikeThis",
     period: "In production",
-    status: "ongoing" as const,
+    status: "active" as const,
     description:
       "Taste-first movie discovery. Semantic pgvector recommendations across 5,000+ films, trailer-first Next.js pages, IMDb CSV import, and a Postgres queue that auto-matches ratings the moment a film lands.",
   },
