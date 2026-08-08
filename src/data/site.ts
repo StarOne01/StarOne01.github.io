@@ -86,6 +86,14 @@ export const experience = [
     description:
       "15+ merged LLVM PRs (incl. float-related changes). Original research on cross-lingual reasoning in multilingual LLMs. Authored technical series on production AI realities.",
   },
+  {
+    role: "Full-stack Builder",
+    company: "MoviesLikeThis",
+    period: "In production",
+    status: "ongoing" as const,
+    description:
+      "Taste-first movie discovery. Semantic pgvector recommendations across 5,000+ films, trailer-first Next.js pages, IMDb CSV import, and a Postgres queue that auto-matches ratings the moment a film lands.",
+  },
 ] as const;
 
 export type StackItem = string | { name: string; fav?: boolean; note?: string };
@@ -93,8 +101,9 @@ export type StackItem = string | { name: string; fav?: boolean; note?: string };
 export const stack: Record<string, readonly StackItem[]> = {
   Languages: ["Go", "Python", "TypeScript", "JavaScript", { name: "C++", fav: true }, "Dart"],
   "AI / ML": ["ASR (Conformer · RNN-T · CTC)", "Whisper", "IndicConformer", "PEFT / QLoRA", "Ollama", "Local Inference"],
-  "Cloud & Infra": ["AWS", "GCP", "Docker", "Redis", "PostgreSQL", "On-prem AI", "Voice Pipelines"],
+  "Cloud & Infra": ["AWS", "GCP", "Docker", "Redis", "PostgreSQL", "Supabase", "Vercel", "On-prem AI", "Voice Pipelines"],
   Frontend: ["Next.js", "React", "Tailwind", "Framer Motion"],
+  "Semantic Search": ["pgvector (HNSW)", "Embedding Pipelines", "Relevance Ranking"],
   "Low-level": ["LLVM", "Compiler Internals", "AST Transformations", "Systems C++"],
   Disciplines: ["System Design", "Architecting", { name: "Testing in prod", note: "lol" }],
   Creative: ["Unreal Engine 5", "DaVinci Resolve", "Cinematic Editing"],
@@ -121,5 +130,12 @@ export const featuredWork = [
     description:
       "Voice-first, multilingual clinical documentation. Doctor-patient conversations → structured SOAP notes via custom ASR and local LLMs.",
     href: "mailto:ping@starone01.me",
+  },
+  {
+    name: "MoviesLikeThis",
+    tag: "Full Stack",
+    description:
+      "Movie discovery by feeling, not genre tags. Semantic pgvector embeddings over 5,000+ films, trailer-first pages, IMDb CSV import, and a Postgres queue that auto-matches stray ratings the moment a film is added.",
+    href: "https://github.com/StarOne01/MoviesLikeThis",
   },
 ] as const;
