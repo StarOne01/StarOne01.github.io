@@ -145,7 +145,7 @@ export const featuredWork = [
     name: "MoviesLikeThis",
     tag: "Full Stack",
     description:
-      "Movie discovery by feeling, not genre tags. Semantic pgvector embeddings over 5,000+ films, trailer-first pages, IMDb CSV import, and a Postgres queue that auto-matches stray ratings the moment a film is added.",
+      "Movie discovery by feeling, not labels. Recommenders keep saying “more sci-fi, more action”; this archive matches films by what they do to you — the ache, the wonder, the quiet — so the next film makes you feel the way the last one did.",
     href: "https://movieslikethis.starone01.me",
   },
 ] as const;
