@@ -70,7 +70,7 @@ export const experience: readonly ExperienceItem[] = [
     period: "In production",
     status: "active" as const,
     description:
-      "Taste-first movie discovery. Semantic pgvector recommendations across 5,000+ films, trailer-first Next.js pages, IMDb CSV import, and a Postgres queue that auto-matches ratings the moment a film lands.",
+      "The film that makes you feel the way the last one did — not just another one \u201clike\u201d it. Built so that a few ratings find the rest of your life's library.",
   },
   {
     role: "Open Source Contributor & Researcher",
