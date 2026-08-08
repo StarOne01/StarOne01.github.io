@@ -56,6 +56,14 @@ export type ExperienceItem = {
 
 export const experience: readonly ExperienceItem[] = [
   {
+    role: "Creator",
+    company: "MoviesLikeThis",
+    period: "In production",
+    status: "active" as const,
+    description:
+      "The film that makes you feel the way the last one did — not just another one \u201clike\u201d it. Built so that a few ratings find the rest of your life's library.",
+  },
+  {
     role: "Founder",
     company: "Software Development Agency",
     period: "Present",
@@ -63,14 +71,6 @@ export const experience: readonly ExperienceItem[] = [
     href: "https://softwares.primesoma.com",
     description:
       "Coimbatore-based agency funding other ventures. High-end web projects, custom AI agent systems (WhatsApp bots), and enterprise software for real estate, studios, and manufacturing.",
-  },
-  {
-    role: "Creator",
-    company: "MoviesLikeThis",
-    period: "In production",
-    status: "active" as const,
-    description:
-      "The film that makes you feel the way the last one did — not just another one \u201clike\u201d it. Built so that a few ratings find the rest of your life's library.",
   },
   {
     role: "Open Source Contributor & Researcher",
@@ -121,18 +121,18 @@ export const stack: Record<string, readonly StackItem[]> = {
 
 export const featuredWork = [
   {
+    name: "MoviesLikeThis",
+    tag: "Full Stack",
+    description:
+      "Movie discovery by feeling, not labels. The recommender keeps offering you more sci-fi, more action; this archive matches films by what they do to you — the ache, the wonder, the quiet — so the next film makes you feel the way the last one did.",
+    href: "https://movieslikethis.starone01.me",
+  },
+  {
     name: "EfficientXLang",
     tag: "Research",
     description:
       "Original research assessing cross-lingual reasoning in multilingual LLMs. A study on whether reasoning compresses across languages — and where it doesn't.",
     href: "https://github.com/StarOne01",
-  },
-  {
-    name: "PhraseNuX",
-    tag: "Open Source",
-    description:
-      "C++ CLI password manager with AES encryption. Zero dependencies, audited crypto, built to teach myself systems-level C++ the hard way.",
-    href: "https://github.com/StarOne01/PhraseNuX",
   },
   {
     name: "Medclara",
@@ -142,10 +142,10 @@ export const featuredWork = [
     href: "mailto:ping@starone01.me",
   },
   {
-    name: "MoviesLikeThis",
-    tag: "Full Stack",
+    name: "PhraseNuX",
+    tag: "Open Source",
     description:
-      "Movie discovery by feeling, not labels. Recommenders keep saying “more sci-fi, more action”; this archive matches films by what they do to you — the ache, the wonder, the quiet — so the next film makes you feel the way the last one did.",
-    href: "https://movieslikethis.starone01.me",
+      "C++ CLI password manager with AES encryption. Zero dependencies, audited crypto, built to teach myself systems-level C++ the hard way.",
+    href: "https://github.com/StarOne01/PhraseNuX",
   },
 ] as const;
