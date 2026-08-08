@@ -45,12 +45,22 @@ export const expertise = [
   },
 ] as const;
 
-export const experience = [
+export type ExperienceItem = {
+  role: string;
+  company: string;
+  period: string;
+  status: "active" | "upcoming" | "development" | "ongoing" | "past";
+  href?: string;
+  description: string;
+};
+
+export const experience: readonly ExperienceItem[] = [
   {
     role: "Founder",
     company: "Software Development Agency",
     period: "Present",
     status: "active" as const,
+    href: "https://softwares.primesoma.com",
     description:
       "Coimbatore-based agency funding other ventures. High-end web projects, custom AI agent systems (WhatsApp bots), and enterprise software for real estate, studios, and manufacturing.",
   },
@@ -136,6 +146,6 @@ export const featuredWork = [
     tag: "Full Stack",
     description:
       "Movie discovery by feeling, not genre tags. Semantic pgvector embeddings over 5,000+ films, trailer-first pages, IMDb CSV import, and a Postgres queue that auto-matches stray ratings the moment a film is added.",
-    href: "https://github.com/StarOne01/MoviesLikeThis",
+    href: "https://movieslikethis.starone01.me",
   },
 ] as const;

@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { experience } from "@/data/site";
 import SectionHeader from "@/components/ui/section-header";
+import Icon from "@/components/ui/icon";
 
 const statusStyles: Record<string, string> = {
   active: "bg-emerald-400/15 text-emerald-300 border-emerald-400/30",
@@ -78,9 +79,21 @@ export default function Experience() {
                 <h3 className="text-xl font-semibold text-white mb-1 leading-tight">
                   {item.role}
                 </h3>
-                <p className="text-white/70 font-mono text-xs tracking-wide mb-1">
-                  {item.company}
-                </p>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-white/70 font-mono text-xs tracking-wide mb-1 hover:text-white transition-colors"
+                  >
+                    {item.company}
+                    <Icon name="external" className="w-3 h-3 text-white/40" aria-hidden />
+                  </a>
+                ) : (
+                  <p className="text-white/70 font-mono text-xs tracking-wide mb-1">
+                    {item.company}
+                  </p>
+                )}
                 <p className="text-white/55 font-mono text-[10px] tracking-[0.2em] uppercase mb-5">
                   {item.period}
                 </p>
