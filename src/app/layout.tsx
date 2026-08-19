@@ -345,7 +345,7 @@ export default function RootLayout({
         <script
           defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "REPLACE_WITH_YOUR_TOKEN", "spa": true}'
+          data-cf-beacon='{"token": "fab21eca730a430f8e5f7b324ac3e2cc", "spa": true}'
         />
       </head>
       <body className="font-sans bg-black text-white antialiased">
