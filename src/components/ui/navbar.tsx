@@ -33,7 +33,7 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed bottom-5 inset-x-0 z-40 flex justify-center transition-opacity duration-300 ${
+      className={`fixed bottom-5 inset-x-0 z-[60] flex justify-center transition-opacity duration-300 ${
         isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
