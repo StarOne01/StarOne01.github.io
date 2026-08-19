@@ -342,6 +342,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "REPLACE_WITH_YOUR_TOKEN", "spa": true}'
+        />
       </head>
       <body className="font-sans bg-black text-white antialiased">
         <a

@@ -125,7 +125,7 @@ export default function Nav() {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
-          className="lg:hidden fixed inset-0 z-50"
+          className="lg:hidden fixed inset-0 z-[80]"
         >
           <div
             className="absolute inset-0 bg-black/80 backdrop-blur-md"
