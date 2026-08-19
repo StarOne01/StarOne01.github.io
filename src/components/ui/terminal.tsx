@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState, useId } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
@@ -30,6 +31,9 @@ const banner = `
 
 export default function Terminal() {
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [history, setHistory] = useState<CommandOutput[]>([
     { kind: "out", text: "starone01 :: portfolio v2.0 — type 'help' to begin" },
   ]);
@@ -37,6 +41,12 @@ export default function Terminal() {
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 100);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -89,7 +99,9 @@ export default function Terminal() {
         aria-label="Open terminal (Ctrl+` or ⌘`)"
         aria-expanded={open}
         aria-haspopup="dialog"
-        className="fixed bottom-5 max-sm:bottom-24 right-5 z-[55] font-mono text-[11px] tracking-[0.2em] uppercase text-white/55 hover:text-white border border-white/15 hover:border-white/30 bg-white/5 backdrop-blur-md rounded-md px-3 py-2 transition-colors"
+        className={`fixed bottom-5 max-sm:bottom-24 right-5 z-[55] font-mono text-[11px] tracking-[0.2em] uppercase text-white/55 hover:text-white border border-white/15 hover:border-white/30 bg-white/5 backdrop-blur-md rounded-md px-3 py-2 transition-opacity duration-300 ${
+          isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
       >
         &gt;_ term
       </button>
