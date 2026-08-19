@@ -32,12 +32,12 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${FULL_NAME} (@${site.handle}) — ${site.role}`,
-    template: `%s — ${FULL_NAME}`,
+    default: `${FULL_NAME} (@${site.handle}), ${site.role}`,
+    template: `%s, ${FULL_NAME}`,
   },
   applicationName: `${site.handle} portfolio`,
   description:
-    "Prashanth T. (@StarOne01) — ML Systems Engineer based in Coimbatore, Tamil Nadu. Production ASR (Conformer, RNN-T, Whisper), LLVM contributor, distributed systems, and privacy-by-design infrastructure in Go and C++.",
+    "Prashanth T. (@StarOne01), ML Systems Engineer based in Coimbatore, Tamil Nadu. Production ASR (Conformer, RNN-T, Whisper), LLVM contributor, distributed systems, and privacy-by-design infrastructure in Go and C++.",
   keywords: [
     "Prashanth",
     "StarOne01",
@@ -85,10 +85,10 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   openGraph: {
     type: "profile",
-    siteName: `${FULL_NAME} — Portfolio`,
+    siteName: `${FULL_NAME}, Portfolio`,
     locale: "en_US",
     url: SITE_URL,
-    title: `${FULL_NAME} (@${site.handle}) — ${site.role}`,
+    title: `${FULL_NAME} (@${site.handle}), ${site.role}`,
     description:
       "Production ASR, compiler infrastructure, and the AI systems underneath. Coimbatore-based ML systems engineer.",
     firstName: site.name,
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${FULL_NAME} (@${site.handle}) — ${site.role}`,
+    title: `${FULL_NAME} (@${site.handle}), ${site.role}`,
     description: "Production ASR, compiler infrastructure, and the AI systems underneath.",
     creator: `@${site.handle}`,
   },
@@ -234,7 +234,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${SITE_URL}#website`,
       url: SITE_URL,
-      name: `${FULL_NAME} — Portfolio`,
+      name: `${FULL_NAME}, Portfolio`,
       description:
         "Personal portfolio of Prashanth T. (StarOne01), ML Systems Engineer based in Coimbatore, India.",
       inLanguage: "en-US",
@@ -247,7 +247,7 @@ const jsonLd = {
       "@type": "ProfilePage",
       "@id": `${SITE_URL}#profile`,
       url: SITE_URL,
-      name: `${FULL_NAME} (@${site.handle}) — ${site.role}`,
+      name: `${FULL_NAME} (@${site.handle}), ${site.role}`,
       description:
         "ML Systems Engineer working on production ASR, compiler infrastructure, and the distributed systems that power real-world AI.",
       mainEntity: { "@id": `${SITE_URL}#person` },
@@ -264,7 +264,7 @@ const jsonLd = {
     },
     {
       "@type": "ItemList",
-      name: `${FULL_NAME} — Selected Work`,
+      name: `${FULL_NAME}, Selected Work`,
       itemListElement: featuredWork.map((work, i) => ({
         "@type": "ListItem",
         position: i + 1,
@@ -294,7 +294,7 @@ const jsonLd = {
           name: `What does ${site.name} work on?`,
           acceptedAnswer: {
             "@type": "Answer",
-            text: `He works on production Automatic Speech Recognition (ASR) — Conformer, RNN-T, CTC, and Whisper fine-tuning with QLoRA — plus on-premise LLM inference with Ollama. He is an active LLVM contributor and founder of Medclara (clinical documentation, past), the Software Development Agency, self / primesoma (AI-native dating, in development), and primesoma (wellness ecosystem, upcoming).`,
+            text: `He works on production Automatic Speech Recognition (ASR), Conformer, RNN-T, CTC, and Whisper fine-tuning with QLoRA, plus on-premise LLM inference with Ollama. He is an active LLVM contributor and founder of Medclara (clinical documentation, past), the Software Development Agency, self / primesoma (AI-native dating, in development), and primesoma (wellness ecosystem, upcoming).`,
           },
         },
         {

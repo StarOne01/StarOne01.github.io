@@ -23,7 +23,7 @@ Prashanth T. is a self-taught ML Systems Engineer and final-year Electrical & El
 - [Stack & tools](https://starone01.github.io/#stack): Go, Python, TypeScript, JavaScript, C++ (favorite), Dart, ASR (Conformer/RNN-T/CTC), Whisper, Ollama, AWS, GCP, LLVM, Next.js
 
 ## Connect
-- [Email](mailto:ping@starone01.me): ping@starone01.me — best for serious inquiries
+- [Email](mailto:ping@starone01.me): ping@starone01.me, best for serious inquiries
 - [LinkedIn](https://www.linkedin.com/in/StarOne01/): in/StarOne01
 - [GitHub](https://github.com/StarOne01): @StarOne01
 

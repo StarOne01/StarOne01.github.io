@@ -4,7 +4,7 @@ export const site = {
   role: "ML Systems Engineer",
   location: "Coimbatore, Tamil Nadu",
   bio: [
-    "Final-year Electrical & Electronics Engineering student and self-taught programmer. I build software from zero-to-one — production ML pipelines, compiler infrastructure, and the distributed systems in between.",
+    "Final-year Electrical & Electronics Engineering student and self-taught programmer. I build software from zero-to-one, production ML pipelines, compiler infrastructure, and the distributed systems in between.",
     "My work bridges bare-metal inference and responsive UI. Custom ASR systems, voice-first clinical AI, and privacy-by-design infrastructure.",
   ],
   tagline: "Curiosity-driven engineer exploring systems from first principles.",
@@ -31,7 +31,7 @@ export const expertise = [
   {
     title: "Systems & Infrastructure",
     description:
-      "Privacy-by-design backends for AI companions — GDPR (Art. 9, 22), India DPDP Act, CCPA/CPRA. Argon2id encryption, AWS & GCP, and Go services.",
+      "Privacy-by-design backends for AI companions, GDPR (Art. 9, 22), India DPDP Act, CCPA/CPRA. Argon2id encryption, AWS & GCP, and Go services.",
   },
   {
     title: "Compilers & Open Source",
@@ -41,7 +41,7 @@ export const expertise = [
   {
     title: "Creative Technologies",
     description:
-      "Unreal Engine 5 cinematics and DaVinci Resolve pipelines — fusing technical rigor with high-end visual work.",
+      "Unreal Engine 5 cinematics and DaVinci Resolve pipelines, fusing technical rigor with high-end visual work.",
   },
 ] as const;
 
@@ -61,7 +61,7 @@ export const experience: readonly ExperienceItem[] = [
     period: "In production",
     status: "active" as const,
     description:
-      "The film that makes you feel the way the last one did — not just another one \u201clike\u201d it. Built so that a few ratings find the rest of your life's library.",
+      "The film that makes you feel the way the last one did, not just another one \u201clike\u201d it. Built so that a few ratings find the rest of your life's library.",
   },
   {
     role: "Founder",
@@ -94,7 +94,7 @@ export const experience: readonly ExperienceItem[] = [
     period: "Upcoming",
     status: "upcoming" as const,
     description:
-      "Vertically integrated wellness ecosystem — food, groceries, farms, fitness, health. Owning the entire stack end-to-end.",
+      "Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health. Owning the entire stack end-to-end.",
   },
   {
     role: "Co-founder",
@@ -131,14 +131,14 @@ export const featuredWork: readonly WorkItem[] = [
     name: "MoviesLikeThis",
     tag: "Full Stack",
     description:
-      "Movie discovery by feeling, not labels. The recommender keeps offering you more sci-fi, more action; this archive matches films by what they do to you — the ache, the wonder, the quiet — so the next film makes you feel the way the last one did.",
+      "Movie discovery by feeling, not labels. The recommender keeps offering you more sci-fi, more action; this archive matches films by what they do to you, the ache, the wonder, the quiet, so the next film makes you feel the way the last one did.",
     href: "https://movieslikethis.starone01.me",
   },
   {
     name: "EfficientXLang",
     tag: "Research",
     description:
-      "Original research assessing cross-lingual reasoning in multilingual LLMs. A study on whether reasoning compresses across languages — and where it doesn't.",
+      "Original research assessing cross-lingual reasoning in multilingual LLMs. A study on how reasoning compresses across languages, and where it doesn't.",
   },
   {
     name: "Medclara",
