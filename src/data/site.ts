@@ -3,23 +3,27 @@ export const site = {
   handle: "StarOne01",
   role: "ML Systems Engineer",
   location: "Coimbatore, Tamil Nadu",
+  intro: "I build speech models, compilers, and the infrastructure between them.",
   bio: [
-    "Final-year Electrical & Electronics Engineering student and self-taught programmer. I build software from zero-to-one, production ML pipelines, compiler infrastructure, and the distributed systems in between.",
-    "My work bridges bare-metal inference and responsive UI. Custom ASR systems, voice-first clinical AI, and privacy-by-design infrastructure.",
+    "Final-year electrical engineering student from Coimbatore who taught himself to program on a phone with a cracked screen. These days I build production ASR systems, compiler infrastructure, and the distributed systems in between.",
+    "My favorite problems are the constrained ones: Tamil medical conversations running through an ASR pipeline on a single consumer GPU, fully on-premise — because Indian healthcare data can't leave the hospital.",
   ],
-  tagline: "Curiosity-driven engineer exploring systems from first principles.",
-  typingLines: [
-    "Curiosity-driven engineer exploring systems from first principles.",
-    "Production ASR, compilers, and systems in the wild.",
-    "Shipping ML pipelines and the infrastructure underneath.",
-  ],
+  tagline: "Constraint-driven engineer. Ships from first principles.",
   email: "ping@starone01.me",
   socials: {
     email: { label: "Email", value: "ping@starone01.me", href: "mailto:ping@starone01.me" },
     linkedin: { label: "LinkedIn", value: "in/StarOne01", href: "https://www.linkedin.com/in/StarOne01/" },
     github: { label: "GitHub", value: "@StarOne01", href: "https://github.com/StarOne01" },
   },
-  nav: ["Work", "Stack", "Experience", "Contact"],
+  nav: ["Story", "Work", "Experience", "Stack", "Contact"],
+} as const;
+
+export const story = {
+  quote:
+    "I wrote my first production code on a phone. No laptop. Just Termux, a cracked screen, and WiFi that dropped every twenty minutes.",
+  after:
+    "PhraseNuX — a C++ password manager with AES encryption — was built entirely on that phone. People said wait until you have the right setup. I didn't wait.",
+  now: "Five years later the problems got bigger but the approach stayed the same: a voice-first clinical AI system that runs on one consumer GPU inside the hospital, because the data can't leave. The limitation was never the phone.",
 } as const;
 
 export const expertise = [
@@ -128,29 +132,30 @@ export type WorkItem = {
 
 export const featuredWork: readonly WorkItem[] = [
   {
+    name: "Medclara",
+    tag: "Clinical AI · Co-founder",
+    description:
+      "Voice-first, multilingual clinical documentation. Tamil doctor-patient conversations become structured SOAP notes through custom ASR and local LLMs — on one GPU, fully on-premise.",
+  },
+  {
     name: "MoviesLikeThis",
     tag: "Full Stack",
     description:
-      "Movie discovery by feeling, not labels. The recommender keeps offering you more sci-fi, more action; this archive matches films by what they do to you, the ache, the wonder, the quiet, so the next film makes you feel the way the last one did.",
+      "Movie discovery by feeling, not labels. The recommender keeps offering you more sci-fi, more action; this matches films by what they do to you — the ache, the wonder, the quiet.",
     href: "https://movieslikethis.starone01.me",
   },
   {
-    name: "EfficientXLang",
-    tag: "Research",
+    name: "LLVM",
+    tag: "Open Source",
     description:
-      "Original research assessing cross-lingual reasoning in multilingual LLMs. A study on how reasoning compresses across languages, and where it doesn't.",
-  },
-  {
-    name: "Medclara",
-    tag: "Founder",
-    description:
-      "Voice-first, multilingual clinical documentation. Doctor-patient conversations → structured SOAP notes via custom ASR and local LLMs.",
+      "15+ merged contributions to the compiler infrastructure behind Swift, Rust, and Clang — including float-related changes. Research on cross-lingual reasoning compression in multilingual LLMs.",
+    href: "https://github.com/StarOne01",
   },
   {
     name: "PhraseNuX",
-    tag: "Open Source",
+    tag: "Where it started",
     description:
-      "C++ CLI password manager with AES encryption. Zero dependencies, audited crypto, built to teach myself systems-level C++ the hard way.",
+      "C++ CLI password manager with AES encryption. Zero dependencies, audited crypto — built entirely on a phone, to teach myself systems-level C++ the hard way.",
     href: "https://github.com/StarOne01/PhraseNuX",
   },
 ];

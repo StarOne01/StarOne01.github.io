@@ -35,10 +35,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.7 }}
-          className="mt-6 text-lg sm:text-xl md:text-2xl text-ink-soft leading-relaxed max-w-xl"
+          className="mt-6 text-base sm:text-lg text-ink-soft leading-relaxed max-w-md"
         >
-          I build things that live in the real world — speech models that understand people,
-          compilers that run faster, and the occasional film recommender.
+          {site.intro}
         </motion.p>
 
         <motion.div
@@ -84,7 +83,7 @@ export default function Hero() {
         className="absolute bottom-8 inset-x-0 z-10 flex justify-center"
       >
         <Link
-          href="#about"
+          href="#story"
           className="group flex flex-col items-center gap-2 text-[11px] tracking-[0.25em] uppercase text-ink-soft/70 hover:text-ink transition-colors"
         >
           <span>scroll</span>

@@ -33,8 +33,8 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-[60] flex justify-center px-4 pt-4 transition-all duration-300 ${
-        isHomePage && !isScrolled ? "opacity-0 -translate-y-2 pointer-events-none" : "opacity-100"
+      className={`fixed bottom-4 inset-x-0 z-[60] flex justify-center px-4 transition-all duration-300 ${
+        isHomePage && !isScrolled ? "opacity-0 translate-y-2 pointer-events-none" : "opacity-100"
       }`}
     >
       <nav
