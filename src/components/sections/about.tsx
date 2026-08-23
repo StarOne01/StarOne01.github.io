@@ -9,14 +9,14 @@ export default function About() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         <div className="lg:col-span-5">
           <SectionHeader
-            eyebrow="01 — about"
+            eyebrow="about"
             title={
               <>
-                An engineer who ships <span className="text-white/55">in production.</span>
+                A bit about <span className="text-clay italic">me.</span>
               </>
             }
           />
-          <div className="space-y-5 text-white/75 text-base md:text-lg leading-relaxed">
+          <div className="space-y-5 text-ink-soft text-base md:text-lg leading-relaxed">
             {site.bio.map((p, i) => (
               <motion.p
                 key={i}
@@ -32,30 +32,25 @@ export default function About() {
         </div>
 
         <div className="lg:col-span-7">
-          <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/50 mb-8">
-            02 — areas
-          </div>
-          <ul className="divide-y divide-white/[0.06] border-y border-white/[0.06]">
+          <p className="font-mono text-[11px] tracking-[0.3em] uppercase text-ink-soft mb-8">
+            what I work on
+          </p>
+          <ul className="space-y-4">
             {expertise.map((area, i) => (
               <motion.li
                 key={area.title}
-                initial={{ opacity: 0, x: 10 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group grid grid-cols-12 gap-4 py-6 cursor-default"
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                className="group p-6 rounded-2xl bg-white border border-sand hover:border-clay/40 transition-colors"
               >
-                <span className="col-span-1 font-mono text-[10px] text-white/50 pt-1" aria-hidden>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div className="col-span-11">
-                  <h3 className="text-lg font-medium text-white/95 group-hover:text-white transition-colors mb-1.5">
-                    {area.title}
-                  </h3>
-                  <p className="text-white/65 text-sm leading-relaxed group-hover:text-white/80 transition-colors">
-                    {area.description}
-                  </p>
-                </div>
+                <h3 className="font-serif text-lg text-ink mb-1.5">
+                  {area.title}
+                </h3>
+                <p className="text-ink-soft text-sm leading-relaxed">
+                  {area.description}
+                </p>
               </motion.li>
             ))}
           </ul>

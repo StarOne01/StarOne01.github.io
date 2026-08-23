@@ -2,98 +2,96 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { site } from "@/data/site";
-import TypingText from "@/components/ui/typing-text";
-import Magnetic from "@/components/ui/magnetic";
 
 export default function Hero() {
   return (
     <section className="relative w-full min-h-[100svh] overflow-hidden flex flex-col items-center justify-center">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06),_transparent_60%)]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vmin] h-[80vmin] border border-white/[0.04] rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vmin] h-[55vmin] border border-white/[0.06] rounded-full" />
+      <div className="absolute inset-0 z-0" aria-hidden>
+        <div className="absolute -top-32 -left-32 w-[36rem] h-[36rem] rounded-full bg-clay/[0.07] blur-3xl" />
+        <div className="absolute top-1/3 -right-40 w-[30rem] h-[30rem] rounded-full bg-cream blur-3xl" />
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-paper to-transparent" />
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pb-28 md:pb-24">
-        <motion.div
+      <div className="relative z-10 px-6 max-w-3xl mx-auto pb-24">
+        <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 md:mb-8"
+          className="text-lg sm:text-xl text-ink-soft mb-4"
         >
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/80 bg-white/[0.03] border border-white/10 rounded-full backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80 animate-pulse" />
-            {site.role}
-          </span>
-        </motion.div>
+          Hi, I&rsquo;m
+        </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-[-0.04em] leading-[0.95]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+          className="font-serif text-6xl sm:text-7xl md:text-8xl font-medium tracking-[-0.03em] leading-[0.98] text-ink"
         >
-          <span className="block bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/50">
-            {site.name}
-          </span>
+          Prashanth<span className="text-clay">.</span>
         </motion.h1>
 
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25, duration: 0.7 }}
+          className="mt-6 text-lg sm:text-xl md:text-2xl text-ink-soft leading-relaxed max-w-xl"
+        >
+          I build things that live in the real world — speech models that understand people,
+          compilers that run faster, and the occasional film recommender.
+        </motion.p>
+
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-4 mb-6 flex items-center justify-center gap-3 font-mono text-[11px] tracking-[0.2em] uppercase text-white/50"
+          className="mt-5 flex items-center gap-2.5 text-sm text-ink-soft"
         >
-          <span className="h-px w-8 bg-white/25" aria-hidden />
-          <span>~/</span>
-          <span className="text-white/70">@{site.handle}</span>
-          <span className="h-px w-8 bg-white/25" aria-hidden />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-sand rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden />
+            {site.role}
+          </span>
+          <span aria-hidden>·</span>
+          <span>{site.location}</span>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-base sm:text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed"
+          transition={{ delay: 0.55, duration: 0.6 }}
+          className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3"
         >
-          <TypingText lines={site.typingLines} />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Magnetic as="a" href="#work" strength={0.4} className="group relative">
-            <span className="relative z-10 block px-7 py-3 bg-white text-slate-950 font-medium rounded-full shadow-[0_0_40px_-10px_rgba(255,255,255,0.4)] group-hover:shadow-[0_0_60px_-10px_rgba(255,255,255,0.6)] transition-shadow">
-              View work
-            </span>
-          </Magnetic>
-
-          <Magnetic as="a" href="#contact" strength={0.4} className="group">
-            <span className="block px-7 py-3 bg-white/[0.02] border border-white/15 text-white/90 rounded-full hover:bg-white/[0.06] hover:border-white/30 transition-colors">
-              Get in touch
-            </span>
-          </Magnetic>
+          <a
+            href="#work"
+            className="group inline-flex items-center gap-2 px-6 py-3 bg-ink text-paper rounded-full hover:bg-clay-deep transition-colors"
+          >
+            See what I&rsquo;ve built
+            <span aria-hidden className="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+          <a
+            href={`mailto:${site.email}`}
+            className="px-6 py-3 bg-white border border-sand text-ink rounded-full hover:border-clay/50 transition-colors"
+          >
+            Say hello
+          </a>
         </motion.div>
       </div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.6 }}
+        transition={{ delay: 1, duration: 0.6 }}
         className="absolute bottom-8 inset-x-0 z-10 flex justify-center"
       >
         <Link
-          href="#work"
-            className="group flex flex-col items-center gap-3 font-mono text-[9px] tracking-[0.3em] uppercase text-white/50 hover:text-white/80 transition-colors"
+          href="#about"
+          className="group flex flex-col items-center gap-2 text-[11px] tracking-[0.25em] uppercase text-ink-soft/70 hover:text-ink transition-colors"
         >
           <span>scroll</span>
-          <span className="relative block w-px h-12 overflow-hidden bg-white/10">
+          <span className="relative block w-px h-10 overflow-hidden bg-sand">
             <motion.span
               aria-hidden
-              className="absolute top-0 left-0 w-full h-3 bg-gradient-to-b from-transparent via-white to-transparent"
+              className="absolute top-0 left-0 w-full h-3 bg-gradient-to-b from-transparent via-clay to-transparent"
               animate={{ y: ["-100%", "400%"] }}
               transition={{ duration: 1.8, ease: "easeInOut", repeat: Infinity, repeatDelay: 0.2 }}
             />

@@ -5,6 +5,7 @@
 :root {
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
 }
 
 html {
@@ -14,13 +15,19 @@ html {
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: #faf7f2;
+  color: #211d18;
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: rgba(188, 85, 39, 0.16);
+  color: #211d18;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-padding-top: 5rem;
+  }
 }
 
 @layer utilities {
@@ -29,6 +36,9 @@ body {
   }
   .font-mono {
     font-family: var(--font-mono);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
   }
   .text-balance {
     text-wrap: balance;

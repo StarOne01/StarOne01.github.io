@@ -13,17 +13,14 @@ interface SectionHeaderProps {
 export default function SectionHeader({ eyebrow, title, description, align = "left", className }: SectionHeaderProps) {
   return (
     <div className={cn("mb-12 md:mb-16", align === "center" && "text-center", className)}>
-      <div className={cn("flex items-center gap-3 mb-5", align === "center" && "justify-center")}>
-        <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/50">
-          {eyebrow}
-        </span>
-        <span className="h-px w-10 bg-white/15" />
-      </div>
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
+      <p className="font-mono text-[11px] tracking-[0.3em] uppercase text-clay mb-4">
+        {eyebrow}
+      </p>
+      <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-ink">
         {title}
       </h2>
       {description && (
-        <p className={cn("mt-5 text-white/60 text-base md:text-lg max-w-2xl leading-relaxed", align === "center" && "mx-auto")}>
+        <p className={cn("mt-5 text-ink-soft text-base md:text-lg max-w-2xl leading-relaxed", align === "center" && "mx-auto")}>
           {description}
         </p>
       )}

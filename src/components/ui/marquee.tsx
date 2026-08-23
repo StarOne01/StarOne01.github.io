@@ -16,11 +16,11 @@ export default function Marquee({ items, speed = 30, className, reverse, separat
     <div className={cn("relative overflow-hidden", className)}>
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10"
+        className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-paper to-transparent z-10"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10"
+        className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-paper to-transparent z-10"
       />
       <motion.div
         className="flex w-max gap-8 py-4"
@@ -28,9 +28,9 @@ export default function Marquee({ items, speed = 30, className, reverse, separat
         transition={{ duration: speed, ease: "linear", repeat: Infinity }}
       >
         {doubled.map((item, i) => (
-          <span key={i} className="flex items-center gap-8 font-mono text-sm uppercase tracking-[0.2em] text-white/40 whitespace-nowrap">
+          <span key={i} className="flex items-center gap-8 font-mono text-sm uppercase tracking-[0.2em] text-ink-soft/60 whitespace-nowrap">
             <span>{item}</span>
-            <span className="text-white/15">{separator}</span>
+            <span className="text-clay/40">{separator}</span>
           </span>
         ))}
       </motion.div>

@@ -23,16 +23,16 @@ export default function NotFound() {
   };
 
   return (
-    <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-[100] cursor-pointer select-none" onClick={nextJoke}>
+    <div className="fixed inset-0 bg-paper flex flex-col items-center justify-center z-[100] cursor-pointer select-none" onClick={nextJoke}>
       <h1 className="sr-only">404 — page not found</h1>
-      <pre className="text-green-400/80 text-sm sm:text-base font-mono leading-relaxed text-center px-4">
+      <pre className="text-clay text-sm sm:text-base font-mono leading-relaxed text-center px-4">
 {`╔══════════════════════════════╗
 ║                              ║
 ║   ${joke.padEnd(27)}║
 ║                              ║
 ╚══════════════════════════════╝`}
       </pre>
-      <p className="text-white/20 text-xs mt-8 font-mono">[ click for another error ]</p>
+      <p className="text-ink-soft/60 text-xs mt-8 font-mono">[ click for another error ]</p>
     </div>
   );
 }
