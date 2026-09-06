@@ -9,51 +9,60 @@ const allStack = Object.values(stack)
 
 const categories = Object.entries(stack);
 
-function Item({ item }: { item: StackItem }) {
-  if (typeof item === "string") {
-    return <li className="text-sm text-white/85 hover:text-white transition-colors">{item}</li>;
-  }
+function Pill({ item }: { item: StackItem }) {
+  const name = typeof item === "string" ? item : item.name;
+  const note = typeof item === "string" ? null : item.note;
+  const fav = typeof item !== "string" && item.fav;
   return (
-    <li className="text-sm text-white/85 hover:text-white transition-colors flex items-baseline gap-1.5">
-      <span>{item.name}</span>
-      {item.fav && <span className="text-white/55 text-[10px]" aria-label="favorite">★</span>}
-      {item.note && <span className="text-white/55 text-[10px] font-mono">({item.note})</span>}
+    <li
+      className={`inline-flex items-baseline gap-1.5 px-4 py-2 rounded-full border text-sm transition-colors cursor-default ${
+        fav
+          ? "border-volt/60 text-volt"
+          : "border-white/12 text-white/80 hover:border-volt/60 hover:text-volt"
+      }`}
+    >
+      <span>{name}</span>
+      {fav && (
+        <span className="text-[10px]" aria-label="favorite">
+          ★
+        </span>
+      )}
+      {note && <span className="text-[10px] font-mono opacity-60">({note})</span>}
     </li>
   );
 }
 
 export default function Stack() {
   return (
-    <section id="stack" className="py-24 md:py-32 border-y border-white/[0.04]">
+    <section id="stack" className="py-24 md:py-32 border-y border-white/[0.06]">
       <div className="px-6 max-w-6xl mx-auto mb-12 md:mb-16">
         <SectionHeader
-          eyebrow="05 — stack"
+          index="05"
+          eyebrow="stack"
           title={
-          <>
-            Tools, not <span className="text-white/55">ornaments.</span>
-          </>
+            <>
+              Loaded <span className="font-display italic font-normal text-volt">and dangerous.</span>
+            </>
           }
-          description="Languages, frameworks, infrastructure, and the disciplines I reach for. Grouped by what they actually do."
+          description="Languages, compilers, models, and infra I actually reach for. Grouped by what they do."
         />
       </div>
 
       <Marquee items={allStack} speed={55} className="mb-12" />
 
-      <div className="px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-px bg-white/[0.04] border border-white/[0.06] rounded-2xl overflow-hidden">
-          {categories.map(([label, items]) => (
-            <div key={label} className="bg-black p-5 min-h-[140px]">
-              <div className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/50 mb-4">
-                {label}
-              </div>
-              <ul className="space-y-1.5">
-                {items.map((item, i) => (
-                  <Item key={i} item={item} />
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      <div className="px-6 max-w-6xl mx-auto space-y-8">
+        {categories.map(([label, items]) => (
+          <div key={label}>
+            <p className="font-mono text-[11px] tracking-[0.3em] uppercase text-white/40 mb-4">
+              <span className="text-volt">▸</span> {label}
+            </p>
+            <ul className="flex flex-wrap gap-2">
+              {items.map((item, i) => (
+                <Pill key={i} item={item} />
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -8,10 +8,12 @@ interface MarqueeProps {
   className?: string;
   reverse?: boolean;
   separator?: string;
+  variant?: "dim" | "volt";
 }
 
-export default function Marquee({ items, speed = 30, className, reverse, separator = "✦" }: MarqueeProps) {
+export default function Marquee({ items, speed = 30, className, reverse, separator = "✦", variant = "dim" }: MarqueeProps) {
   const doubled = [...items, ...items];
+  const volt = variant === "volt";
   return (
     <div className={cn("relative overflow-hidden", className)}>
       <div
@@ -28,9 +30,12 @@ export default function Marquee({ items, speed = 30, className, reverse, separat
         transition={{ duration: speed, ease: "linear", repeat: Infinity }}
       >
         {doubled.map((item, i) => (
-          <span key={i} className="flex items-center gap-8 font-mono text-sm uppercase tracking-[0.2em] text-white/40 whitespace-nowrap">
+          <span key={i} className={cn(
+            "flex items-center gap-8 font-mono uppercase whitespace-nowrap",
+            volt ? "text-sm tracking-[0.3em] text-foam/90" : "text-sm tracking-[0.2em] text-white/40"
+          )}>
             <span>{item}</span>
-            <span className="text-white/15">{separator}</span>
+            <span className={volt ? "text-volt" : "text-white/15"}>{separator}</span>
           </span>
         ))}
       </motion.div>

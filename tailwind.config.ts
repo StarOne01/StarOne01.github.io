@@ -12,6 +12,11 @@ const config: Config =  {
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
+        display: ["var(--font-display)"],
+      },
+      colors: {
+        carbon: "#0A0A0B",
+        volt: "#D9FF3D",
       },
     },
   },

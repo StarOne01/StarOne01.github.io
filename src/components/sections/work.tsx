@@ -6,53 +6,55 @@ import Icon from "@/components/ui/icon";
 
 export default function Work() {
   return (
-    <section id="work" className="py-24 md:py-32 px-6 max-w-6xl mx-auto">
-      <SectionHeader
-        eyebrow="02 — selected work"
-        title={
-          <>
-            Things I've shipped <span className="text-white/55">in the wild.</span>
-          </>
-        }
-        description="A few things I've built, researched, or shipped. All live, all in production or open source."
-      />
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {featuredWork.map((item, i) => {
-          const card = (
+    <section id="work" className="py-24 md:py-32">
+      <div className="px-6 max-w-6xl mx-auto">
+        <SectionHeader
+          index="02"
+          eyebrow="selected work"
+          title={
             <>
-              <div className="flex items-center justify-between mb-6">
-                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/55">
-                  {item.tag}
-                </span>
+              Proof, <span className="font-display italic font-normal text-volt">not promises.</span>
+            </>
+          }
+          description="A few things I've built, researched, or shipped — all in production or open source."
+        />
+      </div>
+
+      <div className="border-t border-white/10">
+        {featuredWork.map((item, i) => {
+          const inner = (
+            <>
+              <span aria-hidden className="font-mono text-sm text-volt shrink-0 pt-2 w-10">
+                0{i + 1}
+              </span>
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-[-0.03em] leading-none text-white group-hover:text-carbon transition-colors">
+                    {item.name}
+                  </h3>
+                  <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/45 group-hover:text-carbon/60 transition-colors">
+                    {item.tag}
+                  </span>
+                </div>
+                <p className="mt-4 text-white/60 group-hover:text-carbon/75 transition-colors text-sm md:text-base leading-relaxed max-w-2xl">
+                  {item.description}
+                </p>
+              </div>
+              <span aria-hidden className="shrink-0 self-center">
                 <Icon
-                  name="external"
-                  className="w-3.5 h-3.5 text-white/40 group-hover:text-white group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
-                  aria-hidden
+                  name="arrow"
+                  className="w-8 h-8 text-white/25 group-hover:text-carbon group-hover:translate-x-2 transition-all"
                 />
-              </div>
-
-              <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">
-                {item.name}
-              </h3>
-              <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/85 transition-colors flex-1">
-                {item.description}
-              </p>
-
-              <div className="mt-6 pt-5 border-t border-white/[0.06] font-mono text-[10px] tracking-[0.2em] uppercase text-white/50 group-hover:text-white/75 transition-colors flex items-center gap-2">
-                <span>{item.href ? "open" : "shipped"}</span>
-                <span className="text-white/30" aria-hidden>/</span>
-                <span>{item.name.toLowerCase()}</span>
-              </div>
+              </span>
             </>
           );
           const classes =
-            "group flex flex-col p-6 md:p-7 rounded-2xl bg-white/[0.015] border border-white/[0.06] hover:bg-white/[0.03] hover:border-white/15 transition-colors min-h-[260px]";
+            "group flex items-start gap-5 md:gap-8 px-6 md:px-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] py-10 md:py-12 border-b border-white/10 hover:bg-volt transition-colors";
           const motionProps = {
-            initial: { opacity: 0, y: 20 },
+            initial: { opacity: 0, y: 24 },
             whileInView: { opacity: 1, y: 0 },
             viewport: { once: true, margin: "-60px" },
-            transition: { duration: 0.5, delay: i * 0.08 },
+            transition: { duration: 0.5, delay: i * 0.05 },
           };
           if (item.href) {
             return (
@@ -64,13 +66,13 @@ export default function Work() {
                 className={classes}
                 {...motionProps}
               >
-                {card}
+                {inner}
               </motion.a>
             );
           }
           return (
             <motion.div key={item.name} className={classes} {...motionProps}>
-              {card}
+              {inner}
             </motion.div>
           );
         })}

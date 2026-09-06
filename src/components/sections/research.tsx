@@ -8,10 +8,11 @@ export default function Research() {
   return (
     <section id="research" className="py-24 md:py-32 px-6 max-w-6xl mx-auto">
       <SectionHeader
-        eyebrow="03 — research & writing"
+        index="03"
+        eyebrow="research & writing"
         title={
           <>
-            Asking questions <span className="text-white/55">models can&rsquo;t answer.</span>
+            Questions <span className="font-display italic font-normal text-volt">worth testing.</span>
           </>
         }
         description="Original evaluation work and building in public — in Tamil and English."
@@ -21,29 +22,32 @@ export default function Research() {
         {research.map((item, i) => {
           const card = (
             <>
-              <div className="flex items-center justify-between mb-6">
-                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/55">
-                  {item.tag}
+              <div className="flex items-start justify-between mb-8">
+                <span aria-hidden className="font-black text-6xl leading-none text-stroke select-none">
+                  R{i + 1}
                 </span>
                 {item.href && (
                   <Icon
                     name="external"
-                    className="w-3.5 h-3.5 text-white/40 group-hover:text-white group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
+                    className="w-5 h-5 text-white/30 group-hover:text-volt group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"
                     aria-hidden
                   />
                 )}
               </div>
 
-              <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">
+              <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-volt mb-3">
+                {item.tag}
+              </p>
+              <h3 className="text-2xl md:text-[1.7rem] font-extrabold text-white mb-3 tracking-tight leading-tight">
                 {item.title}
               </h3>
-              <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/85 transition-colors flex-1">
+              <p className="text-white/60 text-sm leading-relaxed flex-1">
                 {item.description}
               </p>
             </>
           );
           const classes =
-            "group flex flex-col p-6 md:p-7 rounded-2xl bg-white/[0.015] border border-white/[0.06] hover:bg-white/[0.03] hover:border-white/15 transition-colors min-h-[220px]";
+            "group flex flex-col p-7 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-volt/60 hover:bg-white/[0.04] transition-colors min-h-[280px]";
           const motionProps = {
             initial: { opacity: 0, y: 20 },
             whileInView: { opacity: 1, y: 0 },

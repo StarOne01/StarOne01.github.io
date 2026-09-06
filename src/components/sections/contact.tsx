@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { site } from "@/data/site";
 import SectionHeader from "@/components/ui/section-header";
 import Icon from "@/components/ui/icon";
-import Magnetic from "@/components/ui/magnetic";
 
 const channels = [
   site.socials.email,
@@ -15,13 +14,14 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 px-6 max-w-6xl mx-auto relative">
       <SectionHeader
-        eyebrow="06 — contact"
+        index="06"
+        eyebrow="contact"
         title={
           <>
-            Let's build <span className="text-white/55">something real.</span>
+            Got something <span className="font-display italic font-normal text-volt">hard?</span>
           </>
         }
-        description="Open to collaborations on AI infrastructure, systems engineering, and tooling for serious problems. Cold emails welcome."
+        description="Open to collaborations on compilers, ML systems, and tooling for serious problems. Cold emails welcome — I read all of them."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -37,23 +37,23 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/[0.06] rounded-xl hover:bg-white/[0.05] hover:border-white/15 transition-colors"
+              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/10 rounded-xl hover:bg-volt hover:border-volt transition-colors"
               aria-label={`${c.label}: ${c.value}`}
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-white/[0.04] border border-white/[0.08] rounded-lg text-white/80 group-hover:text-black group-hover:bg-white group-hover:border-white transition-colors">
+              <div className="w-10 h-10 flex items-center justify-center bg-white/[0.04] border border-white/10 rounded-lg text-white/80 group-hover:text-carbon group-hover:bg-carbon/10 group-hover:border-carbon/20 transition-colors">
                 <Icon name={iconName} className="w-4 h-4" aria-hidden />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/50 mb-1">
+                <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/50 group-hover:text-carbon/60 mb-1">
                   {c.label}
                 </p>
-                <p className="text-sm font-medium text-white/90 truncate group-hover:text-white">
+                <p className="text-sm font-medium text-white/90 truncate group-hover:text-carbon">
                   {c.value}
                 </p>
               </div>
               <Icon
                 name="arrow"
-                className="w-3.5 h-3.5 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all"
+                className="w-3.5 h-3.5 text-white/40 group-hover:text-carbon group-hover:translate-x-1 transition-all"
                 aria-hidden
               />
             </motion.a>
@@ -68,14 +68,15 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
         className="mt-20 md:mt-28 text-center"
       >
-        <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/50 mb-4">
-          or, if you prefer
+        <p className="font-display italic text-2xl sm:text-3xl text-white/50 mb-4">
+          or just write to me at
         </p>
-        <Magnetic as="a" href={`mailto:${site.email}`} strength={0.3}>
-          <span className="inline-block text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white hover:text-white/75 transition-colors">
-            {site.email} →
-          </span>
-        </Magnetic>
+        <a
+          href={`mailto:${site.email}`}
+          className="inline-block text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-[-0.03em] text-white hover:text-volt transition-colors break-all"
+        >
+          {site.email}
+        </a>
       </motion.div>
     </section>
   );

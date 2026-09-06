@@ -4,57 +4,48 @@ import { motion } from "framer-motion";
 import { site } from "@/data/site";
 import TypingText from "@/components/ui/typing-text";
 import Magnetic from "@/components/ui/magnetic";
+import Marquee from "@/components/ui/marquee";
+
+const strip = ["compilers", "embeddings", "inference", "llvm / mlir", "clinical ai", "go", "c++", "rag"];
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[100svh] overflow-hidden flex flex-col items-center justify-center">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06),_transparent_60%)]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vmin] h-[80vmin] border border-white/[0.04] rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vmin] h-[55vmin] border border-white/[0.06] rounded-full" />
+    <section className="relative w-full min-h-[100svh] overflow-hidden flex flex-col justify-end">
+      <div className="absolute inset-0 z-0" aria-hidden>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_30%_40%,_rgba(217,255,61,0.07),_transparent_70%)]" />
+        <div className="absolute top-24 right-8 hidden md:block font-mono text-[10px] tracking-[0.3em] text-white/30 uppercase [writing-mode:vertical-rl]">
+          folio ©2026 — {site.handle}
+        </div>
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pb-28 md:pb-24">
-        <motion.div
+      <div className="relative z-10 px-6 max-w-6xl mx-auto w-full pt-32">
+        <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 md:mb-8"
+          className="font-mono text-[11px] tracking-[0.35em] uppercase text-white/50 mb-6"
         >
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.25em] text-white/80 bg-white/[0.03] border border-white/10 rounded-full backdrop-blur-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80 animate-pulse" />
-            {site.role}
-          </span>
-        </motion.div>
+          <span className="text-volt">●</span>&nbsp;&nbsp;{site.role} — {site.location}
+        </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-[-0.04em] leading-[0.95]"
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+          className="font-black uppercase leading-[0.88] tracking-[-0.045em] text-[clamp(3.8rem,13vw,11rem)]"
         >
-          <span className="block bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/50">
-            {site.name}
+          <span className="block text-white">Prashanth</span>
+          <span className="block">
+            <span className="font-display italic normal-case font-normal tracking-normal text-volt">T.</span>
+            <span className="text-stroke select-none"> engineer</span>
           </span>
         </motion.h1>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-4 mb-6 flex items-center justify-center gap-3 font-mono text-[11px] tracking-[0.2em] uppercase text-white/50"
-        >
-          <span className="h-px w-8 bg-white/25" aria-hidden />
-          <span>~/</span>
-          <span className="text-white/70">@{site.handle}</span>
-          <span className="h-px w-8 bg-white/25" aria-hidden />
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-sm sm:text-base text-white/70 font-light max-w-xl mx-auto mb-8 md:mb-10 leading-relaxed"
+          transition={{ delay: 0.45, duration: 0.6 }}
+          className="mt-8 text-sm sm:text-base text-white/60 font-light max-w-xl leading-relaxed"
         >
           <TypingText lines={site.typingLines} />
         </motion.div>
@@ -62,17 +53,17 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          transition={{ delay: 0.65, duration: 0.6 }}
+          className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4"
         >
           <Magnetic as="a" href="#work" strength={0.4} className="group relative">
-            <span className="relative z-10 block px-7 py-3 bg-white text-slate-950 font-medium rounded-full shadow-[0_0_40px_-10px_rgba(255,255,255,0.4)] group-hover:shadow-[0_0_60px_-10px_rgba(255,255,255,0.6)] transition-shadow">
-              View work
+            <span className="relative z-10 block px-8 py-3.5 bg-volt text-carbon font-semibold rounded-full group-hover:bg-white transition-colors">
+              View work ↓
             </span>
           </Magnetic>
 
           <Magnetic as="a" href="#contact" strength={0.4} className="group">
-            <span className="block px-7 py-3 bg-white/[0.02] border border-white/15 text-white/90 rounded-full hover:bg-white/[0.06] hover:border-white/30 transition-colors">
+            <span className="block px-8 py-3.5 border border-white/20 text-white/90 rounded-full hover:border-volt hover:text-volt transition-colors">
               Get in touch
             </span>
           </Magnetic>
@@ -82,22 +73,16 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.6 }}
-        className="absolute bottom-8 inset-x-0 z-10 flex justify-center"
+        transition={{ delay: 0.9, duration: 0.6 }}
+        className="relative z-10 mt-16 md:mt-20 border-y border-white/10 bg-carbon/60 backdrop-blur-sm"
       >
+        <Marquee items={strip} speed={28} variant="volt" />
         <Link
-          href="#work"
-            className="group flex flex-col items-center gap-3 font-mono text-[9px] tracking-[0.3em] uppercase text-white/50 hover:text-white/80 transition-colors"
+          href="#about"
+          aria-label="Scroll to about"
+          className="absolute -top-3 left-6 font-mono text-[9px] tracking-[0.3em] uppercase text-white/40 hover:text-volt transition-colors bg-carbon px-2"
         >
-          <span>scroll</span>
-          <span className="relative block w-px h-12 overflow-hidden bg-white/10">
-            <motion.span
-              aria-hidden
-              className="absolute top-0 left-0 w-full h-3 bg-gradient-to-b from-transparent via-white to-transparent"
-              animate={{ y: ["-100%", "400%"] }}
-              transition={{ duration: 1.8, ease: "easeInOut", repeat: Infinity, repeatDelay: 0.2 }}
-            />
-          </span>
+          scroll ↓
         </Link>
       </motion.div>
     </section>

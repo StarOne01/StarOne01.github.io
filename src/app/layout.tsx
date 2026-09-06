@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/navbar";
 import Grain from "@/components/ui/grain";
@@ -11,6 +11,7 @@ import { site, stack, experience, expertise, featuredWork } from "@/data/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
+const display = Instrument_Serif({ subsets: ["latin"], weight: "400", variable: "--font-display" });
 
 const SITE_URL = "https://starone01.me";
 const FULL_NAME = "Prashanth T.";
@@ -21,8 +22,8 @@ const STACK_FLAT = Object.values(stack)
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-    { media: "(prefers-color-scheme: light)", color: "#000000" },
+    { media: "(prefers-color-scheme: dark)", color: "#0A0A0B" },
+    { media: "(prefers-color-scheme: light)", color: "#0A0A0B" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -325,7 +326,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${mono.variable} ${display.variable}`}>
       <head>
         <link rel="canonical" href={SITE_URL} />
         <link rel="me" href={site.socials.linkedin.href} />
@@ -349,7 +350,7 @@ export default function RootLayout({
           data-cf-beacon='{"token": "fab21eca730a430f8e5f7b324ac3e2cc", "spa": true}'
         />
       </head>
-      <body className="font-sans bg-black text-white antialiased">
+      <body className="font-sans bg-carbon text-white antialiased">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded-md focus:font-mono focus:text-xs focus:tracking-widest focus:uppercase"

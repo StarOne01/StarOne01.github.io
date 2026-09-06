@@ -100,7 +100,7 @@ export default function Terminal() {
         aria-label="Open terminal (Ctrl+` or ⌘`)"
         aria-expanded={open}
         aria-haspopup="dialog"
-        className={`fixed bottom-5 max-sm:bottom-24 right-5 z-[55] font-mono text-[11px] tracking-[0.2em] uppercase text-white/55 hover:text-white border border-white/15 hover:border-white/30 bg-white/5 backdrop-blur-md rounded-md px-3 py-2 transition-opacity duration-300 ${
+        className={`fixed bottom-5 max-sm:bottom-24 right-5 z-[55] font-mono text-[11px] tracking-[0.2em] uppercase text-white/55 hover:text-volt border border-white/15 hover:border-volt/50 bg-carbon/80 backdrop-blur-md rounded-md px-3 py-2 transition-all duration-300 ${
           isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
@@ -117,7 +117,7 @@ export default function Terminal() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-20 right-5 z-[70] w-[min(92vw,560px)] h-[min(60vh,420px)] bg-black/95 border border-white/15 rounded-lg shadow-2xl shadow-black backdrop-blur-xl flex flex-col overflow-hidden font-mono text-[12px]"
+            className="fixed bottom-20 right-5 z-[70] w-[min(92vw,560px)] h-[min(60vh,420px)] bg-carbon border border-white/15 rounded-lg shadow-2xl shadow-black flex flex-col overflow-hidden font-mono text-[12px]"
           >
             <div className="flex items-center justify-between px-4 py-2 border-b border-white/10 bg-white/[0.02]">
               <div className="flex items-center gap-1.5" aria-hidden>
