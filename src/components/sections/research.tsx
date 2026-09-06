@@ -47,7 +47,7 @@ export default function Research() {
             </>
           );
           const classes =
-            "group flex flex-col p-7 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-volt/60 hover:bg-white/[0.04] transition-colors min-h-[280px]";
+            "group flex flex-col p-7 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-volt/60 hover:bg-white/[0.04] active:border-volt/60 active:bg-white/[0.04] transition-colors min-h-[280px]";
           const motionProps = {
             initial: { opacity: 0, y: 20 },
             whileInView: { opacity: 1, y: 0 },

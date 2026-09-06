@@ -18,7 +18,7 @@ function Pill({ item }: { item: StackItem }) {
       className={`inline-flex items-baseline gap-1.5 px-4 py-2 rounded-full border text-sm transition-colors cursor-default ${
         fav
           ? "border-volt/60 text-volt"
-          : "border-white/12 text-white/80 hover:border-volt/60 hover:text-volt"
+          : "border-white/12 text-white/80 hover:border-volt/60 hover:text-volt active:border-volt/60 active:text-volt"
       }`}
     >
       <span>{name}</span>

@@ -55,7 +55,7 @@ export default function Nav() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 role="listitem"
-                className="px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/55 hover:text-volt transition-colors"
+                className="px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/55 hover:text-volt active:text-volt transition-colors"
               >
                 {item}
               </a>

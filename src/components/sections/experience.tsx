@@ -66,7 +66,7 @@ export default function Experience() {
             {experience.map((item, i) => (
               <article
                 key={`${item.company}-${i}`}
-                className="relative shrink-0 w-[min(85vw,380px)] p-6 md:p-7 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-volt/60 hover:bg-white/[0.04] transition-colors group"
+                className="relative shrink-0 w-[min(85vw,380px)] p-6 md:p-7 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-volt/60 hover:bg-white/[0.04] active:border-volt/60 transition-colors group"
               >
                 <div className="flex items-center justify-between mb-4 font-mono text-[10px] tracking-[0.2em] uppercase">
                   <span className="text-white/40" aria-hidden>E/{String(i + 1).padStart(2, "0")}</span>

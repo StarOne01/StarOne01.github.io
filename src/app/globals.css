@@ -44,8 +44,13 @@ body {
     text-wrap: balance;
   }
   .text-stroke {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.28);
-    color: transparent;
+    color: rgba(255, 255, 255, 0.22);
+  }
+  @supports (-webkit-text-stroke: 1px black) {
+    .text-stroke {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.28);
+      color: transparent;
+    }
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;

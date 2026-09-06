@@ -37,23 +37,23 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/10 rounded-xl hover:bg-volt hover:border-volt transition-colors"
+              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/10 rounded-xl hover:bg-volt hover:border-volt active:bg-volt active:border-volt transition-colors"
               aria-label={`${c.label}: ${c.value}`}
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-white/[0.04] border border-white/10 rounded-lg text-white/80 group-hover:text-carbon group-hover:bg-carbon/10 group-hover:border-carbon/20 transition-colors">
+              <div className="w-10 h-10 flex items-center justify-center bg-white/[0.04] border border-white/10 rounded-lg text-white/80 group-hover:text-carbon group-hover:bg-carbon/10 group-hover:border-carbon/20 group-active:text-carbon group-active:bg-carbon/10 group-active:border-carbon/20 transition-colors">
                 <Icon name={iconName} className="w-4 h-4" aria-hidden />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/50 group-hover:text-carbon/60 mb-1">
+                <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/50 group-hover:text-carbon/60 group-active:text-carbon/60 mb-1">
                   {c.label}
                 </p>
-                <p className="text-sm font-medium text-white/90 truncate group-hover:text-carbon">
+                <p className="text-sm font-medium text-white/90 truncate group-hover:text-carbon group-active:text-carbon">
                   {c.value}
                 </p>
               </div>
               <Icon
                 name="arrow"
-                className="w-3.5 h-3.5 text-white/40 group-hover:text-carbon group-hover:translate-x-1 transition-all"
+                className="w-3.5 h-3.5 text-white/40 group-hover:text-carbon group-hover:translate-x-1 group-active:text-carbon group-active:translate-x-1 transition-all"
                 aria-hidden
               />
             </motion.a>
