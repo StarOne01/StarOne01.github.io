@@ -12,7 +12,7 @@ import { site, stack, experience, expertise, featuredWork } from "@/data/site";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
-const SITE_URL = "https://starone01.github.io";
+const SITE_URL = "https://starone01.me";
 const FULL_NAME = "Prashanth T.";
 
 const STACK_FLAT = Object.values(stack)
@@ -37,35 +37,36 @@ export const metadata: Metadata = {
   },
   applicationName: `${site.handle} portfolio`,
   description:
-    "Prashanth T. (@StarOne01), ML Systems Engineer based in Coimbatore, Tamil Nadu. Production ASR (Conformer, RNN-T, Whisper), LLVM contributor, distributed systems, and privacy-by-design infrastructure in Go and C++.",
+    "Prashanth T. (@StarOne01) — Systems Engineer from Coimbatore working the hardware-software gap: LLVM/MLIR compiler internals, production multilingual clinical AI (IndicConformer, ABDM/FHIR), embeddings, and local LLM inference in Go, Python, and C++.",
   keywords: [
     "Prashanth",
     "StarOne01",
+    "Ragi",
+    "Systems Engineer",
     "ML Systems Engineer",
+    "LLVM",
+    "MLIR",
+    "Compiler",
     "ASR",
     "Automatic Speech Recognition",
-    "Conformer",
-    "RNN-T",
-    "Whisper",
     "IndicConformer",
+    "Clinical AI",
+    "ABDM",
+    "FHIR",
     "QLoRA",
-    "PEFT",
-    "Speaker Diarization",
+    "Fine-tuning",
+    "Embeddings",
+    "RAG",
+    "Qdrant",
     "Ollama",
-    "LLVM",
-    "Compiler",
-    "Distributed Systems",
+    "Local LLM Inference",
+    "CUDA",
     "Go",
     "C++",
     "Python",
     "TypeScript",
     "AWS",
-    "GCP",
-    "Docker",
-    "Privacy by design",
-    "GDPR",
-    "Flutter",
-    "Next.js",
+    "Ory Kratos",
     "Coimbatore",
     "Tamil Nadu",
   ],

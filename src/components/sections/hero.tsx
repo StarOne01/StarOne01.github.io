@@ -54,7 +54,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-base sm:text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed"
+          className="text-sm sm:text-base text-white/70 font-light max-w-xl mx-auto mb-8 md:mb-10 leading-relaxed"
         >
           <TypingText lines={site.typingLines} />
         </motion.div>

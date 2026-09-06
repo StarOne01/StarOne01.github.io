@@ -1,17 +1,18 @@
 export const site = {
-  name: "Prashanth",
+  name: "Prashanth T.",
   handle: "StarOne01",
-  role: "ML Systems Engineer",
+  role: "Systems Engineer",
   location: "Coimbatore, Tamil Nadu",
   bio: [
-    "Final-year Electrical & Electronics Engineering student and self-taught programmer. I build software from zero-to-one, production ML pipelines, compiler infrastructure, and the distributed systems in between.",
-    "My work bridges bare-metal inference and responsive UI. Custom ASR systems, voice-first clinical AI, and privacy-by-design infrastructure.",
+    "I'm Prashanth — most people know me as Ragi or StarOne01. I'm a final-year Electrical and Electronics Engineering student, but most of what I actually do lives in the gap between hardware and software: compilers, model inference, and the systems that make AI run efficiently on real silicon.",
+    "I'm self-taught — started coding on a phone through Termux before I even owned a laptop — and I've spent the last few years building things that actually ship: a production multilingual clinical AI system, open-source contributions to LLVM, a film recommendation engine built on custom embeddings, and original research into where and why language models fail on multilingual tasks.",
+    "Right now I'm going deep on compiler internals and MLIR — the layer where AI models actually meet hardware — because that's where I think the most interesting (and most underbuilt) engineering problems are.",
   ],
-  tagline: "Curiosity-driven engineer exploring systems from first principles.",
+  tagline: "Systems engineer building at the intersection of hardware and AI.",
   typingLines: [
-    "Curiosity-driven engineer exploring systems from first principles.",
-    "Production ASR, compilers, and systems in the wild.",
-    "Shipping ML pipelines and the infrastructure underneath.",
+    "Systems engineer building at the intersection of hardware and AI.",
+    "Compilers, embeddings, and the systems underneath them.",
+    "EE fundamentals. Production AI systems. LLVM.",
   ],
   email: "ping@starone01.me",
   socials: {
@@ -19,29 +20,29 @@ export const site = {
     linkedin: { label: "LinkedIn", value: "in/StarOne01", href: "https://www.linkedin.com/in/StarOne01/" },
     github: { label: "GitHub", value: "@StarOne01", href: "https://github.com/StarOne01" },
   },
-  nav: ["Work", "Stack", "Experience", "Contact"],
+  nav: ["Work", "Research", "Experience", "Stack", "Contact"],
 } as const;
 
 export const expertise = [
   {
-    title: "Production ASR & ML",
+    title: "Compilers & LLVM",
     description:
-      "Custom ASR architectures (Conformer, RNN-T, CTC), Whisper fine-tuning with QLoRA, speaker diarization, and on-premise inference via Ollama with structured clinical outputs.",
+      "16 contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.",
   },
   {
-    title: "Systems & Infrastructure",
+    title: "Production ASR & Clinical AI",
     description:
-      "Privacy-by-design backends for AI companions, GDPR (Art. 9, 22), India DPDP Act, CCPA/CPRA. Argon2id encryption, AWS & GCP, and Go services.",
+      "IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, with ABDM/FHIR integration — built solo for doctors in Indian Tier-2/3 cities.",
   },
   {
-    title: "Compilers & Open Source",
+    title: "ML Systems & Inference",
     description:
-      "Active LLVM contributor. Authored PhraseNuX, a C++ CLI password manager with AES encryption. Research on cross-lingual reasoning compression in multilingual LLMs.",
+      "Local LLM inference and deployment of open models in production. Fine-tuning (SFT, QLoRA) with hands-on failure-mode debugging, and CUDA fundamentals in progress.",
   },
   {
-    title: "Creative Technologies",
+    title: "Embeddings & Retrieval",
     description:
-      "Unreal Engine 5 cinematics and DaVinci Resolve pipelines, fusing technical rigor with high-end visual work.",
+      "Custom embedding and content-fingerprinting techniques for recommendation, plus RAG pipelines over Qdrant. Built to solve matching problems genre tags can't.",
   },
 ] as const;
 
@@ -61,7 +62,7 @@ export const experience: readonly ExperienceItem[] = [
     period: "In production",
     status: "active" as const,
     description:
-      "The film that makes you feel the way the last one did, not just another one \u201clike\u201d it. Built so that a few ratings find the rest of your life's library.",
+      "The film that makes you feel the way the last one did, not just another one \u201clike\u201d it. Custom embeddings and content fingerprinting so a few ratings find the rest of your life's library.",
   },
   {
     role: "Founder",
@@ -73,12 +74,12 @@ export const experience: readonly ExperienceItem[] = [
       "Coimbatore-based agency funding other ventures. High-end web projects, custom AI agent systems (WhatsApp bots), and enterprise software for real estate, studios, and manufacturing.",
   },
   {
-    role: "Open Source Contributor & Researcher",
-    company: "LLVM · EfficientXLang",
+    role: "Open Source Contributor",
+    company: "LLVM",
     period: "Ongoing",
     status: "ongoing" as const,
     description:
-      "15+ merged LLVM PRs (incl. float-related changes). Original research on cross-lingual reasoning in multilingual LLMs. Authored technical series on production AI realities.",
+      "16 contributions: X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.",
   },
   {
     role: "Founder",
@@ -97,26 +98,45 @@ export const experience: readonly ExperienceItem[] = [
       "Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health. Owning the entire stack end-to-end.",
   },
   {
-    role: "Co-founder",
+    role: "Founding Engineer",
     company: "Medclara",
     period: "Past",
     status: "past" as const,
     description:
-      "Co-founded a voice-first, multilingual clinical documentation platform. Doctor-patient conversations → structured SOAP notes via custom ASR and LLMs.",
+      "Founding engineer and technical lead. IndicConformer ASR plus a fine-tuned Gemma model for clinical notes, with ABDM/FHIR integration — architecture, infra, and compliance, solo.",
+  },
+] as const;
+
+export type ResearchItem = {
+  title: string;
+  tag: string;
+  description: string;
+  href?: string;
+};
+
+export const research: readonly ResearchItem[] = [
+  {
+    title: "Do price, size, or reputation predict LLM failure?",
+    tag: "Original research",
+    description:
+      "A multilingual LLM evaluation study testing whether model price, size, or reputation predict task-specific failure — findings suggest they don't, at least not reliably. Latest run benchmarked 6 models on multilingual code-switched number parsing.",
+  },
+  {
+    title: "StarOne Labs",
+    tag: "Writing · Tamil & English",
+    description:
+      "Writing and building in public around open-source AI in production — an ongoing Ollama deep-dive series (inference internals, scheduling engines) and honest, no-theory takes on what actually works when deploying open models.",
+    href: "https://starone01.me",
   },
 ] as const;
 
 export type StackItem = string | { name: string; fav?: boolean; note?: string };
 
 export const stack: Record<string, readonly StackItem[]> = {
-  Languages: ["Go", "Python", "TypeScript", "JavaScript", { name: "C++", fav: true }, "Dart"],
-  "AI / ML": ["ASR (Conformer · RNN-T · CTC)", "Whisper", "IndicConformer", "PEFT / QLoRA", "Ollama", "Local Inference"],
-  "Cloud & Infra": ["AWS", "GCP", "Docker", "Redis", "PostgreSQL", "Supabase", "Vercel", "On-prem AI", "Voice Pipelines"],
-  Frontend: ["Next.js", "React", "Tailwind", "Framer Motion"],
-  "Semantic Search": ["pgvector (HNSW)", "Embedding Pipelines", "Relevance Ranking"],
-  "Low-level": ["LLVM", "Compiler Internals", "AST Transformations", "Systems C++"],
-  Disciplines: ["System Design", "Architecting", { name: "Testing in prod", note: "lol" }],
-  Creative: ["Unreal Engine 5", "DaVinci Resolve", "Cinematic Editing"],
+  Languages: ["Go", "Python", { name: "C++", fav: true }, "TypeScript / Next.js"],
+  "Systems & Compilers": ["LLVM", { name: "MLIR", note: "in progress" }, "Local LLM Inference", { name: "CUDA", note: "in progress" }],
+  "ML / AI": ["SFT / QLoRA", "ASR Pipelines", "Embeddings", "RAG"],
+  "Infra & Data": ["AWS", "Qdrant", "Ory Kratos"],
 };
 
 export type WorkItem = {
@@ -128,29 +148,28 @@ export type WorkItem = {
 
 export const featuredWork: readonly WorkItem[] = [
   {
-    name: "MoviesLikeThis",
-    tag: "Full Stack",
+    name: "Medclara",
+    tag: "Clinical AI · Founding Engineer",
     description:
-      "Movie discovery by feeling, not labels. The recommender keeps offering you more sci-fi, more action; this archive matches films by what they do to you, the ache, the wonder, the quiet, so the next film makes you feel the way the last one did.",
+      "Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, plus ABDM/FHIR integration — architecture, infra, and compliance, solo.",
+  },
+  {
+    name: "Primesoma — Film Discovery",
+    tag: "Embeddings · Full Stack",
+    description:
+      "A recommendation system around custom embedding and content-fingerprinting techniques, built to solve the “movies like this” problem better than genre-tag matching — including the hub pathology work most engines skip.",
     href: "https://movieslikethis.starone01.me",
   },
   {
-    name: "EfficientXLang",
-    tag: "Research",
+    name: "BrailleVision",
+    tag: "Hackathon Build",
     description:
-      "Original research assessing cross-lingual reasoning in multilingual LLMs. A study on how reasoning compresses across languages, and where it doesn't.",
+      "A Flutter + YOLO + ONNX mobile app for real-time Braille OCR, built under hackathon time pressure. Computer vision meeting accessibility, shipped end-to-end solo.",
   },
   {
-    name: "Medclara",
-    tag: "Founder",
+    name: "Sherlock SFT",
+    tag: "Fine-Tuning",
     description:
-      "Voice-first, multilingual clinical documentation. Doctor-patient conversations → structured SOAP notes via custom ASR and local LLMs.",
-  },
-  {
-    name: "PhraseNuX",
-    tag: "Open Source",
-    description:
-      "C++ CLI password manager with AES encryption. Zero dependencies, audited crypto, built to teach myself systems-level C++ the hard way.",
-    href: "https://github.com/StarOne01/PhraseNuX",
+      "Fine-tuned a character-consistent language model via supervised fine-tuning — iterating on training data quality and debugging a QLoRA NaN loss down to root cause.",
   },
 ];

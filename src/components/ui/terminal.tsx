@@ -7,12 +7,13 @@ import { cn } from "@/utils/cn";
 type CommandOutput = { kind: "in" | "out" | "err"; text: string };
 
 const commands: Record<string, string> = {
-  help: "available: about, work, stack, contact, whoami, ls, clear, sudo, exit",
-  about: "Prashanth. ML Systems Engineer. Coimbatore. Builds production ASR, compilers, and the infrastructure in between.",
-  work: "Medclara (co-founder, past) · primesoma (founder, upcoming) · self (founder, in development) · LLVM contributor · EfficientXLang (research).",
-  stack: "Go · Python · TypeScript · C++ (favorite) · AWS · GCP · Whisper · LLVM · UE5 · DaVinci Resolve",
+  help: "available: about, work, research, stack, contact, whoami, ls, clear, sudo, exit",
+  about: "Prashanth T. Systems Engineer. Coimbatore. Hardware-software gap: compilers, inference, and the systems underneath.",
+  work: "Medclara (founding engineer, past) · Primesoma film discovery (live) · BrailleVision (hackathon) · Sherlock SFT (fine-tuning).",
+  research: "multilingual LLM eval: price/size/reputation don't predict failure · StarOne Labs: Ollama deep-dives, Tamil & English.",
+  stack: "Go · Python · C++ (favorite) · TypeScript · LLVM/MLIR · QLoRA · Qdrant",
   contact: "ping@starone01.me  ·  linkedin.com/in/StarOne01  ·  github.com/StarOne01",
-  projects: "EfficientXLang (research) · PhraseNuX (C++ CLI) · Medclara (clinical AI)",
+  projects: "Medclara (clinical AI) · film discovery (embeddings) · BrailleVision (YOLO+ONNX) · PhraseNuX (C++ CLI)",
   whoami: "guest@starone01.me — you are not logged in. (this is a portfolio, not a server.)",
   ls: "about.md  work.md  stack.md  contact.txt  resume.pdf",
   sudo: "nice try.",

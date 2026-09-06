@@ -33,7 +33,7 @@ export default function About() {
 
         <div className="lg:col-span-7">
           <div className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/50 mb-8">
-            02 — areas
+            focus areas
           </div>
           <ul className="divide-y divide-white/[0.06] border-y border-white/[0.06]">
             {expertise.map((area, i) => (
