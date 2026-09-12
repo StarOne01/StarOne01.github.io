@@ -10,16 +10,6 @@ export default function Hero() {
     <section className="relative w-full min-h-[100svh] overflow-hidden flex flex-col items-center justify-center">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06),_transparent_60%)]" />
-        <span aria-hidden className="absolute top-24 left-6 hidden lg:block font-mono text-[11px] leading-loose text-white/[0.07] select-none">
-          {"%w = llvm.fadd %x, %y : f16"}
-          <br />
-          {"// todo: lower to nvvm"}
-        </span>
-        <span aria-hidden className="absolute bottom-32 right-6 hidden lg:block font-mono text-[11px] leading-loose text-right text-white/[0.07] select-none">
-          {"func @ship(%idea: !prod.prototype)"}
-          <br />
-          {"// opt-level = -O3"}
-        </span>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vmin] h-[80vmin] border border-white/[0.04] rounded-full" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vmin] h-[55vmin] border border-white/[0.06] rounded-full" />
       </div>
@@ -60,14 +50,33 @@ export default function Hero() {
           <span className="h-px w-8 bg-white/25" aria-hidden />
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+        <motion.nav
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.6 }}
-          className="mb-6 font-mono text-[10px] tracking-[0.25em] uppercase text-white/35"
+          aria-label="Site sections as compiler passes"
+          className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 max-w-3xl mx-auto text-left"
         >
-          frontend <span className="text-white/25">→</span> lower <span className="text-white/25">→</span> emit <span className="text-white/25">→</span> link
-        </motion.p>
+          {[
+            { n: "01", pass: "frontend", sec: "about" },
+            { n: "02", pass: "lower", sec: "work" },
+            { n: "03", pass: "emit", sec: "experience" },
+            { n: "04", pass: "dialects", sec: "stack" },
+            { n: "05", pass: "link", sec: "contact" },
+          ].map((p) => (
+            <a
+              key={p.n}
+              href={`#${p.sec}`}
+              className="group border border-white/12 hover:border-emerald-300/60 bg-white/[0.02] hover:bg-emerald-300/[0.06] active:border-emerald-300/60 px-4 py-3 transition-colors"
+            >
+              <span className="block font-mono text-[10px] text-emerald-300/80">{p.n}</span>
+              <span className="block font-mono text-sm uppercase tracking-[0.15em] text-white group-hover:text-emerald-200">
+                {p.pass}
+              </span>
+              <span className="block font-mono text-[10px] text-white/40">→ {p.sec}</span>
+            </a>
+          ))}
+        </motion.nav>
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}
