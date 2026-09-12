@@ -5,22 +5,22 @@
 Prashanth T. is a self-taught ML Systems Engineer and final-year Electrical & Electronics Engineering student. He builds production ML pipelines, custom ASR systems (Conformer, RNN-T, Whisper fine-tuning with QLoRA), contributes to LLVM, and runs multiple ventures spanning voice-first clinical AI, AI-native dating, and an integrated wellness ecosystem. Stack: Go, Python, TypeScript, C++ (favorite), AWS, GCP.
 
 ## About
-- [Bio](https://starone01.github.io/#about): Self-taught ML Systems Engineer, production ASR, compiler infrastructure, distributed systems
-- [Expertise](https://starone01.github.io/#about): Production ASR & ML, Systems & Infrastructure, Compilers & Open Source, Creative Technologies
-- [Open Graph card](https://starone01.github.io/opengraph-image): Site preview used by search engines and chat apps
+- [Bio](https://starone01.me/#about): Self-taught ML Systems Engineer, production ASR, compiler infrastructure, distributed systems
+- [Expertise](https://starone01.me/#about): Production ASR & ML, Systems & Infrastructure, Compilers & Open Source, Creative Technologies
+- [Open Graph card](https://starone01.me/opengraph-image): Site preview used by search engines and chat apps
 
 ## Work
-- [Selected work](https://starone01.github.io/#work): EfficientXLang, PhraseNuX, Medclara
+- [Selected work](https://starone01.me/#work): EfficientXLang, PhraseNuX, Medclara
 - [EfficientXLang](https://github.com/StarOne01): Original research on cross-lingual reasoning in multilingual LLMs
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): Open-source C++ CLI password manager with AES encryption
 - [GitHub profile](https://github.com/StarOne01): All open source code and contributions
 
 ## Experience
-- [Experience timeline](https://starone01.github.io/#experience): Software Development Agency, primesoma, self, Medclara, LLVM research
+- [Experience timeline](https://starone01.me/#experience): Software Development Agency, primesoma, self, Medclara, LLVM research
 - [LinkedIn](https://www.linkedin.com/in/StarOne01/): Professional history and endorsements
 
 ## Stack
-- [Stack & tools](https://starone01.github.io/#stack): Go, Python, TypeScript, JavaScript, C++ (favorite), Dart, ASR (Conformer/RNN-T/CTC), Whisper, Ollama, AWS, GCP, LLVM, Next.js
+- [Stack & tools](https://starone01.me/#stack): Go, Python, TypeScript, JavaScript, C++ (favorite), Dart, ASR (Conformer/RNN-T/CTC), Whisper, Ollama, AWS, GCP, LLVM, Next.js
 
 ## Connect
 - [Email](mailto:ping@starone01.me): ping@starone01.me, best for serious inquiries
@@ -28,7 +28,7 @@ Prashanth T. is a self-taught ML Systems Engineer and final-year Electrical & El
 - [GitHub](https://github.com/StarOne01): @StarOne01
 
 ## Machine-readable
-- [Sitemap](https://starone01.github.io/sitemap.xml): XML sitemap
-- [Robots](https://starone01.github.io/robots.txt): Crawler directives
-- [Web manifest](https://starone01.github.io/manifest.webmanifest): PWA manifest
-- [Full LLM reference](https://starone01.github.io/llms-full.txt): Detailed reference for LLM ingestion
+- [Sitemap](https://starone01.me/sitemap.xml): XML sitemap
+- [Robots](https://starone01.me/robots.txt): Crawler directives
+- [Web manifest](https://starone01.me/manifest.webmanifest): PWA manifest
+- [Full LLM reference](https://starone01.me/llms-full.txt): Detailed reference for LLM ingestion
