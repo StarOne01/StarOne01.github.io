@@ -28,10 +28,7 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="font-mono font-bold tracking-tight leading-[1.05] text-2xl sm:text-4xl md:text-[3.4rem]"
         >
-          <span className="text-white/40">func </span>
-          <span className="text-white">@prashanth_t</span>
-          <span className="text-white/40">() -&gt; </span>
-          <span className="text-emerald-300">!systems.engineer</span>
+          <span className="text-emerald-300">@</span><span className="text-white">prashanth_t</span><span aria-hidden className="ml-2 inline-block w-[0.5em] h-[0.9em] translate-y-[0.1em] bg-emerald-300 animate-pulse" />
         </motion.h1>
 
         <motion.div
