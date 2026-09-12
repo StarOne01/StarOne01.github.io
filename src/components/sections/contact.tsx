@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { site } from "@/data/site";
 import SectionHeader from "@/components/ui/section-header";
 import Icon from "@/components/ui/icon";
-import Magnetic from "@/components/ui/magnetic";
 
 const channels = [
   site.socials.email,
@@ -15,13 +14,10 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 px-6 max-w-6xl mx-auto relative">
       <SectionHeader
-        eyebrow="05 · link — contact"
-        title={
-          <>
-            Let's build <span className="text-white/55">something real.</span>
-          </>
-        }
-        description="Open to collaborations on AI infrastructure, systems engineering, and tooling for serious problems. Cold emails welcome."
+        index="05"
+        pass="link"
+        title="link externals."
+        description="Open to collaborations on compilers, ML systems, and tooling for serious problems. Cold emails welcome — I read all of them."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -37,23 +33,23 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/[0.06] rounded-xl hover:bg-white/[0.05] hover:border-white/15 transition-colors"
+              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/10 hover:border-amber-400/60 hover:bg-amber-400 active:bg-amber-400 active:border-amber-400 transition-colors"
               aria-label={`${c.label}: ${c.value}`}
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-white/[0.04] border border-white/[0.08] rounded-lg text-white/80 group-hover:text-black group-hover:bg-white group-hover:border-white transition-colors">
+              <div className="w-10 h-10 flex items-center justify-center bg-white/[0.04] border border-white/10 text-white/80 group-hover:text-black group-hover:bg-black/10 group-hover:border-black/20 group-active:text-black group-active:bg-black/10 group-active:border-black/20 transition-colors">
                 <Icon name={iconName} className="w-4 h-4" aria-hidden />
               </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/50 mb-1">
+              <div className="flex-1 min-w-0 font-mono">
+                <p className="text-[10px] tracking-[0.25em] uppercase text-white/45 group-hover:text-black/60 group-active:text-black/60 mb-1">
                   {c.label}
                 </p>
-                <p className="text-sm font-medium text-white/90 truncate group-hover:text-white">
+                <p className="text-sm font-bold text-white/90 truncate group-hover:text-black group-active:text-black">
                   {c.value}
                 </p>
               </div>
               <Icon
                 name="arrow"
-                className="w-3.5 h-3.5 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all"
+                className="w-3.5 h-3.5 text-white/40 group-hover:text-black group-hover:translate-x-1 group-active:text-black group-active:translate-x-1 transition-all"
                 aria-hidden
               />
             </motion.a>
@@ -66,16 +62,19 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mt-20 md:mt-28 text-center"
+        className="mt-20 md:mt-28 text-center font-mono"
       >
-        <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/50 mb-4">
-          or, if you prefer
+        <p className="text-[11px] tracking-[0.3em] uppercase text-white/40 mb-4">
+          <span className="text-white/25">call </span>
+          <span className="text-amber-400">@say_hello</span>
+          <span className="text-white/25">() -&gt; !response</span>
         </p>
-        <Magnetic as="a" href={`mailto:${site.email}`} strength={0.3}>
-          <span className="inline-block text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white hover:text-white/75 transition-colors">
-            {site.email} →
-          </span>
-        </Magnetic>
+        <a
+          href={`mailto:${site.email}`}
+          className="inline-block text-xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white hover:text-amber-400 active:text-amber-400 transition-colors break-all"
+        >
+          {site.email}
+        </a>
       </motion.div>
     </section>
   );

@@ -6,6 +6,13 @@ import { usePathname } from "next/navigation";
 import { site } from "@/data/site";
 import Icon from "@/components/ui/icon";
 
+const passNames: Record<string, string> = {
+  work: "lower",
+  experience: "emit",
+  stack: "dialects",
+  contact: "link",
+};
+
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,19 +45,12 @@ export default function Nav() {
       }`}
     >
       <nav
-        className="flex items-center justify-between backdrop-blur-xl bg-black/60 border border-white/10 rounded-full px-4 sm:px-5 py-2.5 max-w-[calc(100vw-2rem)] sm:max-w-xl lg:max-w-3xl w-full mx-4 sm:mx-auto"
+        className="flex items-center justify-between backdrop-blur-xl bg-[#0b0d10]/90 border border-white/12 px-4 sm:px-5 py-2.5 max-w-[calc(100vw-2rem)] sm:max-w-xl lg:max-w-3xl w-full mx-4 sm:mx-auto shadow-[0_8px_40px_-12px_rgba(0,0,0,0.9)]"
         aria-label="Global"
       >
-        <Link href="/" className="flex items-center gap-2 group" aria-label={`${site.name} home`}>
-          <span
-            className="w-2 h-2 rounded-full bg-emerald-400/80 group-hover:bg-emerald-400 transition-colors"
-            aria-hidden
-          />
-          <span
-            className="font-mono text-xs text-white/80 group-hover:text-white tracking-wide"
-            onMouseEnter={() => document.dispatchEvent(new CustomEvent("egg:prashanth-hover"))}
-            onMouseLeave={() => document.dispatchEvent(new CustomEvent("egg:prashanth-leave"))}
-          >
+        <Link href="/" className="flex items-center gap-2 group font-mono text-xs" aria-label={`${site.name} home`}>
+          <span className="text-amber-400" aria-hidden>%_</span>
+          <span className="text-white/85 group-hover:text-amber-400 tracking-[0.15em] uppercase transition-colors">
             {site.handle}
           </span>
         </Link>
@@ -62,13 +62,13 @@ export default function Nav() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 role="listitem"
-                className="px-3 py-1.5 text-xs font-mono uppercase tracking-[0.15em] text-white/55 hover:text-white transition-colors"
+                className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-amber-400 active:text-amber-400 transition-colors"
               >
-                {item}
+                --{passNames[item.toLowerCase()] ?? item.toLowerCase()}
               </a>
             ))
           ) : (
-            <Link href="/" className="px-3 py-1.5 text-xs font-mono uppercase tracking-[0.15em] text-white/55 hover:text-white transition-colors">
+            <Link href="/" className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-amber-400 transition-colors">
               ← home
             </Link>
           )}
@@ -78,7 +78,7 @@ export default function Nav() {
           <a
             href={site.socials.email.href}
             aria-label="Email Prashanth"
-            className="p-2 rounded-full hover:bg-white/10 text-white/55 hover:text-white transition-colors"
+            className="p-2 hover:bg-white/10 text-white/55 hover:text-amber-400 transition-colors"
           >
             <Icon name="email" className="w-3.5 h-3.5" aria-hidden />
           </a>
@@ -87,7 +87,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Prashanth on LinkedIn (opens in new tab)"
-            className="p-2 rounded-full hover:bg-white/10 text-white/55 hover:text-white transition-colors"
+            className="p-2 hover:bg-white/10 text-white/55 hover:text-amber-400 transition-colors"
           >
             <Icon name="linkedin" className="w-3.5 h-3.5" aria-hidden />
           </a>
@@ -96,7 +96,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Prashanth on GitHub (opens in new tab)"
-            className="p-2 rounded-full hover:bg-white/10 text-white/55 hover:text-white transition-colors"
+            className="p-2 hover:bg-white/10 text-white/55 hover:text-amber-400 transition-colors"
           >
             <Icon name="github" className="w-3.5 h-3.5" aria-hidden />
           </a>
@@ -108,7 +108,7 @@ export default function Nav() {
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
-          className="lg:hidden -mr-1 inline-flex items-center justify-center p-2 text-white/80 hover:bg-white/10 rounded-full transition-colors"
+          className="lg:hidden -mr-1 inline-flex items-center justify-center p-2 text-white/80 hover:bg-white/10 transition-colors"
           onClick={() => setMobileMenuOpen((o) => !o)}
         >
           {mobileMenuOpen ? (
@@ -128,35 +128,40 @@ export default function Nav() {
           className="lg:hidden fixed inset-0 z-[80]"
         >
           <div
-            className="absolute inset-0 bg-black/80 backdrop-blur-md"
+            className="absolute inset-0 bg-black/85 backdrop-blur-md"
             onClick={closeMenu}
             aria-hidden
           />
-          <div className="absolute bottom-0 inset-x-0 bg-black/95 border-t border-white/10 rounded-t-2xl p-6 pb-10 max-h-[80vh] overflow-y-auto">
+          <div className="absolute bottom-0 inset-x-0 bg-[#0b0d10] border-t border-white/12 p-6 pb-10 max-h-[80vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
-              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/45">menu</span>
+              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-amber-400">pass pipeline</span>
               <button
                 onClick={closeMenu}
                 aria-label="Close menu"
-                className="p-2 text-white/70 hover:text-white"
+                className="p-2 text-white/70 hover:text-amber-400"
               >
                 <XMarkIcon className="w-5 h-5" aria-hidden />
               </button>
             </div>
             <div className="space-y-1 mb-6">
               {isHomePage ? (
-                site.nav.map((item) => (
+                site.nav.map((item, i) => (
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
                     onClick={closeMenu}
-                    className="block px-4 py-3 rounded-lg font-mono text-sm text-white/80 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-colors"
+                    className="group flex items-baseline gap-4 px-4 py-3 hover:bg-white/5 active:bg-white/5 transition-colors"
                   >
-                    {item}
+                    <span className="font-mono text-[11px] text-amber-400" aria-hidden>
+                      0{i + 1}
+                    </span>
+                    <span className="font-mono text-lg font-bold text-white/90 group-hover:text-amber-400 transition-colors">
+                      --{passNames[item.toLowerCase()] ?? item.toLowerCase()}
+                    </span>
                   </a>
                 ))
               ) : (
-                <Link href="/" onClick={closeMenu} className="block px-4 py-3 rounded-lg font-mono text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors">
+                <Link href="/" onClick={closeMenu} className="block px-4 py-3 font-mono text-lg font-bold text-white/90 hover:text-amber-400 transition-colors">
                   ← home
                 </Link>
               )}
@@ -165,7 +170,7 @@ export default function Nav() {
             <div className="grid grid-cols-3 gap-2">
               <a
                 href={site.socials.email.href}
-                className="flex flex-col items-center gap-2 p-4 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-amber-400 hover:border-amber-400/40 transition-colors"
                 aria-label="Email Prashanth"
               >
                 <Icon name="email" className="w-5 h-5" aria-hidden />
@@ -175,7 +180,7 @@ export default function Nav() {
                 href={site.socials.linkedin.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-4 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-amber-400 hover:border-amber-400/40 transition-colors"
                 aria-label="Prashanth on LinkedIn (opens in new tab)"
               >
                 <Icon name="linkedin" className="w-5 h-5" aria-hidden />
@@ -185,7 +190,7 @@ export default function Nav() {
                 href={site.socials.github.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-4 rounded-lg bg-white/5 border border-white/10 text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-amber-400 hover:border-amber-400/40 transition-colors"
                 aria-label="Prashanth on GitHub (opens in new tab)"
               >
                 <Icon name="github" className="w-5 h-5" aria-hidden />

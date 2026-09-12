@@ -56,7 +56,7 @@ export default function SelectEgg() {
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
-      <div className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white/60 backdrop-blur-xl whitespace-nowrap">
+      <div className="bg-[#0b0d10] border border-white/12 px-4 py-2 text-sm text-white/60 whitespace-nowrap font-mono">
         {msg}
       </div>
     </div>

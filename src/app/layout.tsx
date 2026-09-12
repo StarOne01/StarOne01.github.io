@@ -21,8 +21,8 @@ const STACK_FLAT = Object.values(stack)
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-    { media: "(prefers-color-scheme: light)", color: "#000000" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B0D10" },
+    { media: "(prefers-color-scheme: light)", color: "#0B0D10" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -348,7 +348,7 @@ export default function RootLayout({
           data-cf-beacon='{"token": "fab21eca730a430f8e5f7b324ac3e2cc", "spa": true}'
         />
       </head>
-      <body className="font-sans bg-black text-white antialiased">
+      <body className="font-sans bg-[#0b0d10] text-white antialiased">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded-md focus:font-mono focus:text-xs focus:tracking-widest focus:uppercase"
