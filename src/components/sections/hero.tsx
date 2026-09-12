@@ -1,37 +1,18 @@
 "use client";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { site } from "@/data/site";
 import TypingText from "@/components/ui/typing-text";
 import Magnetic from "@/components/ui/magnetic";
-import Marquee from "@/components/ui/marquee";
-
-const passes = [
-  "canonicalize",
-  "cse",
-  "inline",
-  "loop-fusion",
-  "vectorize",
-  "lower-affine",
-  "convert-scf-to-cf",
-  "reconcile-unrealized-casts",
-];
-
-const jumps = [
-  { n: "01", pass: "frontend", sec: "about" },
-  { n: "02", pass: "lower", sec: "work" },
-  { n: "03", pass: "emit", sec: "experience" },
-  { n: "04", pass: "dialects", sec: "stack" },
-  { n: "05", pass: "link", sec: "contact" },
-];
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[100svh] overflow-hidden flex flex-col justify-end">
+    <section className="relative w-full min-h-[100svh] overflow-hidden flex flex-col justify-center">
       <div className="absolute inset-0 z-0" aria-hidden>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(110,231,183,0.06),_transparent_60%)]" />
       </div>
 
-      <div className="relative z-10 px-6 max-w-6xl mx-auto w-full pt-28">
+      <div className="relative z-10 px-6 max-w-6xl mx-auto w-full py-28">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -96,33 +77,11 @@ export default function Hero() {
           </Magnetic>
         </motion.div>
 
-        <motion.nav
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.85, duration: 0.6 }}
-          aria-label="Site sections as compiler passes"
-          className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 max-w-3xl"
-        >
-          {jumps.map((j) => (
-            <a
-              key={j.n}
-              href={`#${j.sec}`}
-              className="group border border-white/12 hover:border-emerald-300/60 bg-white/[0.02] hover:bg-emerald-300/[0.06] active:border-emerald-300/60 px-4 py-3 transition-colors"
-            >
-              <span className="block font-mono text-[10px] text-emerald-300/80">{j.n}</span>
-              <span className="block font-mono text-sm uppercase tracking-[0.15em] text-white group-hover:text-emerald-200">
-                {j.pass}
-              </span>
-              <span className="block font-mono text-[10px] text-white/40">→ {j.sec}</span>
-            </a>
-          ))}
-        </motion.nav>
-
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="mt-8 font-mono text-sm text-white/45"
+          transition={{ delay: 0.85, duration: 0.6 }}
+          className="mt-10 font-mono text-sm text-white/45"
         >
           {"}"} <span className="text-white/25">// end module — scroll to lower</span>
         </motion.p>
@@ -132,9 +91,22 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
-        className="relative z-10 mt-10 border-y border-white/10 bg-black/40"
+        className="absolute bottom-8 inset-x-0 z-10 flex justify-center"
       >
-        <Marquee items={passes} speed={40} />
+        <Link
+          href="#about"
+          className="group flex flex-col items-center gap-3 font-mono text-[9px] tracking-[0.3em] uppercase text-white/40 hover:text-emerald-300 transition-colors"
+        >
+          <span>scroll</span>
+          <span className="relative block w-px h-12 overflow-hidden bg-white/10">
+            <motion.span
+              aria-hidden
+              className="absolute top-0 left-0 w-full h-3 bg-gradient-to-b from-transparent via-emerald-300 to-transparent"
+              animate={{ y: ["-100%", "400%"] }}
+              transition={{ duration: 1.8, ease: "easeInOut", repeat: Infinity, repeatDelay: 0.2 }}
+            />
+          </span>
+        </Link>
       </motion.div>
     </section>
   );
