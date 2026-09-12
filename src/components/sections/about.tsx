@@ -5,15 +5,15 @@ import SectionHeader from "@/components/ui/section-header";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 px-6 max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+    <section id="about" className="py-28 md:py-40 px-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
         <div className="lg:col-span-5">
           <SectionHeader
             index="01"
             pass="frontend"
             title="parse a human."
           />
-          <div className="space-y-5 text-white/70 text-base md:text-lg leading-relaxed font-sans">
+          <div className="space-y-7 text-white/70 text-lg md:text-xl font-light leading-loose font-sans">
             {site.bio.map((p, i) => (
               <motion.p
                 key={i}
@@ -28,11 +28,11 @@ export default function About() {
           </div>
         </div>
 
-        <div className="lg:col-span-7">
-          <p className="font-mono text-[11px] tracking-[0.25em] uppercase text-white/40 mb-8">
+        <div className="lg:col-span-6 lg:col-start-7">
+          <p className="font-mono text-[11px] tracking-[0.25em] uppercase text-white/40 mb-10">
             focus areas
           </p>
-          <ul className="space-y-4">
+          <ul className="divide-y divide-white/10 border-y border-white/10">
             {expertise.map((area, i) => (
               <motion.li
                 key={area.title}
@@ -40,15 +40,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="group p-6 bg-white/[0.02] border border-white/10 hover:border-emerald-300/50 active:border-emerald-300/50 transition-colors"
+                className="group py-8 first:pt-0 last:pb-0"
               >
-                <p className="font-mono text-[11px] text-emerald-300/80 mb-2" aria-hidden>
-                  0{i + 1}
-                </p>
-                <h3 className="font-mono font-bold text-lg text-white mb-1.5">
+                <h3 className="font-mono font-bold text-xl text-white mb-2 group-hover:text-emerald-300 transition-colors">
                   {area.title}
                 </h3>
-                <p className="text-white/65 text-[15px] leading-relaxed font-sans">
+                <p className="text-white/60 text-base leading-relaxed font-sans max-w-xl">
                   {area.description}
                 </p>
               </motion.li>
