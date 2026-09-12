@@ -19,7 +19,7 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer and final-year Elect
 - [X](https://x.com/iamstarone01): @iamstarone01
 
 ## Experience
-- [Experience timeline](https://starone01.me/#experience): MoviesLikeThis, Software Development Agency, LLVM, self, primesoma, Medclara
+- [Experience timeline](https://starone01.me/#experience): MoviesLikeThis, Software Development Agency, LLVM, primesoma, Medclara
 - [LinkedIn](https://www.linkedin.com/in/StarOne01/): Professional history and endorsements
 
 ## Stack

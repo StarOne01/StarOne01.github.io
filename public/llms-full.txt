@@ -37,7 +37,6 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 - [Experience](https://starone01.me/#experience): Full timeline of all current and past roles
 - [MoviesLikeThis](https://starone01.me/#experience): The films that stay with you, in production
 - [Software Development Agency](https://starone01.me/#experience): Coimbatore-based agency funding other ventures
-- [self / primesoma](https://starone01.me/#experience): AI-native dating platform, in development
 
 ## Upcoming
 - [primesoma](https://starone01.me/#experience): Vertically integrated wellness ecosystem (food, groceries, farms, fitness, health)

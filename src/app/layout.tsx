@@ -137,7 +137,7 @@ const jsonLd = {
       additionalName: site.handle,
       jobTitle: site.role,
       description:
-        "ML Systems Engineer based in Coimbatore, Tamil Nadu. Production ASR (Conformer, RNN-T, Whisper fine-tuning with QLoRA), active LLVM contributor, and founder of multiple ventures spanning voice-first clinical AI, AI-native dating, and an integrated wellness ecosystem.",
+        "ML Systems Engineer based in Coimbatore, Tamil Nadu. Production ASR (Conformer, RNN-T, Whisper fine-tuning with QLoRA), active LLVM contributor, and founder of multiple ventures spanning voice-first clinical AI and an integrated wellness ecosystem.",
       url: SITE_URL,
       email: `mailto:${site.email}`,
       image: `${SITE_URL}/opengraph-image`,
@@ -291,7 +291,7 @@ const jsonLd = {
           name: `What does ${site.name} work on?`,
           acceptedAnswer: {
             "@type": "Answer",
-            text: `He works on production Automatic Speech Recognition (ASR), Conformer, RNN-T, CTC, and Whisper fine-tuning with QLoRA, plus on-premise LLM inference with Ollama. He is an active LLVM contributor and founder of Medclara (clinical documentation, past), the Software Development Agency, self / primesoma (AI-native dating, in development), and primesoma (wellness ecosystem, upcoming).`,
+            text: `He works on production Automatic Speech Recognition (ASR), Conformer, RNN-T, CTC, and Whisper fine-tuning with QLoRA, plus on-premise LLM inference with Ollama. He is an active LLVM contributor and founder of Medclara (clinical documentation, past), the Software Development Agency, and primesoma (wellness ecosystem, upcoming).`,
           },
         },
         {

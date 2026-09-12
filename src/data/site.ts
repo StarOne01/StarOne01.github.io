@@ -83,14 +83,6 @@ export const experience: readonly ExperienceItem[] = [
   },
   {
     role: "Founder",
-    company: "self (primesoma)",
-    period: "In development",
-    status: "development" as const,
-    description:
-      "AI-native dating platform matching through meaningful conversation. Go/Gin backend, Flutter mobile, end-to-end encryption.",
-  },
-  {
-    role: "Founder",
     company: "primesoma",
     period: "Upcoming",
     status: "upcoming" as const,
