@@ -40,7 +40,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="group py-6 first:pt-0 last:pb-0"
+                className="group py-6"
               >
                 <h3 className="font-mono font-bold text-xl text-white mb-2 group-hover:text-emerald-300 transition-colors">
                   {area.title}

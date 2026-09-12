@@ -3,14 +3,14 @@ import { useState } from "react";
 
 const jokes = [
   "this page doesn't exist. try :q to quit.",
-  "E173: 1 more file to edit — this 404 page.",
+  "E173: 1 more file to edit: this 404 page.",
   "How do I exit vim? I've been here since 2023.",
   "404 | :q! | same energy",
   "Buffer not found. Try `:ls`.",
   "This page was deleted. `:w` next time.",
   "/dev/null has more content than this URL.",
   "Page has been :wq'd out of existence.",
-  "It's not a bug, it's a feature —~",
+  "It's not a bug, it's a feature ~",
   "You've reached the void. Want to pair program an exit?",
 ];
 
@@ -24,7 +24,7 @@ export default function NotFound() {
 
   return (
     <div className="fixed inset-0 bg-[#0b0d10] flex flex-col items-center justify-center z-[100] cursor-pointer select-none" onClick={nextJoke}>
-      <h1 className="sr-only">404 — page not found</h1>
+      <h1 className="sr-only">404: page not found</h1>
       <pre className="text-emerald-300/90 text-sm sm:text-base font-mono leading-relaxed text-center px-4">
 {`╔══════════════════════════════╗
 ║                              ║

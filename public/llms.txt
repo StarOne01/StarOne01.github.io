@@ -10,7 +10,7 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer and final-year Elect
 
 ## Work
 - [Selected work](https://starone01.me/#work): Medclara, Primesoma film discovery, BrailleVision, Sherlock SFT
-- [Medclara](https://starone01.me/#work): Founding engineer — IndicConformer ASR plus fine-tuned Gemma for clinical notes, ABDM/FHIR integration, built solo
+- [Medclara](https://starone01.me/#work): Founding engineer, IndicConformer ASR plus fine-tuned Gemma for clinical notes, ABDM/FHIR integration, built solo
 - [Film discovery](https://movieslikethis.starone01.me): Custom embedding and content-fingerprinting recommender
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): Open-source C++ CLI password manager with AES encryption
 - [GitHub profile](https://github.com/StarOne01): All open source code and contributions

@@ -80,7 +80,7 @@ export default function Hero() {
           transition={{ delay: 0.85, duration: 0.6 }}
           className="mt-10 font-mono text-sm text-white/45"
         >
-          {"}"} <span className="text-white/25">// end module — scroll to lower</span>
+          {"}"} <span className="text-white/25">{"// end module: scroll to lower"}</span>
         </motion.p>
       </div>
 

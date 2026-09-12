@@ -6,13 +6,6 @@ import { usePathname } from "next/navigation";
 import { site } from "@/data/site";
 import Icon from "@/components/ui/icon";
 
-const passNames: Record<string, string> = {
-  work: "lower",
-  experience: "emit",
-  stack: "dialects",
-  contact: "link",
-};
-
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +57,7 @@ export default function Nav() {
                 role="listitem"
                 className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-emerald-300 active:text-emerald-300 transition-colors"
               >
-                --{passNames[item.toLowerCase()] ?? item.toLowerCase()}
+                {item}
               </a>
             ))
           ) : (
@@ -156,7 +149,7 @@ export default function Nav() {
                       0{i + 1}
                     </span>
                     <span className="font-mono text-lg font-bold text-white/90 group-hover:text-emerald-300 transition-colors">
-                      --{passNames[item.toLowerCase()] ?? item.toLowerCase()}
+                      {item}
                     </span>
                   </a>
                 ))

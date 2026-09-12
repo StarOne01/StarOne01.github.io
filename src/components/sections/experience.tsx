@@ -27,7 +27,7 @@ export default function Experience() {
         index="03"
         pass="emit"
         title="emit history."
-        description="Every role, venture, and ongoing thread — newest first, no passes skipped."
+        description="Every role, venture, and ongoing thread, newest first, no passes skipped."
       />
 
       <ol className="relative ml-1.5 border-l border-white/15 space-y-6">

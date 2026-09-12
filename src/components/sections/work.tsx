@@ -11,7 +11,7 @@ export default function Work() {
         index="02"
         pass="lower"
         title="lower ideas to prod."
-        description="A few things I've built, researched, or shipped — all in production or open source."
+        description="A few things I've built, researched, or shipped, all in production or open source."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

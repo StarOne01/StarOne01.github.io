@@ -4,8 +4,8 @@ export const site = {
   role: "Systems Engineer",
   location: "Coimbatore, Tamil Nadu",
   bio: [
-    "I'm Prashanth (StarOne01) — a final-year EEE student working the gap between hardware and software: compilers, inference, and the systems that make AI run on real silicon. Self-taught, starting on a phone through Termux before I ever owned a laptop.",
-    "Since then: a production multilingual clinical AI system, 16 LLVM contributions, a film engine on custom embeddings, and multilingual LLM research. Now going deep on compiler internals and MLIR — the layer where models actually meet hardware.",
+    "I'm Prashanth (StarOne01), a final-year EEE student working the gap between hardware and software: compilers, inference, and the systems that make AI run on real silicon. Self-taught, starting on a phone through Termux before I ever owned a laptop.",
+    "Since then: a production multilingual clinical AI system, 16 LLVM contributions, a film engine on custom embeddings, and multilingual LLM research. Now going deep on compiler internals and MLIR, the layer where models actually meet hardware.",
   ],
   tagline: "Systems engineer building at the intersection of hardware and AI.",
   typingLines: [
@@ -31,7 +31,7 @@ export const expertise = [
   {
     title: "Production ASR & Clinical AI",
     description:
-      "IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, with ABDM/FHIR integration — built solo for doctors in Indian Tier-2/3 cities.",
+      "IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, with ABDM/FHIR integration, built solo for doctors in Indian Tier-2/3 cities.",
   },
   {
     title: "ML Systems & Inference",
@@ -102,7 +102,7 @@ export const experience: readonly ExperienceItem[] = [
     period: "Past",
     status: "past" as const,
     description:
-      "Founding engineer and technical lead. IndicConformer ASR plus a fine-tuned Gemma model for clinical notes, with ABDM/FHIR integration — architecture, infra, and compliance, solo.",
+      "Founding engineer and technical lead. IndicConformer ASR plus a fine-tuned Gemma model for clinical notes, with ABDM/FHIR integration, covering architecture, infra, and compliance solo.",
   },
 ] as const;
 
@@ -127,13 +127,13 @@ export const featuredWork: readonly WorkItem[] = [
     name: "Medclara",
     tag: "Clinical AI · Founding Engineer",
     description:
-      "Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, plus ABDM/FHIR integration — architecture, infra, and compliance, solo.",
+      "Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, plus ABDM/FHIR integration, covering architecture, infra, and compliance solo.",
   },
   {
-    name: "Primesoma — Film Discovery",
+    name: "Primesoma: Film Discovery",
     tag: "Embeddings · Full Stack",
     description:
-      "A recommendation system around custom embedding and content-fingerprinting techniques, built to solve the “movies like this” problem better than genre-tag matching — including the hub pathology work most engines skip.",
+      "A recommendation system around custom embedding and content-fingerprinting techniques, built to solve the “movies like this” problem better than genre-tag matching, including the hub pathology work most engines skip.",
     href: "https://movieslikethis.starone01.me",
   },
   {
@@ -146,6 +146,6 @@ export const featuredWork: readonly WorkItem[] = [
     name: "Sherlock SFT",
     tag: "Fine-Tuning",
     description:
-      "Fine-tuned a character-consistent language model via supervised fine-tuning — iterating on training data quality and debugging a QLoRA NaN loss down to root cause.",
+      "Fine-tuned a character-consistent language model via supervised fine-tuning, iterating on training data quality and debugging a QLoRA NaN loss down to root cause.",
   },
 ];

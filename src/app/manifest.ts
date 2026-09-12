@@ -4,7 +4,7 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Prashanth T. (@StarOne01) — ML Systems Engineer",
+    name: "Prashanth T. (@StarOne01), ML Systems Engineer",
     short_name: "StarOne01",
     description: "ML Systems Engineer based in Coimbatore. Production ASR, compiler infrastructure, and distributed systems.",
     start_url: "/",

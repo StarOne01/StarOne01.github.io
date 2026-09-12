@@ -17,7 +17,7 @@ export default function Contact() {
         index="05"
         pass="link"
         title="link externals."
-        description="Open to collaborations on compilers, ML systems, and tooling for serious problems. Cold emails welcome — I read all of them."
+        description="Open to collaborations on compilers, ML systems, and tooling for serious problems. Cold emails welcome. I read all of them."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">

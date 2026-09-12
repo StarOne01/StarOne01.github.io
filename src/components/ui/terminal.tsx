@@ -14,7 +14,7 @@ const commands: Record<string, string> = {
   contact: "ping@starone01.me  ·  linkedin.com/in/StarOne01  ·  github.com/StarOne01",
   projects: "Medclara (clinical AI) · film discovery (embeddings) · BrailleVision (YOLO+ONNX) · PhraseNuX (C++ CLI)",
   passes: "frontend(parse: about) → lower(work) → emit(experience) → dialects(stack) → link(contact). you are here.",
-  whoami: "guest@starone01.me — you are not logged in. (this is a portfolio, not a server.)",
+  whoami: "guest@starone01.me, you are not logged in. (this is a portfolio, not a server.)",
   ls: "about.md  work.md  stack.md  contact.txt  resume.pdf",
   sudo: "nice try.",
   banner: "",
@@ -36,7 +36,7 @@ export default function Terminal() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const [history, setHistory] = useState<CommandOutput[]>([
-    { kind: "out", text: "starone01 :: portfolio v2.0 — type 'help' to begin" },
+    { kind: "out", text: "starone01 :: portfolio v2.0, type 'help' to begin" },
   ]);
   const [input, setInput] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -126,7 +126,7 @@ export default function Terminal() {
                 <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
               </div>
               <span id={titleId} className="text-white/55 text-[10px] tracking-[0.2em] uppercase">
-                starone01 — tty1
+                starone01 · tty1
               </span>
               <button
                 onClick={() => setOpen(false)}

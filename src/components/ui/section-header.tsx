@@ -16,7 +16,7 @@ export default function SectionHeader({ index, pass, title, description, align =
     <div className={cn("mb-12 md:mb-16", align === "center" && "text-center", className)}>
       <div className={cn("flex items-center gap-4 mb-5", align === "center" && "justify-center")}>
         <p className="font-mono text-xs md:text-sm text-emerald-300 shrink-0">
-          <span className="text-white/30">pass {index}/05 — </span>"{pass}"
+          <span className="text-white/30">pass {index}/05: </span>"{pass}"
         </p>
         <span aria-hidden className={cn("h-px w-16 bg-gradient-to-r from-emerald-300/50 to-transparent", align === "center" && "hidden")} />
       </div>

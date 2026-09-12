@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   applicationName: `${site.handle} portfolio`,
   description:
-    "Prashanth T. (@StarOne01) — Systems Engineer from Coimbatore working the hardware-software gap: LLVM/MLIR compiler internals, production multilingual clinical AI (IndicConformer, ABDM/FHIR), embeddings, and local LLM inference in Go, Python, and C++.",
+    "Prashanth T. (@StarOne01), Systems Engineer from Coimbatore working the hardware-software gap: LLVM/MLIR compiler internals, production multilingual clinical AI (IndicConformer, ABDM/FHIR), embeddings, and local LLM inference in Go, Python, and C++.",
   keywords: [
     "Prashanth",
     "StarOne01",

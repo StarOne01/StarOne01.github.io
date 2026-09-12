@@ -15,14 +15,14 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 - [Web manifest](https://starone01.me/manifest.webmanifest): PWA manifest
 
 ## Areas of expertise
-- [Compilers & LLVM](https://starone01.me/#about): 16 contributions — X86 backend _Float16 lowering (FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, libc POSIX header docs; now deepening into MLIR
+- [Compilers & LLVM](https://starone01.me/#about): 16 contributions: X86 backend _Float16 lowering (FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, libc POSIX header docs; now deepening into MLIR
 - [Production ASR & Clinical AI](https://starone01.me/#about): IndicConformer speech recognition with a fine-tuned Gemma model for clinical note generation, ABDM/FHIR integration for Indian Tier-2/3 cities
 - [ML Systems & Inference](https://starone01.me/#about): Local LLM inference and open-model deployment, fine-tuning (SFT, QLoRA) with failure-mode debugging, CUDA fundamentals in progress
 - [Embeddings & Retrieval](https://starone01.me/#about): Custom embedding and content-fingerprinting for recommendation, RAG pipelines over Qdrant
 
 ## Selected work
 - [Selected work section](https://starone01.me/#work): Medclara, Primesoma film discovery, BrailleVision, Sherlock SFT
-- [Medclara](https://starone01.me/#work): Founding engineer and technical lead — full pipeline combining IndicConformer ASR with a fine-tuned Gemma model for clinical notes, ABDM/FHIR integration, architecture/infra/compliance solo
+- [Medclara](https://starone01.me/#work): Founding engineer and technical lead: full pipeline combining IndicConformer ASR with a fine-tuned Gemma model for clinical notes, ABDM/FHIR integration, architecture/infra/compliance solo
 - [Primesoma film discovery](https://movieslikethis.starone01.me): Recommendation around custom embeddings and content fingerprinting, including fingerprint-based hub pathology work
 - [BrailleVision](https://starone01.me/#work): Flutter + YOLO + ONNX mobile app for real-time Braille OCR, built under hackathon time pressure, shipped solo
 - [Sherlock SFT](https://starone01.me/#work): Character-consistent language model via supervised fine-tuning; debugged a QLoRA NaN loss to root cause
@@ -30,7 +30,7 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 ## Open source
 - [GitHub profile](https://github.com/StarOne01): All code and contributions
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): C++ CLI password manager with AES encryption, zero dependencies, written entirely on a phone
-- [LLVM contributions](https://github.com/StarOne01): 16 contributions — backend/codegen (_Float16 lowering), frontend (Clang Sema diagnostic, 49 review comments), libc documentation series; MLIR next
+- [LLVM contributions](https://github.com/StarOne01): 16 contributions: backend/codegen (_Float16 lowering), frontend (Clang Sema diagnostic, 49 review comments), libc documentation series; MLIR next
 
 ## Currently running
 - [Experience](https://starone01.me/#experience): Full timeline of all current and past roles
@@ -45,7 +45,7 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 - [Medclara](https://starone01.me/#experience): Founding engineer of a voice-first, multilingual clinical documentation platform
 
 ## Stack
-- [Stack & tools](https://starone01.me/#stack): Languages — Go, Python, C++ (favorite), TypeScript/Next.js. Systems — LLVM, MLIR (in progress), local LLM inference, CUDA (in progress). ML/AI — SFT/QLoRA, ASR pipelines, embeddings, RAG. Infra — AWS, Qdrant, Ory Kratos
+- [Stack & tools](https://starone01.me/#stack): Languages: Go, Python, C++ (favorite), TypeScript/Next.js. Systems: LLVM, MLIR (in progress), local LLM inference, CUDA (in progress). ML/AI: SFT/QLoRA, ASR pipelines, embeddings, RAG. Infra: AWS, Qdrant, Ory Kratos
 
 ## Connect
 - [Email](mailto:ping@starone01.me): ping@starone01.me, best for serious inquiries
