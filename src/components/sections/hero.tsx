@@ -10,6 +10,16 @@ export default function Hero() {
     <section className="relative w-full min-h-[100svh] overflow-hidden flex flex-col items-center justify-center">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06),_transparent_60%)]" />
+        <span aria-hidden className="absolute top-24 left-6 hidden lg:block font-mono text-[11px] leading-loose text-white/[0.07] select-none">
+          {"%w = llvm.fadd %x, %y : f16"}
+          <br />
+          {"// todo: lower to nvvm"}
+        </span>
+        <span aria-hidden className="absolute bottom-32 right-6 hidden lg:block font-mono text-[11px] leading-loose text-right text-white/[0.07] select-none">
+          {"func @ship(%idea: !prod.prototype)"}
+          <br />
+          {"// opt-level = -O3"}
+        </span>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vmin] h-[80vmin] border border-white/[0.04] rounded-full" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vmin] h-[55vmin] border border-white/[0.06] rounded-full" />
       </div>
@@ -49,6 +59,15 @@ export default function Hero() {
           <span className="text-white/70">@{site.handle}</span>
           <span className="h-px w-8 bg-white/25" aria-hidden />
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.45, duration: 0.6 }}
+          className="mb-6 font-mono text-[10px] tracking-[0.25em] uppercase text-white/35"
+        >
+          frontend <span className="text-white/25">→</span> lower <span className="text-white/25">→</span> emit <span className="text-white/25">→</span> link
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}

@@ -35,7 +35,7 @@ export default function Experience() {
       <div className="sticky top-0 h-screen overflow-hidden flex flex-col">
         <div className="pt-20 md:pt-24 px-6 max-w-6xl mx-auto w-full">
           <SectionHeader
-            eyebrow="03 — experience"
+            eyebrow="03 · emit — experience"
             title={
               <>
                 Things I've <span className="text-white/55">built & broken.</span>

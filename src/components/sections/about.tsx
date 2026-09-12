@@ -9,7 +9,7 @@ export default function About() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         <div className="lg:col-span-5">
           <SectionHeader
-            eyebrow="01 — about"
+            eyebrow="01 · frontend — about"
             title={
               <>
                 An engineer who ships <span className="text-white/55">in production.</span>

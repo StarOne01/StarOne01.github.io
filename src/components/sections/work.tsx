@@ -8,7 +8,7 @@ export default function Work() {
   return (
     <section id="work" className="py-24 md:py-32 px-6 max-w-6xl mx-auto">
       <SectionHeader
-        eyebrow="02 — selected work"
+        eyebrow="02 · lower — selected work"
         title={
           <>
             Things I've shipped <span className="text-white/55">in the wild.</span>

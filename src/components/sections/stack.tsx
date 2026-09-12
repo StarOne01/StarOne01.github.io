@@ -27,7 +27,7 @@ export default function Stack() {
     <section id="stack" className="py-24 md:py-32 border-y border-white/[0.04]">
       <div className="px-6 max-w-6xl mx-auto mb-12 md:mb-16">
         <SectionHeader
-          eyebrow="04 — stack"
+          eyebrow="04 · dialects — stack"
           title={
           <>
             Tools, not <span className="text-white/55">ornaments.</span>
@@ -35,6 +35,9 @@ export default function Stack() {
           }
           description="Languages, frameworks, infrastructure, and the disciplines I reach for. Grouped by what they actually do."
         />
+        <p className="mt-6 font-mono text-[11px] tracking-[0.2em] uppercase text-white/35">
+          target = prod <span className="text-white/20">·</span> opt = -O3 <span className="text-white/20">·</span> host = coimbatore
+        </p>
       </div>
 
       <Marquee items={allStack} speed={55} className="mb-12" />
