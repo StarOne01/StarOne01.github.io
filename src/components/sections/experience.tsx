@@ -30,7 +30,7 @@ export default function Experience() {
         description="Every role, venture, and ongoing thread — newest first, no passes skipped."
       />
 
-      <ol className="relative ml-1.5 border-l border-dashed border-white/15 space-y-8">
+      <ol className="relative ml-1.5 border-l border-white/15 space-y-6">
         {experience.map((item, i) => (
           <motion.li
             key={`${item.company}-${i}`}
@@ -44,18 +44,15 @@ export default function Experience() {
               aria-hidden
               className={`absolute -left-[5px] top-2 w-2.5 h-2.5 ${statusDot[item.status]}`}
             />
-            <div className="group bg-white/[0.02] border border-white/10 hover:border-emerald-300/50 active:border-emerald-300/50 transition-colors p-6">
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3 font-mono text-[11px]">
-                <span className="text-white/30" aria-hidden>
-                  [{String(i + 1).padStart(2, "0")}]
-                </span>
-                <span className={`px-2 py-0.5 border uppercase tracking-[0.15em] ${statusStyles[item.status]}`}>
+            <div className="group max-w-3xl">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-2">
+                <span className={`font-mono text-[10px] px-2 py-0.5 border uppercase tracking-[0.15em] ${statusStyles[item.status]}`}>
                   {item.status}
                 </span>
-                <span className="text-white/35 uppercase tracking-[0.15em]">{item.period}</span>
+                <span className="font-mono text-[11px] text-white/40">{item.period}</span>
               </div>
 
-              <h3 className="font-mono font-bold text-xl md:text-2xl text-white tracking-tight">
+              <h3 className="font-mono font-bold text-lg md:text-xl text-white tracking-tight">
                 {item.role} <span className="text-white/30 font-normal">@</span>{" "}
                 {item.href ? (
                   <a
@@ -71,17 +68,13 @@ export default function Experience() {
                   <span className="text-white">{item.company}</span>
                 )}
               </h3>
-              <p className="mt-3 text-white/60 text-sm md:text-[15px] leading-relaxed font-sans max-w-2xl">
+              <p className="mt-2 text-white/65 text-[15px] leading-relaxed font-sans max-w-2xl">
                 {item.description}
               </p>
             </div>
           </motion.li>
         ))}
       </ol>
-
-      <p className="mt-10 font-mono text-xs text-white/30">
-        {"// end of log — "}{experience.length}{" entries emitted"}
-      </p>
     </section>
   );
 }

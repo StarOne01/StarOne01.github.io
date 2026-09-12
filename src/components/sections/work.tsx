@@ -19,8 +19,8 @@ export default function Work() {
           const op = item.name.toLowerCase().replace(/[^a-z]+/g, "_").replace(/^_|_$/g, "");
           const card = (
             <>
-              <div className="flex items-center justify-between mb-5 font-mono">
-                <span className="text-[13px] font-bold text-white">
+              <div className="flex items-center justify-between mb-4 font-mono text-[13px]">
+                <span className="font-bold text-white">
                   <span className="text-white/35 font-normal">op </span>
                   <span className="text-emerald-300">@</span>{op}
                 </span>
@@ -31,32 +31,22 @@ export default function Work() {
                     aria-hidden
                   />
                 ) : (
-                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/30">
-                    noescape
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-white/30">
+                    {item.tag}
                   </span>
                 )}
               </div>
 
-              <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/40 mb-2">
-                traits = ["{item.tag.toLowerCase()}"]
-              </p>
               <h3 className="font-mono font-bold text-xl text-white mb-3 tracking-tight">
                 {item.name}
               </h3>
-              <p className="text-white/60 text-sm leading-relaxed font-sans flex-1">
+              <p className="text-white/65 text-[15px] leading-relaxed font-sans flex-1">
                 {item.description}
               </p>
-
-              <div className="mt-6 pt-4 border-t border-dashed border-white/12 font-mono text-[11px] text-white/40">
-                <span className="text-white/25">→ result: </span>
-                <span className={item.href ? "text-emerald-300" : "text-white/70"}>
-                  {item.href ? "open" : "shipped"}
-                </span>
-              </div>
             </>
           );
           const classes =
-            "group flex flex-col p-6 md:p-7 bg-white/[0.02] border border-white/10 hover:border-emerald-300/50 hover:bg-white/[0.04] active:border-emerald-300/50 transition-colors min-h-[260px]";
+            "group flex flex-col p-6 md:p-7 bg-white/[0.02] border border-white/10 hover:border-emerald-300/50 hover:bg-white/[0.04] active:border-emerald-300/50 transition-colors";
           const motionProps = {
             initial: { opacity: 0, y: 20 },
             whileInView: { opacity: 1, y: 0 },
