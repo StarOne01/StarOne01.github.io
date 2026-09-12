@@ -9,9 +9,9 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer and final-year Elect
 - [Expertise](https://starone01.me/#about): Compilers & LLVM, Production ASR & Clinical AI, ML Systems & Inference, Embeddings & Retrieval
 
 ## Work
-- [Selected work](https://starone01.me/#work): Medclara, MoviesLikeThis, BrailleVision, Sherlock SFT
+- [Selected work](https://starone01.me/#work): Medclara, MoviesLikeThis, Sherlock SFT
 - [MoviesLikeThis](https://movieslikethis.starone01.me): The films that stay with you. Same feeling, different film, matched by emotional experience, not genre
-- [Medclara](https://starone01.me/#work): Founding engineer, IndicConformer ASR plus fine-tuned Gemma for clinical notes, ABDM/FHIR integration, built solo
+- [Medclara](https://starone01.me/#work): Founding engineer, IndicConformer ASR plus fine-tuned Gemma for clinical notes, built solo
 - [MoviesLikeThis](https://movieslikethis.starone01.me): The films that stay with you. Same feeling, different film, matched by emotional experience, not genre
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): Open-source C++ CLI password manager with AES encryption
 - [bfloat16](https://github.com/StarOne01/bfloat16): Lightweight C++ implementation of Google Brain's bfloat16 format
@@ -23,7 +23,7 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer and final-year Elect
 - [LinkedIn](https://www.linkedin.com/in/StarOne01/): Professional history and endorsements
 
 ## Stack
-- [Stack & tools](https://starone01.me/#stack): Go, Python, C++ (favorite), TypeScript/Next.js, LLVM/MLIR, local LLM inference, CUDA (in progress), SFT/QLoRA, ASR pipelines, embeddings, RAG, AWS, Qdrant, Ory Kratos
+- [Stack & tools](https://starone01.me/#stack): Go, Python, C++ (favorite), TypeScript/Next.js, LLVM/MLIR, local LLM inference, CUDA (in progress), SFT/QLoRA, ASR pipelines, embeddings, RAG, AWS, Qdrant
 
 ## Connect
 - [Email](mailto:ping@starone01.me): ping@starone01.me, best for serious inquiries

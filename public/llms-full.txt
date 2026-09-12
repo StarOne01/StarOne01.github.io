@@ -21,10 +21,9 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 - [Embeddings & Retrieval](https://starone01.me/#about): Custom embedding and content-fingerprinting for recommendation, RAG pipelines over Qdrant
 
 ## Selected work
-- [Selected work section](https://starone01.me/#work): Medclara, MoviesLikeThis, BrailleVision, Sherlock SFT
-- [Medclara](https://starone01.me/#work): Founding engineer and technical lead: full pipeline combining IndicConformer ASR with a fine-tuned Gemma model for clinical notes, ABDM/FHIR integration, architecture/infra/compliance solo
+- [Selected work section](https://starone01.me/#work): Medclara, MoviesLikeThis, Sherlock SFT
+- [Medclara](https://starone01.me/#work): Founding engineer and technical lead: full pipeline combining IndicConformer ASR with a fine-tuned Gemma model for clinical notes, covering architecture, infra, and compliance solo
 - [MoviesLikeThis](https://movieslikethis.starone01.me): The films that stay with you. Same feeling, different film, matched by emotional experience, not genre; custom embeddings and content fingerprinting
-- [BrailleVision](https://starone01.me/#work): Flutter + YOLO + ONNX mobile app for real-time Braille OCR, built under hackathon time pressure, shipped solo
 - [Sherlock SFT](https://starone01.me/#work): Character-consistent language model via supervised fine-tuning; debugged a QLoRA NaN loss to root cause
 
 ## Open source
@@ -47,7 +46,7 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 - [Medclara](https://starone01.me/#experience): Founding engineer of a voice-first, multilingual clinical documentation platform
 
 ## Stack
-- [Stack & tools](https://starone01.me/#stack): Languages: Go, Python, C++ (favorite), TypeScript/Next.js. Systems: LLVM, MLIR (in progress), local LLM inference, CUDA (in progress). ML/AI: SFT/QLoRA, ASR pipelines, embeddings, RAG. Infra: AWS, Qdrant, Ory Kratos
+- [Stack & tools](https://starone01.me/#stack): Languages: Go, Python, C++ (favorite), TypeScript/Next.js. Systems: LLVM, MLIR (in progress), local LLM inference, CUDA (in progress). ML/AI: SFT/QLoRA, ASR pipelines, embeddings, RAG. Infra: AWS, Qdrant
 
 ## Connect
 - [Email](mailto:ping@starone01.me): ping@starone01.me, best for serious inquiries

@@ -32,7 +32,7 @@ export const expertise = [
   {
     title: "Production ASR & Clinical AI",
     description:
-      "IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, with ABDM/FHIR integration, built solo for doctors in Indian Tier-2/3 cities.",
+      "IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, built solo for doctors in Indian Tier-2/3 cities.",
   },
   {
     title: "ML Systems & Inference",
@@ -103,7 +103,7 @@ export const experience: readonly ExperienceItem[] = [
     period: "Past",
     status: "past" as const,
     description:
-      "Founding engineer and technical lead. IndicConformer ASR plus a fine-tuned Gemma model for clinical notes, with ABDM/FHIR integration, covering architecture, infra, and compliance solo.",
+      "Founding engineer and technical lead. IndicConformer ASR plus a fine-tuned Gemma model for clinical notes, covering architecture, infra, and compliance solo.",
   },
 ] as const;
 
@@ -113,7 +113,7 @@ export const stack: Record<string, readonly StackItem[]> = {
   Languages: ["Go", "Python", { name: "C++", fav: true }, "TypeScript / Next.js"],
   "Systems & Compilers": ["LLVM", { name: "MLIR", note: "in progress" }, "Compilers", "System Design", "Local LLM Inference", { name: "CUDA", note: "in progress" }],
   "ML / AI": ["SFT / QLoRA", "ASR Pipelines", "Embeddings", "RAG"],
-  "Infra & Data": ["AWS", "GCP", "PostgreSQL", "Qdrant", "Ory Kratos", "Fedora"],
+  "Infra & Data": ["AWS", "GCP", "PostgreSQL", "Qdrant", "Fedora"],
 };
 
 export type WorkItem = {
@@ -128,7 +128,7 @@ export const featuredWork: readonly WorkItem[] = [
     name: "Medclara",
     tag: "Clinical AI · Founding Engineer",
     description:
-      "Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, plus ABDM/FHIR integration, covering architecture, infra, and compliance solo.",
+      "Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, covering architecture, infra, and compliance solo.",
   },
   {
     name: "MoviesLikeThis",
@@ -136,12 +136,6 @@ export const featuredWork: readonly WorkItem[] = [
     description:
       "The films that stay with you. Not “more sci-fi.” Not “another action movie.” Same feeling, different film: matched by emotional experience, not genre.",
     href: "https://movieslikethis.starone01.me",
-  },
-  {
-    name: "BrailleVision",
-    tag: "Hackathon Build",
-    description:
-      "A Flutter + YOLO + ONNX mobile app for real-time Braille OCR, built under hackathon time pressure. Computer vision meeting accessibility, shipped end-to-end solo.",
   },
   {
     name: "Sherlock SFT",
