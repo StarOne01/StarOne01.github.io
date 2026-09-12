@@ -21,9 +21,9 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 - [Embeddings & Retrieval](https://starone01.me/#about): Custom embedding and content-fingerprinting for recommendation, RAG pipelines over Qdrant
 
 ## Selected work
-- [Selected work section](https://starone01.me/#work): Medclara, Primesoma film discovery, BrailleVision, Sherlock SFT
+- [Selected work section](https://starone01.me/#work): Medclara, MoviesLikeThis, BrailleVision, Sherlock SFT
 - [Medclara](https://starone01.me/#work): Founding engineer and technical lead: full pipeline combining IndicConformer ASR with a fine-tuned Gemma model for clinical notes, ABDM/FHIR integration, architecture/infra/compliance solo
-- [Primesoma film discovery](https://movieslikethis.starone01.me): Recommendation around custom embeddings and content fingerprinting, including fingerprint-based hub pathology work
+- [MoviesLikeThis](https://movieslikethis.starone01.me): The films that stay with you. Same feeling, different film, matched by emotional experience, not genre; custom embeddings and content fingerprinting
 - [BrailleVision](https://starone01.me/#work): Flutter + YOLO + ONNX mobile app for real-time Braille OCR, built under hackathon time pressure, shipped solo
 - [Sherlock SFT](https://starone01.me/#work): Character-consistent language model via supervised fine-tuning; debugged a QLoRA NaN loss to root cause
 
@@ -34,7 +34,7 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 
 ## Currently running
 - [Experience](https://starone01.me/#experience): Full timeline of all current and past roles
-- [MoviesLikeThis](https://starone01.me/#experience): Film discovery by feeling, in production
+- [MoviesLikeThis](https://starone01.me/#experience): The films that stay with you, in production
 - [Software Development Agency](https://starone01.me/#experience): Coimbatore-based agency funding other ventures
 - [self / primesoma](https://starone01.me/#experience): AI-native dating platform, in development
 

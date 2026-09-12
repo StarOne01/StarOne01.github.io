@@ -61,7 +61,7 @@ export const experience: readonly ExperienceItem[] = [
     period: "In production",
     status: "active" as const,
     description:
-      "The film that makes you feel the way the last one did, not just another one \u201clike\u201d it. Custom embeddings and content fingerprinting so a few ratings find the rest of your life's library.",
+      "The films that stay with you. Not “more sci-fi.” Not “another action movie.” Same feeling, different film: matched by emotional experience, not genre.",
   },
   {
     role: "Founder",
@@ -130,10 +130,10 @@ export const featuredWork: readonly WorkItem[] = [
       "Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, plus ABDM/FHIR integration, covering architecture, infra, and compliance solo.",
   },
   {
-    name: "Primesoma: Film Discovery",
+    name: "MoviesLikeThis",
     tag: "Embeddings · Full Stack",
     description:
-      "A recommendation system around custom embedding and content-fingerprinting techniques, built to solve the “movies like this” problem better than genre-tag matching, including the hub pathology work most engines skip.",
+      "The films that stay with you. Not “more sci-fi.” Not “another action movie.” Same feeling, different film: matched by emotional experience, not genre.",
     href: "https://movieslikethis.starone01.me",
   },
   {
