@@ -29,7 +29,9 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 
 ## Open source
 - [GitHub profile](https://github.com/StarOne01): All code and contributions
+- [X](https://x.com/iamstarone01): @iamstarone01, building in public
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): C++ CLI password manager with AES encryption, zero dependencies, written entirely on a phone
+- [bfloat16](https://github.com/StarOne01/bfloat16): Lightweight C++ implementation of Google Brain's bfloat16 format (8-bit exponent, 7-bit mantissa)
 - [LLVM contributions](https://github.com/StarOne01): 16 contributions: backend/codegen (_Float16 lowering), frontend (Clang Sema diagnostic, 49 review comments), libc documentation series; MLIR next
 
 ## Currently running

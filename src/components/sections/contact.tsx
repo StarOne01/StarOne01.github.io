@@ -8,6 +8,7 @@ const channels = [
   site.socials.email,
   site.socials.linkedin,
   site.socials.github,
+  site.socials.x,
 ];
 
 export default function Contact() {
@@ -20,9 +21,9 @@ export default function Contact() {
         description="Open to collaborations on compilers, ML systems, and tooling for serious problems. Cold emails welcome. I read all of them."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {channels.map((c, i) => {
-          const iconName = c.label.toLowerCase() as "email" | "linkedin" | "github";
+          const iconName = c.label.toLowerCase() as "email" | "linkedin" | "github" | "x";
           return (
             <motion.a
               key={c.label}

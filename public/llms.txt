@@ -14,7 +14,9 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer and final-year Elect
 - [Medclara](https://starone01.me/#work): Founding engineer, IndicConformer ASR plus fine-tuned Gemma for clinical notes, ABDM/FHIR integration, built solo
 - [MoviesLikeThis](https://movieslikethis.starone01.me): The films that stay with you. Same feeling, different film, matched by emotional experience, not genre
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): Open-source C++ CLI password manager with AES encryption
+- [bfloat16](https://github.com/StarOne01/bfloat16): Lightweight C++ implementation of Google Brain's bfloat16 format
 - [GitHub profile](https://github.com/StarOne01): All open source code and contributions
+- [X](https://x.com/iamstarone01): @iamstarone01
 
 ## Experience
 - [Experience timeline](https://starone01.me/#experience): MoviesLikeThis, Software Development Agency, LLVM, self, primesoma, Medclara

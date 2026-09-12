@@ -18,6 +18,7 @@ export const site = {
     email: { label: "Email", value: "ping@starone01.me", href: "mailto:ping@starone01.me" },
     linkedin: { label: "LinkedIn", value: "in/StarOne01", href: "https://www.linkedin.com/in/StarOne01/" },
     github: { label: "GitHub", value: "@StarOne01", href: "https://github.com/StarOne01" },
+    x: { label: "X", value: "@iamstarone01", href: "https://x.com/iamstarone01" },
   },
   nav: ["Work", "Experience", "Stack", "Contact"],
 } as const;
@@ -147,5 +148,12 @@ export const featuredWork: readonly WorkItem[] = [
     tag: "Fine-Tuning",
     description:
       "Fine-tuned a character-consistent language model via supervised fine-tuning, iterating on training data quality and debugging a QLoRA NaN loss down to root cause.",
+  },
+  {
+    name: "bfloat16",
+    tag: "Open Source · Numerics",
+    description:
+      "A lightweight C++ implementation of Google Brain's bfloat16 format. Same 8-bit exponent as FP32 with a 7-bit mantissa, the number format ML hardware actually speaks.",
+    href: "https://github.com/StarOne01/bfloat16",
   },
 ];

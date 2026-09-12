@@ -93,6 +93,15 @@ export default function Nav() {
           >
             <Icon name="github" className="w-3.5 h-3.5" aria-hidden />
           </a>
+          <a
+            href={site.socials.x.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Prashanth on X (opens in new tab)"
+            className="p-2 hover:bg-white/10 text-white/55 hover:text-emerald-300 transition-colors"
+          >
+            <Icon name="x" className="w-3.5 h-3.5" aria-hidden />
+          </a>
         </div>
 
         <button
@@ -160,7 +169,7 @@ export default function Nav() {
               )}
             </div>
             <div className="h-px bg-white/10 mb-6" aria-hidden />
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-4 gap-2">
               <a
                 href={site.socials.email.href}
                 className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
@@ -188,6 +197,16 @@ export default function Nav() {
               >
                 <Icon name="github" className="w-5 h-5" aria-hidden />
                 <span className="font-mono text-[10px] tracking-[0.2em] uppercase">github</span>
+              </a>
+              <a
+                href={site.socials.x.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
+                aria-label="Prashanth on X (opens in new tab)"
+              >
+                <Icon name="x" className="w-5 h-5" aria-hidden />
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase">x</span>
               </a>
             </div>
           </div>
