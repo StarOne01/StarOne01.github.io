@@ -15,9 +15,6 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer and final-year Elect
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): Open-source C++ CLI password manager with AES encryption
 - [GitHub profile](https://github.com/StarOne01): All open source code and contributions
 
-## Research
-- [Research & writing](https://starone01.me/#research): Multilingual LLM evaluation study (price/size/reputation don't predict failure; 6 models on code-switched number parsing) and StarOne Labs (Ollama deep-dives, Tamil & English)
-
 ## Experience
 - [Experience timeline](https://starone01.me/#experience): MoviesLikeThis, Software Development Agency, LLVM, self, primesoma, Medclara
 - [LinkedIn](https://www.linkedin.com/in/StarOne01/): Professional history and endorsements

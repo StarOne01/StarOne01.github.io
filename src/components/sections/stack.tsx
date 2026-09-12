@@ -27,7 +27,7 @@ export default function Stack() {
     <section id="stack" className="py-24 md:py-32 border-y border-white/[0.04]">
       <div className="px-6 max-w-6xl mx-auto mb-12 md:mb-16">
         <SectionHeader
-          eyebrow="05 — stack"
+          eyebrow="04 — stack"
           title={
           <>
             Tools, not <span className="text-white/55">ornaments.</span>

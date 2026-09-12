@@ -27,11 +27,6 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 - [BrailleVision](https://starone01.me/#work): Flutter + YOLO + ONNX mobile app for real-time Braille OCR, built under hackathon time pressure, shipped solo
 - [Sherlock SFT](https://starone01.me/#work): Character-consistent language model via supervised fine-tuning; debugged a QLoRA NaN loss to root cause
 
-## Research & writing
-- [Research section](https://starone01.me/#research): Multilingual LLM evaluation study and StarOne Labs
-- [Multilingual eval study](https://starone01.me/#research): Tests whether model price, size, or reputation predict task-specific failure — findings suggest they don't; latest run benchmarked 6 models on multilingual code-switched number parsing
-- [StarOne Labs](https://starone01.me): Writing and building in public on open-source AI in production — Ollama deep-dive series (inference internals, scheduling engines), published in Tamil and English
-
 ## Open source
 - [GitHub profile](https://github.com/StarOne01): All code and contributions
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): C++ CLI password manager with AES encryption, zero dependencies, written entirely on a phone

@@ -7,10 +7,9 @@ import { cn } from "@/utils/cn";
 type CommandOutput = { kind: "in" | "out" | "err"; text: string };
 
 const commands: Record<string, string> = {
-  help: "available: about, work, research, stack, contact, whoami, ls, clear, sudo, exit",
+  help: "available: about, work, stack, contact, whoami, ls, clear, sudo, exit",
   about: "Prashanth T. Systems Engineer. Coimbatore. Hardware-software gap: compilers, inference, and the systems underneath.",
   work: "Medclara (founding engineer, past) · Primesoma film discovery (live) · BrailleVision (hackathon) · Sherlock SFT (fine-tuning).",
-  research: "multilingual LLM eval: price/size/reputation don't predict failure · StarOne Labs: Ollama deep-dives, Tamil & English.",
   stack: "Go · Python · C++ (favorite) · TypeScript · LLVM/MLIR · QLoRA · Qdrant",
   contact: "ping@starone01.me  ·  linkedin.com/in/StarOne01  ·  github.com/StarOne01",
   projects: "Medclara (clinical AI) · film discovery (embeddings) · BrailleVision (YOLO+ONNX) · PhraseNuX (C++ CLI)",

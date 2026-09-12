@@ -20,7 +20,7 @@ export const site = {
     linkedin: { label: "LinkedIn", value: "in/StarOne01", href: "https://www.linkedin.com/in/StarOne01/" },
     github: { label: "GitHub", value: "@StarOne01", href: "https://github.com/StarOne01" },
   },
-  nav: ["Work", "Research", "Experience", "Stack", "Contact"],
+  nav: ["Work", "Experience", "Stack", "Contact"],
 } as const;
 
 export const expertise = [
@@ -104,29 +104,6 @@ export const experience: readonly ExperienceItem[] = [
     status: "past" as const,
     description:
       "Founding engineer and technical lead. IndicConformer ASR plus a fine-tuned Gemma model for clinical notes, with ABDM/FHIR integration — architecture, infra, and compliance, solo.",
-  },
-] as const;
-
-export type ResearchItem = {
-  title: string;
-  tag: string;
-  description: string;
-  href?: string;
-};
-
-export const research: readonly ResearchItem[] = [
-  {
-    title: "Do price, size, or reputation predict LLM failure?",
-    tag: "Original research",
-    description:
-      "A multilingual LLM evaluation study testing whether model price, size, or reputation predict task-specific failure — findings suggest they don't, at least not reliably. Latest run benchmarked 6 models on multilingual code-switched number parsing.",
-  },
-  {
-    title: "StarOne Labs",
-    tag: "Writing · Tamil & English",
-    description:
-      "Writing and building in public around open-source AI in production — an ongoing Ollama deep-dive series (inference internals, scheduling engines) and honest, no-theory takes on what actually works when deploying open models.",
-    href: "https://starone01.me",
   },
 ] as const;
 

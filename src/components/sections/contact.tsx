@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 px-6 max-w-6xl mx-auto relative">
       <SectionHeader
-        eyebrow="06 — contact"
+        eyebrow="05 — contact"
         title={
           <>
             Let's build <span className="text-white/55">something real.</span>
