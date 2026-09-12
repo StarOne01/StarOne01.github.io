@@ -65,9 +65,7 @@ export default function Contact() {
         className="mt-20 md:mt-28 text-center font-mono"
       >
         <p className="text-[11px] tracking-[0.3em] uppercase text-white/40 mb-4">
-          <span className="text-white/25">call </span>
-          <span className="text-emerald-300">@say_hello</span>
-          <span className="text-white/25">() -&gt; !response</span>
+          or just write to me directly
         </p>
         <a
           href={`mailto:${site.email}`}
