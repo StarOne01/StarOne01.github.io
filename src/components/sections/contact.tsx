@@ -33,7 +33,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/10 hover:border-amber-400/60 hover:bg-amber-400 active:bg-amber-400 active:border-amber-400 transition-colors"
+              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/10 hover:border-emerald-300/60 hover:bg-emerald-300 active:bg-emerald-300 active:border-emerald-300 transition-colors"
               aria-label={`${c.label}: ${c.value}`}
             >
               <div className="w-10 h-10 flex items-center justify-center bg-white/[0.04] border border-white/10 text-white/80 group-hover:text-black group-hover:bg-black/10 group-hover:border-black/20 group-active:text-black group-active:bg-black/10 group-active:border-black/20 transition-colors">
@@ -66,12 +66,12 @@ export default function Contact() {
       >
         <p className="text-[11px] tracking-[0.3em] uppercase text-white/40 mb-4">
           <span className="text-white/25">call </span>
-          <span className="text-amber-400">@say_hello</span>
+          <span className="text-emerald-300">@say_hello</span>
           <span className="text-white/25">() -&gt; !response</span>
         </p>
         <a
           href={`mailto:${site.email}`}
-          className="inline-block text-xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white hover:text-amber-400 active:text-amber-400 transition-colors break-all"
+          className="inline-block text-xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white hover:text-emerald-300 active:text-emerald-300 transition-colors break-all"
         >
           {site.email}
         </a>

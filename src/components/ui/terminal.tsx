@@ -100,7 +100,7 @@ export default function Terminal() {
         aria-label="Open terminal (Ctrl+` or ⌘`)"
         aria-expanded={open}
         aria-haspopup="dialog"
-        className={`fixed bottom-5 max-sm:bottom-24 right-5 z-[55] font-mono text-[11px] tracking-[0.2em] uppercase text-white/55 hover:text-amber-400 border border-white/15 hover:border-amber-400/50 bg-[#0b0d10]/90 backdrop-blur-md px-3 py-2 transition-all duration-300 ${
+        className={`fixed bottom-5 max-sm:bottom-24 right-5 z-[55] font-mono text-[11px] tracking-[0.2em] uppercase text-white/55 hover:text-emerald-300 border border-white/15 hover:border-emerald-300/50 bg-[#0b0d10]/90 backdrop-blur-md px-3 py-2 transition-all duration-300 ${
           isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >

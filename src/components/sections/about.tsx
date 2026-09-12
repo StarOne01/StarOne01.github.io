@@ -30,7 +30,7 @@ export default function About() {
 
         <div className="lg:col-span-7">
           <p className="font-mono text-[11px] tracking-[0.25em] text-white/40 mb-8">
-            <span className="text-amber-400">%ops</span> = focus areas
+            <span className="text-emerald-300">%ops</span> = focus areas
           </p>
           <ul className="space-y-4">
             {expertise.map((area, i) => (
@@ -40,9 +40,9 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="group p-6 bg-white/[0.02] border border-white/10 hover:border-amber-400/50 active:border-amber-400/50 transition-colors"
+                className="group p-6 bg-white/[0.02] border border-white/10 hover:border-emerald-300/50 active:border-emerald-300/50 transition-colors"
               >
-                <p className="font-mono text-[11px] text-amber-400 mb-2" aria-hidden>
+                <p className="font-mono text-[11px] text-emerald-300 mb-2" aria-hidden>
                   %op{i + 1} = "{area.title.toLowerCase().replace(/[^a-z]+/g, "_")}"()
                 </p>
                 <h3 className="font-mono font-bold text-lg text-white mb-1.5">

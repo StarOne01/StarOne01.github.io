@@ -22,12 +22,12 @@ export default function Work() {
               <div className="flex items-center justify-between mb-5 font-mono">
                 <span className="text-[13px] font-bold text-white">
                   <span className="text-white/35 font-normal">op </span>
-                  <span className="text-amber-400">@</span>{op}
+                  <span className="text-emerald-300">@</span>{op}
                 </span>
                 {item.href ? (
                   <Icon
                     name="external"
-                    className="w-4 h-4 text-white/30 group-hover:text-amber-400 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
+                    className="w-4 h-4 text-white/30 group-hover:text-emerald-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
                     aria-hidden
                   />
                 ) : (
@@ -49,14 +49,14 @@ export default function Work() {
 
               <div className="mt-6 pt-4 border-t border-dashed border-white/12 font-mono text-[11px] text-white/40">
                 <span className="text-white/25">→ result: </span>
-                <span className={item.href ? "text-amber-400" : "text-white/70"}>
+                <span className={item.href ? "text-emerald-300" : "text-white/70"}>
                   {item.href ? "open" : "shipped"}
                 </span>
               </div>
             </>
           );
           const classes =
-            "group flex flex-col p-6 md:p-7 bg-white/[0.02] border border-white/10 hover:border-amber-400/50 hover:bg-white/[0.04] active:border-amber-400/50 transition-colors min-h-[260px]";
+            "group flex flex-col p-6 md:p-7 bg-white/[0.02] border border-white/10 hover:border-emerald-300/50 hover:bg-white/[0.04] active:border-emerald-300/50 transition-colors min-h-[260px]";
           const motionProps = {
             initial: { opacity: 0, y: 20 },
             whileInView: { opacity: 1, y: 0 },

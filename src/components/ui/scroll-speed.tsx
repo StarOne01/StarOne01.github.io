@@ -69,7 +69,7 @@ export default function ScrollSpeed() {
       }`}
     >
       <div className="bg-[#0b0d10] border border-white/12 px-4 py-2 text-sm text-white/60 whitespace-nowrap font-mono">
-        <span className="text-amber-400">{speed}px/s</span> — {msg}
+        <span className="text-emerald-300">{speed}px/s</span> — {msg}
       </div>
     </div>
   );

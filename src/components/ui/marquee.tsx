@@ -30,7 +30,7 @@ export default function Marquee({ items, speed = 30, className, reverse, separat
         {doubled.map((item, i) => (
           <span key={i} className="flex items-center gap-8 font-mono text-sm uppercase tracking-[0.2em] text-white/40 whitespace-nowrap">
             <span>{item}</span>
-            <span className="text-amber-400/50">{separator}</span>
+            <span className="text-emerald-300/50">{separator}</span>
           </span>
         ))}
       </motion.div>

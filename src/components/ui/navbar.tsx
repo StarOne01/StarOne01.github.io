@@ -49,8 +49,8 @@ export default function Nav() {
         aria-label="Global"
       >
         <Link href="/" className="flex items-center gap-2 group font-mono text-xs" aria-label={`${site.name} home`}>
-          <span className="text-amber-400" aria-hidden>%_</span>
-          <span className="text-white/85 group-hover:text-amber-400 tracking-[0.15em] uppercase transition-colors">
+          <span className="text-emerald-300" aria-hidden>%_</span>
+          <span className="text-white/85 group-hover:text-emerald-300 tracking-[0.15em] uppercase transition-colors">
             {site.handle}
           </span>
         </Link>
@@ -62,13 +62,13 @@ export default function Nav() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 role="listitem"
-                className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-amber-400 active:text-amber-400 transition-colors"
+                className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-emerald-300 active:text-emerald-300 transition-colors"
               >
                 --{passNames[item.toLowerCase()] ?? item.toLowerCase()}
               </a>
             ))
           ) : (
-            <Link href="/" className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-amber-400 transition-colors">
+            <Link href="/" className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-emerald-300 transition-colors">
               ← home
             </Link>
           )}
@@ -78,7 +78,7 @@ export default function Nav() {
           <a
             href={site.socials.email.href}
             aria-label="Email Prashanth"
-            className="p-2 hover:bg-white/10 text-white/55 hover:text-amber-400 transition-colors"
+            className="p-2 hover:bg-white/10 text-white/55 hover:text-emerald-300 transition-colors"
           >
             <Icon name="email" className="w-3.5 h-3.5" aria-hidden />
           </a>
@@ -87,7 +87,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Prashanth on LinkedIn (opens in new tab)"
-            className="p-2 hover:bg-white/10 text-white/55 hover:text-amber-400 transition-colors"
+            className="p-2 hover:bg-white/10 text-white/55 hover:text-emerald-300 transition-colors"
           >
             <Icon name="linkedin" className="w-3.5 h-3.5" aria-hidden />
           </a>
@@ -96,7 +96,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Prashanth on GitHub (opens in new tab)"
-            className="p-2 hover:bg-white/10 text-white/55 hover:text-amber-400 transition-colors"
+            className="p-2 hover:bg-white/10 text-white/55 hover:text-emerald-300 transition-colors"
           >
             <Icon name="github" className="w-3.5 h-3.5" aria-hidden />
           </a>
@@ -134,11 +134,11 @@ export default function Nav() {
           />
           <div className="absolute bottom-0 inset-x-0 bg-[#0b0d10] border-t border-white/12 p-6 pb-10 max-h-[80vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
-              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-amber-400">pass pipeline</span>
+              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-emerald-300">pass pipeline</span>
               <button
                 onClick={closeMenu}
                 aria-label="Close menu"
-                className="p-2 text-white/70 hover:text-amber-400"
+                className="p-2 text-white/70 hover:text-emerald-300"
               >
                 <XMarkIcon className="w-5 h-5" aria-hidden />
               </button>
@@ -152,16 +152,16 @@ export default function Nav() {
                     onClick={closeMenu}
                     className="group flex items-baseline gap-4 px-4 py-3 hover:bg-white/5 active:bg-white/5 transition-colors"
                   >
-                    <span className="font-mono text-[11px] text-amber-400" aria-hidden>
+                    <span className="font-mono text-[11px] text-emerald-300" aria-hidden>
                       0{i + 1}
                     </span>
-                    <span className="font-mono text-lg font-bold text-white/90 group-hover:text-amber-400 transition-colors">
+                    <span className="font-mono text-lg font-bold text-white/90 group-hover:text-emerald-300 transition-colors">
                       --{passNames[item.toLowerCase()] ?? item.toLowerCase()}
                     </span>
                   </a>
                 ))
               ) : (
-                <Link href="/" onClick={closeMenu} className="block px-4 py-3 font-mono text-lg font-bold text-white/90 hover:text-amber-400 transition-colors">
+                <Link href="/" onClick={closeMenu} className="block px-4 py-3 font-mono text-lg font-bold text-white/90 hover:text-emerald-300 transition-colors">
                   ← home
                 </Link>
               )}
@@ -170,7 +170,7 @@ export default function Nav() {
             <div className="grid grid-cols-3 gap-2">
               <a
                 href={site.socials.email.href}
-                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-amber-400 hover:border-amber-400/40 transition-colors"
+                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
                 aria-label="Email Prashanth"
               >
                 <Icon name="email" className="w-5 h-5" aria-hidden />
@@ -180,7 +180,7 @@ export default function Nav() {
                 href={site.socials.linkedin.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-amber-400 hover:border-amber-400/40 transition-colors"
+                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
                 aria-label="Prashanth on LinkedIn (opens in new tab)"
               >
                 <Icon name="linkedin" className="w-5 h-5" aria-hidden />
@@ -190,7 +190,7 @@ export default function Nav() {
                 href={site.socials.github.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-amber-400 hover:border-amber-400/40 transition-colors"
+                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
                 aria-label="Prashanth on GitHub (opens in new tab)"
               >
                 <Icon name="github" className="w-5 h-5" aria-hidden />

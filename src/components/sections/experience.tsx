@@ -5,17 +5,17 @@ import SectionHeader from "@/components/ui/section-header";
 import Icon from "@/components/ui/icon";
 
 const statusStyles: Record<string, string> = {
-  active: "bg-amber-400 text-black border-amber-400",
+  active: "bg-emerald-300 text-black border-emerald-300",
   development: "bg-sky-400/15 text-sky-300 border-sky-400/30",
-  upcoming: "bg-amber-400/10 text-amber-300 border-amber-400/30",
+  upcoming: "bg-emerald-300/10 text-emerald-200 border-emerald-300/30",
   ongoing: "bg-white/[0.06] text-white/75 border-white/15",
   past: "bg-white/[0.04] text-white/50 border-white/10",
 };
 
 const statusDot: Record<string, string> = {
-  active: "bg-amber-400",
+  active: "bg-emerald-300",
   development: "bg-sky-300",
-  upcoming: "bg-amber-300",
+  upcoming: "bg-emerald-200",
   ongoing: "bg-white/50",
   past: "bg-white/25",
 };
@@ -44,7 +44,7 @@ export default function Experience() {
               aria-hidden
               className={`absolute -left-[5px] top-2 w-2.5 h-2.5 ${statusDot[item.status]}`}
             />
-            <div className="group bg-white/[0.02] border border-white/10 hover:border-amber-400/50 active:border-amber-400/50 transition-colors p-6">
+            <div className="group bg-white/[0.02] border border-white/10 hover:border-emerald-300/50 active:border-emerald-300/50 transition-colors p-6">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-3 font-mono text-[11px]">
                 <span className="text-white/30" aria-hidden>
                   [{String(i + 1).padStart(2, "0")}]
@@ -62,7 +62,7 @@ export default function Experience() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-amber-400 hover:text-white transition-colors inline-flex items-center gap-1"
+                    className="text-emerald-300 hover:text-white transition-colors inline-flex items-center gap-1"
                   >
                     {item.company}
                     <Icon name="external" className="w-3.5 h-3.5" aria-hidden />
