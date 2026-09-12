@@ -110,9 +110,9 @@ export type StackItem = string | { name: string; fav?: boolean; note?: string };
 
 export const stack: Record<string, readonly StackItem[]> = {
   Languages: ["Go", "Python", { name: "C++", fav: true }, "TypeScript / Next.js"],
-  "Systems & Compilers": ["LLVM", { name: "MLIR", note: "in progress" }, "Local LLM Inference", { name: "CUDA", note: "in progress" }],
+  "Systems & Compilers": ["LLVM", { name: "MLIR", note: "in progress" }, "Compilers", "System Design", "Local LLM Inference", { name: "CUDA", note: "in progress" }],
   "ML / AI": ["SFT / QLoRA", "ASR Pipelines", "Embeddings", "RAG"],
-  "Infra & Data": ["AWS", "Qdrant", "Ory Kratos"],
+  "Infra & Data": ["AWS", "GCP", "PostgreSQL", "Qdrant", "Ory Kratos", "Fedora"],
 };
 
 export type WorkItem = {
