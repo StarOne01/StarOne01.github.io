@@ -1,26 +1,29 @@
 # Prashanth T. (StarOne01)
 
-> ML Systems Engineer based in Coimbatore, Tamil Nadu, India. Production ASR, compiler infrastructure, and the distributed systems underneath.
+> Systems Engineer based in Coimbatore, Tamil Nadu, India. Works the gap between hardware and software: compilers, model inference, and the systems that make AI run efficiently on real silicon.
 
-Prashanth T. is a self-taught ML Systems Engineer and final-year Electrical & Electronics Engineering student. He builds production ML pipelines, custom ASR systems (Conformer, RNN-T, Whisper fine-tuning with QLoRA), contributes to LLVM, and runs multiple ventures spanning voice-first clinical AI, AI-native dating, and an integrated wellness ecosystem. Stack: Go, Python, TypeScript, C++ (favorite), AWS, GCP.
+Prashanth T. — known as Ragi or StarOne01 — is a self-taught Systems Engineer and final-year Electrical & Electronics Engineering student. He started coding on a phone through Termux before owning a laptop, and now builds production clinical AI, contributes to LLVM (16 contributions and counting), and is going deep on compiler internals and MLIR. Stack: Go, Python, C++ (favorite), TypeScript/Next.js, LLVM/MLIR, QLoRA, Qdrant.
 
 ## About
-- [Bio](https://starone01.me/#about): Self-taught ML Systems Engineer, production ASR, compiler infrastructure, distributed systems
-- [Expertise](https://starone01.me/#about): Production ASR & ML, Systems & Infrastructure, Compilers & Open Source, Creative Technologies
-- [Open Graph card](https://starone01.me/opengraph-image): Site preview used by search engines and chat apps
+- [Bio](https://starone01.me/#about): Final-year EEE student, Termux-to-production origin, now focused on MLIR and compiler internals
+- [Expertise](https://starone01.me/#about): Compilers & LLVM, Production ASR & Clinical AI, ML Systems & Inference, Embeddings & Retrieval
 
 ## Work
-- [Selected work](https://starone01.me/#work): EfficientXLang, PhraseNuX, Medclara
-- [EfficientXLang](https://github.com/StarOne01): Original research on cross-lingual reasoning in multilingual LLMs
+- [Selected work](https://starone01.me/#work): Medclara, Primesoma film discovery, BrailleVision, Sherlock SFT
+- [Medclara](https://starone01.me/#work): Founding engineer — IndicConformer ASR plus fine-tuned Gemma for clinical notes, ABDM/FHIR integration, built solo
+- [Film discovery](https://movieslikethis.starone01.me): Custom embedding and content-fingerprinting recommender
 - [PhraseNuX](https://github.com/StarOne01/PhraseNuX): Open-source C++ CLI password manager with AES encryption
 - [GitHub profile](https://github.com/StarOne01): All open source code and contributions
 
+## Research
+- [Research & writing](https://starone01.me/#research): Multilingual LLM evaluation study (price/size/reputation don't predict failure; 6 models on code-switched number parsing) and StarOne Labs (Ollama deep-dives, Tamil & English)
+
 ## Experience
-- [Experience timeline](https://starone01.me/#experience): Software Development Agency, primesoma, self, Medclara, LLVM research
+- [Experience timeline](https://starone01.me/#experience): MoviesLikeThis, Software Development Agency, LLVM, self, primesoma, Medclara
 - [LinkedIn](https://www.linkedin.com/in/StarOne01/): Professional history and endorsements
 
 ## Stack
-- [Stack & tools](https://starone01.me/#stack): Go, Python, TypeScript, JavaScript, C++ (favorite), Dart, ASR (Conformer/RNN-T/CTC), Whisper, Ollama, AWS, GCP, LLVM, Next.js
+- [Stack & tools](https://starone01.me/#stack): Go, Python, C++ (favorite), TypeScript/Next.js, LLVM/MLIR, local LLM inference, CUDA (in progress), SFT/QLoRA, ASR pipelines, embeddings, RAG, AWS, Qdrant, Ory Kratos
 
 ## Connect
 - [Email](mailto:ping@starone01.me): ping@starone01.me, best for serious inquiries
