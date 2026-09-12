@@ -5,15 +5,15 @@ import SectionHeader from "@/components/ui/section-header";
 
 export default function About() {
   return (
-    <section id="about" className="py-28 md:py-40 px-6 max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+    <section id="about" className="py-24 md:py-32 px-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
         <div className="lg:col-span-5">
           <SectionHeader
             index="01"
             pass="frontend"
             title="parse a human."
           />
-          <div className="space-y-7 text-white/70 text-lg md:text-xl font-light leading-loose font-sans">
+          <div className="space-y-5 text-white/70 text-base md:text-lg leading-relaxed font-sans">
             {site.bio.map((p, i) => (
               <motion.p
                 key={i}
@@ -29,7 +29,7 @@ export default function About() {
         </div>
 
         <div className="lg:col-span-6 lg:col-start-7">
-          <p className="font-mono text-[11px] tracking-[0.25em] uppercase text-white/40 mb-10">
+          <p className="font-mono text-[11px] tracking-[0.25em] uppercase text-white/40 mb-8">
             focus areas
           </p>
           <ul className="divide-y divide-white/10 border-y border-white/10">
@@ -40,7 +40,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="group py-8 first:pt-0 last:pb-0"
+                className="group py-6 first:pt-0 last:pb-0"
               >
                 <h3 className="font-mono font-bold text-xl text-white mb-2 group-hover:text-emerald-300 transition-colors">
                   {area.title}
