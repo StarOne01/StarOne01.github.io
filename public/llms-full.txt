@@ -16,7 +16,7 @@ Prashanth T. (@StarOne01) is a self-taught Systems Engineer based in Coimbatore,
 
 ## Areas of expertise
 - [Compilers & LLVM](https://starone01.me/#about): 16 contributions: X86 backend _Float16 lowering (FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, libc POSIX header docs; now deepening into MLIR
-- [Production ASR & Clinical AI](https://starone01.me/#about): IndicConformer speech recognition with a fine-tuned Gemma model for clinical note generation, ABDM/FHIR integration for Indian Tier-2/3 cities
+- [Production ASR & Clinical AI](https://starone01.me/#about): IndicConformer speech recognition with a fine-tuned Gemma model for clinical note generation for Indian Tier-2/3 cities
 - [ML Systems & Inference](https://starone01.me/#about): Local LLM inference and open-model deployment, fine-tuning (SFT, QLoRA) with failure-mode debugging, CUDA fundamentals in progress
 - [Embeddings & Retrieval](https://starone01.me/#about): Custom embedding and content-fingerprinting for recommendation, RAG pipelines over Qdrant
 
