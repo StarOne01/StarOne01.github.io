@@ -11,7 +11,7 @@ export default function Research() {
         eyebrow="03 — research & writing"
         title={
           <>
-            Asking questions <span className="text-white/55">models can&rsquo;t answer.</span>
+            Measured, <span className="text-white/55">not assumed.</span>
           </>
         }
         description="Original evaluation work and building in public — in Tamil and English."
