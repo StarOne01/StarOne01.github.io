@@ -68,7 +68,7 @@ export default function ScrollSpeed() {
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
-      <div className="bg-[#0b0d10] border border-white/12 px-4 py-2 text-sm text-white/60 whitespace-nowrap font-mono">
+      <div className="bg-[#0b0d10]/70 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_8px_32px_-8px_rgba(0,0,0,0.5)] px-4 py-2 text-sm text-white/60 whitespace-nowrap font-mono">
         <span className="text-emerald-300">{speed}px/s</span> — {msg}
       </div>
     </div>
