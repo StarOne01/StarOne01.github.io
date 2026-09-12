@@ -41,7 +41,6 @@ export const metadata: Metadata = {
   keywords: [
     "Prashanth",
     "StarOne01",
-    "Ragi",
     "Systems Engineer",
     "ML Systems Engineer",
     "LLVM",

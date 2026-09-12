@@ -2,7 +2,7 @@
 
 > Systems Engineer based in Coimbatore, Tamil Nadu, India. Works the gap between hardware and software: compilers, model inference, and the systems that make AI run efficiently on real silicon.
 
-Prashanth T. — known as Ragi or StarOne01 — is a self-taught Systems Engineer and final-year Electrical & Electronics Engineering student. He started coding on a phone through Termux before owning a laptop, and now builds production clinical AI, contributes to LLVM (16 contributions and counting), and is going deep on compiler internals and MLIR. Stack: Go, Python, C++ (favorite), TypeScript/Next.js, LLVM/MLIR, QLoRA, Qdrant.
+Prashanth T. (@StarOne01) is a self-taught Systems Engineer and final-year Electrical & Electronics Engineering student. He started coding on a phone through Termux before owning a laptop, and now builds production clinical AI, contributes to LLVM (16 contributions and counting), and is going deep on compiler internals and MLIR. Stack: Go, Python, C++ (favorite), TypeScript/Next.js, LLVM/MLIR, QLoRA, Qdrant.
 
 ## About
 - [Bio](https://starone01.me/#about): Final-year EEE student, Termux-to-production origin, now focused on MLIR and compiler internals

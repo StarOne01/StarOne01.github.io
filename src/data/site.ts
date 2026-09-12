@@ -4,7 +4,7 @@ export const site = {
   role: "Systems Engineer",
   location: "Coimbatore, Tamil Nadu",
   bio: [
-    "I'm Prashanth — most people know me as Ragi or StarOne01. I'm a final-year Electrical and Electronics Engineering student, but most of what I actually do lives in the gap between hardware and software: compilers, model inference, and the systems that make AI run efficiently on real silicon.",
+    "I'm Prashanth, known online as StarOne01. I'm a final-year Electrical and Electronics Engineering student, but most of what I actually do lives in the gap between hardware and software: compilers, model inference, and the systems that make AI run efficiently on real silicon.",
     "I'm self-taught — started coding on a phone through Termux before I even owned a laptop — and I've spent the last few years building things that actually ship: a production multilingual clinical AI system, open-source contributions to LLVM, a film recommendation engine built on custom embeddings, and original research into where and why language models fail on multilingual tasks.",
     "Right now I'm going deep on compiler internals and MLIR — the layer where AI models actually meet hardware — because that's where I think the most interesting (and most underbuilt) engineering problems are.",
   ],
