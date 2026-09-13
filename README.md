@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Prashanth T. — @StarOne01
 
-## Getting Started
+**Systems Engineer building at the intersection of hardware and AI.**
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```mlir
+module @starone01 {
+  func @prashanth_t() -> !systems.engineer
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Final-year EEE student working the gap between hardware and software: compilers, inference, and the systems that make AI run on real silicon. Self-taught, starting on a phone through Termux before I ever owned a laptop.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Since then: a production multilingual clinical AI system, 16 LLVM contributions, a film engine on custom embeddings, and multilingual LLM research. Now going deep on compiler internals and MLIR, the layer where models actually meet hardware.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Live portfolio: **[starone01.me](https://starone01.me)** · Coimbatore, Tamil Nadu
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Focus areas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Compilers & LLVM**
+16 contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Production ASR & Clinical AI**
+IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, built solo for doctors in Indian Tier-2/3 cities.
 
-## Deploy on Vercel
+**ML Systems & Inference**
+Local LLM inference and deployment of open models in production. Fine-tuning (SFT, QLoRA) with hands-on failure-mode debugging, and CUDA fundamentals in progress.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Embeddings & Retrieval**
+Custom embedding and content-fingerprinting techniques for recommendation, plus RAG pipelines over Qdrant. Built to solve matching problems genre tags cannot.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## Featured work
+
+| Project | What it is |
+|---|---|
+| **Medclara** — Clinical AI, Founding Engineer | Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, covering architecture, infra, and compliance solo. |
+| **[MoviesLikeThis](https://movieslikethis.starone01.me)** — Embeddings, Full Stack | The films that stay with you. Not "more sci-fi." Not "another action movie." Same feeling, different film: matched by emotional experience, not genre. |
+| **Sherlock SFT** — Fine-Tuning | Fine-tuned a character-consistent language model via supervised fine-tuning, iterating on training data quality and debugging a QLoRA NaN loss down to root cause. |
+| **[bfloat16](https://github.com/StarOne01/bfloat16)** — Open Source, Numerics | A lightweight C++ implementation of Google Brain's bfloat16 format. Same 8-bit exponent as FP32 with a 7-bit mantissa, the number format ML hardware actually speaks. |
+
+Also: **[PhraseNuX](https://github.com/StarOne01/PhraseNuX)** — C++ CLI password manager with AES encryption, zero dependencies, written entirely on a phone.
+
+---
+
+## Experience
+
+- **Creator @ MoviesLikeThis** — In production. The films that stay with you, matched by emotional experience, not genre.
+- **Founder @ Software Development Agency** — Present. Coimbatore-based agency funding other ventures. High-end web, custom AI agent systems, and enterprise software. [softwares.primesoma.com](https://softwares.primesoma.com)
+- **Open Source Contributor @ LLVM** — Ongoing. 16 contributions: X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.
+- **Founder @ primesoma** — Upcoming. Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health.
+- **Founding Engineer @ Medclara** — Past. Founding engineer and technical lead for the clinical AI pipeline described above.
+
+---
+
+## Open source
+
+**LLVM — 16 contributions**
+Backend and codegen (X86 _Float16), frontend (Clang Sema diagnostic, 49 review comments), and libc docs. Tracking toward MLIR.
+
+- `llvm/llvm-project` — profile pinned, all reviews public on GitHub.
+
+**Other**
+- `StarOne01/bfloat16` — bfloat16 in C++
+- `StarOne01/PhraseNuX` — secure CLI password manager
+
+---
+
+## Stack
+
+**Languages:** Go, Python, C++ (favorite), TypeScript / Next.js
+
+**Systems & Compilers:** LLVM, MLIR (in progress), Compilers, System Design, Local LLM Inference, CUDA (in progress)
+
+**ML / AI:** SFT / QLoRA, ASR Pipelines, Embeddings, RAG
+
+**Infra & Data:** AWS, GCP, PostgreSQL, Qdrant, Fedora
+
+---
+
+## Connect
+
+- Email: [ping@starone01.me](mailto:ping@starone01.me)
+- LinkedIn: [in/StarOne01](https://www.linkedin.com/in/StarOne01/)
+- GitHub: [@StarOne01](https://github.com/StarOne01)
+- X: [@iamstarone01](https://x.com/iamstarone01)
+- Portfolio: [starone01.me](https://starone01.me)
+
+---
+
+## This portfolio repo
+
+This site is built with Next.js, TypeScript, Tailwind, and Framer Motion. Static export to GitHub Pages.
+
+```bash
+bun install
+bun run dev      # http://localhost:3000
+bun run build    # static export to dist/
+```
+
+Deployed from `main` to `starone01.me` via GitHub Pages. Analytics via Cloudflare Web Analytics. No em dashes were harmed in the making of this README.
