@@ -21,8 +21,8 @@ Live portfolio: **[starone01.me](https://starone01.me)** · Coimbatore, Tamil Na
 **Compilers & LLVM**
 Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.
 
-**Production ASR & Clinical AI**
-IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, built solo for doctors in Indian Tier-2/3 cities.
+**Local & On-device AI**
+Private inference without the cloud: local pipelines over open models with Ollama, quantization for constrained hardware, and on-device deployment.
 
 **ML Systems & Inference**
 Local LLM inference and deployment of open models in production. Fine-tuning (SFT, QLoRA) with hands-on failure-mode debugging, and CUDA fundamentals in progress.

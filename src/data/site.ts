@@ -30,9 +30,9 @@ export const expertise = [
       "Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.",
   },
   {
-    title: "Production ASR & Clinical AI",
+    title: "Local & On-device AI",
     description:
-      "IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, built solo for doctors in Indian Tier-2/3 cities.",
+      "Private inference without the cloud: local pipelines over open models with Ollama, quantization for constrained hardware, and on-device deployment.",
   },
   {
     title: "ML Systems & Inference",
