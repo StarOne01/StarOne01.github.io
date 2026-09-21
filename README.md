@@ -1,4 +1,4 @@
-# Prashanth T. — @StarOne01
+# Prashanth T. (@StarOne01)
 
 **Systems Engineer building at the intersection of hardware and AI.**
 
@@ -10,7 +10,7 @@ module @starone01 {
 
 Final-year EEE student working the gap between hardware and software: compilers, inference, and the systems that make AI run on real silicon. Self-taught, starting on a phone through Termux before I ever owned a laptop.
 
-Since then: a production multilingual clinical AI system, 16 LLVM contributions, a film engine on custom embeddings, and multilingual LLM research. Now going deep on compiler internals and MLIR, the layer where models actually meet hardware.
+Since then: a production multilingual clinical AI system, LLVM contributions, a film engine on custom embeddings, and multilingual LLM research. Now going deep on compiler internals and MLIR, the layer where models actually meet hardware.
 
 Live portfolio: **[starone01.me](https://starone01.me)** · Coimbatore, Tamil Nadu
 
@@ -19,7 +19,7 @@ Live portfolio: **[starone01.me](https://starone01.me)** · Coimbatore, Tamil Na
 ## Focus areas
 
 **Compilers & LLVM**
-16 contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.
+Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.
 
 **Production ASR & Clinical AI**
 IndicConformer speech recognition paired with a fine-tuned Gemma model for clinical note generation, built solo for doctors in Indian Tier-2/3 cities.
@@ -36,35 +36,35 @@ Custom embedding and content-fingerprinting techniques for recommendation, plus 
 
 | Project | What it is |
 |---|---|
-| **Medclara** — Clinical AI, Founding Engineer | Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, covering architecture, infra, and compliance solo. |
-| **[MoviesLikeThis](https://movieslikethis.starone01.me)** — Embeddings, Full Stack | The films that stay with you. Not "more sci-fi." Not "another action movie." Same feeling, different film: matched by emotional experience, not genre. |
-| **Sherlock SFT** — Fine-Tuning | Fine-tuned a character-consistent language model via supervised fine-tuning, iterating on training data quality and debugging a QLoRA NaN loss down to root cause. |
-| **[bfloat16](https://github.com/StarOne01/bfloat16)** — Open Source, Numerics | A lightweight C++ implementation of Google Brain's bfloat16 format. Same 8-bit exponent as FP32 with a 7-bit mantissa, the number format ML hardware actually speaks. |
+| **Medclara**, Clinical AI, Founding Engineer | Voice-first multilingual clinical documentation. IndicConformer for speech recognition with a fine-tuned Gemma model for clinical note generation, covering architecture, infra, and compliance solo. |
+| **[MoviesLikeThis](https://movieslikethis.starone01.me)**, Embeddings, Full Stack | The films that stay with you. Not "more sci-fi." Not "another action movie." Same feeling, different film: matched by emotional experience, not genre. |
+| **Sherlock SFT**, Fine-Tuning | Fine-tuned a character-consistent language model via supervised fine-tuning, iterating on training data quality and debugging a QLoRA NaN loss down to root cause. |
+| **[bfloat16](https://github.com/StarOne01/bfloat16)**, Open Source, Numerics | A lightweight C++ implementation of Google Brain's bfloat16 format. Same 8-bit exponent as FP32 with a 7-bit mantissa, the number format ML hardware actually speaks. |
 
-Also: **[PhraseNuX](https://github.com/StarOne01/PhraseNuX)** — C++ CLI password manager with AES encryption, zero dependencies, written entirely on a phone.
+Also: **[PhraseNuX](https://github.com/StarOne01/PhraseNuX)**, a C++ CLI password manager with AES encryption, zero dependencies, written entirely on a phone.
 
 ---
 
 ## Experience
 
-- **Creator @ MoviesLikeThis** — In production. The films that stay with you, matched by emotional experience, not genre.
-- **Founder @ Software Development Agency** — Present. Coimbatore-based agency funding other ventures. High-end web, custom AI agent systems, and enterprise software. [softwares.primesoma.com](https://softwares.primesoma.com)
-- **Open Source Contributor @ LLVM** — Ongoing. 16 contributions: X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.
-- **Founder @ primesoma** — Upcoming. Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health.
-- **Founding Engineer @ Medclara** — Past. Founding engineer and technical lead for the clinical AI pipeline described above.
+- **Creator @ MoviesLikeThis**, in production. The films that stay with you, matched by emotional experience, not genre.
+- **Founder @ Software Development Agency**, present. Coimbatore-based agency funding other ventures. High-end web, custom AI agent systems, and enterprise software. [softwares.primesoma.com](https://softwares.primesoma.com)
+- **Open Source Contributor @ LLVM**, ongoing. X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.
+- **Founder @ primesoma**, upcoming. Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health.
+- **Founding Engineer @ Medclara**, past. Founding engineer and technical lead for the clinical AI pipeline described above.
 
 ---
 
 ## Open source
 
-**LLVM — 16 contributions**
-Backend and codegen (X86 _Float16), frontend (Clang Sema diagnostic, 49 review comments), and libc docs. Tracking toward MLIR.
+**LLVM**
+Backend and codegen (X86 _Float16), frontend (Clang Sema diagnostic), and libc docs. Tracking toward MLIR.
 
-- `llvm/llvm-project` — profile pinned, all reviews public on GitHub.
+- `llvm/llvm-project`: profile pinned, all reviews public on GitHub.
 
 **Other**
-- `StarOne01/bfloat16` — bfloat16 in C++
-- `StarOne01/PhraseNuX` — secure CLI password manager
+- `StarOne01/bfloat16`: bfloat16 in C++
+- `StarOne01/PhraseNuX`: secure CLI password manager
 
 ---
 

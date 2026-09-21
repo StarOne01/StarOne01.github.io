@@ -5,7 +5,7 @@ export const site = {
   location: "Coimbatore, Tamil Nadu",
   bio: [
     "I'm Prashanth (StarOne01), a final-year EEE student working the gap between hardware and software: compilers, inference, and the systems that make AI run on real silicon. Self-taught, starting on a phone through Termux before I ever owned a laptop.",
-    "Since then: a production multilingual clinical AI system, 16 LLVM contributions, a film engine on custom embeddings, and multilingual LLM research. Now going deep on compiler internals and MLIR, the layer where models actually meet hardware.",
+    "Since then: a production multilingual clinical AI system, LLVM contributions, a film engine on custom embeddings, and multilingual LLM research. Now going deep on compiler internals and MLIR, the layer where models actually meet hardware.",
   ],
   tagline: "Systems engineer building at the intersection of hardware and AI.",
   typingLines: [
@@ -27,7 +27,7 @@ export const expertise = [
   {
     title: "Compilers & LLVM",
     description:
-      "16 contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.",
+      "Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.",
   },
   {
     title: "Production ASR & Clinical AI",
@@ -79,7 +79,7 @@ export const experience: readonly ExperienceItem[] = [
     period: "Ongoing",
     status: "ongoing" as const,
     description:
-      "16 contributions: X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.",
+      "X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.",
   },
   {
     role: "Founder",

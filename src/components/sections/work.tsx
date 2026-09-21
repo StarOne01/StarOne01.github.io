@@ -1,78 +1,58 @@
-"use client";
-import { motion } from "framer-motion";
 import { featuredWork } from "@/data/site";
 import SectionHeader from "@/components/ui/section-header";
 import Icon from "@/components/ui/icon";
 
 export default function Work() {
   return (
-    <section id="work" className="py-24 md:py-32 px-6 max-w-6xl mx-auto">
-      <SectionHeader
-        index="02"
-        pass="lower"
-        title="lower ideas to prod."
-        description="A few things I've built, researched, or shipped, all in production or open source."
-      />
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {featuredWork.map((item, i) => {
-          const op = item.name.toLowerCase().replace(/[^a-z]+/g, "_").replace(/^_|_$/g, "");
-          const card = (
-            <>
-              <div className="flex items-center justify-between mb-4 font-mono text-[13px]">
-                <span className="font-bold text-white">
-                  <span className="text-white/35 font-normal">op </span>
-                  <span className="text-emerald-300">@</span>{op}
+    <section id="work" className="border-y border-line bg-card">
+      <div className="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 md:py-32">
+        <SectionHeader
+          index="02"
+          eyebrow="Selected work"
+          title={<>Shipped & open-sourced.</>}
+        />
+        <ol className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          {featuredWork.map((item, i) => (
+            <li
+              key={item.name}
+              className="flex h-full flex-col rounded-2xl border border-line bg-paper p-6 transition-colors hover:border-ink active:border-ink md:p-8"
+            >
+              <span className="flex items-center justify-between">
+                <span className="font-mono text-[11px] text-moss" aria-hidden>
+                  {String(i + 1).padStart(2, "0")}
                 </span>
                 {item.href ? (
-                  <Icon
-                    name="external"
-                    className="w-4 h-4 text-white/30 group-hover:text-emerald-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
-                    aria-hidden
-                  />
-                ) : (
-                  <span className="text-[10px] tracking-[0.2em] uppercase text-white/30">
-                    {item.tag}
-                  </span>
-                )}
-              </div>
-
-              <h3 className="font-mono font-bold text-xl text-white mb-3 tracking-tight">
+                  <a
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    aria-label={`${item.name}, open link`}
+                    className="rounded-full p-1 text-muted transition-colors hover:text-ink"
+                  >
+                    <Icon name="arrow" className="h-4 w-4" aria-hidden />
+                  </a>
+                ) : null}
+              </span>
+              <span className="mt-6 block font-serif text-3xl font-medium tracking-tight md:text-4xl">
                 {item.name}
-              </h3>
-              <p className="text-white/65 text-[15px] leading-relaxed font-sans flex-1">
-                {item.description}
-              </p>
-            </>
-          );
-          const classes =
-            "group flex flex-col p-6 md:p-7 bg-white/[0.02] border border-white/10 hover:border-emerald-300/50 hover:bg-white/[0.04] active:border-emerald-300/50 transition-colors";
-          const motionProps = {
-            initial: { opacity: 0, y: 20 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true, margin: "-60px" },
-            transition: { duration: 0.5, delay: i * 0.08 },
-          };
-          if (item.href) {
-            return (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className={classes}
-                {...motionProps}
-              >
-                {card}
-              </motion.a>
-            );
-          }
-          return (
-            <motion.div key={item.name} className={classes} {...motionProps}>
-              {card}
-            </motion.div>
-          );
-        })}
+              </span>
+              <span className="mt-3">
+                <span className="inline-block rounded-full border border-line bg-card px-3 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
+                  {item.tag}
+                </span>
+              </span>
+              <details className="group mt-5" name="work">
+                <summary className="inline-flex cursor-pointer list-none items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-mossdeep hover:text-ink [&::-webkit-details-marker]:hidden">
+                  <span className="inline-block transition-transform group-open:rotate-45" aria-hidden>＋</span>
+                  About
+                </summary>
+                <span className="mt-3 block leading-relaxed text-muted">
+                  {item.description}
+                </span>
+              </details>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

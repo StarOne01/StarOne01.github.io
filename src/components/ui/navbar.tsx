@@ -4,214 +4,209 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { site } from "@/data/site";
-import Icon from "@/components/ui/icon";
 
 export default function Nav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("");
   const pathname = usePathname();
   const isHomePage = pathname === "/";
-  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 100);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        setScrolled(window.scrollY > 8);
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
+  // Push mode: shift header + content instead of locking scroll.
   useEffect(() => {
-    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    document.documentElement.classList.toggle("sidebar-open", open);
+    if (open) closeRef.current?.focus();
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.classList.remove("sidebar-open");
     };
-  }, [mobileMenuOpen]);
+  }, [open ]);
 
-  const closeMenu = () => {
-    setMobileMenuOpen(false);
-    requestAnimationFrame(() => triggerRef.current?.focus());
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        menuRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open ]);
+
+  // Scroll-spy: highlight the section currently in view.
+  useEffect(() => {
+    if (!isHomePage) return;
+    const ids = site.nav.map((n) => n.toLowerCase());
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        }
+      },
+      { rootMargin: "-35% 0px -55% 0px" }
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [isHomePage]);
+
+  const close = () => {
+    setOpen(false);
+    requestAnimationFrame(() => menuRef.current?.focus());
   };
 
   return (
-    <header
-      className={`fixed bottom-5 inset-x-0 z-[60] flex justify-center transition-opacity duration-300 ${
-        isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
-      }`}
-    >
-      <nav
-        className="flex items-center justify-between backdrop-blur-xl bg-[#0b0d10]/70 border border-white/10 rounded-full px-4 sm:px-5 py-2.5 max-w-[calc(100vw-2rem)] sm:max-w-xl lg:max-w-3xl w-full mx-4 sm:mx-auto shadow-[0_8px_32px_-8px_rgba(0,0,0,0.5)]"
-        aria-label="Global"
-      >
-        <Link href="/" className="flex items-center gap-2 group font-mono text-xs" aria-label={`${site.name} home`}>
-          <span className="text-emerald-300" aria-hidden>%_</span>
-          <span className="text-white/85 group-hover:text-emerald-300 tracking-[0.15em] uppercase transition-colors">
+    <>
+      <header className="site-shift fixed inset-x-0 bottom-3 z-[60] px-3 sm:bottom-4 sm:px-5">
+        <nav
+          aria-label="Global"
+          className={`mx-auto flex h-14 max-w-6xl items-center justify-between rounded-2xl px-4 transition-all duration-300 sm:px-5 ${
+            scrolled
+              ? "border border-line bg-paper/90 shadow-[0_12px_32px_-16px_rgba(28,27,23,0.25)] backdrop-blur-md"
+              : "border border-transparent bg-transparent"
+          }`}
+        >
+          <Link href="/" className="font-serif text-lg font-semibold tracking-tight" aria-label={`${site.name} home`}>
             {site.handle}
-          </span>
-        </Link>
+          </Link>
 
-        <div className="hidden lg:flex lg:gap-1" role="list">
-          {isHomePage ? (
-            site.nav.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                role="listitem"
-                className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-emerald-300 active:text-emerald-300 transition-colors"
-              >
-                {item}
-              </a>
-            ))
-          ) : (
-            <Link href="/" className="px-3 py-1.5 font-mono text-[11px] tracking-[0.15em] text-white/55 hover:text-emerald-300 transition-colors">
-              ← home
-            </Link>
-          )}
+          <div className="flex items-center gap-1 sm:gap-2">
+            <a
+              href={site.socials.email.href}
+              className="hidden font-mono text-[11px] uppercase tracking-[0.18em] text-muted transition-colors hover:text-ink md:inline"
+            >
+              {site.email}
+            </a>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent("terminal:open"))}
+              aria-label="Open terminal"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full font-mono text-xs text-muted transition-colors hover:bg-ink/5 hover:text-ink"
+            >
+              &gt;_
+            </button>
+            <button
+              ref={menuRef}
+              type="button"
+              aria-label="Open menu"
+              aria-expanded={open}
+              aria-controls="site-sidebar"
+              onClick={() => setOpen(true)}
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-full px-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink/5"
+            >
+              <Bars3Icon className="h-5 w-5" aria-hidden />
+              Menu
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Sidebar (right, push) */}
+      <aside
+        id="site-sidebar"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Site menu"
+        aria-hidden={!open}
+        className={`fixed bottom-0 right-0 top-0 z-[80] flex w-[min(88vw,380px)] flex-col border-l border-line bg-paper transition-transform duration-300 ease-out ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex h-16 items-center justify-between border-b border-line px-5 sm:px-6">
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-moss">Index</span>
+          <button
+            ref={closeRef}
+            type="button"
+            onClick={close}
+            aria-label="Close menu"
+            tabIndex={open ? 0 : -1}
+            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full text-ink transition-colors hover:bg-ink/5"
+          >
+            <XMarkIcon className="h-5 w-5" aria-hidden />
+          </button>
         </div>
 
-        <div className="hidden lg:flex items-center gap-0.5">
-          <a
-            href={site.socials.email.href}
-            aria-label="Email Prashanth"
-            className="p-2 hover:bg-white/10 text-white/55 hover:text-emerald-300 transition-colors"
-          >
-            <Icon name="email" className="w-3.5 h-3.5" aria-hidden />
-          </a>
-          <a
-            href={site.socials.linkedin.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Prashanth on LinkedIn (opens in new tab)"
-            className="p-2 hover:bg-white/10 text-white/55 hover:text-emerald-300 transition-colors"
-          >
-            <Icon name="linkedin" className="w-3.5 h-3.5" aria-hidden />
-          </a>
-          <a
-            href={site.socials.github.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Prashanth on GitHub (opens in new tab)"
-            className="p-2 hover:bg-white/10 text-white/55 hover:text-emerald-300 transition-colors"
-          >
-            <Icon name="github" className="w-3.5 h-3.5" aria-hidden />
-          </a>
-          <a
-            href={site.socials.x.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Prashanth on X (opens in new tab)"
-            className="p-2 hover:bg-white/10 text-white/55 hover:text-emerald-300 transition-colors"
-          >
-            <Icon name="x" className="w-3.5 h-3.5" aria-hidden />
-          </a>
-        </div>
-
-        <button
-          ref={triggerRef}
-          type="button"
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileMenuOpen}
-          aria-controls="mobile-menu"
-          className="lg:hidden -mr-1 inline-flex items-center justify-center p-2 text-white/80 hover:bg-white/10 rounded-full transition-colors"
-          onClick={() => setMobileMenuOpen((o) => !o)}
-        >
-          {mobileMenuOpen ? (
-            <XMarkIcon className="w-5 h-5" aria-hidden />
-          ) : (
-            <Bars3Icon className="w-5 h-5" aria-hidden />
-          )}
-        </button>
-      </nav>
-
-      {mobileMenuOpen && (
-        <div
-          id="mobile-menu"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Mobile navigation"
-          className="lg:hidden fixed inset-0 z-[80]"
-        >
-          <div
-            className="absolute inset-0 bg-black/85 backdrop-blur-md"
-            onClick={closeMenu}
-            aria-hidden
-          />
-          <div className="absolute bottom-0 inset-x-0 bg-[#0b0d10] border-t border-white/12 p-6 pb-10 max-h-[80vh] overflow-y-auto">
-            <div className="flex items-center justify-between mb-6">
-              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-emerald-300">pass pipeline</span>
-              <button
-                onClick={closeMenu}
-                aria-label="Close menu"
-                className="p-2 text-white/70 hover:text-emerald-300"
-              >
-                <XMarkIcon className="w-5 h-5" aria-hidden />
-              </button>
-            </div>
-            <div className="space-y-1 mb-6">
-              {isHomePage ? (
-                site.nav.map((item, i) => (
+        <nav aria-label="Sidebar" className="flex-1 overflow-y-auto px-5 py-6 sm:px-6">
+          <ul>
+            {(isHomePage ? site.nav : ["Home"]).map((item, i) => (
+              <li key={item} className="border-b border-line first:border-t">
+                {isHomePage ? (
                   <a
-                    key={item}
                     href={`#${item.toLowerCase()}`}
-                    onClick={closeMenu}
-                    className="group flex items-baseline gap-4 px-4 py-3 hover:bg-white/5 active:bg-white/5 transition-colors"
+                    onClick={close}
+                    tabIndex={open ? 0 : -1}
+                    aria-current={active === item.toLowerCase() ? "location" : undefined}
+                    className="group flex min-h-[64px] items-baseline gap-4 py-4"
                   >
-                    <span className="font-mono text-[11px] text-emerald-300" aria-hidden>
-                      0{i + 1}
+                    <span
+                      className={`font-mono text-[11px] transition-colors ${active === item.toLowerCase() ? "text-moss" : "text-muted/50"}`}
+                      aria-hidden
+                    >
+                      {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="font-mono text-lg font-bold text-white/90 group-hover:text-emerald-300 transition-colors">
+                    <span
+                      className={`font-serif text-3xl font-medium tracking-tight transition-all duration-200 group-hover:translate-x-1 ${active === item.toLowerCase() ? "translate-x-1 text-mossdeep" : ""}`}
+                    >
                       {item}
                     </span>
                   </a>
-                ))
-              ) : (
-                <Link href="/" onClick={closeMenu} className="block px-4 py-3 font-mono text-lg font-bold text-white/90 hover:text-emerald-300 transition-colors">
-                  ← home
-                </Link>
-              )}
-            </div>
-            <div className="h-px bg-white/10 mb-6" aria-hidden />
-            <div className="grid grid-cols-4 gap-2">
-              <a
-                href={site.socials.email.href}
-                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
-                aria-label="Email Prashanth"
-              >
-                <Icon name="email" className="w-5 h-5" aria-hidden />
-                <span className="font-mono text-[10px] tracking-[0.2em] uppercase">email</span>
-              </a>
-              <a
-                href={site.socials.linkedin.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
-                aria-label="Prashanth on LinkedIn (opens in new tab)"
-              >
-                <Icon name="linkedin" className="w-5 h-5" aria-hidden />
-                <span className="font-mono text-[10px] tracking-[0.2em] uppercase">linkedin</span>
-              </a>
-              <a
-                href={site.socials.github.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
-                aria-label="Prashanth on GitHub (opens in new tab)"
-              >
-                <Icon name="github" className="w-5 h-5" aria-hidden />
-                <span className="font-mono text-[10px] tracking-[0.2em] uppercase">github</span>
-              </a>
-              <a
-                href={site.socials.x.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-4 bg-white/5 border border-white/10 text-white/80 hover:text-emerald-300 hover:border-emerald-300/40 transition-colors"
-                aria-label="Prashanth on X (opens in new tab)"
-              >
-                <Icon name="x" className="w-5 h-5" aria-hidden />
-                <span className="font-mono text-[10px] tracking-[0.2em] uppercase">x</span>
-              </a>
-            </div>
+                ) : (
+                  <Link
+                    href="/"
+                    onClick={close}
+                    tabIndex={open ? 0 : -1}
+                    className="group flex min-h-[64px] items-baseline gap-4 py-4"
+                  >
+                    <span className="font-mono text-[11px] text-moss" aria-hidden>01</span>
+                    <span className="font-serif text-3xl font-medium tracking-tight transition-transform duration-200 group-hover:translate-x-1">
+                      Home
+                    </span>
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={site.socials.email.href}
+            tabIndex={open ? 0 : -1}
+            className="mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-full bg-ink font-mono text-xs uppercase tracking-[0.14em] text-paper transition-colors hover:bg-moss"
+          >
+            {site.email}
+          </a>
+
+          <div className="mt-6 flex gap-6 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+            <a href={site.socials.linkedin.href} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} className="hover:text-ink">LinkedIn</a>
+            <a href={site.socials.github.href} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} className="hover:text-ink">GitHub</a>
+            <a href={site.socials.x.href} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} className="hover:text-ink">X</a>
           </div>
-        </div>
-      )}
-    </header>
+        </nav>
+
+        <p className="border-t border-line px-5 py-4 font-mono text-[10px] uppercase tracking-[0.18em] text-muted/70 sm:px-6">
+          Coimbatore · India
+        </p>
+      </aside>
+    </>
   );
 }

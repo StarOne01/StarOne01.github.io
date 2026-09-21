@@ -1,15 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/navbar";
-import Grain from "@/components/ui/grain";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import Terminal from "@/components/ui/terminal";
-import ScrollSpeed from "@/components/ui/scroll-speed";
-import SelectEgg from "@/components/ui/select-egg";
+import SideNotes from "@/components/ui/side-notes";
 import { site, stack, experience, expertise, featuredWork } from "@/data/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const serif = Space_Grotesk({ subsets: ["latin"], variable: "--font-serif" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 const SITE_URL = "https://starone01.me";
@@ -21,12 +20,12 @@ const STACK_FLAT = Object.values(stack)
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0B0D10" },
-    { media: "(prefers-color-scheme: light)", color: "#0B0D10" },
+    { media: "(prefers-color-scheme: dark)", color: "#F7F5EF" },
+    { media: "(prefers-color-scheme: light)", color: "#F7F5EF" },
   ],
   width: "device-width",
   initialScale: 1,
-  colorScheme: "dark",
+  colorScheme: "light",
 };
 
 export const metadata: Metadata = {
@@ -321,7 +320,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${serif.variable} ${mono.variable}`}>
       <head>
         <link rel="canonical" href={`${SITE_URL}/`} />
         <link rel="me" href={site.socials.linkedin.href} />
@@ -335,30 +334,33 @@ export default function RootLayout({
         <meta name="rating" content="General" />
         <meta name="distribution" content="Global" />
         <meta name="revisit-after" content="7 days" />
+        <meta name="theme-color" content="#F7F5EF" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "fab21eca730a430f8e5f7b324ac3e2cc", "spa": true}'
-        />
+        {/* Analytics only in production: the beacon's CORS policy rejects
+            localhost origins, so loading it in dev just throws console errors. */}
+        {process.env.NODE_ENV === "production" && (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "fab21eca730a430f8e5f7b324ac3e2cc", "spa": true}'
+          />
+        )}
       </head>
-      <body className="font-sans bg-[#0b0d10] text-white antialiased">
+      <body className="font-sans bg-paper text-ink antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded-md focus:font-mono focus:text-xs focus:tracking-widest focus:uppercase"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-ink focus:text-paper focus:rounded-md focus:font-mono focus:text-xs focus:tracking-widest focus:uppercase"
         >
           Skip to content
         </a>
-        <Grain />
         <ScrollProgress />
         <Nav />
-        <ScrollSpeed />
-        <SelectEgg />
         <Terminal />
-        {children}
+        <SideNotes />
+        <div className="site-shift">{children}</div>
       </body>
     </html>
   );

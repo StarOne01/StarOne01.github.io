@@ -1,6 +1,4 @@
-type IconProps = { className?: string };
-
-const paths = {
+const fills = {
   email: (
     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
   ),
@@ -17,34 +15,45 @@ const paths = {
   x: (
     <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
   ),
+} as const;
+
+const strokes = {
   arrow: (
     <path
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      d="M5 12h14m0 0-5-5m5 5-5 5"
+      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
     />
   ),
   external: (
     <path
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"
+      d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
     />
   ),
 } as const;
 
-export type IconName = keyof typeof paths;
+export type IconName = keyof typeof fills | keyof typeof strokes;
 
 export default function Icon({ name, className = "w-4 h-4" }: { name: IconName; className?: string }) {
+  if (name === "arrow" || name === "external") {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        className={className}
+      >
+        {strokes[name]}
+      </svg>
+    );
+  }
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className={className}>
-      {paths[name]}
+      {fills[name as keyof typeof fills]}
     </svg>
   );
 }

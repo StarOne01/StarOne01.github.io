@@ -1,33 +1,33 @@
-"use client";
 import { ReactNode } from "react";
 import { cn } from "@/utils/cn";
+import Parallax from "@/components/ui/parallax";
 
 interface SectionHeaderProps {
   index: string;
-  pass: string;
+  eyebrow: string;
   title: ReactNode;
   description?: string;
-  align?: "left" | "center";
   className?: string;
 }
 
-export default function SectionHeader({ index, pass, title, description, align = "left", className }: SectionHeaderProps) {
+export default function SectionHeader({ index, eyebrow, title, description, className }: SectionHeaderProps) {
   return (
-    <div className={cn("mb-12 md:mb-16", align === "center" && "text-center", className)}>
-      <div className={cn("flex items-center gap-4 mb-5", align === "center" && "justify-center")}>
-        <p className="font-mono text-xs md:text-sm text-emerald-300 shrink-0">
-          <span className="text-white/30">pass {index}/05: </span>"{pass}"
-        </p>
-        <span aria-hidden className={cn("h-px w-16 bg-gradient-to-r from-emerald-300/50 to-transparent", align === "center" && "hidden")} />
-      </div>
-      <h2 className="font-mono font-bold text-3xl sm:text-4xl md:text-5xl tracking-tight text-white leading-[1.05]">
-        {title}
-      </h2>
-      {description && (
-        <p className={cn("mt-5 text-white/55 text-base md:text-lg max-w-2xl leading-relaxed font-sans", align === "center" && "mx-auto")}>
-          {description}
-        </p>
-      )}
+    <div className={cn("mb-10 md:mb-14", className)}>
+      <Parallax amount={-50}>
+        <div className="mb-4 flex items-center gap-3">
+          <span className="font-mono text-[11px] tracking-[0.2em] text-moss">{index}</span>
+          <span aria-hidden className="h-px w-10 bg-line" />
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">{eyebrow}</span>
+        </div>
+        <h2 className="font-serif text-4xl font-medium tracking-tight text-balance sm:text-5xl">
+          {title}
+        </h2>
+        {description && (
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted md:text-lg">
+            {description}
+          </p>
+        )}
+      </Parallax>
     </div>
   );
 }

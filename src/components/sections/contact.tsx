@@ -1,8 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
 import { site } from "@/data/site";
 import SectionHeader from "@/components/ui/section-header";
 import Icon from "@/components/ui/icon";
+import Parallax from "@/components/ui/parallax";
 
 const channels = [
   site.socials.email,
@@ -13,68 +12,53 @@ const channels = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 md:py-32 px-6 max-w-6xl mx-auto relative">
+    <section id="contact" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 md:py-32">
       <SectionHeader
         index="05"
-        pass="link"
-        title="link externals."
-        description="Open to collaborations on compilers, ML systems, and tooling for serious problems. Cold emails welcome. I read all of them."
+        eyebrow="Contact"
+        title={<>Open to serious collaborations.</>}
+        description="Compilers, ML systems, tooling for real problems. Cold emails welcome. I read all of them."
       />
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        {channels.map((c, i) => {
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {channels.map((c) => {
           const iconName = c.label.toLowerCase() as "email" | "linkedin" | "github" | "x";
           return (
-            <motion.a
+            <a
               key={c.label}
               href={c.href}
               target={c.href.startsWith("http") ? "_blank" : undefined}
               rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="group relative flex items-center gap-4 p-5 bg-white/[0.02] border border-white/10 hover:border-emerald-300/60 hover:bg-emerald-300 active:bg-emerald-300 active:border-emerald-300 transition-colors"
+              className="group flex min-h-[76px] items-center gap-4 rounded-2xl border border-line bg-card p-5 transition-colors hover:border-ink active:border-ink"
               aria-label={`${c.label}: ${c.value}`}
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-white/[0.04] border border-white/10 text-white/80 group-hover:text-black group-hover:bg-black/10 group-hover:border-black/20 group-active:text-black group-active:bg-black/10 group-active:border-black/20 transition-colors">
-                <Icon name={iconName} className="w-4 h-4" aria-hidden />
-              </div>
-              <div className="flex-1 min-w-0 font-mono">
-                <p className="text-[10px] tracking-[0.25em] uppercase text-white/45 group-hover:text-black/60 group-active:text-black/60 mb-1">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-paper text-ink transition-colors group-hover:bg-ink group-hover:text-paper">
+                <Icon name={iconName} className="h-4 w-4" aria-hidden />
+              </span>
+              <span className="min-w-0 font-mono">
+                <span className="mb-1 block text-[10px] uppercase tracking-[0.22em] text-muted">
                   {c.label}
-                </p>
-                <p className="text-sm font-bold text-white/90 truncate group-hover:text-black group-active:text-black">
-                  {c.value}
-                </p>
-              </div>
-              <Icon
-                name="arrow"
-                className="w-3.5 h-3.5 text-white/40 group-hover:text-black group-hover:translate-x-1 group-active:text-black group-active:translate-x-1 transition-all"
-                aria-hidden
-              />
-            </motion.a>
+                </span>
+                <span className="block truncate text-sm font-bold text-ink">{c.value}</span>
+              </span>
+              <Icon name="arrow" className="ml-auto h-3.5 w-3.5 shrink-0 text-muted transition-transform group-hover:translate-x-1 group-hover:text-ink" aria-hidden />
+            </a>
           );
         })}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mt-20 md:mt-28 text-center font-mono"
-      >
-        <p className="text-[11px] tracking-[0.3em] uppercase text-white/40 mb-4">
-          or just write to me directly
-        </p>
-        <a
-          href={`mailto:${site.email}`}
-          className="inline-block text-xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white hover:text-emerald-300 active:text-emerald-300 transition-colors break-all"
-        >
-          {site.email}
-        </a>
-      </motion.div>
+      <Parallax amount={-50}>
+        <div className="mt-16 text-center md:mt-24">
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-muted">
+            Or write directly
+          </p>
+          <a
+            href={`mailto:${site.email}`}
+            className="inline-block max-w-full break-words font-serif text-3xl font-medium tracking-tight underline decoration-moss/30 underline-offset-8 hover:decoration-moss sm:text-5xl md:text-6xl"
+          >
+            {site.email}
+          </a>
+        </div>
+      </Parallax>
     </section>
   );
 }

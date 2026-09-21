@@ -1,53 +1,31 @@
 "use client";
 import { useEffect, useRef, useState, useId } from "react";
-import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 type CommandOutput = { kind: "in" | "out" | "err"; text: string };
 
 const commands: Record<string, string> = {
-  help: "available: about, work, passes, stack, contact, whoami, ls, clear, sudo, exit",
+  help: "available: about, work, stack, contact, whoami, ls, clear, sudo, exit",
   about: "Prashanth T. Systems Engineer. Coimbatore. Hardware-software gap: compilers, inference, and the systems underneath.",
   work: "Medclara (founding engineer, past) · MoviesLikeThis (live) · Sherlock SFT (fine-tuning).",
   stack: "Go · Python · C++ (favorite) · TypeScript · LLVM/MLIR · QLoRA · Qdrant",
   contact: "ping@starone01.me  ·  linkedin.com/in/StarOne01  ·  github.com/StarOne01",
-  projects: "Medclara (clinical AI) · MoviesLikeThis (embeddings) · PhraseNuX (C++ CLI) · bfloat16 (fp16)",
-  passes: "frontend(parse: about) → lower(work) → emit(experience) → dialects(stack) → link(contact). you are here.",
+  projects: "Medclara (clinical AI) · MoviesLikeThis (embeddings) · bfloat16 (C++ numerics)",
   whoami: "guest@starone01.me, you are not logged in. (this is a portfolio, not a server.)",
-  ls: "about.md  work.md  stack.md  contact.txt  resume.pdf",
+  ls: "about.md  work.md  stack.md  contact.txt",
   sudo: "nice try.",
-  banner: "",
   exit: "you can't exit a portfolio. keep scrolling.",
 };
 
-const banner = `
-  ███████╗████████╗ █████╗ ██████╗  ██████╗ ███╗   ██╗███████╗ ██████╗  ██╗
-  ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██╔════╝██╔═████╗███║
-  ███████╗   ██║   ███████║██████╔╝██║   ██║██╔██╗ ██║█████╗  ██║██╔██║╚██║
-  ╚════██║   ██║   ██╔══██║██╔══██╗██║   ██║██║╚██╗██║██╔══╝  ████╔╝██║ ██║
-  ███████║   ██║   ██║  ██║██║  ██║╚██████╔╝██║ ╚████║███████╗╚██████╔╝ ██║
-  ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝ ╚═════╝  ╚═╝
-`;
-
 export default function Terminal() {
   const [open, setOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
   const [history, setHistory] = useState<CommandOutput[]>([
-    { kind: "out", text: "starone01 :: portfolio v2.0, type 'help' to begin" },
+    { kind: "out", text: "starone01 :: portfolio, type 'help' to begin" },
   ]);
   const [input, setInput] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 100);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -63,8 +41,14 @@ export default function Terminal() {
   }, [open]);
 
   useEffect(() => {
+    const onOpen = () => setOpen(true);
+    window.addEventListener("terminal:open", onOpen);
+    return () => window.removeEventListener("terminal:open", onOpen);
+  }, []);
+
+  useEffect(() => {
     if (open) {
-      setTimeout(() => inputRef.current?.focus(), 100);
+      setTimeout(() => inputRef.current?.focus(), 60);
     }
   }, [open]);
 
@@ -82,11 +66,6 @@ export default function Terminal() {
       setInput("");
       return;
     }
-    if (raw === "banner") {
-      setHistory([...next, { kind: "out", text: banner }]);
-      setInput("");
-      return;
-    }
     const out = commands[raw];
     next.push({ kind: out ? "out" : "err", text: out ?? `command not found: ${raw}. try 'help'.` });
     setHistory(next);
@@ -95,97 +74,79 @@ export default function Terminal() {
 
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        aria-label="Open terminal (Ctrl+` or ⌘`)"
-        aria-expanded={open}
-        aria-haspopup="dialog"
-        className={`fixed bottom-5 max-sm:bottom-24 right-5 z-[55] font-mono text-[11px] tracking-[0.2em] uppercase text-white/55 hover:text-emerald-300 border border-white/15 hover:border-emerald-300/50 bg-[#0b0d10]/90 backdrop-blur-md px-3 py-2 transition-all duration-300 ${
-          isHomePage && !isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
-        }`}
-      >
-        &gt;_ term
-      </button>
-
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby={titleId}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed bottom-20 right-5 z-[70] w-[min(92vw,560px)] h-[min(60vh,420px)] bg-[#0b0d10] border border-white/15 shadow-2xl shadow-black flex flex-col overflow-hidden font-mono text-[12px]"
-          >
-            <div className="flex items-center justify-between px-4 py-2 border-b border-white/10 bg-white/[0.02]">
-              <div className="flex items-center gap-1.5" aria-hidden>
-                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-              </div>
-              <span id={titleId} className="text-white/55 text-[10px] tracking-[0.2em] uppercase">
-                starone01 · tty1
-              </span>
-              <button
-                onClick={() => setOpen(false)}
-                aria-label="Close terminal"
-                className="text-white/55 hover:text-white text-xs"
-              >
-                esc
-              </button>
+      {open && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={titleId}
+          className="fixed inset-x-4 bottom-[max(5rem,calc(env(safe-area-inset-bottom)+5rem))] z-[70] flex h-[min(62vh,440px)] flex-col overflow-hidden rounded-2xl border border-line bg-card font-mono text-[12px] text-ink shadow-[0_24px_64px_-16px_rgba(28,27,23,0.25)] sm:inset-x-auto sm:bottom-20 sm:right-6 sm:h-[min(60vh,420px)] sm:w-[min(92vw,560px)]"
+        >
+          <div className="flex items-center justify-between border-b border-line bg-paper px-4 py-2">
+            <div className="flex items-center gap-1.5" aria-hidden>
+              <span className="h-2.5 w-2.5 rounded-full bg-line" />
+              <span className="h-2.5 w-2.5 rounded-full bg-line" />
+              <span className="h-2.5 w-2.5 rounded-full bg-moss/60" />
             </div>
-
-            <div
-              ref={scrollRef}
-              role="log"
-              aria-live="polite"
-              aria-label="Terminal output"
-              className="flex-1 overflow-y-auto p-4 space-y-1"
+            <span id={titleId} className="text-[10px] uppercase tracking-[0.2em] text-muted">
+              starone01 · tty1
+            </span>
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Close terminal"
+              className="-mr-2 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-xs text-muted hover:text-ink"
             >
-              {history.map((line, i) => (
-                <div
-                  key={i}
-                  className={cn(
-                    "whitespace-pre-wrap break-words leading-relaxed",
-                    line.kind === "in" && "text-white",
-                    line.kind === "out" && "text-white/80",
-                    line.kind === "err" && "text-white/50 italic"
-                  )}
-                >
-                  {line.kind === "in" ? (
-                    <>
-                      <span className="text-white/55">guest@starone01</span>
-                      <span className="text-white/40"> ~ </span>
-                      <span>{line.text}</span>
-                    </>
-                  ) : (
-                    line.text
-                  )}
-                </div>
-              ))}
-            </div>
+              esc
+            </button>
+          </div>
 
-            <form onSubmit={submit} className="flex items-center gap-2 px-4 py-3 border-t border-white/10">
-              <label className="sr-only" htmlFor="terminal-input">Terminal command</label>
-              <span className="text-white/55" aria-hidden>guest@starone01</span>
-              <span className="text-white/40" aria-hidden>~</span>
-              <span className="text-white/55" aria-hidden>$</span>
-              <input
-                id="terminal-input"
-                ref={inputRef}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                spellCheck={false}
-                autoComplete="off"
-                className="flex-1 bg-transparent outline-none text-white placeholder:text-white/50"
-                placeholder="type a command…"
-              />
-            </form>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          <div
+            ref={scrollRef}
+            role="log"
+            aria-live="polite"
+            aria-label="Terminal output"
+            className="flex-1 space-y-1 overflow-y-auto p-4"
+          >
+            {history.map((line, i) => (
+              <div
+                key={i}
+                className={cn(
+                  "whitespace-pre-wrap break-words leading-relaxed",
+                  line.kind === "in" && "text-ink",
+                  line.kind === "out" && "text-ink/80",
+                  line.kind === "err" && "italic text-muted"
+                )}
+              >
+                {line.kind === "in" ? (
+                  <>
+                    <span className="text-moss">guest@starone01</span>
+                    <span className="text-muted"> ~ </span>
+                    <span>{line.text}</span>
+                  </>
+                ) : (
+                  line.text
+                )}
+              </div>
+            ))}
+          </div>
+
+          <form onSubmit={submit} className="flex items-center gap-2 border-t border-line bg-paper px-4 py-3">
+            <label className="sr-only" htmlFor="terminal-input">Terminal command</label>
+            <span className="text-moss" aria-hidden>guest@starone01</span>
+            <span className="text-muted" aria-hidden>~</span>
+            <span className="text-muted" aria-hidden>$</span>
+            <input
+              id="terminal-input"
+              ref={inputRef}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              spellCheck={false}
+              autoComplete="off"
+              className="flex-1 bg-transparent text-ink outline-none placeholder:text-muted/70"
+              placeholder="type a command…"
+            />
+          </form>
+        </div>
+      )}
     </>
   );
 }

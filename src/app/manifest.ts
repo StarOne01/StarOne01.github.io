@@ -9,8 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "ML Systems Engineer based in Coimbatore. Production ASR, compiler infrastructure, and distributed systems.",
     start_url: "/",
     display: "standalone",
-    background_color: "#000000",
-    theme_color: "#000000",
+    background_color: "#F7F5EF",
+    theme_color: "#F7F5EF",
     orientation: "portrait-primary",
     lang: "en-US",
     icons: [
