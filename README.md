@@ -50,7 +50,7 @@ Also: **[PhraseNuX](https://github.com/StarOne01/PhraseNuX)**, a C++ CLI passwor
 - **Creator @ MoviesLikeThis**, in production. The films that stay with you, matched by emotional experience, not genre.
 - **Founder @ Software Development Agency**, present. Coimbatore-based agency funding other ventures. High-end web, custom AI agent systems, and enterprise software. [softwares.primesoma.com](https://softwares.primesoma.com)
 - **Open Source Contributor @ LLVM**, ongoing. X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.
-- **Founder @ primesoma**, upcoming. Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health.
+- **Founder @ primesoma**, past. Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health.
 - **Founding Engineer @ Medclara**, past. Founding engineer and technical lead for the clinical AI pipeline described above.
 
 ---
@@ -72,7 +72,7 @@ Backend and codegen (X86 _Float16), frontend (Clang Sema diagnostic), and libc d
 
 **Languages:** Go, Python, C++ (favorite), TypeScript / Next.js
 
-**Systems & Compilers:** LLVM, MLIR (in progress), Compilers, System Design, Local LLM Inference, CUDA (in progress)
+**Systems & Compilers:** LLVM, MLIR (in progress), Compilers, System Design, CUDA (in progress)
 
 **ML / AI:** SFT / QLoRA, ASR Pipelines, Embeddings, RAG
 

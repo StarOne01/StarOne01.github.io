@@ -61,6 +61,7 @@ export const experience: readonly ExperienceItem[] = [
     company: "MoviesLikeThis",
     period: "In production",
     status: "active" as const,
+    href: "https://movieslikethis.starone01.me",
     description:
       "The films that stay with you. Not “more sci-fi.” Not “another action movie.” Same feeling, different film: matched by emotional experience, not genre.",
   },
@@ -84,8 +85,8 @@ export const experience: readonly ExperienceItem[] = [
   {
     role: "Founder",
     company: "primesoma",
-    period: "Upcoming",
-    status: "upcoming" as const,
+    period: "Past",
+    status: "past" as const,
     description:
       "Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health. Owning the entire stack end-to-end.",
   },
@@ -103,7 +104,7 @@ export type StackItem = string | { name: string; fav?: boolean; note?: string };
 
 export const stack: Record<string, readonly StackItem[]> = {
   Languages: ["Go", "Python", { name: "C++", fav: true }, "TypeScript / Next.js"],
-  "Systems & Compilers": ["LLVM", { name: "MLIR", note: "in progress" }, "Compilers", "System Design", "Local LLM Inference", { name: "CUDA", note: "in progress" }],
+  "Systems & Compilers": ["LLVM", { name: "MLIR", note: "in progress" }, "Compilers", "System Design", { name: "CUDA", note: "in progress" }],
   "ML / AI": ["SFT / QLoRA", "ASR Pipelines", "Embeddings", "RAG"],
   "Infra & Data": ["AWS", "GCP", "PostgreSQL", "Qdrant", "Fedora"],
 };

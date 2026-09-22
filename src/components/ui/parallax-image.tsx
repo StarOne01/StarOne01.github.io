@@ -6,13 +6,15 @@ interface ParallaxImageProps {
   src: string;
   alt: string;
   eager?: boolean;
+  srcSet?: string;
+  sizes?: string;
 }
 
 /**
  * Scroll parallax for framed photos, driven by the shared scroll hub
  * (batched reads before writes, one listener for all layers).
  */
-export default function ParallaxImage({ src, alt, eager = false }: ParallaxImageProps) {
+export default function ParallaxImage({ src, alt, eager = false, srcSet, sizes }: ParallaxImageProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,6 +40,8 @@ export default function ParallaxImage({ src, alt, eager = false }: ParallaxImage
         alt={alt}
         loading={eager ? "eager" : "lazy"}
         fetchPriority={eager ? "high" : "auto"}
+        srcSet={srcSet}
+        sizes={sizes}
         className="h-full w-full object-cover"
       />
     </div>

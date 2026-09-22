@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/navbar";
@@ -55,7 +56,6 @@ export const metadata: Metadata = {
     "RAG",
     "Qdrant",
     "Ollama",
-    "Local LLM Inference",
     "CUDA",
     "Go",
     "C++",
@@ -290,7 +290,7 @@ const jsonLd = {
           name: `What does ${site.name} work on?`,
           acceptedAnswer: {
             "@type": "Answer",
-            text: `He works on production Automatic Speech Recognition (ASR), Conformer, RNN-T, CTC, and Whisper fine-tuning with QLoRA, plus on-premise LLM inference with Ollama. He is an active LLVM contributor and founder of Medclara (clinical documentation, past), the Software Development Agency, and primesoma (wellness ecosystem, upcoming).`,
+            text: `He works on production Automatic Speech Recognition (ASR), Conformer, RNN-T, CTC, and Whisper fine-tuning with QLoRA, plus on-premise LLM inference with Ollama. He is an active LLVM contributor and founder of Medclara (clinical documentation, past), the Software Development Agency, and primesoma (wellness ecosystem, past).`,
           },
         },
         {
@@ -346,13 +346,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Analytics only in production: the beacon's CORS policy rejects
-            localhost origins, so loading it in dev just throws console errors. */}
+        {/* Analytics, production only. lazyOnload injects the beacon during
+            browser idle time, so it never competes on the critical path. */}
         {process.env.NODE_ENV === "production" && (
-          <script
-            defer
+          <Script
             src="https://static.cloudflareinsights.com/beacon.min.js"
             data-cf-beacon='{"token": "fab21eca730a430f8e5f7b324ac3e2cc", "spa": true}'
+            strategy="lazyOnload"
           />
         )}
       </head>

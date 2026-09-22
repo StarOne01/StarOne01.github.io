@@ -6,7 +6,7 @@ const statusDot: Record<string, string> = {
   active: "bg-moss",
   development: "bg-moss/60",
   upcoming: "bg-amber-500",
-  ongoing: "bg-ink/40",
+  ongoing: "bg-blue-600",
   past: "bg-ink/20",
 };
 

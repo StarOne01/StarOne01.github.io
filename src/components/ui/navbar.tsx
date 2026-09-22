@@ -4,11 +4,13 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { site } from "@/data/site";
+import Icon from "@/components/ui/icon";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
+  const [awake, setAwake] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -21,6 +23,10 @@ export default function Nav() {
       raf = requestAnimationFrame(() => {
         raf = 0;
         setScrolled(window.scrollY > 8);
+        // Any scroll wakes the nav; short pages show it outright.
+        const scrollable =
+          document.documentElement.scrollHeight > window.innerHeight + 40;
+        setAwake(!scrollable || window.scrollY > 40);
       });
     };
     onScroll();
@@ -31,7 +37,6 @@ export default function Nav() {
     };
   }, []);
 
-  // Push mode: shift header + content instead of locking scroll.
   useEffect(() => {
     document.documentElement.classList.toggle("sidebar-open", open);
     if (open) closeRef.current?.focus();
@@ -82,6 +87,8 @@ export default function Nav() {
         <nav
           aria-label="Global"
           className={`mx-auto flex h-14 max-w-6xl items-center justify-between rounded-2xl px-4 transition-all duration-300 sm:px-5 ${
+            awake ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-[160%] opacity-0"
+          } ${
             scrolled
               ? "border border-line bg-paper/90 shadow-[0_12px_32px_-16px_rgba(28,27,23,0.25)] backdrop-blur-md"
               : "border border-transparent bg-transparent"
@@ -102,6 +109,7 @@ export default function Nav() {
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent("terminal:open"))}
               aria-label="Open terminal"
+              tabIndex={awake ? 0 : -1}
               className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full font-mono text-xs text-muted transition-colors hover:bg-ink/5 hover:text-ink"
             >
               &gt;_
@@ -109,13 +117,18 @@ export default function Nav() {
             <button
               ref={menuRef}
               type="button"
-              aria-label="Open menu"
+              aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               aria-controls="site-sidebar"
-              onClick={() => setOpen(true)}
+              onClick={() => (open ? close() : setOpen(true))}
+              tabIndex={awake ? 0 : -1}
               className="inline-flex min-h-[44px] items-center gap-2 rounded-full px-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-ink/5"
             >
-              <Bars3Icon className="h-5 w-5" aria-hidden />
+              {open ? (
+                <XMarkIcon className="h-5 w-5" aria-hidden />
+              ) : (
+                <Bars3Icon className="h-5 w-5" aria-hidden />
+              )}
               Menu
             </button>
           </div>
@@ -133,21 +146,7 @@ export default function Nav() {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex h-16 items-center justify-between border-b border-line px-5 sm:px-6">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-moss">Index</span>
-          <button
-            ref={closeRef}
-            type="button"
-            onClick={close}
-            aria-label="Close menu"
-            tabIndex={open ? 0 : -1}
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full text-ink transition-colors hover:bg-ink/5"
-          >
-            <XMarkIcon className="h-5 w-5" aria-hidden />
-          </button>
-        </div>
-
-        <nav aria-label="Sidebar" className="flex-1 overflow-y-auto px-5 py-6 sm:px-6">
+        <nav aria-label="Sidebar" className="flex flex-1 flex-col justify-end overflow-y-auto px-5 pb-6 pt-16 sm:px-6">
           <ul>
             {(isHomePage ? site.nav : ["Home"]).map((item, i) => (
               <li key={item} className="border-b border-line first:border-t">
@@ -196,16 +195,55 @@ export default function Nav() {
             {site.email}
           </a>
 
-          <div className="mt-6 flex gap-6 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-            <a href={site.socials.linkedin.href} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} className="hover:text-ink">LinkedIn</a>
-            <a href={site.socials.github.href} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} className="hover:text-ink">GitHub</a>
-            <a href={site.socials.x.href} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} className="hover:text-ink">X</a>
+          <div className="mt-6 grid grid-cols-3 gap-2">
+            <a
+              href={site.socials.linkedin.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={open ? 0 : -1}
+              aria-label="Prashanth on LinkedIn (opens in new tab)"
+              className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-line font-mono text-xs uppercase tracking-[0.14em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper active:border-ink active:bg-ink active:text-paper"
+            >
+              <Icon name="linkedin" className="h-5 w-5" aria-hidden />
+            </a>
+            <a
+              href={site.socials.github.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={open ? 0 : -1}
+              aria-label="Prashanth on GitHub (opens in new tab)"
+              className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-line font-mono text-xs uppercase tracking-[0.14em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper active:border-ink active:bg-ink active:text-paper"
+            >
+              <Icon name="github" className="h-5 w-5" aria-hidden />
+            </a>
+            <a
+              href={site.socials.x.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={open ? 0 : -1}
+              aria-label="Prashanth on X (opens in new tab)"
+              className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-line font-mono text-xs uppercase tracking-[0.14em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper active:border-ink active:bg-ink active:text-paper"
+            >
+              <Icon name="x" className="h-4 w-4" aria-hidden />
+            </a>
           </div>
         </nav>
 
-        <p className="border-t border-line px-5 py-4 font-mono text-[10px] uppercase tracking-[0.18em] text-muted/70 sm:px-6">
-          Coimbatore · India
-        </p>
+        <div className="flex items-center justify-between border-t border-line py-3 pl-5 pr-3 sm:pl-6 sm:pr-4">
+          <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted/70">
+            Coimbatore · India
+          </p>
+          <button
+            ref={closeRef}
+            type="button"
+            onClick={close}
+            aria-label="Close menu"
+            tabIndex={open ? 0 : -1}
+            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full text-ink transition-colors hover:bg-ink/5"
+          >
+            <XMarkIcon className="h-5 w-5" aria-hidden />
+          </button>
+        </div>
       </aside>
     </>
   );
