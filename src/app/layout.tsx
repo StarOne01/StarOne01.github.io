@@ -335,6 +335,13 @@ export default function RootLayout({
         <meta name="distribution" content="Global" />
         <meta name="revisit-after" content="7 days" />
         <meta name="theme-color" content="#F7F5EF" />
+        {/* LCP: hero image discovered in <head>, not after React hydrates */}
+        <link
+          rel="preload"
+          as="image"
+          href="/electric-green-aurora-storm-mountains.webp"
+          fetchPriority="high"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

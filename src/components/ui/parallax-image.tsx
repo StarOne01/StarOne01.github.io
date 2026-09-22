@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { subscribeParallax, prefersReducedMotion } from "@/components/ui/scroll-hub";
 
 interface ParallaxImageProps {
   src: string;
@@ -8,10 +9,8 @@ interface ParallaxImageProps {
 }
 
 /**
- * Subtle scroll parallax for framed photos. The image layer is taller than
- * its overflow-hidden frame and drifts ±18% of the frame height as it crosses
- * the viewport. One rAF-throttled listener, GPU transform only, and fully
- * static when the user prefers reduced motion.
+ * Scroll parallax for framed photos, driven by the shared scroll hub
+ * (batched reads before writes, one listener for all layers).
  */
 export default function ParallaxImage({ src, alt, eager = false }: ParallaxImageProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,29 +19,15 @@ export default function ParallaxImage({ src, alt, eager = false }: ParallaxImage
     const el = ref.current;
     const frame = el?.parentElement;
     if (!el || !frame) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (prefersReducedMotion()) return;
 
-    let raf = 0;
-    const update = () => {
-      raf = 0;
-      const rect = frame.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const progress = Math.min(1, Math.max(0, (vh - rect.top) / (vh + rect.height)));
-      const travel = rect.height * 0.36;
-      el.style.transform = `translate3d(0, ${((0.5 - progress) * travel).toFixed(1)}px, 0)`;
-    };
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(update);
-    };
-
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
+    return subscribeParallax({
+      frame,
+      apply: (progress, frameHeight) => {
+        const travel = frameHeight * 0.36;
+        el.style.transform = `translate3d(0, ${((0.5 - progress) * travel).toFixed(1)}px, 0)`;
+      },
+    });
   }, []);
 
   return (
@@ -52,6 +37,7 @@ export default function ParallaxImage({ src, alt, eager = false }: ParallaxImage
         src={src}
         alt={alt}
         loading={eager ? "eager" : "lazy"}
+        fetchPriority={eager ? "high" : "auto"}
         className="h-full w-full object-cover"
       />
     </div>

@@ -1,6 +1,6 @@
 # Prashanth T. (@StarOne01)
 
-**Systems Engineer building at the intersection of hardware and AI.**
+**Systems Engineer. AI systems that run on real silicon.**
 
 ```mlir
 module @starone01 {
@@ -32,7 +32,7 @@ Custom embedding and content-fingerprinting techniques for recommendation, plus 
 
 ---
 
-## Featured work
+## Selected work
 
 | Project | What it is |
 |---|---|
@@ -92,7 +92,9 @@ Backend and codegen (X86 _Float16), frontend (Clang Sema diagnostic), and libc d
 
 ## This portfolio repo
 
-This site is built with Next.js, TypeScript, Tailwind, and Framer Motion. Static export to GitHub Pages.
+Light editorial design: paper background, Space Grotesk display type, Inter body, JetBrains Mono labels. Right push sidebar with scroll-spy, rAF scroll parallax on photos and headlines, expandable work and experience entries, pop-up terminal (`Ctrl/⌘ + \``), AI-generated aurora imagery.
+
+Built with Next.js, TypeScript, and Tailwind. Static export to GitHub Pages.
 
 ```bash
 bun install
@@ -100,4 +102,4 @@ bun run dev      # http://localhost:3000
 bun run build    # static export to dist/
 ```
 
-Deployed from `main` to `starone01.me` via GitHub Pages. Analytics via Cloudflare Web Analytics. No em dashes were harmed in the making of this README.
+Deployed from `main` to `starone01.me` via GitHub Pages. Analytics via Cloudflare Web Analytics (production only).
