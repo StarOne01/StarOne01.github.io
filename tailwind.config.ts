@@ -13,7 +13,6 @@ const config: Config = {
         sans: ["var(--font-sans)"],
         display: ["var(--font-display)"],
         mono: ["var(--font-mono)"],
-        hero: ["var(--font-hero)"],
       },
       colors: {
         bg: "#080A08",

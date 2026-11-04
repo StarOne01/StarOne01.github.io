@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { Inter, Space_Grotesk, JetBrains_Mono, Fredoka } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/navbar";
 import ScrollProgress from "@/components/ui/scroll-progress";
@@ -11,7 +11,6 @@ import { site, stack, experience, expertise, featuredWork } from "@/data/site";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
-const hero = Fredoka({ subsets: ["latin"], variable: "--font-hero" });
 
 const SITE_URL = "https://starone01.me";
 const FULL_NAME = "Prashanth T.";
@@ -321,7 +320,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${display.variable} ${mono.variable} ${hero.variable}`}>
+    <html lang="en" className={`${inter.variable} ${display.variable} ${mono.variable}`}>
       <head>
         <link rel="canonical" href={`${SITE_URL}/`} />
         <link rel="me" href={site.socials.linkedin.href} />
