@@ -37,12 +37,17 @@ export default function Experience() {
                   {item.href && (
                     <a
                       href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      {...(item.href.startsWith("http")
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
                       className="whitespace-nowrap text-accent underline-offset-4 hover:underline"
                     >
-                      Visit
-                      <Icon name="external" className="mb-0.5 ml-1 inline h-3.5 w-3.5" aria-hidden />
+                      {item.linkLabel ?? "Visit"}
+                      <Icon
+                        name={item.href.startsWith("http") ? "external" : "arrow"}
+                        className="mb-0.5 ml-1 inline h-3.5 w-3.5"
+                        aria-hidden
+                      />
                     </a>
                   )}
                 </p>

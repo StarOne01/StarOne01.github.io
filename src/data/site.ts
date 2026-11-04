@@ -53,6 +53,7 @@ export type ExperienceItem = {
   period: string;
   status: "active" | "upcoming" | "development" | "ongoing" | "past";
   href?: string;
+  linkLabel?: string;
   description: string;
 };
 
@@ -80,6 +81,8 @@ export const experience: readonly ExperienceItem[] = [
     company: "LLVM",
     period: "Ongoing",
     status: "ongoing" as const,
+    href: "/opensource",
+    linkLabel: "PR log",
     description:
       "X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.",
   },

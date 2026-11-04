@@ -13,6 +13,16 @@ export default function Nav() {
   const [awake, setAwake] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const isOpenSource = pathname.startsWith("/opensource");
+  const menuItems = isHomePage
+    ? [
+        ...site.nav.map((item) => ({ label: item, href: `#${item.toLowerCase()}` })),
+        { label: "Open Source", href: "/opensource" },
+      ]
+    : [
+        { label: "Home", href: "/" },
+        { label: "Open Source", href: "/opensource" },
+      ];
   const closeRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLButtonElement>(null);
 
@@ -103,15 +113,15 @@ export default function Nav() {
           </Link>
 
           <div className="flex items-center gap-1 sm:gap-2">
-            <a
-              href={site.socials.blog.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden items-center gap-1 font-mono text-[10px] uppercase tracking-[0.18em] text-dim transition-colors hover:text-accent sm:inline-flex"
+            <Link
+              href="/opensource"
+              aria-current={isOpenSource ? "page" : undefined}
+              className={`hidden items-center font-mono text-[10px] uppercase tracking-[0.18em] transition-colors hover:text-accent sm:inline-flex ${
+                isOpenSource ? "text-accent" : "text-dim"
+              }`}
             >
-              Blog
-              <span aria-hidden>↗</span>
-            </a>
+              Open source
+            </Link>
             <a
               href={site.socials.email.href}
               className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-dim transition-colors hover:text-accent md:inline"
@@ -164,49 +174,58 @@ export default function Nav() {
           className="flex flex-1 flex-col justify-end overflow-y-auto px-5 pb-6 pt-16 sm:px-6"
         >
           <ul>
-            {(isHomePage ? site.nav : ["Home"]).map((item, i) => (
-              <li key={item} className="border-b border-edge first:border-t">
-                {isHomePage ? (
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    onClick={close}
-                    tabIndex={open ? 0 : -1}
-                    aria-current={active === item.toLowerCase() ? "location" : undefined}
-                    className="group flex min-h-[64px] items-baseline gap-4 py-4"
+            {menuItems.map((item, i) => {
+              const isAnchor = item.href.startsWith("#");
+              const isCurrent = isAnchor
+                ? active === item.href.slice(1)
+                : pathname === item.href;
+
+              const inner = (
+                <>
+                  <span
+                    className={`font-mono text-[11px] transition-colors ${
+                      isCurrent ? "text-accent" : "text-faint"
+                    }`}
+                    aria-hidden
                   >
-                    <span
-                      className={`font-mono text-[11px] transition-colors ${
-                        active === item.toLowerCase() ? "text-accent" : "text-faint"
-                      }`}
-                      aria-hidden
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span
-                      className={`font-display text-3xl font-medium uppercase tracking-tight transition-colors group-hover:text-accent ${
-                        active === item.toLowerCase() ? "text-accent" : "text-ink"
-                      }`}
-                    >
-                      {item}
-                    </span>
-                  </a>
-                ) : (
-                  <Link
-                    href="/"
-                    onClick={close}
-                    tabIndex={open ? 0 : -1}
-                    className="group flex min-h-[64px] items-baseline gap-4 py-4"
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className={`font-display text-3xl font-medium uppercase tracking-tight transition-colors group-hover:text-accent ${
+                      isCurrent ? "text-accent" : "text-ink"
+                    }`}
                   >
-                    <span className="font-mono text-[11px] text-faint" aria-hidden>
-                      01
-                    </span>
-                    <span className="font-display text-3xl font-medium uppercase tracking-tight text-ink transition-colors group-hover:text-accent">
-                      Home
-                    </span>
-                  </Link>
-                )}
-              </li>
-            ))}
+                    {item.label}
+                  </span>
+                </>
+              );
+
+              return (
+                <li key={item.href} className="border-b border-edge first:border-t">
+                  {isAnchor ? (
+                    <a
+                      href={item.href}
+                      onClick={close}
+                      tabIndex={open ? 0 : -1}
+                      aria-current={isCurrent ? "location" : undefined}
+                      className="group flex min-h-[64px] items-baseline gap-4 py-4"
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      onClick={close}
+                      tabIndex={open ? 0 : -1}
+                      aria-current={isCurrent ? "page" : undefined}
+                      className="group flex min-h-[64px] items-baseline gap-4 py-4"
+                    >
+                      {inner}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
 
           <a
@@ -217,8 +236,8 @@ export default function Nav() {
             {site.email}
           </a>
 
-          <div className="mt-6 grid grid-cols-4 gap-2">
-            {[site.socials.linkedin, site.socials.github, site.socials.x, site.socials.blog].map((social) => (
+          <div className="mt-6 grid grid-cols-3 gap-2">
+            {[site.socials.linkedin, site.socials.github, site.socials.x].map((social) => (
               <a
                 key={social.label}
                 href={social.href}

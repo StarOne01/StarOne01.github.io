@@ -26,7 +26,7 @@ export default function Hero() {
           <span>sys.portfolio / 2026</span>
         </div>
 
-        <h1 className="mt-6 font-display text-[clamp(2.6rem,6.2vw,5.6rem)] font-semibold leading-[1.02] tracking-[-0.035em]">
+        <h1 className="mt-6 font-display text-[clamp(2.6rem,6.2vw,5.6rem)] font-semibold italic leading-[1.02] tracking-[-0.035em]">
           AI systems that run
           <br />
           on <span className="text-accent">real silicon</span>

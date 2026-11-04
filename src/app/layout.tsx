@@ -322,7 +322,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${display.variable} ${mono.variable}`}>
       <head>
-        <link rel="canonical" href={`${SITE_URL}/`} />
         <link rel="me" href={site.socials.linkedin.href} />
         <link rel="me" href={site.socials.github.href} />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary" />
