@@ -248,7 +248,7 @@ export default function Nav() {
                 className="inline-flex min-h-[52px] items-center justify-center rounded-sm border border-edge text-dim transition-colors hover:border-accent hover:bg-accent hover:text-black"
               >
                 <Icon
-                  name={social.label.toLowerCase() as "linkedin" | "github" | "x" | "blog"}
+                  name={social.label.toLowerCase() as "linkedin" | "github" | "x"}
                   className="h-5 w-5"
                   aria-hidden
                 />

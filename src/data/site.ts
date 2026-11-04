@@ -16,7 +16,6 @@ export const site = {
   email: "ping@starone01.me",
   socials: {
     email: { label: "Email", value: "ping@starone01.me", href: "mailto:ping@starone01.me" },
-    blog: { label: "Blog", value: "blogs.starone01.me", href: "https://blogs.starone01.me" },
     linkedin: { label: "LinkedIn", value: "in/StarOne01", href: "https://www.linkedin.com/in/StarOne01/" },
     github: { label: "GitHub", value: "@StarOne01", href: "https://github.com/StarOne01" },
     x: { label: "X", value: "@iamstarone01", href: "https://x.com/iamstarone01" },
