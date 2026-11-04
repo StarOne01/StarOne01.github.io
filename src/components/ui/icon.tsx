@@ -32,12 +32,19 @@ const strokes = {
       d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
     />
   ),
+  blog: (
+    <>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 11a9 9 0 0 1 9 9" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 4a16 16 0 0 1 16 16" />
+      <circle cx="5" cy="19" r="1.6" fill="currentColor" stroke="none" />
+    </>
+  ),
 } as const;
 
 export type IconName = keyof typeof fills | keyof typeof strokes;
 
 export default function Icon({ name, className = "w-4 h-4" }: { name: IconName; className?: string }) {
-  if (name === "arrow" || name === "external") {
+  if (name === "arrow" || name === "external" || name === "blog") {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"

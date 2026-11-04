@@ -4,6 +4,7 @@ import Icon from "@/components/ui/icon";
 
 const channels = [
   site.socials.email,
+  site.socials.blog,
   site.socials.linkedin,
   site.socials.github,
   site.socials.x,
@@ -36,9 +37,9 @@ export default function Contact() {
         </span>
       </a>
 
-      <div className="mt-10 grid grid-cols-1 gap-px border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid grid-cols-1 gap-px border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-5">
         {channels.map((c) => {
-          const iconName = c.label.toLowerCase() as "email" | "linkedin" | "github" | "x";
+          const iconName = c.label.toLowerCase() as "email" | "blog" | "linkedin" | "github" | "x";
           return (
             <a
               key={c.label}

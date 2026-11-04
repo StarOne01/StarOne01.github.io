@@ -104,6 +104,15 @@ export default function Nav() {
 
           <div className="flex items-center gap-1 sm:gap-2">
             <a
+              href={site.socials.blog.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden items-center gap-1 font-mono text-[10px] uppercase tracking-[0.18em] text-dim transition-colors hover:text-accent sm:inline-flex"
+            >
+              Blog
+              <span aria-hidden>↗</span>
+            </a>
+            <a
               href={site.socials.email.href}
               className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-dim transition-colors hover:text-accent md:inline"
             >
@@ -208,8 +217,8 @@ export default function Nav() {
             {site.email}
           </a>
 
-          <div className="mt-6 grid grid-cols-3 gap-2">
-            {[site.socials.linkedin, site.socials.github, site.socials.x].map((social) => (
+          <div className="mt-6 grid grid-cols-4 gap-2">
+            {[site.socials.linkedin, site.socials.github, site.socials.x, site.socials.blog].map((social) => (
               <a
                 key={social.label}
                 href={social.href}
@@ -220,7 +229,7 @@ export default function Nav() {
                 className="inline-flex min-h-[52px] items-center justify-center rounded-sm border border-edge text-dim transition-colors hover:border-accent hover:bg-accent hover:text-black"
               >
                 <Icon
-                  name={social.label.toLowerCase() as "linkedin" | "github" | "x"}
+                  name={social.label.toLowerCase() as "linkedin" | "github" | "x" | "blog"}
                   className="h-5 w-5"
                   aria-hidden
                 />

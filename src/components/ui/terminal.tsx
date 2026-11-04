@@ -5,11 +5,12 @@ import { cn } from "@/utils/cn";
 type CommandOutput = { kind: "in" | "out" | "err"; text: string };
 
 const commands: Record<string, string> = {
-  help: "available: about, work, stack, contact, whoami, ls, clear, sudo, exit",
+  help: "available: about, work, stack, contact, blog, whoami, ls, clear, sudo, exit",
   about: "Prashanth T. Systems Engineer. Coimbatore. Hardware-software gap: compilers, inference, and the systems underneath.",
   work: "Medclara (founding engineer, past) · MoviesLikeThis (live) · Sherlock SFT (fine-tuning).",
   stack: "Go · Python · C++ (favorite) · TypeScript · LLVM/MLIR · QLoRA · Qdrant",
-  contact: "ping@starone01.me  ·  linkedin.com/in/StarOne01  ·  github.com/StarOne01",
+  contact: "ping@starone01.me  ·  blogs.starone01.me  ·  linkedin.com/in/StarOne01  ·  github.com/StarOne01",
+  blog: "https://blogs.starone01.me",
   projects: "Medclara (clinical AI) · MoviesLikeThis (embeddings) · bfloat16 (C++ numerics)",
   whoami: "guest@starone01.me, you are not logged in. (this is a portfolio, not a server.)",
   ls: "about.md  work.md  stack.md  contact.txt",
