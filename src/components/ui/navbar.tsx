@@ -90,7 +90,7 @@ export default function Nav() {
             awake ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-[160%] opacity-0"
           } ${
             scrolled
-              ? "border border-line bg-paper/90 shadow-[0_12px_32px_-16px_rgba(28,27,23,0.25)] backdrop-blur-md"
+              ? "border border-line bg-paper/90 shadow-[0_12px_32px_-16px_rgba(0,0,0,0.55)] backdrop-blur-md"
               : "border border-transparent bg-transparent"
           }`}
         >

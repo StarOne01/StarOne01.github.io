@@ -10,7 +10,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: '#F7F5EF',
+          background: '#070D17',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -27,7 +27,15 @@ export default async function Image() {
             position: 'absolute',
             inset: 0,
             background:
-              'radial-gradient(circle at 50% 40%, rgba(15,107,74,0.10) 0%, rgba(247,245,239,0) 60%)',
+              'radial-gradient(circle at 50% 38%, rgba(67,232,184,0.18) 0%, rgba(7,13,23,0) 60%)',
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background:
+              'radial-gradient(circle at 82% 12%, rgba(129,108,255,0.15) 0%, rgba(7,13,23,0) 55%)',
           }}
         />
         <div
@@ -35,7 +43,7 @@ export default async function Image() {
             position: 'absolute',
             top: 40,
             left: 40,
-            color: 'rgba(28,27,23,0.5)',
+            color: 'rgba(237,236,228,0.55)',
             fontSize: 22,
             letterSpacing: '0.3em',
             textTransform: 'uppercase',
@@ -44,7 +52,7 @@ export default async function Image() {
             gap: 10,
           }}
         >
-          <span style={{ display: 'flex', width: 10, height: 10, borderRadius: 9999, background: '#0F6B4A' }} />
+          <span style={{ display: 'flex', width: 10, height: 10, borderRadius: 9999, background: '#43E8B8' }} />
           coimbatore · in
         </div>
         <div
@@ -52,7 +60,7 @@ export default async function Image() {
             position: 'absolute',
             bottom: 40,
             right: 40,
-            color: 'rgba(28,27,23,0.4)',
+            color: 'rgba(237,236,228,0.4)',
             fontSize: 20,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
@@ -68,16 +76,16 @@ export default async function Image() {
             alignItems: 'center',
             justifyContent: 'center',
             padding: '60px 90px',
-            border: '1px solid #E5E1D6',
+            border: '1px solid rgba(237,236,228,0.14)',
             borderRadius: 32,
-            background: '#FFFFFF',
+            background: 'rgba(12,21,34,0.85)',
           }}
         >
           <h1
             style={{
               fontSize: 120,
               fontWeight: 800,
-              color: '#1C1B17',
+              color: '#EDECE4',
               letterSpacing: '-0.04em',
               margin: 0,
               lineHeight: 1,
@@ -93,10 +101,10 @@ export default async function Image() {
               margin: '24px 0 0 0',
             }}
           >
-            <span style={{ display: 'flex', width: 36, height: 1, background: '#E5E1D6' }} />
+            <span style={{ display: 'flex', width: 36, height: 1, background: 'rgba(237,236,228,0.16)' }} />
             <span
               style={{
-                color: '#0F6B4A',
+                color: '#43E8B8',
                 fontSize: 28,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
@@ -104,7 +112,7 @@ export default async function Image() {
             >
               Systems Engineer
             </span>
-            <span style={{ display: 'flex', width: 36, height: 1, background: '#E5E1D6' }} />
+            <span style={{ display: 'flex', width: 36, height: 1, background: 'rgba(237,236,228,0.16)' }} />
           </div>
           <div
             style={{
@@ -112,15 +120,15 @@ export default async function Image() {
               gap: 14,
               marginTop: 56,
               fontSize: 22,
-              color: 'rgba(28,27,23,0.55)',
+              color: 'rgba(237,236,228,0.55)',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
             }}
           >
             <span>ASR</span>
-            <span style={{ color: 'rgba(28,27,23,0.25)' }}>·</span>
+            <span style={{ color: 'rgba(237,236,228,0.22)' }}>·</span>
             <span>Compilers</span>
-            <span style={{ color: 'rgba(28,27,23,0.25)' }}>·</span>
+            <span style={{ color: 'rgba(237,236,228,0.22)' }}>·</span>
             <span>Inference</span>
           </div>
         </div>

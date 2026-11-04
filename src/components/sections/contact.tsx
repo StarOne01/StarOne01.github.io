@@ -30,7 +30,7 @@ export default function Contact() {
               className="group flex min-h-[76px] items-center gap-4 rounded-2xl border border-line bg-card p-5 transition-colors hover:border-ink active:border-ink"
               aria-label={`${c.label}: ${c.value}`}
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-paper text-ink transition-colors group-hover:bg-ink group-hover:text-paper">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-paper text-ink transition-colors group-hover:bg-moss group-hover:text-[#070D17]">
                 <Icon name={iconName} className="h-4 w-4" aria-hidden />
               </span>
               <span className="min-w-0 font-mono">

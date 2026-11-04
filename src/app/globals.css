@@ -6,12 +6,12 @@
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
-  --paper: #F7F5EF;
-  --card: #FFFFFF;
-  --ink: #1C1B17;
-  --muted: #6B675C;
-  --line: #E5E1D6;
-  --moss: #0F6B4A;
+  --paper: #070D17;
+  --card: #0C1522;
+  --ink: #EDECE4;
+  --muted: #8291A6;
+  --line: #1B2635;
+  --moss: #43E8B8;
 }
 
 html {
@@ -20,6 +20,8 @@ html {
   text-rendering: optimizeLegibility;
   scroll-padding-top: 5.5rem;
   overflow-x: clip;
+  scrollbar-color: var(--line) transparent;
+  scrollbar-width: thin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -33,9 +35,41 @@ body {
   color: var(--ink);
 }
 
+/* Constant aurora wash behind everything, never intercepting input. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(1100px 720px at 18% -8%, rgba(67, 232, 184, 0.07), transparent 60%),
+    radial-gradient(900px 640px at 85% 4%, rgba(129, 108, 255, 0.07), transparent 62%);
+}
+
 ::selection {
-  background: #0F6B4A;
-  color: #F7F5EF;
+  background: var(--moss);
+  color: #070D17;
+}
+
+:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B2635;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A3A50;
 }
 
 @layer utilities {

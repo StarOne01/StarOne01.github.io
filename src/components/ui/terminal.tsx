@@ -79,7 +79,7 @@ export default function Terminal() {
           role="dialog"
           aria-modal="true"
           aria-labelledby={titleId}
-          className="fixed inset-x-4 bottom-[max(5rem,calc(env(safe-area-inset-bottom)+5rem))] z-[70] flex h-[min(62vh,440px)] flex-col overflow-hidden rounded-2xl border border-line bg-card font-mono text-[12px] text-ink shadow-[0_24px_64px_-16px_rgba(28,27,23,0.25)] sm:inset-x-auto sm:bottom-20 sm:right-6 sm:h-[min(60vh,420px)] sm:w-[min(92vw,560px)]"
+          className="fixed inset-x-4 bottom-[max(5rem,calc(env(safe-area-inset-bottom)+5rem))] z-[70] flex h-[min(62vh,440px)] flex-col overflow-hidden rounded-2xl border border-line bg-card font-mono text-[12px] text-ink shadow-[0_24px_64px_-16px_rgba(0,0,0,0.55)] sm:inset-x-auto sm:bottom-20 sm:right-6 sm:h-[min(60vh,420px)] sm:w-[min(92vw,560px)]"
         >
           <div className="flex items-center justify-between border-b border-line bg-paper px-4 py-2">
             <div className="flex items-center gap-1.5" aria-hidden>

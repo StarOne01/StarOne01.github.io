@@ -21,12 +21,12 @@ const STACK_FLAT = Object.values(stack)
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#F7F5EF" },
-    { media: "(prefers-color-scheme: light)", color: "#F7F5EF" },
+    { media: "(prefers-color-scheme: dark)", color: "#070D17" },
+    { media: "(prefers-color-scheme: light)", color: "#070D17" },
   ],
   width: "device-width",
   initialScale: 1,
-  colorScheme: "light",
+  colorScheme: "dark",
 };
 
 export const metadata: Metadata = {
@@ -334,7 +334,7 @@ export default function RootLayout({
         <meta name="rating" content="General" />
         <meta name="distribution" content="Global" />
         <meta name="revisit-after" content="7 days" />
-        <meta name="theme-color" content="#F7F5EF" />
+        <meta name="theme-color" content="#070D17" />
         {/* LCP: hero image discovered in <head> with the same srcset the
             <img> uses, so mobile preloads the 800w file instead of the
             1920w one (avoids a double download). */}
