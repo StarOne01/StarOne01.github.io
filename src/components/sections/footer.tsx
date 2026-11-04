@@ -11,14 +11,6 @@ export default function Footer() {
         >
           Open source
         </a>
-        <a
-          href={site.socials.blog.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-dim transition-colors hover:text-accent"
-        >
-          Blog ↗
-        </a>
         <p className="hidden lg:block">Visuals AI-generated · Built with Next.js</p>
         <p>Coimbatore · India</p>
         <a href="/#top" className="text-dim transition-colors hover:text-accent">
