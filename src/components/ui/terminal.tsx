@@ -79,21 +79,21 @@ export default function Terminal() {
           role="dialog"
           aria-modal="true"
           aria-labelledby={titleId}
-          className="fixed inset-x-4 bottom-[max(5rem,calc(env(safe-area-inset-bottom)+5rem))] z-[70] flex h-[min(62vh,440px)] flex-col overflow-hidden rounded-2xl border border-line bg-card font-mono text-[12px] text-ink shadow-[0_24px_64px_-16px_rgba(28,27,23,0.25)] sm:inset-x-auto sm:bottom-20 sm:right-6 sm:h-[min(60vh,420px)] sm:w-[min(92vw,560px)]"
+          className="fixed inset-x-4 bottom-[max(5rem,calc(env(safe-area-inset-bottom)+5rem))] z-[70] flex h-[min(62vh,440px)] flex-col overflow-hidden rounded-sm border border-edge bg-surface font-mono text-[12px] text-ink shadow-[0_24px_64px_-16px_rgba(0,0,0,0.85)] sm:inset-x-auto sm:bottom-20 sm:right-6 sm:h-[min(60vh,420px)] sm:w-[min(92vw,560px)]"
         >
-          <div className="flex items-center justify-between border-b border-line bg-paper px-4 py-2">
+          <div className="flex items-center justify-between border-b border-edge bg-bg px-4 py-2">
             <div className="flex items-center gap-1.5" aria-hidden>
-              <span className="h-2.5 w-2.5 rounded-full bg-line" />
-              <span className="h-2.5 w-2.5 rounded-full bg-line" />
-              <span className="h-2.5 w-2.5 rounded-full bg-moss/60" />
+              <span className="h-2.5 w-2.5 rounded-full bg-edge" />
+              <span className="h-2.5 w-2.5 rounded-full bg-edge" />
+              <span className="h-2.5 w-2.5 rounded-full bg-lime/70" />
             </div>
-            <span id={titleId} className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span id={titleId} className="text-[10px] uppercase tracking-[0.2em] text-faint">
               starone01 · tty1
             </span>
             <button
               onClick={() => setOpen(false)}
               aria-label="Close terminal"
-              className="-mr-2 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-xs text-muted hover:text-ink"
+              className="-mr-2 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-xs text-faint hover:text-lime"
             >
               esc
             </button>
@@ -112,14 +112,14 @@ export default function Terminal() {
                 className={cn(
                   "whitespace-pre-wrap break-words leading-relaxed",
                   line.kind === "in" && "text-ink",
-                  line.kind === "out" && "text-ink/80",
-                  line.kind === "err" && "italic text-muted"
+                  line.kind === "out" && "text-dim",
+                  line.kind === "err" && "italic text-faint"
                 )}
               >
                 {line.kind === "in" ? (
                   <>
-                    <span className="text-moss">guest@starone01</span>
-                    <span className="text-muted"> ~ </span>
+                    <span className="text-lime">guest@starone01</span>
+                    <span className="text-faint"> ~ </span>
                     <span>{line.text}</span>
                   </>
                 ) : (
@@ -129,11 +129,11 @@ export default function Terminal() {
             ))}
           </div>
 
-          <form onSubmit={submit} className="flex items-center gap-2 border-t border-line bg-paper px-4 py-3">
+          <form onSubmit={submit} className="flex items-center gap-2 border-t border-edge bg-bg px-4 py-3">
             <label className="sr-only" htmlFor="terminal-input">Terminal command</label>
-            <span className="text-moss" aria-hidden>guest@starone01</span>
-            <span className="text-muted" aria-hidden>~</span>
-            <span className="text-muted" aria-hidden>$</span>
+            <span className="text-lime" aria-hidden>guest@starone01</span>
+            <span className="text-faint" aria-hidden>~</span>
+            <span className="text-faint" aria-hidden>$</span>
             <input
               id="terminal-input"
               ref={inputRef}
@@ -141,7 +141,7 @@ export default function Terminal() {
               onChange={(e) => setInput(e.target.value)}
               spellCheck={false}
               autoComplete="off"
-              className="flex-1 bg-transparent text-ink outline-none placeholder:text-muted/70"
+              className="flex-1 bg-transparent text-ink outline-none placeholder:text-faint/70"
               placeholder="type a command…"
             />
           </form>

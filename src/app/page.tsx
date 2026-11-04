@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/hero";
+import Marquee from "@/components/sections/marquee";
 import About from "@/components/sections/about";
 import Work from "@/components/sections/work";
 import Experience from "@/components/sections/experience";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <main id="main" tabIndex={-1}>
       <Hero />
+      <Marquee />
       <About />
       <Work />
       <Experience />

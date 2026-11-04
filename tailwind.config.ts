@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-const config: Config =  {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,17 +11,33 @@ const config: Config =  {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)"],
-        serif: ["var(--font-serif)"],
+        display: ["var(--font-display)"],
         mono: ["var(--font-mono)"],
       },
       colors: {
-        paper: "#F7F5EF",
-        card: "#FFFFFF",
-        ink: "#1C1B17",
-        muted: "#6B675C",
-        line: "#E5E1D6",
-        moss: "#0F6B4A",
-        mossdeep: "#0A4A34",
+        bg: "#080A08",
+        surface: "#0E110D",
+        raise: "#141811",
+        ink: "#EDEBE2",
+        dim: "#8C9386",
+        faint: "#7E867A",
+        edge: "#242A22",
+        lime: "#B8F24C",
+        limedeep: "#7FAF33",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        blink: {
+          "0%, 49%": { opacity: "1" },
+          "50%, 100%": { opacity: "0" },
+        },
+      },
+      animation: {
+        marquee: "marquee 34s linear infinite",
+        blink: "blink 1.1s step-end infinite",
       },
     },
   },

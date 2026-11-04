@@ -10,13 +10,13 @@ export default async function Image() {
     (
       <div
         style={{
-          background: '#F7F5EF',
+          background: '#080A08',
           width: '100%',
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-between',
+          padding: '56px 64px',
           fontFamily: 'sans-serif',
           position: 'relative',
           overflow: 'hidden',
@@ -26,103 +26,96 @@ export default async function Image() {
           style={{
             position: 'absolute',
             inset: 0,
-            background:
-              'radial-gradient(circle at 50% 40%, rgba(15,107,74,0.10) 0%, rgba(247,245,239,0) 60%)',
+            display: 'flex',
+            backgroundImage:
+              'linear-gradient(to right, rgba(237,235,226,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(237,235,226,0.06) 1px, transparent 1px)',
+            backgroundSize: '80px 80px',
           }}
         />
         <div
           style={{
             position: 'absolute',
-            top: 40,
-            left: 40,
-            color: 'rgba(28,27,23,0.5)',
-            fontSize: 22,
-            letterSpacing: '0.3em',
-            textTransform: 'uppercase',
+            inset: 0,
             display: 'flex',
-            alignItems: 'center',
-            gap: 10,
+            background:
+              'radial-gradient(circle at 18% 0%, rgba(184,242,76,0.16) 0%, rgba(8,10,8,0) 55%)',
           }}
-        >
-          <span style={{ display: 'flex', width: 10, height: 10, borderRadius: 9999, background: '#0F6B4A' }} />
-          coimbatore · in
-        </div>
+        />
+
         <div
           style={{
-            position: 'absolute',
-            bottom: 40,
-            right: 40,
-            color: 'rgba(28,27,23,0.4)',
+            display: 'flex',
+            justifyContent: 'space-between',
             fontSize: 20,
-            letterSpacing: '0.2em',
+            letterSpacing: '0.24em',
             textTransform: 'uppercase',
+            color: 'rgba(237,235,226,0.55)',
           }}
         >
-          @starone01
+          <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ display: 'flex', width: 10, height: 10, background: '#B8F24C' }} />
+            sys.portfolio / 2026
+          </span>
+          <span style={{ display: 'flex' }}>11.01°N · 76.95°E</span>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 16,
+              color: '#B8F24C',
+              fontSize: 24,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+            }}
+          >
+            <span style={{ display: 'flex', width: 44, height: 2, background: '#B8F24C' }} />
+            Systems engineer
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              fontSize: 132,
+              fontWeight: 800,
+              letterSpacing: '-0.04em',
+              lineHeight: 1,
+              color: '#EDEBE2',
+              textTransform: 'uppercase',
+              marginTop: 18,
+            }}
+          >
+            Prashanth
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              fontSize: 30,
+              color: 'rgba(237,235,226,0.6)',
+              marginTop: 20,
+            }}
+          >
+            AI systems that run on real silicon.
+          </div>
         </div>
 
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
+            justifyContent: 'space-between',
             alignItems: 'center',
-            justifyContent: 'center',
-            padding: '60px 90px',
-            border: '1px solid #E5E1D6',
-            borderRadius: 32,
-            background: '#FFFFFF',
+            borderTop: '1px solid rgba(237,235,226,0.14)',
+            paddingTop: 22,
+            fontSize: 20,
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
           }}
         >
-          <h1
-            style={{
-              fontSize: 120,
-              fontWeight: 800,
-              color: '#1C1B17',
-              letterSpacing: '-0.04em',
-              margin: 0,
-              lineHeight: 1,
-            }}
-          >
-            Prashanth
-          </h1>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 18,
-              margin: '24px 0 0 0',
-            }}
-          >
-            <span style={{ display: 'flex', width: 36, height: 1, background: '#E5E1D6' }} />
-            <span
-              style={{
-                color: '#0F6B4A',
-                fontSize: 28,
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
-              }}
-            >
-              Systems Engineer
-            </span>
-            <span style={{ display: 'flex', width: 36, height: 1, background: '#E5E1D6' }} />
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              gap: 14,
-              marginTop: 56,
-              fontSize: 22,
-              color: 'rgba(28,27,23,0.55)',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-            }}
-          >
-            <span>ASR</span>
-            <span style={{ color: 'rgba(28,27,23,0.25)' }}>·</span>
-            <span>Compilers</span>
-            <span style={{ color: 'rgba(28,27,23,0.25)' }}>·</span>
-            <span>Inference</span>
-          </div>
+          <span style={{ display: 'flex', color: '#B8F24C' }}>
+            compilers · inference · embeddings
+          </span>
+          <span style={{ display: 'flex', color: 'rgba(237,235,226,0.5)' }}>@starone01</span>
         </div>
       </div>
     ),

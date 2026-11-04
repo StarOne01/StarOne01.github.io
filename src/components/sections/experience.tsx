@@ -2,49 +2,51 @@ import { experience } from "@/data/site";
 import SectionHeader from "@/components/ui/section-header";
 import Icon from "@/components/ui/icon";
 
-const statusDot: Record<string, string> = {
-  active: "bg-moss",
-  development: "bg-moss/60",
-  upcoming: "bg-amber-500",
-  ongoing: "bg-blue-600",
-  past: "bg-ink/20",
+const dot: Record<string, string> = {
+  active: "bg-lime",
+  development: "bg-lime/60",
+  upcoming: "bg-amber-400",
+  ongoing: "bg-lime/70",
+  past: "bg-faint",
 };
 
 export default function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 md:py-32">
-      <SectionHeader
-        index="03"
-        eyebrow="Experience"
-        title={<>Where I've been.</>}
-      />
-      <ol>
+    <section id="experience" className="mx-auto w-full max-w-7xl scroll-mt-24 px-5 py-24 sm:px-8 md:py-32">
+      <SectionHeader index="03" eyebrow="Trace" title={<>Where I've been.</>} />
+
+      <ol className="border-t border-edge">
         {experience.map((item) => (
-          <li key={item.company} className="border-t border-line py-5 last:border-b md:py-6">
-            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-              <span className={`h-2 w-2 rounded-full ${statusDot[item.status]}`} aria-hidden />
-              <span className="min-w-0">
-                <span className="block truncate font-serif text-xl font-medium tracking-tight md:text-2xl">
-                  {item.role} <span className="text-muted">·</span> {item.company}
-                </span>
-                <span className="mt-0.5 block font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-                  {item.period} · {item.status}
-                </span>
-              </span>
-            </div>
-            <div className="mt-3 max-w-2xl pl-6 leading-relaxed text-muted">
-              {item.description}{" "}
-              {item.href && (
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whitespace-nowrap text-mossdeep underline decoration-moss/30 underline-offset-4 hover:decoration-moss"
-                >
-                  Visit
-                  <Icon name="external" className="mb-0.5 ml-1 inline h-3.5 w-3.5" aria-hidden />
-                </a>
-              )}
+          <li key={item.company} className="border-b border-edge">
+            <div className="flex gap-4 py-6 md:gap-8 md:py-7">
+              <span
+                className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${dot[item.status]}`}
+                aria-hidden
+              />
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                  <h3 className="font-display text-xl font-medium tracking-tight text-ink md:text-2xl">
+                    {item.role} <span className="text-faint">/</span> {item.company}
+                  </h3>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">
+                    {item.period} <span className="text-lime/70">· {item.status}</span>
+                  </span>
+                </div>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
+                  {item.description}{" "}
+                  {item.href && (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whitespace-nowrap text-lime underline-offset-4 hover:underline"
+                    >
+                      Visit
+                      <Icon name="external" className="mb-0.5 ml-1 inline h-3.5 w-3.5" aria-hidden />
+                    </a>
+                  )}
+                </p>
+              </div>
             </div>
           </li>
         ))}

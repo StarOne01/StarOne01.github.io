@@ -14,15 +14,15 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#F7F5EF',
-          borderRadius: 14,
-          fontSize: 40,
+          background: '#080A08',
+          borderRadius: 12,
+          fontSize: 38,
           fontWeight: 700,
-          color: '#0F6B4A',
-          fontFamily: 'sans-serif',
+          color: '#B8F24C',
+          fontFamily: 'monospace',
         }}
       >
-        S
+        S<span style={{ opacity: 0.5 }}>_</span>
       </div>
     ),
     { ...size }

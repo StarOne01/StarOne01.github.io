@@ -4,21 +4,23 @@
 
 :root {
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-serif: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
-  --paper: #F7F5EF;
-  --card: #FFFFFF;
-  --ink: #1C1B17;
-  --muted: #6B675C;
-  --line: #E5E1D6;
-  --moss: #0F6B4A;
+  --bg: #080A08;
+  --surface: #0E110D;
+  --raise: #141811;
+  --ink: #EDEBE2;
+  --dim: #8C9386;
+  --faint: #7E867A;
+  --edge: #242A22;
+  --lime: #B8F24C;
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 5rem;
   overflow-x: clip;
 }
 
@@ -29,21 +31,31 @@ html {
 }
 
 body {
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
 }
 
 ::selection {
-  background: #0F6B4A;
-  color: #F7F5EF;
+  background: var(--lime);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+
+/* Lock background scroll while the menu sheet is open. */
+.sidebar-open {
+  overflow: hidden;
 }
 
 @layer utilities {
   .font-sans {
     font-family: var(--font-sans);
   }
-  .font-serif {
-    font-family: var(--font-serif);
+  .font-display {
+    font-family: var(--font-display);
   }
   .font-mono {
     font-family: var(--font-mono);
@@ -58,15 +70,13 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-}
-
-/* Push sidebar: shifted elements make room on desktop, overlay on mobile */
-.site-shift {
-  transition: margin-right 0.3s ease-out;
-}
-
-@media (min-width: 640px) {
-  .sidebar-open .site-shift {
-    margin-right: 380px;
+  /* Faint drafting grid, faded out toward the bottom. */
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgba(237, 235, 226, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(237, 235, 226, 0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
   }
 }

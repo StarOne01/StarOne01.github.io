@@ -23,21 +23,21 @@ export default function NotFound() {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex cursor-pointer select-none flex-col items-center justify-center bg-paper px-4" onClick={nextJoke}>
+    <div className="fixed inset-0 z-[100] flex cursor-pointer select-none flex-col items-center justify-center bg-bg px-4" onClick={nextJoke}>
       <h1 className="sr-only">404: page not found</h1>
-      <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.3em] text-moss">error 404</p>
-      <pre className="rounded-2xl border border-line bg-card px-6 py-5 text-center font-mono text-sm leading-relaxed text-ink sm:text-base">
+      <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.3em] text-lime">error 404</p>
+      <pre className="rounded-sm border border-edge bg-surface px-6 py-5 text-center font-mono text-sm leading-relaxed text-ink sm:text-base">
 {`╔══════════════════════════════╗
 ║                              ║
 ║   ${joke.padEnd(27)}║
 ║                              ║
 ╚══════════════════════════════╝`}
       </pre>
-      <p className="mt-8 font-mono text-xs text-muted">[ click for another error ]</p>
+      <p className="mt-8 font-mono text-xs text-dim">[ click for another error ]</p>
       <a
         href="/"
         onClick={(e) => e.stopPropagation()}
-        className="mt-4 inline-flex min-h-[48px] items-center justify-center rounded-full bg-ink px-8 font-mono text-xs uppercase tracking-[0.14em] text-paper transition-colors hover:bg-moss"
+        className="mt-4 inline-flex min-h-[48px] items-center justify-center rounded-sm bg-lime px-8 font-mono text-xs uppercase tracking-[0.14em] text-black transition-colors hover:bg-ink"
       >
         Back home
       </a>
