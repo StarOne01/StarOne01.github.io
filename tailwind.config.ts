@@ -29,6 +29,10 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
         blink: {
           "0%, 49%": { opacity: "1" },
           "50%, 100%": { opacity: "0" },
@@ -36,6 +40,7 @@ const config: Config = {
       },
       animation: {
         marquee: "marquee 34s linear infinite",
+        "marquee-reverse": "marquee-reverse 44s linear infinite",
         blink: "blink 1.1s step-end infinite",
       },
     },

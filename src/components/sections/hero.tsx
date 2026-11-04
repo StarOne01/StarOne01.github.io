@@ -13,9 +13,10 @@ export default function Hero() {
           sizes="100vw"
           alt=""
           fetchPriority="high"
-          className="h-full w-full object-cover opacity-40"
+          className="h-full w-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/65 to-bg" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-transparent to-bg" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bg/85 via-bg/35 to-transparent" />
         <div className="grid-lines absolute inset-0" />
       </div>
 
