@@ -1,7 +1,6 @@
 import { site } from "@/data/site";
 import SectionHeader from "@/components/ui/section-header";
 import Icon from "@/components/ui/icon";
-import Parallax from "@/components/ui/parallax";
 
 const channels = [
   site.socials.email,
@@ -46,19 +45,17 @@ export default function Contact() {
         })}
       </div>
 
-      <Parallax amount={-50}>
-        <div className="mt-16 text-center md:mt-24">
-          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-muted">
-            Or write directly
-          </p>
-          <a
-            href={`mailto:${site.email}`}
-            className="inline-block max-w-full break-words font-serif text-3xl font-medium tracking-tight underline decoration-moss/30 underline-offset-8 hover:decoration-moss sm:text-5xl md:text-6xl"
-          >
-            {site.email}
-          </a>
-        </div>
-      </Parallax>
+      <div className="mt-16 text-center md:mt-24">
+        <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.24em] text-muted">
+          Or write directly
+        </p>
+        <a
+          href={`mailto:${site.email}`}
+          className="inline-block max-w-full break-words font-serif text-3xl font-medium tracking-tight underline decoration-moss/30 underline-offset-8 hover:decoration-moss sm:text-5xl md:text-6xl"
+        >
+          {site.email}
+        </a>
+      </div>
     </section>
   );
 }

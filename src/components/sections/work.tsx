@@ -41,15 +41,9 @@ export default function Work() {
                   {item.tag}
                 </span>
               </span>
-              <details className="group mt-5" name="work">
-                <summary className="inline-flex cursor-pointer list-none items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-mossdeep hover:text-ink [&::-webkit-details-marker]:hidden">
-                  <span className="inline-block transition-transform group-open:rotate-45" aria-hidden>＋</span>
-                  About
-                </summary>
-                <span className="mt-3 block leading-relaxed text-muted">
-                  {item.description}
-                </span>
-              </details>
+              <span className="mt-5 block leading-relaxed text-muted">
+                {item.description}
+              </span>
             </li>
           ))}
         </ol>

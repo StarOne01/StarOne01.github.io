@@ -1,6 +1,5 @@
 import { expertise } from "@/data/site";
 import SectionHeader from "@/components/ui/section-header";
-import Parallax from "@/components/ui/parallax";
 
 export default function About() {
   return (
@@ -11,12 +10,10 @@ export default function About() {
         title={<>Engineer where hardware meets software.</>}
       />
       <div className="flex justify-end">
-        <Parallax amount={-50}>
-          <p className="max-w-2xl font-serif text-2xl leading-snug tracking-tight md:text-3xl">
-            Final-year EEE student, self-taught from a phone via Termux, now building
-            compilers, inference, and production AI.
-          </p>
-        </Parallax>
+        <p className="max-w-2xl font-serif text-2xl leading-snug tracking-tight md:text-3xl">
+          Final-year EEE student, self-taught from a phone via Termux, now building
+          compilers, inference, and production AI.
+        </p>
       </div>
       <ul className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2 md:mt-16">
         {expertise.map((area, i) => (

@@ -335,11 +335,15 @@ export default function RootLayout({
         <meta name="distribution" content="Global" />
         <meta name="revisit-after" content="7 days" />
         <meta name="theme-color" content="#F7F5EF" />
-        {/* LCP: hero image discovered in <head>, not after React hydrates */}
+        {/* LCP: hero image discovered in <head> with the same srcset the
+            <img> uses, so mobile preloads the 800w file instead of the
+            1920w one (avoids a double download). */}
         <link
           rel="preload"
           as="image"
           href="/electric-green-aurora-storm-mountains.webp"
+          imageSrcSet="/hero-sm.webp 800w, /electric-green-aurora-storm-mountains.webp 1920w"
+          imageSizes="100vw"
           fetchPriority="high"
         />
         <script

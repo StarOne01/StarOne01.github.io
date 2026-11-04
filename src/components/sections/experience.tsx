@@ -21,34 +21,31 @@ export default function Experience() {
       <ol>
         {experience.map((item) => (
           <li key={item.company} className="border-t border-line py-5 last:border-b md:py-6">
-            <details className="group" name="experience">
-              <summary className="grid cursor-pointer list-none grid-cols-[auto_1fr_auto] items-center gap-4 [&::-webkit-details-marker]:hidden">
-                <span className={`h-2 w-2 rounded-full ${statusDot[item.status]}`} aria-hidden />
-                <span className="min-w-0">
-                  <span className="block truncate font-serif text-xl font-medium tracking-tight md:text-2xl">
-                    {item.role} <span className="text-muted">·</span> {item.company}
-                  </span>
-                  <span className="mt-0.5 block font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-                    {item.period} · {item.status}
-                  </span>
+            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+              <span className={`h-2 w-2 rounded-full ${statusDot[item.status]}`} aria-hidden />
+              <span className="min-w-0">
+                <span className="block truncate font-serif text-xl font-medium tracking-tight md:text-2xl">
+                  {item.role} <span className="text-muted">·</span> {item.company}
                 </span>
-                <span className="font-mono text-lg text-muted transition-transform group-open:rotate-45" aria-hidden>＋</span>
-              </summary>
-              <div className="mt-3 max-w-2xl pl-6 leading-relaxed text-muted">
-                {item.description}{" "}
-                {item.href && (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="whitespace-nowrap text-mossdeep underline decoration-moss/30 underline-offset-4 hover:decoration-moss"
-                  >
-                    Visit
-                    <Icon name="external" className="mb-0.5 ml-1 inline h-3.5 w-3.5" aria-hidden />
-                  </a>
-                )}
-              </div>
-            </details>
+                <span className="mt-0.5 block font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
+                  {item.period} · {item.status}
+                </span>
+              </span>
+            </div>
+            <div className="mt-3 max-w-2xl pl-6 leading-relaxed text-muted">
+              {item.description}{" "}
+              {item.href && (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whitespace-nowrap text-mossdeep underline decoration-moss/30 underline-offset-4 hover:decoration-moss"
+                >
+                  Visit
+                  <Icon name="external" className="mb-0.5 ml-1 inline h-3.5 w-3.5" aria-hidden />
+                </a>
+              )}
+            </div>
           </li>
         ))}
       </ol>

@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
 export const dynamic = 'force-static';
 export const alt = `${"Prashanth T."} (StarOne01), Systems Engineer`;
 export const size = { width: 1200, height: 630 };
