@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[86svh] flex-col overflow-hidden border-b border-edge"
+      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden border-b border-edge"
     >
       <div className="absolute inset-0 -z-10">
         <img
@@ -20,24 +20,24 @@ export default function Hero() {
         <div className="grid-lines absolute inset-0" />
       </div>
 
-      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-16 pt-24 sm:px-8 sm:pb-20">
+      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-5 pb-24 pt-28 sm:px-8 sm:pb-28">
         <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-dim">
           <span aria-hidden className="inline-block h-1.5 w-1.5 animate-pulse bg-accent" />
           <span>sys.portfolio / 2026</span>
         </div>
 
-        <h1 className="mt-8 font-display text-[clamp(2.2rem,5vw,4.6rem)] font-medium uppercase leading-[1.02] tracking-[-0.03em]">
+        <h1 className="mt-6 font-display text-[clamp(2.2rem,5vw,4.6rem)] font-medium uppercase leading-[1.02] tracking-[-0.03em]">
           AI systems that run
           <br />
           on <span className="text-accent">real silicon</span>
           <span aria-hidden className="animate-blink text-accent">_</span>
         </h1>
 
-        <p className="mt-7 max-w-lg text-base leading-relaxed text-dim sm:text-lg">
+        <p className="mt-6 max-w-lg text-base leading-relaxed text-dim sm:text-lg">
           {site.tagline}
         </p>
 
-        <div className="mt-9 flex flex-wrap items-center gap-3">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
           <a
             href="#work"
             className="inline-flex min-h-[52px] items-center gap-2 rounded-sm bg-accent px-7 font-mono text-[11px] uppercase tracking-[0.18em] text-black transition-colors hover:bg-ink"
