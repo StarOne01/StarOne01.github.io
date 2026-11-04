@@ -25,7 +25,7 @@ export default function NotFound() {
   return (
     <div className="fixed inset-0 z-[100] flex cursor-pointer select-none flex-col items-center justify-center bg-bg px-4" onClick={nextJoke}>
       <h1 className="sr-only">404: page not found</h1>
-      <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.3em] text-lime">error 404</p>
+      <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.3em] text-accent">error 404</p>
       <pre className="rounded-sm border border-edge bg-surface px-6 py-5 text-center font-mono text-sm leading-relaxed text-ink sm:text-base">
 {`╔══════════════════════════════╗
 ║                              ║
@@ -37,7 +37,7 @@ export default function NotFound() {
       <a
         href="/"
         onClick={(e) => e.stopPropagation()}
-        className="mt-4 inline-flex min-h-[48px] items-center justify-center rounded-sm bg-lime px-8 font-mono text-xs uppercase tracking-[0.14em] text-black transition-colors hover:bg-ink"
+        className="mt-4 inline-flex min-h-[48px] items-center justify-center rounded-sm bg-accent px-8 font-mono text-xs uppercase tracking-[0.14em] text-black transition-colors hover:bg-ink"
       >
         Back home
       </a>

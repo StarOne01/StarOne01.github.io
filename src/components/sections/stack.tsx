@@ -15,7 +15,7 @@ function Item({ item }: { item: StackItem }) {
       <span aria-hidden className="text-edge">–</span>
       <span className="text-ink">{item.name}</span>
       {item.fav && (
-        <span className="text-lime" aria-label="favorite">*</span>
+        <span className="text-accent" aria-label="favorite">*</span>
       )}
       {item.note && <span className="text-faint">({item.note})</span>}
     </li>
@@ -36,7 +36,7 @@ export default function Stack() {
         <div className="grid grid-cols-1 gap-px border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-4">
           {Object.entries(stack).map(([label, items]) => (
             <div key={label} className="bg-surface p-6">
-              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.22em] text-lime">
+              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.22em] text-accent">
                 // {label}
               </p>
               <ul className="space-y-2.5">

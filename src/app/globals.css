@@ -13,14 +13,14 @@
   --dim: #8C9386;
   --faint: #7E867A;
   --edge: #242A22;
-  --lime: #B8F24C;
+  --accent: #8CFFC1;
 }
 
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 2rem;
   overflow-x: clip;
 }
 
@@ -36,18 +36,29 @@ body {
 }
 
 ::selection {
-  background: var(--lime);
+  background: var(--accent);
   color: var(--bg);
 }
 
 :focus-visible {
-  outline: 2px solid var(--lime);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
 /* Lock background scroll while the menu sheet is open. */
 .sidebar-open {
   overflow: hidden;
+}
+
+/* Push layout: make room for the menu sheet on desktop. */
+.site-shift {
+  transition: margin-right 0.3s ease-out;
+}
+
+@media (min-width: 640px) {
+  .sidebar-open .site-shift {
+    margin-right: 380px;
+  }
 }
 
 @layer utilities {

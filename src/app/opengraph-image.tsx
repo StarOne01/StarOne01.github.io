@@ -38,7 +38,7 @@ export default async function Image() {
             inset: 0,
             display: 'flex',
             background:
-              'radial-gradient(circle at 18% 0%, rgba(184,242,76,0.16) 0%, rgba(8,10,8,0) 55%)',
+              'radial-gradient(circle at 18% 0%, rgba(140,255,193,0.14) 0%, rgba(8,10,8,0) 55%)',
           }}
         />
 
@@ -53,7 +53,7 @@ export default async function Image() {
           }}
         >
           <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ display: 'flex', width: 10, height: 10, background: '#B8F24C' }} />
+            <span style={{ display: 'flex', width: 10, height: 10, background: '#8CFFC1' }} />
             sys.portfolio / 2026
           </span>
           <span style={{ display: 'flex' }}>11.01°N · 76.95°E</span>
@@ -65,13 +65,13 @@ export default async function Image() {
               display: 'flex',
               alignItems: 'center',
               gap: 16,
-              color: '#B8F24C',
+              color: '#8CFFC1',
               fontSize: 24,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
             }}
           >
-            <span style={{ display: 'flex', width: 44, height: 2, background: '#B8F24C' }} />
+            <span style={{ display: 'flex', width: 44, height: 2, background: '#8CFFC1' }} />
             Systems engineer
           </div>
           <div
@@ -112,7 +112,7 @@ export default async function Image() {
             textTransform: 'uppercase',
           }}
         >
-          <span style={{ display: 'flex', color: '#B8F24C' }}>
+          <span style={{ display: 'flex', color: '#8CFFC1' }}>
             compilers · inference · embeddings
           </span>
           <span style={{ display: 'flex', color: 'rgba(237,235,226,0.5)' }}>@starone01</span>

@@ -8,11 +8,34 @@ import Icon from "@/components/ui/icon";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
+  const [awake, setAwake] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const closeRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        setScrolled(window.scrollY > 8);
+        // Any scroll wakes the nav; short pages show it outright.
+        const scrollable =
+          document.documentElement.scrollHeight > window.innerHeight + 40;
+        setAwake(!scrollable || window.scrollY > 40);
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   useEffect(() => {
     document.documentElement.classList.toggle("sidebar-open", open);
@@ -60,45 +83,29 @@ export default function Nav() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-[60] border-b border-edge bg-bg/80 backdrop-blur-md">
+      <header className="site-shift fixed inset-x-0 bottom-3 z-[60] px-3 sm:bottom-4 sm:px-5">
         <nav
           aria-label="Global"
-          className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8"
+          className={`mx-auto flex h-14 max-w-6xl items-center justify-between rounded-2xl px-4 transition-all duration-300 sm:px-5 ${
+            awake ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-[160%] opacity-0"
+          } ${
+            scrolled
+              ? "border border-edge bg-surface/90 shadow-[0_12px_32px_-16px_rgba(0,0,0,0.85)] backdrop-blur-md"
+              : "border border-transparent bg-transparent"
+          }`}
         >
           <Link
             href="/"
             className="font-mono text-sm font-bold uppercase tracking-[0.12em] text-ink"
             aria-label={`${site.name} home`}
           >
-            StarOne01<span className="text-lime">_</span>
+            StarOne01<span className="text-accent">_</span>
           </Link>
 
-          <div className="hidden items-center gap-5 md:flex">
-            {(isHomePage ? site.nav : ["Home"]).map((item, i) => {
-              const id = item.toLowerCase();
-              const current = isHomePage && active === id;
-              return (
-                <a
-                  key={item}
-                  href={isHomePage ? `#${id}` : "/"}
-                  aria-current={current ? "location" : undefined}
-                  className={`font-mono text-[10px] uppercase tracking-[0.2em] transition-colors ${
-                    current ? "text-lime" : "text-dim hover:text-lime"
-                  }`}
-                >
-                  <span aria-hidden className="mr-1.5 text-faint">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  {item}
-                </a>
-              );
-            })}
-          </div>
-
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 sm:gap-2">
             <a
               href={site.socials.email.href}
-              className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-dim transition-colors hover:text-lime lg:inline"
+              className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-dim transition-colors hover:text-accent md:inline"
             >
               {site.email}
             </a>
@@ -106,7 +113,8 @@ export default function Nav() {
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent("terminal:open"))}
               aria-label="Open terminal"
-              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-sm font-mono text-xs text-dim transition-colors hover:bg-raise hover:text-lime"
+              tabIndex={awake ? 0 : -1}
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full font-mono text-xs text-dim transition-colors hover:bg-raise hover:text-accent"
             >
               &gt;_
             </button>
@@ -117,7 +125,8 @@ export default function Nav() {
               aria-expanded={open}
               aria-controls="site-sidebar"
               onClick={() => (open ? close() : setOpen(true))}
-              className="inline-flex min-h-[44px] items-center gap-2 rounded-sm px-2 font-mono text-[10px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-raise md:hidden"
+              tabIndex={awake ? 0 : -1}
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-full px-3 font-mono text-[10px] uppercase tracking-[0.18em] text-ink transition-colors hover:bg-raise"
             >
               {open ? (
                 <XMarkIcon className="h-5 w-5" aria-hidden />
@@ -130,21 +139,14 @@ export default function Nav() {
         </nav>
       </header>
 
-      {open && (
-        <div
-          aria-hidden
-          onClick={close}
-          className="fixed inset-0 z-[75] bg-black/60 backdrop-blur-sm md:hidden"
-        />
-      )}
-
+      {/* Sidebar (right, push) */}
       <aside
         id="site-sidebar"
         role="dialog"
         aria-modal="true"
         aria-label="Site menu"
         aria-hidden={!open}
-        className={`fixed inset-y-0 right-0 z-[80] flex w-[min(88vw,360px)] flex-col border-l border-edge bg-surface transition-transform duration-300 ease-out md:hidden ${
+        className={`fixed bottom-0 right-0 top-0 z-[80] flex w-[min(88vw,380px)] flex-col border-l border-edge bg-surface transition-transform duration-300 ease-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -165,15 +167,15 @@ export default function Nav() {
                   >
                     <span
                       className={`font-mono text-[11px] transition-colors ${
-                        active === item.toLowerCase() ? "text-lime" : "text-faint"
+                        active === item.toLowerCase() ? "text-accent" : "text-faint"
                       }`}
                       aria-hidden
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span
-                      className={`font-display text-3xl font-medium uppercase tracking-tight transition-colors group-hover:text-lime ${
-                        active === item.toLowerCase() ? "text-lime" : "text-ink"
+                      className={`font-display text-3xl font-medium uppercase tracking-tight transition-colors group-hover:text-accent ${
+                        active === item.toLowerCase() ? "text-accent" : "text-ink"
                       }`}
                     >
                       {item}
@@ -189,7 +191,7 @@ export default function Nav() {
                     <span className="font-mono text-[11px] text-faint" aria-hidden>
                       01
                     </span>
-                    <span className="font-display text-3xl font-medium uppercase tracking-tight text-ink transition-colors group-hover:text-lime">
+                    <span className="font-display text-3xl font-medium uppercase tracking-tight text-ink transition-colors group-hover:text-accent">
                       Home
                     </span>
                   </Link>
@@ -201,7 +203,7 @@ export default function Nav() {
           <a
             href={site.socials.email.href}
             tabIndex={open ? 0 : -1}
-            className="mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-sm bg-lime font-mono text-[11px] uppercase tracking-[0.14em] text-black transition-colors hover:bg-ink"
+            className="mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-sm bg-accent font-mono text-[11px] uppercase tracking-[0.14em] text-black transition-colors hover:bg-ink"
           >
             {site.email}
           </a>
@@ -215,7 +217,7 @@ export default function Nav() {
                 rel="noopener noreferrer"
                 tabIndex={open ? 0 : -1}
                 aria-label={`${site.name} on ${social.label} (opens in new tab)`}
-                className="inline-flex min-h-[52px] items-center justify-center rounded-sm border border-edge text-dim transition-colors hover:border-lime hover:bg-lime hover:text-black"
+                className="inline-flex min-h-[52px] items-center justify-center rounded-sm border border-edge text-dim transition-colors hover:border-accent hover:bg-accent hover:text-black"
               >
                 <Icon
                   name={social.label.toLowerCase() as "linkedin" | "github" | "x"}
@@ -237,7 +239,7 @@ export default function Nav() {
             onClick={close}
             aria-label="Close menu"
             tabIndex={open ? 0 : -1}
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-sm text-ink transition-colors hover:bg-raise"
+            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full text-ink transition-colors hover:bg-raise"
           >
             <XMarkIcon className="h-5 w-5" aria-hidden />
           </button>

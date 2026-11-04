@@ -3,10 +3,10 @@ import SectionHeader from "@/components/ui/section-header";
 import Icon from "@/components/ui/icon";
 
 const dot: Record<string, string> = {
-  active: "bg-lime",
-  development: "bg-lime/60",
+  active: "bg-accent",
+  development: "bg-accent/60",
   upcoming: "bg-amber-400",
-  ongoing: "bg-lime/70",
+  ongoing: "bg-accent/70",
   past: "bg-faint",
 };
 
@@ -29,7 +29,7 @@ export default function Experience() {
                     {item.role} <span className="text-faint">/</span> {item.company}
                   </h3>
                   <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">
-                    {item.period} <span className="text-lime/70">· {item.status}</span>
+                    {item.period} <span className="text-accent/70">· {item.status}</span>
                   </span>
                 </div>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-dim">
@@ -39,7 +39,7 @@ export default function Experience() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="whitespace-nowrap text-lime underline-offset-4 hover:underline"
+                      className="whitespace-nowrap text-accent underline-offset-4 hover:underline"
                     >
                       Visit
                       <Icon name="external" className="mb-0.5 ml-1 inline h-3.5 w-3.5" aria-hidden />

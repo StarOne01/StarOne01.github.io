@@ -22,8 +22,7 @@ const config: Config = {
         dim: "#8C9386",
         faint: "#7E867A",
         edge: "#242A22",
-        lime: "#B8F24C",
-        limedeep: "#7FAF33",
+        accent: "#8CFFC1",
       },
       keyframes: {
         marquee: {

@@ -16,7 +16,7 @@ export default function Work() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group grid gap-3 px-3 py-6 transition-colors hover:bg-lime md:grid-cols-[auto_1fr] md:gap-8 md:px-6 md:py-8"
+                  className="group grid gap-3 px-3 py-6 transition-colors hover:bg-accent md:grid-cols-[auto_1fr] md:gap-8 md:px-6 md:py-8"
                 >
                   <Row item={item} index={i} link />
                 </a>

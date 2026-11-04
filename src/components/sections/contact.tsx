@@ -26,11 +26,11 @@ export default function Contact() {
         <span className="block font-mono text-[10px] uppercase tracking-[0.24em] text-faint">
           Direct line
         </span>
-        <span className="mt-3 block break-words font-display text-3xl font-medium tracking-tight text-ink transition-colors group-hover:text-lime sm:text-5xl md:text-7xl">
+        <span className="mt-3 block break-words font-display text-3xl font-medium tracking-tight text-ink transition-colors group-hover:text-accent sm:text-5xl md:text-7xl">
           {site.email}
           <Icon
             name="arrow"
-            className="mb-2 ml-2 inline h-5 w-5 -rotate-45 text-lime opacity-0 transition-opacity group-hover:opacity-100 md:h-9 md:w-9"
+            className="mb-2 ml-2 inline h-5 w-5 -rotate-45 text-accent opacity-0 transition-opacity group-hover:opacity-100 md:h-9 md:w-9"
             aria-hidden
           />
         </span>
@@ -45,7 +45,7 @@ export default function Contact() {
               href={c.href}
               target={c.href.startsWith("http") ? "_blank" : undefined}
               rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group flex items-center justify-between gap-4 bg-bg p-5 transition-colors hover:bg-lime"
+              className="group flex items-center justify-between gap-4 bg-bg p-5 transition-colors hover:bg-accent"
               aria-label={`${c.label}: ${c.value}`}
             >
               <span className="flex min-w-0 items-center gap-3">

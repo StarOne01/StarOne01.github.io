@@ -11,7 +11,7 @@ export default function About() {
       />
 
       <div className="grid gap-10 md:grid-cols-[1fr_1.5fr] md:gap-16">
-        <p className="border-l border-lime/40 pl-6 font-display text-2xl leading-tight tracking-tight text-ink md:text-3xl">
+        <p className="border-l border-accent/40 pl-6 font-display text-2xl leading-tight tracking-tight text-ink md:text-3xl">
           Final-year EEE student, self-taught from a phone via Termux, now building
           compilers, inference, and production AI.
         </p>
@@ -30,7 +30,7 @@ export default function About() {
               key={area.title}
               className="grid gap-3 py-6 md:grid-cols-[auto_1fr_1.3fr] md:items-baseline md:gap-8 md:py-7"
             >
-              <span className="font-mono text-[11px] text-lime">
+              <span className="font-mono text-[11px] text-accent">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display text-xl font-medium tracking-tight text-ink md:text-2xl">

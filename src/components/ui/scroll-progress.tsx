@@ -40,7 +40,7 @@ export default function ScrollProgress() {
       ref={ref}
       aria-hidden
       style={{ transform: "scaleX(0)", transformOrigin: "0% 50%" }}
-      className="fixed top-0 left-0 right-0 h-[2px] z-[60] bg-lime will-change-transform"
+      className="fixed top-0 left-0 right-0 h-[2px] z-[60] bg-accent will-change-transform"
     />
   );
 }

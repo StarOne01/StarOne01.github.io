@@ -85,7 +85,7 @@ export default function Terminal() {
             <div className="flex items-center gap-1.5" aria-hidden>
               <span className="h-2.5 w-2.5 rounded-full bg-edge" />
               <span className="h-2.5 w-2.5 rounded-full bg-edge" />
-              <span className="h-2.5 w-2.5 rounded-full bg-lime/70" />
+              <span className="h-2.5 w-2.5 rounded-full bg-accent/70" />
             </div>
             <span id={titleId} className="text-[10px] uppercase tracking-[0.2em] text-faint">
               starone01 · tty1
@@ -93,7 +93,7 @@ export default function Terminal() {
             <button
               onClick={() => setOpen(false)}
               aria-label="Close terminal"
-              className="-mr-2 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-xs text-faint hover:text-lime"
+              className="-mr-2 inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-xs text-faint hover:text-accent"
             >
               esc
             </button>
@@ -118,7 +118,7 @@ export default function Terminal() {
               >
                 {line.kind === "in" ? (
                   <>
-                    <span className="text-lime">guest@starone01</span>
+                    <span className="text-accent">guest@starone01</span>
                     <span className="text-faint"> ~ </span>
                     <span>{line.text}</span>
                   </>
@@ -131,7 +131,7 @@ export default function Terminal() {
 
           <form onSubmit={submit} className="flex items-center gap-2 border-t border-edge bg-bg px-4 py-3">
             <label className="sr-only" htmlFor="terminal-input">Terminal command</label>
-            <span className="text-lime" aria-hidden>guest@starone01</span>
+            <span className="text-accent" aria-hidden>guest@starone01</span>
             <span className="text-faint" aria-hidden>~</span>
             <span className="text-faint" aria-hidden>$</span>
             <input

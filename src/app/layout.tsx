@@ -363,7 +363,7 @@ export default function RootLayout({
       <body className="font-sans bg-bg text-ink antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-lime focus:text-black focus:rounded-sm focus:font-mono focus:text-xs focus:tracking-widest focus:uppercase"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:bg-accent focus:text-black focus:rounded-sm focus:font-mono focus:text-xs focus:tracking-widest focus:uppercase"
         >
           Skip to content
         </a>
@@ -371,7 +371,7 @@ export default function RootLayout({
         <Nav />
         <Terminal />
         <SideNotes />
-        {children}
+        <div className="site-shift">{children}</div>
       </body>
     </html>
   );

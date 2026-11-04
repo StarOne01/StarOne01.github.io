@@ -12,7 +12,7 @@ const words = [
 
 export default function Marquee() {
   return (
-    <div aria-hidden className="overflow-hidden border-b border-edge bg-lime text-black">
+    <div aria-hidden className="overflow-hidden border-b border-edge bg-accent text-black">
       <div className="flex w-max animate-marquee motion-reduce:animate-none">
         {[0, 1].map((copy) => (
           <div key={copy} className="flex shrink-0 items-center">

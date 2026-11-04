@@ -13,7 +13,7 @@ export default function SectionHeader({ index, eyebrow, title, description, clas
   return (
     <div className={cn("mb-12 md:mb-16", className)}>
       <div className="mb-6 flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.22em]">
-        <span className="text-lime">{index}</span>
+        <span className="text-accent">{index}</span>
         <span aria-hidden className="h-px flex-1 bg-edge" />
         <span className="text-dim">{eyebrow}</span>
       </div>

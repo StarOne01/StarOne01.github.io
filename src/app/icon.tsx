@@ -18,7 +18,7 @@ export default function Icon() {
           borderRadius: 12,
           fontSize: 38,
           fontWeight: 700,
-          color: '#B8F24C',
+          color: '#8CFFC1',
           fontFamily: 'monospace',
         }}
       >
