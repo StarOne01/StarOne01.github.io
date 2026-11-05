@@ -27,7 +27,7 @@ export const expertise = [
   {
     title: "Compilers & LLVM",
     description:
-      "Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.",
+      "Member of the llvm GitHub org. Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.",
   },
   {
     title: "Local & On-device AI",
@@ -83,7 +83,7 @@ export const experience: readonly ExperienceItem[] = [
     href: "/opensource",
     linkLabel: "PR log",
     description:
-      "X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.",
+      "Member of the llvm GitHub org. X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.",
   },
   {
     role: "Founder",

@@ -3,6 +3,7 @@ import {
   contributionGroups,
   contributions,
   contributionsSource,
+  llvmOrg,
   type ContributionStatus,
 } from "@/data/contribs";
 import Footer from "@/components/sections/footer";
@@ -10,13 +11,13 @@ import Footer from "@/components/sections/footer";
 export const metadata: Metadata = {
   title: "Open source",
   description:
-    "Pull requests to LLVM: MLIR loop and vector work, NVPTX and X86 lowering, Clang diagnostics, and the libc POSIX docs.",
+    "LLVM GitHub org member and author of pull requests across MLIR, LLVM backends, Clang, and libc.",
   alternates: { canonical: "/opensource" },
   openGraph: {
     type: "website",
     title: "Open source — Prashanth T.",
     description:
-      "Pull requests to LLVM: MLIR loop and vector work, NVPTX and X86 lowering, Clang diagnostics, and the libc POSIX docs.",
+      "LLVM GitHub org member and author of pull requests across MLIR, LLVM backends, Clang, and libc.",
     url: "/opensource",
   },
 };
@@ -81,9 +82,23 @@ export default function OpenSourcePage() {
     <main id="main" tabIndex={-1}>
       <section className="border-b border-edge">
         <div className="mx-auto w-full max-w-6xl px-5 pb-14 pt-28 sm:px-8 sm:pb-20 sm:pt-36">
-          <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-dim">
+          <div className="flex flex-wrap items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-dim">
             <span aria-hidden className="inline-block h-1.5 w-1.5 bg-accent" />
             <span>upstream / llvm-project</span>
+            {llvmOrg.member && (
+              <a
+                href={llvmOrg.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-sm border border-accent/30 bg-accent/[0.06] px-2 py-1 text-[9px] tracking-[0.16em] text-accent transition-colors hover:border-accent"
+              >
+                <span
+                  aria-hidden
+                  className="h-1 w-1 rounded-full bg-accent"
+                />
+                {llvmOrg.name} org member
+              </a>
+            )}
           </div>
 
           <h1 className="mt-6 max-w-3xl font-display text-[clamp(2.6rem,7vw,5.2rem)] font-semibold uppercase leading-[0.95] tracking-[-0.03em]">
@@ -91,9 +106,11 @@ export default function OpenSourcePage() {
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-dim sm:text-lg">
-            Pull requests I&apos;ve written and landed in LLVM: MLIR loop and
+            Pull requests I&apos;ve written in llvm/llvm-project: MLIR loop and
             vector work, NVPTX and X86 lowering, Clang diagnostics, and the libc
-            POSIX docs. Every entry links to the review.
+            POSIX docs.
+            {llvmOrg.member && " I'm a member of the llvm GitHub organization."}{" "}
+            Every entry links to the review.
           </p>
 
           <dl className="mt-10 grid grid-cols-2 gap-px border border-edge bg-edge sm:grid-cols-4">

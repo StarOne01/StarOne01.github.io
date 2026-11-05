@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:contribs": "node scripts/sync-contribs.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

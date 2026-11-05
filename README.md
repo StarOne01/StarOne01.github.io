@@ -19,7 +19,7 @@ Live portfolio: **[starone01.me](https://starone01.me)** · Coimbatore, Tamil Na
 ## Focus areas
 
 **Compilers & LLVM**
-Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.
+Member of the [llvm GitHub organization](https://github.com/llvm). Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.
 
 **Local & On-device AI**
 Private inference without the cloud: local pipelines over open models with Ollama, quantization for constrained hardware, and on-device deployment.
@@ -49,7 +49,7 @@ Also: **[PhraseNuX](https://github.com/StarOne01/PhraseNuX)**, a C++ CLI passwor
 
 - **Creator @ MoviesLikeThis**, in production. The films that stay with you, matched by emotional experience, not genre.
 - **Founder @ Software Development Agency**, present. Coimbatore-based agency funding other ventures. High-end web, custom AI agent systems, and enterprise software. [softwares.primesoma.com](https://softwares.primesoma.com)
-- **Open Source Contributor @ LLVM**, ongoing. X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.
+- **Member & Open Source Contributor @ LLVM**, ongoing. X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.
 - **Founder @ primesoma**, past. Vertically integrated wellness ecosystem, food, groceries, farms, fitness, health.
 - **Founding Engineer @ Medclara**, past. Founding engineer and technical lead for the clinical AI pipeline described above.
 
@@ -58,9 +58,10 @@ Also: **[PhraseNuX](https://github.com/StarOne01/PhraseNuX)**, a C++ CLI passwor
 ## Open source
 
 **LLVM**
-Backend and codegen (X86 _Float16), frontend (Clang Sema diagnostic), and libc docs. Tracking toward MLIR.
+Member of the llvm GitHub organization. Backend and codegen (X86 _Float16), frontend (Clang Sema diagnostic), and libc docs. Tracking toward MLIR.
 
 - `llvm/llvm-project`: profile pinned, all reviews public on GitHub.
+- Contribution log: generated from the GitHub API by `scripts/sync-contribs.mjs` and refreshed on every deploy (plus a daily scheduled build).
 
 **Other**
 - `StarOne01/bfloat16`: bfloat16 in C++
@@ -98,8 +99,12 @@ Built with Next.js, TypeScript, and Tailwind. Static export to GitHub Pages.
 
 ```bash
 bun install
-bun run dev      # http://localhost:3000
-bun run build    # static export to dist/
+bun run dev            # http://localhost:3000
+bun run sync:contribs  # refresh LLVM PRs from the GitHub API
+bun run build          # static export to dist/
 ```
+
+`GITHUB_TOKEN=...` is optional locally, but authenticated calls get a much
+higher rate limit. CI supplies the workflow token automatically.
 
 Deployed from `main` to `starone01.me` via GitHub Pages. Analytics via Cloudflare Web Analytics (production only).

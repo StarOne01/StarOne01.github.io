@@ -12,9 +12,15 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Refresh the contribution list from the GitHub API every day.
+  schedule:
+    - cron: "17 3 * * *"
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
+  issues: read
+  pull-requests: read
   pages: write
   id-token: write
 
@@ -55,6 +61,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lock') }}-
       - name: Install dependencies
         run: bun install
+      - name: Sync LLVM contributions from GitHub
+        run: node scripts/sync-contribs.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build with Next.js
         run: bun run build
       - name: Upload artifact
