@@ -36,7 +36,7 @@ export default function Contact() {
         </span>
       </a>
 
-      <div className="mt-10 grid grid-cols-1 gap-px border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-10 grid grid-cols-1 gap-px border border-edge bg-edge sm:grid-cols-2 lg:grid-cols-4">
         {channels.map((c) => {
           const iconName = c.label.toLowerCase() as "email" | "linkedin" | "github" | "x";
           return (
