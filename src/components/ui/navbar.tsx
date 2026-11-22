@@ -16,8 +16,8 @@ export default function Nav() {
   const isOpenSource = pathname.startsWith("/opensource");
   const menuItems = isHomePage
     ? [
-        ...site.nav.map((item) => ({ label: item, href: `#${item.toLowerCase()}` })),
-        { label: "Open Source", href: "/opensource" },
+        ...site.nav.map((item) => ({ label: item.label, href: `#${item.id}` })),
+        { label: "PR log", href: "/opensource" },
       ]
     : [
         { label: "Home", href: "/" },
@@ -70,7 +70,7 @@ export default function Nav() {
   // Scroll-spy: highlight the section currently in view.
   useEffect(() => {
     if (!isHomePage) return;
-    const ids = site.nav.map((n) => n.toLowerCase());
+    const ids = site.nav.map((item) => item.id);
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -122,12 +122,6 @@ export default function Nav() {
             >
               Open source
             </Link>
-            <a
-              href={site.socials.email.href}
-              className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-dim transition-colors hover:text-accent md:inline"
-            >
-              {site.email}
-            </a>
             <button
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent("terminal:open"))}

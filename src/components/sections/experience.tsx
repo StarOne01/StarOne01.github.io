@@ -13,7 +13,7 @@ const dot: Record<string, string> = {
 export default function Experience() {
   return (
     <section id="experience" className="mx-auto w-full max-w-7xl scroll-mt-24 px-5 py-24 sm:px-8 md:py-32">
-      <SectionHeader index="03" eyebrow="Trace" title={<>Where I've been.</>} />
+      <SectionHeader index="04" eyebrow="Trace" title={<>Where I've been.</>} />
 
       <ol className="border-t border-edge">
         {experience.map((item) => (

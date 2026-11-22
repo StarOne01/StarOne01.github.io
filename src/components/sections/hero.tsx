@@ -20,15 +20,15 @@ export default function Hero() {
         <div className="grid-lines absolute inset-0" />
       </div>
 
-      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-5 pb-24 pt-28 sm:px-8 sm:pb-28">
+      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-24 pt-28 sm:px-8">
         <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-dim">
-          <span aria-hidden className="inline-block h-1.5 w-1.5 animate-pulse bg-accent" />
+          <span aria-hidden className="hidden h-1.5 w-1.5 animate-pulse bg-accent sm:-ml-[18px] sm:inline-block" />
           <span>sys.portfolio / 2026</span>
         </div>
 
-        <h1 className="mt-6 font-display text-[clamp(2.6rem,6.2vw,5.6rem)] font-semibold leading-[1.02] tracking-[-0.035em]">
-          AI systems that run
-          <br />
+        <h1 className="mt-6 font-display text-[clamp(2.6rem,6.2vw,5.6rem)] font-medium text-balance leading-[1.06] tracking-[-0.02em]">
+          AI systems that run{" "}
+          <br className="hidden sm:inline" />
           on <span className="text-accent">real silicon</span>
           <span aria-hidden className="animate-blink text-accent">_</span>
         </h1>

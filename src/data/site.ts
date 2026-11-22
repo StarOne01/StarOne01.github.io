@@ -20,14 +20,20 @@ export const site = {
     github: { label: "GitHub", value: "@StarOne01", href: "https://github.com/StarOne01" },
     x: { label: "X", value: "@iamstarone01", href: "https://x.com/iamstarone01" },
   },
-  nav: ["Work", "Experience", "Stack", "Contact"],
+  nav: [
+    { label: "Work", id: "work" },
+    { label: "Open Source", id: "opensource" },
+    { label: "Experience", id: "experience" },
+    { label: "Stack", id: "stack" },
+    { label: "Contact", id: "contact" },
+  ],
 } as const;
 
 export const expertise = [
   {
     title: "Compilers & LLVM",
     description:
-      "Member of the llvm GitHub org. Contributions across the X86 backend (_Float16 lowering: FABS, FNEG, FCOPYSIGN), a Clang Sema diagnostic, and libc POSIX docs. Now going deeper into MLIR and compiler internals.",
+      "Member of the llvm GitHub org. Merged work across MLIR SCF loop peeling and specialization, vector lowering fixes, the NVPTX and X86 backends, a Clang Sema diagnostic, and libc POSIX docs.",
   },
   {
     title: "Local & On-device AI",
@@ -83,7 +89,7 @@ export const experience: readonly ExperienceItem[] = [
     href: "/opensource",
     linkLabel: "PR log",
     description:
-      "Member of the llvm GitHub org. X86 backend _Float16 lowering, a Clang Sema diagnostic through extensive review, and a series of libc POSIX header docs. Now deepening into MLIR.",
+      "Member of the llvm GitHub org. MLIR SCF loop peeling and specialization, vector lowering fixes, NVPTX and X86 backend work, a Clang Sema diagnostic, and libc POSIX docs.",
   },
   {
     role: "Founder",

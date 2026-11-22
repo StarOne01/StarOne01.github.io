@@ -27,7 +27,7 @@ export default function Stack() {
     <section id="stack" className="border-y border-edge bg-surface">
       <div className="mx-auto w-full max-w-7xl scroll-mt-24 px-5 py-24 sm:px-8 md:py-32">
         <SectionHeader
-          index="04"
+          index="05"
           eyebrow="Manifest"
           title={<>Tools I actually reach for.</>}
           description="Languages, compilers, models, and infra, grouped by what they do."

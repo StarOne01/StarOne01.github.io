@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto w-full max-w-7xl scroll-mt-24 px-5 py-24 sm:px-8 md:py-32">
       <SectionHeader
-        index="05"
+        index="06"
         eyebrow="Uplink"
         title={<>Open to serious collaborations.</>}
         description="Compilers, ML systems, tooling for real problems. Cold emails welcome — I read all of them."

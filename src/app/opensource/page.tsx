@@ -77,6 +77,13 @@ function monthYear(iso: string) {
 
 const range = `${monthYear(since)} — ${monthYear(latest)}`;
 
+const groupsWithItems = contributionGroups
+  .map((group) => ({
+    ...group,
+    count: contributions.filter((c) => c.group === group.id).length,
+  }))
+  .filter((group) => group.count > 0);
+
 export default function OpenSourcePage() {
   return (
     <main id="main" tabIndex={-1}>
@@ -140,7 +147,7 @@ export default function OpenSourcePage() {
               href={contributionsSource}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent underline-offset-4 hover:underline"
+              className="inline-flex min-h-[44px] items-center text-accent underline-offset-4 hover:underline"
             >
               Live pull request list <span aria-hidden>↗</span>
             </a>
@@ -148,7 +155,7 @@ export default function OpenSourcePage() {
               href="https://github.com/llvm/llvm-project"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dim transition-colors hover:text-accent"
+              className="inline-flex min-h-[44px] items-center text-dim transition-colors hover:text-accent"
             >
               llvm/llvm-project <span aria-hidden>↗</span>
             </a>
@@ -156,6 +163,24 @@ export default function OpenSourcePage() {
           </div>
         </div>
       </section>
+
+      <nav aria-label="Jump to contribution group" className="border-b border-edge">
+        <div className="mx-auto w-full max-w-6xl px-5 py-3 sm:px-8">
+          <ul className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 py-1">
+            {groupsWithItems.map((group) => (
+              <li key={group.id} className="shrink-0">
+                <a
+                  href={`#group-${group.id}`}
+                  className="inline-flex min-h-[44px] items-center gap-2 rounded-sm border border-edge px-3 font-mono text-[9px] uppercase tracking-[0.16em] text-dim transition-colors hover:border-accent hover:text-accent"
+                >
+                  {group.label}
+                  <span className="text-faint">({group.count})</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
 
       {contributionGroups.map((group) => {
         const items = contributions.filter((c) => c.group === group.id);
@@ -198,38 +223,40 @@ export default function OpenSourcePage() {
                         href={pr.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col gap-2 py-4 sm:grid sm:grid-cols-[7rem_1fr_auto] sm:items-baseline sm:gap-5"
+                        className="group flex flex-col gap-1.5 py-4 sm:grid sm:grid-cols-[7rem_1fr_auto] sm:items-baseline sm:gap-5"
                       >
-                        <time
-                          dateTime={pr.date}
-                          className="font-mono text-[10px] uppercase tracking-[0.16em] text-faint"
-                        >
-                          {formatDate(pr.date)}
-                        </time>
+                        <span className="flex items-center justify-between gap-3 sm:contents">
+                          <time
+                            dateTime={pr.date}
+                            className="font-mono text-[10px] uppercase tracking-[0.16em] text-faint sm:order-1"
+                          >
+                            {formatDate(pr.date)}
+                          </time>
 
-                        <span className="flex items-baseline gap-2 text-sm leading-relaxed text-dim transition-colors group-hover:text-ink">
+                          <span className="flex items-center gap-3 sm:order-3">
+                            <span
+                              className={`inline-flex items-center gap-1.5 rounded-sm border px-2 py-1 font-mono text-[9px] uppercase tracking-[0.16em] ${style.box} ${style.text}`}
+                            >
+                              <span
+                                aria-hidden
+                                className={`h-1 w-1 rounded-full ${style.dot}`}
+                              />
+                              {style.label}
+                            </span>
+                            <span
+                              aria-hidden
+                              className="hidden text-faint transition-colors group-hover:text-accent sm:inline"
+                            >
+                              ↗
+                            </span>
+                          </span>
+                        </span>
+
+                        <span className="flex min-w-0 items-baseline gap-2 text-sm leading-relaxed text-dim transition-colors group-hover:text-ink sm:order-2">
                           <span className="shrink-0 font-mono text-[11px] text-faint">
                             #{pr.number}
                           </span>
                           <span>{pr.title}</span>
-                        </span>
-
-                        <span className="flex items-center gap-3">
-                          <span
-                            className={`inline-flex items-center gap-1.5 rounded-sm border px-2 py-1 font-mono text-[9px] uppercase tracking-[0.16em] ${style.box} ${style.text}`}
-                          >
-                            <span
-                              aria-hidden
-                              className={`h-1 w-1 rounded-full ${style.dot}`}
-                            />
-                            {style.label}
-                          </span>
-                          <span
-                            aria-hidden
-                            className="hidden text-faint transition-colors group-hover:text-accent sm:inline"
-                          >
-                            ↗
-                          </span>
                         </span>
                       </a>
                     </li>
