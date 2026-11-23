@@ -7,14 +7,17 @@ export default function Hero() {
       className="relative isolate flex min-h-[100svh] flex-col overflow-hidden border-b border-edge"
     >
       <div className="absolute inset-0 -z-10">
-        <img
-          src="/electric-green-aurora-storm-mountains.webp"
-          srcSet="/hero-sm.webp 800w, /electric-green-aurora-storm-mountains.webp 1920w"
-          sizes="100vw"
-          alt=""
-          fetchPriority="high"
-          className="h-full w-full object-cover opacity-70"
-        />
+        <picture>
+          <source media="(max-width: 639px)" srcSet="/hero-mobile.webp" />
+          <img
+            src="/electric-green-aurora-storm-mountains.webp"
+            srcSet="/hero-sm.webp 800w, /electric-green-aurora-storm-mountains.webp 1920w"
+            sizes="100vw"
+            alt=""
+            fetchPriority="high"
+            className="h-full w-full object-cover opacity-70"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-transparent to-bg" />
         <div className="absolute inset-0 bg-gradient-to-r from-bg/90 via-bg/55 to-transparent sm:from-bg/85 sm:via-bg/35" />
         <div className="grid-lines absolute inset-0" />
@@ -26,9 +29,11 @@ export default function Hero() {
           <span>sys.portfolio / 2026</span>
         </div>
 
-        <h1 className="mt-6 font-display text-[clamp(2.6rem,6.2vw,5.6rem)] font-medium text-balance leading-[1.06] tracking-[-0.02em]">
-          AI systems that run{" "}
-          <br className="hidden sm:inline" />
+        <h1 className="mt-6 font-display text-[clamp(2.25rem,9.35vw,2.6rem)] font-medium leading-[1.06] tracking-[-0.02em] sm:text-[clamp(2.6rem,6.2vw,5.6rem)]">
+          AI systems that{" "}
+          <br className="sm:hidden" />
+          run
+          <br className="hidden sm:inline" />{" "}
           on <span className="text-accent">real silicon</span>
           <span aria-hidden className="animate-blink text-accent">_</span>
         </h1>
