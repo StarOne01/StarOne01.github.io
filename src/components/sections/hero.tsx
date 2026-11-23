@@ -16,12 +16,12 @@ export default function Hero() {
           className="h-full w-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-transparent to-bg" />
-        <div className="absolute inset-0 bg-gradient-to-r from-bg/85 via-bg/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bg/90 via-bg/55 to-transparent sm:from-bg/85 sm:via-bg/35" />
         <div className="grid-lines absolute inset-0" />
       </div>
 
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-24 pt-28 sm:px-8">
-        <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-dim">
+        <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.18em] text-ink/70 sm:text-[11px] sm:tracking-[0.22em]">
           <span aria-hidden className="hidden h-1.5 w-1.5 animate-pulse bg-accent sm:-ml-[18px] sm:inline-block" />
           <span>sys.portfolio / 2026</span>
         </div>
@@ -33,7 +33,7 @@ export default function Hero() {
           <span aria-hidden className="animate-blink text-accent">_</span>
         </h1>
 
-        <p className="mt-6 max-w-lg text-base leading-relaxed text-dim sm:text-lg">
+        <p className="mt-6 max-w-lg text-[17px] leading-relaxed text-ink/80 sm:text-lg">
           {site.tagline}
         </p>
 

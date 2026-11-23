@@ -7,13 +7,16 @@ export default function Footer() {
         <p>© 2026 Prashanth T.</p>
         <a
           href="/opensource"
-          className="text-dim transition-colors hover:text-accent"
+          className="inline-flex min-h-[44px] items-center text-dim transition-colors hover:text-accent sm:min-h-0"
         >
           Open source
         </a>
         <p className="hidden lg:block">Visuals AI-generated · Built with Next.js</p>
         <p>Coimbatore · India</p>
-        <a href="/#top" className="text-dim transition-colors hover:text-accent">
+        <a
+          href="/#top"
+          className="inline-flex min-h-[44px] items-center text-dim transition-colors hover:text-accent sm:min-h-0"
+        >
           Back to top ↑
         </a>
       </div>

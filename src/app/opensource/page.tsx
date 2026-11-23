@@ -97,7 +97,7 @@ export default function OpenSourcePage() {
                 href={llvmOrg.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-sm border border-accent/30 bg-accent/[0.06] px-2 py-1 text-[9px] tracking-[0.16em] text-accent transition-colors hover:border-accent"
+                className="inline-flex min-h-[36px] items-center gap-1.5 rounded-sm border border-accent/30 bg-accent/[0.06] px-2.5 text-[9px] tracking-[0.16em] text-accent transition-colors hover:border-accent sm:min-h-0 sm:px-2 sm:py-1"
               >
                 <span
                   aria-hidden
