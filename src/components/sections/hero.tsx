@@ -58,6 +58,18 @@ export default function Hero() {
           </a>
         </div>
       </div>
+
+      <a
+        href="#about"
+        aria-label="Scroll to the profile section"
+        className="absolute bottom-16 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 px-4 font-mono text-[9px] uppercase tracking-[0.22em] text-faint transition-colors hover:text-accent sm:hidden [@media(max-height:620px)]:hidden"
+      >
+        Scroll
+        <span
+          aria-hidden
+          className="block h-7 w-px bg-gradient-to-b from-faint/70 to-transparent"
+        />
+      </a>
     </section>
   );
 }
