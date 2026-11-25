@@ -19,6 +19,33 @@ export const metadata: Metadata = {
     description:
       "LLVM GitHub org member and author of pull requests across MLIR, LLVM backends, Clang, and libc.",
     url: "/opensource",
+    siteName: "Prashanth T., Portfolio",
+    locale: "en_US",
+    images: [
+      {
+        url: "/opensource-og.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "Sent upstream — Prashanth T.'s pull requests merged into llvm/llvm-project across MLIR, NVPTX, X86, Clang, and libc.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Open source — Prashanth T.",
+    description:
+      "LLVM GitHub org member and author of pull requests across MLIR, LLVM backends, Clang, and libc.",
+    creator: "@StarOne01",
+    images: [
+      {
+        url: "/opensource-og.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "Sent upstream — Prashanth T.'s pull requests merged into llvm/llvm-project across MLIR, NVPTX, X86, Clang, and libc.",
+      },
+    ],
   },
 };
 

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-og.mjs && next build",
+    "og": "node scripts/generate-og.mjs",
     "start": "next start",
     "lint": "next lint",
     "sync:contribs": "node scripts/sync-contribs.mjs"
