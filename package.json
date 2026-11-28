@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "node scripts/generate-og.mjs && next build",
     "og": "node scripts/generate-og.mjs",
+    "icons": "node scripts/generate-icons.mjs",
     "start": "next start",
     "lint": "next lint",
     "sync:contribs": "node scripts/sync-contribs.mjs"
