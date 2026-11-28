@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" aria-label="Prashanth T. — 01 mark" role="img" viewBox="0 0 512 512"><defs><radialGradient id="glow" cx=".78" cy=".8" r=".72"><stop offset="0" stop-color="#8CFFC1" stop-opacity=".26"/><stop offset=".45" stop-color="#8CFFC1" stop-opacity=".09"/><stop offset="1" stop-color="#8CFFC1" stop-opacity="0"/></radialGradient></defs><rect width="512" height="512" fill="#080A08"/><rect width="512" height="512" fill="url(#glow)"/><circle cx="209" cy="256" r="115" fill="none" stroke="#EDEBE2" stroke-width="44"/><rect width="50" height="214" x="390" y="149" fill="#8CFFC1" rx="6"/><path fill="#8CFFC1" d="M 356 183 L 390 149 L 390 225 Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Prashanth T. — 01 mark">
+<defs>
+<radialGradient id="glow" cx="0.78" cy="0.8" r="0.72">
+<stop offset="0" stop-color="#8CFFC1" stop-opacity="0.26"/>
+<stop offset="0.45" stop-color="#8CFFC1" stop-opacity="0.09"/>
+<stop offset="1" stop-color="#8CFFC1" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="512" height="512" fill="#080A08"/>
+<rect width="512" height="512" fill="url(#glow)"/>
+<circle cx="209" cy="256" r="115" fill="none" stroke="#EDEBE2" stroke-width="44"/><rect x="390" y="149" width="50" height="214" rx="6" fill="#8CFFC1"/><path d="M 356 183 L 390 149 L 390 225 Z" fill="#8CFFC1"/>
+</svg>
